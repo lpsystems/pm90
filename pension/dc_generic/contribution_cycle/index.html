@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>DC Generic Contribution Cycle</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>DC Generic Contribution Cycle</h1>
+        </div>
+      
+
+      
+<p>This document aims to set out the regular contribution processing cycle in Pension
+Master. It does this as a step by step list of activities you need to do to process
+regular contributions, some of which may not be applicable to all schemes.</p>
+
+<p>To view a printable checklist, click <a href="/pension/dc_generic/checklist/">here</a>.</p>
+
+<h2>Contribution Request Run</h2>
+
+<p>This <a href="/pension/investments/contribution_entry/peu_cont/">program</a> calculates expected contributions for a specified
+group of members. If successful, these are loaded into a Contribution Batch for onward
+processing.</p>
+
+<p>It is intended that you send the schedule produced by this program to your client
+to request the contributions that are then due. The client should then ensure they
+deduct these contributions from the member and send you full details. These will then
+be reconciled against what was expected in Batch Data Input.</p>
+
+<h2>Allocate Contributions</h2>
+
+<p>This <a href="/pension/investments/allocate_contributions/peu_alloc/">program</a> allows you to allocate contributions to
+investment funds as per the members current investment choice.</p>
+
+<p>A <a href="/pension/investments/allocate_contributions/per_alloc/">report</a> is available to produce a list of any contributions
+that have not yet been allocated to investment funds for a selected group of members.</p>
+
+<h2>Unit Posting</h2>
+
+<p>This <a href="/pension/investments/unit_posting/peu_post/">program</a> allows you to post allocated contributions
+to units.</p>
+
+<p>A <a href="/pension/investments/unit_posting/per_post/">report</a> is available to produce a list of any investment
+history entries that have not yet had units posted for a selected group of members.</p>
+
+<h2>Switches</h2>
+
+<p>This <a href="/pension/investments/switches/peu_switch/">program</a> allows you to switch a member (or group
+of members) investments from one set of investment funds to another. It allows the
+option of one to many, many to many or many to one with regard to switching from old
+fund(s) to new fund(s).</p>
+
+<p>This <a href="/pension/investments/switches/per_switch/">report</a> allows you to produce a list of any switches
+that have been instigated for the selected group of members, where the money has not
+yet been dis-invested from the old investment fund.</p>
+
+<h2>Asset Transfer</h2>
+
+<p>This <a href="/pension/investments/peu_asset/">program</a> allows you to transfer the existing units
+for a member to the scheme suspense account. It will transfer all units for a member
+to the scheme suspense account and write a negative unit entry to each of the members
+funds so that the members total unit holdings will be zero.</p>
+
+<h2>Asset Balance</h2>
+
+<p>This <a href="/pension/investments/peu_assbal/">program</a> allows you to reconcile total units for
+a fund against those recorded on Pension Master. Any difference between the two values
+is written to the scheme suspense account.</p>
+
+<h2>Fund Balancing</h2>
+
+<p>This <a href="/pension/investments/peu_fbal/">program</a> allows you to report on members who have
+had a lifestyle event since the last date they invested contributions. It shows you
+the current allocation of the members investments, and the proposed new split of investments
+after re-investing according to the appropriate lifestyle matrix.</p>
+
+<h2>Bulk Fund Redirection</h2>
+
+<p>This <a href="/pension/investments/peu_binvch/">program</a> enables you to add or remove a investment
+setup details to a selection of members in one step.</p>
+
+<h2>Units Listing Report</h2>
+
+<p>This <a href="/pension/reports/standard_reports/per_units/">program</a> allows you to produce a list of contributions
+and units for the selected group of members between two user entered dates.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

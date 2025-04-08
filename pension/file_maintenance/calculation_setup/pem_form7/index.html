@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085342" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>“YYYYMMDD”</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use “YYYYMMDD” to add a constant date to your formula.</p>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>YYYY is the year, MM is the month and DD is the day.</li>
+</ul>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>"19880512"
+</code></pre>
+
+<p>This example is May 12 1988.</p>
+
+<h2><a name="02"></a>‘Character String’</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use ‘Character String’ to add a string constant to your formula.</p>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>Use ‘Character String’ to specify that a formula line contains a string constant.</li>
+</ul>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>'Special'
+</code></pre>
+
+<h2><a name="03"></a>+ - * / ^ &gt; &lt; ! =</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use these symbols to perform arithmetic operations in your formula.</p>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li><code>+</code> represents addition.</li>
+  <li><code>-</code> represents subtraction.</li>
+  <li><code>*</code> represents multiplication.</li>
+  <li><code>/</code> represents division.</li>
+  <li><code>^</code> represents exponentiation.</li>
+  <li><code>&gt;</code> represents greater than.</li>
+  <li><code>&lt;</code> represents less than.</li>
+  <li><code>!</code> represents doesn’t equal.</li>
+  <li><code>=</code> represents equals.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Combining arithmetic operators is only allowed for =&gt; and &lt;=.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>@1 + @2 
+@2 * #pm_rt1 
+3 ^ 8
+</code></pre>
+
+<h2><a name="04"></a>999 or 999.99</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use numbers to define numerical constants to be used in your formula.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>999.99 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The numerical constant can be any number you wish, to any number of decimal places you require.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>123.544 
+656 
+1 
+576.4355353 
+</code></pre>
+
+<h2><a name="05"></a>@line_number</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the @ symbol to refer to the result of a previous line of your formula.</p>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>line_number must be &gt;= 1 and cannot be greater than the current formula line number
+e.g. if you put “@55” in line 30 of the formula you will see an error message and
+be invited to re-enter the line number after the @ symbol.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>@54 
+</code></pre>
+
+<h2><a name="06"></a>Example Formula</h2>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Line No.</th>
+          <th style="text-align: left">Contents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">1.</td>
+          <td style="text-align: left">#pm_npa</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2.</td>
+          <td style="text-align: left">@1 &gt; 60 goto 5</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">3.</td>
+          <td style="text-align: left">avg(ps1_sal1,3) * $AAAAA</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4.</td>
+          <td style="text-align: left">result @3</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">5.</td>
+          <td style="text-align: left">avg(ps1_sal1,4) * $AAAAA</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">6.</td>
+          <td style="text-align: left">result @5</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The result of the formula is dependant on the member’s Normal Pension Age. If the NPA is &lt;= 60, then the result is his/her average user defined salary 1 for the last 3 years, multiplied by the appropriate factor in the actuarial table AAAA. If the NPA is &gt; 60, then the result is his/her average user defined salary 1 for the last 4 years, multiplied by the appropriate factor in table AAAA.</p>
+
+<h2><a name="07"></a>annuity(int_rate,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the annuity function to calculate the value of an annuity certain for a given
+interest rate and an outstanding term defined by two dates.</p>
+
+<p>This may be used, for example when valuing future contributions paid into a money
+purchase type arrangement.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>annuity(int_rate,date1,date2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>int_rate - is the interest rate to calculate the annuity at.</li>
+  <li>date1 - is the start date for the annuity period.</li>
+  <li>date2 - is the end date for the annuity period</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If date1 &gt; date2 the value the annuity will be calculated with a term of 0</li>
+  <li>The annuity is a continuous annuity which means that if it is being used to value
+future contributions in a defined contribution scheme, it assumes that contributions
+are payable at least monthly.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem)
+or constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the
+month and DD is the day or references to the result of another line of formula code
+within the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>annuity(8.5,19950112,pm_npd) 
+annuity(7,pm_dps,pm_dtlft) 
+annuity(10.6,19950112,20031115) 
+annuity(9.5,pm_dps,@1) 
+</code></pre>
+
+<h2><a name="08"></a>cont_value</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use cont_value to insert the value of the current contribution type in your formula
+when <a href="/pension/file_maintenance/pem_sch/#EXP">calculating expenses</a> on incoming contributions.</p>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If this function is called from anything other than the expense calculation routine it will return a numeric value of 0.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<p>If we are calculating expenses for Employee Ordinary contributions, the following
+formula will calculate expenses as 1% of the gross employee ordinary contribution
+value:</p>
+
+<pre><code>cont_value 
+2 * @1 / 100 
+result @2 
+</code></pre>
+
+<h2><a name="09"></a>eur_to_ncu(@line_num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the eur_to_ncu function to convert the value of a previous formula line from Euro’s
+to the National Currency Unit.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>eur_to_ncu(@line_num) 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>line_number must be &gt;= 1 and cannot be greater than the current formula line number
+e.g. if you put “@55” in line 30 of the formula you will see an error message and
+be invited to re-enter the line number after the @ symbol.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>eur_to_ncu(@2) 
+</code></pre>
+
+<h2><a name="10"></a>euro_rate(currency_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the euro_rate function to get the euro exchange rate for a specific currency.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>euro_rate(currency_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>currency_code is the code entered in Currency Conversion in System Data.</li>
+</ul>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>euro_rate(GBP) 
+euro_rate(IEP) 
+</code></pre>
+
+<h2><a name="11"></a>format(field,Nn)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the format function to format numerical values to the amount of decimal places
+you require.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>format(field,Nn) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>field - field to be formatted e.g. @1, pm_ord_int, 12.23456.</li>
+  <li>Nn - where n is the number of decimal places to be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>n must be between 0 and 6.</li>
+  <li>if the field or line reference is a number held in character format then it will be converted to a number.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>format(@2,N4) 
+format(pm_ord_int,N6) 
+</code></pre>
+
+<h2><a name="12"></a>fund_val(fund)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the fund_val function to calculate the total current fund value of a members pot
+based on unit bid prices and the total units allocated for all investment funds that
+the member invests in.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>fund_val(fund) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fund - is the fund code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>To obtain the total fund value across all investment funds for the member, use a fund code of TOT.</li>
+  <li>The unit price to use for the valuation is the latest (i.e. most recent in relation
+to the quotation date) one on the pe_prices table for the fund.</li>
+  <li>The basis on which the units should be valued (i.e. Bid, Mid or Offer) is determined
+by reference to the pif_sell_basis field on the pe_invfun table for this fund.</li>
+  <li>The total units to value can be found by summing the units across all contribution
+sources from the pe_minv table for the fund and member.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>fund_val(EQUITY) 
+fund_val(TOT) 
+fund_val(MANAGED) 
+</code></pre>
+
+<h2><a name="13"></a>loop(line_ref,max_loop)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the loop function to allow the user to loop back to a previous line in the formulae.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>loop(line_ref,max_loop) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>line_ref - to be entered in the format of @n, where n is the line number e.g. @1.</li>
+  <li>max_loop - this represents the maximum number of times the formula should go through
+the loop. This should be either a number or a reference to a previous line e.g. 20, @1.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If max_loop is entered in the format @n, then the value held on the referenced line must be numeric.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>loop(@2,15) 
+loop(@4,@2) 
+</code></pre>
+
+<h2><a name="14"></a>mess(n)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the mess function in order to force a User Defined Message to the warnings file
+which the user will be prompted to print off after the calculation has been run.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>mess(n) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>n - is the number of the User Defined Message and can be between 1 and 999999. If
+you are unsure of the user defined message number you require and you have already
+entered the ‘mess’ part of the formula line, click on the lookup icon for a
+list of defined messages.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>To force a particular message, e.g. 15, onto the warnings file if service is less than two years.</li>
+</ol>
+
+<pre><code>@3 &amp;gt; 2 goto @10 
+mess(15)
+</code></pre>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>mess(1) 
+mess(273) 
+mess(52835) 
+</code></pre>
+
+<h2><a name="15"></a>ncu_to_eur(@line_num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the ncu_to_eur function to convert the value of a previous formula line from the
+National Currency Unit to Euro’s.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>ncu_to_eur(@line_num) 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>line_number must be &gt;= 1 and cannot be greater than the current formula line number
+e.g. if you put “@55” in line 30 of the formula you will see an error message and
+be invited to re-enter the line number after the @ symbol.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>ncu_to_eur(@2) 
+</code></pre>
+
+<h2><a name="16"></a>popup(msg_text,field_type)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the popup function to display a run-time pop-up window asking the user to input
+a value that is needed in the formula. In the Batch Quotation Run or the Pension Increase
+Run, the user has the option of using the same popup result for all members being
+processed.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>popup(msg_text,field_type) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>msg_text - appropriate text to prompt user for input</li>
+  <li>field_type - this is a two character field that denotes the type of field you are
+asking for. Valid values are DT (date), TX (free format text), IN (Indicator - single
+character returned as uppercase), BO( Boolean, Y or N ), MO (monetary amount) or Nn
+(Number with n decimal places (n = 0-6)).</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>msg_text cannot be longer than 50 characters.</li>
+  <li>field_type must be one of DT, TX, IN, BO, MO, N0, N1, N2, N3, N4, N5 or N6 and must be uppercase.</li>
+  <li>If a field type is set as IN, then the value returned by the formula will be a text string, all in uppercase.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>popup(Enter the amount of pre 1991 AVC's,MO) 
+popup(Enter dependants age,N0) 
+popup(Enter date started paying extra contributions,DT) 
+</code></pre>
+
+<h2><a name="17"></a>result</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the function result to tell the formula to finish and display the result when
+the quotes have been run.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>result @line_number 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The word result must appear in every formula. It means that the result of the formula is whatever follows the word result.</li>
+  <li>You may use more than one occurrence of the word result in a formula, for example
+where you have some form of ‘if’ type branching dependant on sex.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>result @45 
+result @2 + 10 
+</code></pre>
+
+<h2><a name="18"></a>rpi(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Extracts the RPI factor as at the date specified.</p>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If no RPI factor is entered on the <a href="/pension/system_data/pem_mli/">MLI/RPI Factors</a> screen
+for the specific date the factor returned will be the factor effective as at that date.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>rpi(20030701) 
+</code></pre>
+
+<h2><a name="19"></a>special(group,code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>If the member already has the Special Code allocated to them, then they will be placed in the Special Code Group.</p>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The Special Code Group can be any 8 character code and is not validated.</li>
+  <li>The Special Code must be a valid code and must be allocated to the member scheme.</li>
+  <li>If the Special Code Group and Special Code have already been given to the member then
+nothing is done and no warning is produced.</li>
+  <li>The function returns no value.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>special(LUMPSUM,2TIMES) 
+</code></pre>
+
+<h2><a name="20"></a>value(uds_type,field_no)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the value function to get a value entered into a run-time user defined screen.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>value( uds_type, field_no ) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>uds_type - The uds type of the user defined screen that you wish to get the value from.</li>
+  <li>field_no - This denotes the number of the field you wish to get the value from(1-20).</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>uds_type must the the correct type of a User Defined Screen that has already been created and set as a runtime screen..</li>
+  <li>field_type must 1-20.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>value(TEST, 9) 
+</code></pre>
+
+<h2><a name="21"></a>{ comment line }</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the curly brackets to enclose any comments you may wish to add to your formulae.</p>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Any comments will be ignored when the formula is subsequently used in calculations.
+They are merely there for you to make your formula easier to understand.</li>
+  <li>Each comment line MUST be on a separate formula line.</li>
+</ol>
+
+<h2><a name="22"></a>smpi(date,age)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Extracts the SMPI factor for the appropriate tax year for the date specified and at
+the age specified.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>smpi(date,age) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - refers to the SMPI tax date. If the date entered is not 06/04/yyyy, then the
+tax year, the date entered falls in, is worked out and used. For example, 12/10/2001
+falls in tax year beginning 06/04/2001.</li>
+  <li>age - refers to the age last birthday at end of preceding tax year. Valid values are between 15 and 63.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>SMPI factors are held on the <a href="/pension/system_data/pem_smpi/">SMPI</a> screen for dates between 06/04/2000 and 05/04/2056.</li>
+  <li>For each tax year the SMPI factors are held for ages between 15 and 63.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>smpi(20030701,20) 
+smpi(@2,@1) 
+</code></pre>
+
+<h2><a name="23"></a>internet</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Used to indicate if the formula is being run from Pension Master Online.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>internet 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>Will return ‘Y’ if the formula is being run from Pension Master Online.</li>
+  <li>Will return ‘N’ if the formula is being run from Member Quotation of Batch Quotation Run.</li>
+</ul>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>internet
+</code></pre>
+
+<h2><a name="24"></a>curformat(line_ref,Cn)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the curformat function to format numerical values to be displayed with the thousand and decimal separators (where applicable). The result will be returned as a character string.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>curformat(line_ref,Cn) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>line_ref - line_ref must be a reference to a previoius line in the formula e.g. @1.</li>
+  <li>Cn - where n denotes which numeric format is to be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>n must be either 1 or 2.</li>
+  <li>if n is 1, then the numeric value will be displayed as 99,999.99 for decimals, or 99,999 for integers.</li>
+  <li>if n is 2, then the numeric value will be displayed as 99.999,99 for decimals, or 99.999 for integers.</li>
+  <li>if the line reference is a number held in character format then it will be converted to a number.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>curformat(@2,C1) 
+curformat(@1,C2) 
+</code></pre>
+
+<h2><a name="25"></a>dateformat(line_ref,Dn)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the dateformat function to format date values to be displayed in either DD/MM/YYYY or MM/DD/YYYY format. The result will be returned as a character string.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>dateformat(line_ref,Dn) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>line_ref - line_ref must be a reference to a previoius line in the formula e.g. @1.</li>
+  <li>Dn - where n denotes which date format is to be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>n must be either 1 or 2.</li>
+  <li>if n is 1, then the date value will be displayed as DD/MM/YYYY.</li>
+  <li>if n is 2, then the date value will be displayed as MM/DD/YYYY.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>dateformat(@2,D1) 
+dateformat(@1,D2) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:42.</p>
+      </div>
+    </div>
+  </body>
+</html>

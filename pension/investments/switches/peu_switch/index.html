@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Investment Switch</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Investment Switch</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add">Add</a></li>
+  <li><a href="#Query">Query</a></li>
+  <li><a href="#Report">Report</a></li>
+  <li><a href="#Delete">Delete</a></li>
+  <li><a href="#Menu">Menu</a></li>
+  <li><a href="#Sell">Sell</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+  <li><a href="#switch_status_codes">Switch Status Codes</a></li>
+  <li><a href="#monetary_amount">Switches Based on a monetary amount</a></li>
+  <li><a href="#Overview">Overview of the Switch Process</a></li>
+</ul>
+
+<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+
+<p>This module allows you to switch a member (or group of members) investments from one
+set of investment funds to another. It allows the option of one to many, many to many
+or many to one with regard to switching from old fund(s) to new fund(s).</p>
+
+<p>You can also take expenses off switches that a member makes. Further details on how
+to setup switch expenses can be found <a href="/pension/file_maintenance/pem_sch/#swexp">here</a>.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit1.jpg" alt="Basic Investment Switch Details Screen" /></p>
+
+  <p>Basic Investment Switch Details Screen</p>
+</div>
+
+<h2><a name="0"></a><a name="Add"></a>Add An Investment Switch</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit0.jpg" alt="Member Selection Screen" /></p>
+
+  <p>Member Selection Screen</p>
+</div>
+
+<p>This screen allows you to select the member(s) to be included in the switch:</p>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to run the Investment
+Switch for using the Scheme, Company, Category, Status, Special Code and Member fields.
+When the selection criteria have been entered click on ‘OK’ to proceed or click on
+‘Cancel’ to return to the main menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit1.jpg" alt="Basic Investment Switch Details Screen" /></p>
+
+  <p>Basic Investment Switch Details Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="psbh_type"></a><strong>TYPE</strong> - Select the type of switch:</p>
+
+<ul>
+  <li><strong>Switch</strong> - A normal switch where investments are moved from old fund(s) to new fund(s).</li>
+  <li><strong>Sale</strong> - A switch out of a fund without the re-investment in new funds.</li>
+</ul>
+
+<p><a name="psbh_dt_type"></a><strong>DATES</strong> - Select the date type you wish to use for the switch:</p>
+
+<ul>
+  <li><strong>Full Switch</strong> - A full switch is where investments, that are found on or before the date received, are moved from old fund(s) to new fund(s).</li>
+  <li><strong>Switch Range</strong> - A switch range is where investments, that are found between the date range entered, are moved from old fund(s) to new fund(s).</li>
+</ul>
+
+<p><a name="psbh_recvd"></a><strong>DATE RECEIVED</strong> - Enter the date the switch instruction
+was received. This defaults to today’s date.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>This field is renamed ‘DATE TO’ if the user has selected to enter a Switch Range.</p>
+</div>
+
+<p><a name="psbh_dt_from"></a><strong>DATE FROM</strong> - Enter the date that the switch range starts from. This date cannot be after the Date To. This field is only entered if the user has selected to enter a Switch Range.</p>
+
+<p><a name="psbh_expenses"></a><strong>SWITCH EXPENSES</strong> - Specify the type of expenses
+to apply to this switch:</p>
+
+<ul>
+  <li><strong>Calculated Expenses</strong> - Calculate expenses as specified under <a href="/pension/file_maintenance/pem_sch/#swexp">Switch Expenses</a> in Scheme File.</li>
+  <li><strong>Free Switch</strong> - Do not calculate any expenses for this switch. This is the default option.</li>
+</ul>
+
+<p><a name="psbh_basis"></a><strong>SWITCH BASIS</strong> - Switch basis can be one of:</p>
+
+<ul>
+  <li><strong>Monetary amount</strong> - Switch units to the value of a given monetary amount per member. Before using this option, see the important note <a href="#monetary_amount">here</a>.</li>
+  <li><strong>Percentage of units</strong> - Switch a percentage of the members units. This is the default option and is the one it is envisaged will be used most often.</li>
+  <li><strong>Number of units</strong> - Switch a specific number of units per member.</li>
+</ul>
+
+<p><a name="psbh_prot_rts"></a><strong>INCLUDE PROT RTS</strong> - Specifies whether to include
+any protected rights contribution types in the switch. The default setting is to include <strong>all</strong> contribution
+types.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p><a name="2"></a>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit2.jpg" alt="Investment Switch Details Screen" /></p>
+
+  <p>Investment Switch Details Screen</p>
+</div>
+
+<p>This screen allows you to specify which fund(s) you wish to switch out of and, in
+the case of a switch, which fund you subsequenetly wish to switch into.</p>
+
+<p>Enter the switch out details as follows:</p>
+
+<p><a name="psbb_fund"></a><strong>FUND</strong> - Select the investment fund to switch out of.
+If you wish to switch out of all funds the member currently invests in, enter ‘ALL’
+in this field.</p>
+
+<p><a name="psbb_cont"></a><strong>CONT TYPE</strong> - Select the contribution type to switch
+out of. If you wish to switch out of all contribution types, enter ‘ALL’ in this field.</p>
+
+<p><a name="psbb_amount"></a><strong>AMOUNT</strong> - If you have indicated that the switch is
+on a ‘Monetary Amount’ basis, enter the amount you wish to realise per member from
+this fund.</p>
+
+<p><a name="psbb_percent"></a><strong>% UNITS</strong> - If you have indicated that the switch
+is on a ‘Percentage Of Units’ basis, enter the percentage of units you wish to realise
+per member from this fund. This must be betweeb 0% and 100%.</p>
+
+<p><a name="psbb_units"></a><strong>NUM UNITS</strong> - If you have indicated that the switch
+is on a ‘Number Of Units’ basis, enter the number of units you wish to realise per
+member from this fund.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p>Enter the switch in details as follows:</p>
+
+<p><a name="psbn_fund"></a><strong>FUND</strong> - Select rthe investment fund(s) to switch into.</p>
+
+<p><a name="psbn_percentage"></a><strong>PERCENTAGE</strong> - Enter the percentage of the total
+monetary amount realised by the sale to allocate to this fund.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The switch will now be processed.</p>
+
+<p><strong>Exception Report</strong></p>
+
+<p>If any exceptions have been found then you will be automatically taken into the exceptions
+report which details the problems found.</p>
+
+<p>Possible exception messages are:</p>
+
+<ul>
+  <li>There is already a switch from this fund on this date.</li>
+  <li>Unit sell price for fund is zero.Unable to determine number of units to sell for this fund.</li>
+  <li>Member does not have enough investments in this fund to realise the monetary amount requested.</li>
+  <li>Member does not have enough units available to realise the number of units requested.</li>
+</ul>
+
+<p>On closing the exceptions report, you will be returned to the main menu and the switch
+status flag will be set to ‘Switch failed’. You should then edit your investment switch
+instructions using the ‘Update’ option and re-run the switch.</p>
+
+<p>Alternativaly, you may delete the switch instruction using the ‘Delete’ option.</p>
+
+<p><a name="results_reports"></a><strong>Results Reports</strong></p>
+
+<p>If no exceptions have been found then the following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit4.jpg" alt="" /></p>
+
+</div>
+
+<p>This allows you to view and/or print the following reports:</p>
+
+<ul>
+  <li><strong>Details Report</strong> - Shows details of the switch you have requested as they appear on the screens you have entered for this switch.</li>
+  <li><strong>Sale Report</strong> - Shows details of the units to be sold for each fund that you have indicated you wish to switch out of. It is intended that you send this to each old fund(s) as your notification of the number of units to sell in that fund. You could accompany this with a suitable covering letter. The report can be produced in Summary or Detailed format as follows:
+    <ul>
+      <li><strong>Summary</strong> - one page per fund showing the total units to sell for each contribution type along with a total overall number of units to sell in that fund.</li>
+      <li><strong>Detailed</strong> - as for the Summary report except that units to be sold for each member concerned are also printed.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>When you have finished with the reports window, click on ‘OK’ to proceed or ‘Cancel’
+to return to the main menu.</p>
+
+<p>Switch entries are now created on each individual members record based on the member
+selection criteria and switch details you entered.</p>
+
+<p>The process of adding a switch is now complete. When you receive notification of units
+sold and sale value from the old fund(s), use the <a href="#Sell">Sell</a> option
+to complete the switch process for thus fund.</p>
+
+<p>The program now returns to the main menu.</p>
+
+<h2><a name="Query"></a>Query</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>This will display the following window which lists all known investment switches:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit5.jpg" alt="" /></p>
+
+</div>
+
+<p>Select the switch you require then click on ‘OK’.</p>
+
+<p>Click on ‘Cancel;’ to return to the main menu.</p>
+
+<h2><a name="Report"></a>Report</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>This displays the <a href="#results_reports">Results Reports</a> window as for the
+‘Add’ option and allows you to view/print details of the selected investment switch.</p>
+
+<h2><a name="Delete"></a>Delete</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>This allows you to delete an <a href="/pension/file_maintenance/pem_mem/#Investment Switches">Investment
+Switch</a> and all associated <a href="/pension/file_maintenance/pem_mem/#Investment History">Investment
+History</a> entries for this switch for all members included in the switch.</p>
+
+<p>You will not be allowed to delete a investment switch:</p>
+
+<ul>
+  <li>Where the entry on the members <a href="/pension/file_maintenance/pem_mem/#Investment History">Investment
+History</a> relating to the switch in has been posted to units.</li>
+  <li>Where there are any switches after date requested of the switch to be deleted for
+the a member.</li>
+</ul>
+
+<p>These will be reported as exceptions and the delete of the Investment Switch will
+be abandoned.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>This option will not only delete the switch, but will also delete
+the corresponding switch details on the selected individual member recrords and any
+entries in the members Investment History that are a result of this switch. We thus
+recommend you are sure you know what you are doing before using this option.</p>
+</div>
+
+<h2><a name="Menu"></a>Menu</h2>
+
+<p>Click ‘Menu’ to allow you to navigate between the various screens.
+Alternatively, you can click on the ‘1’ or the ‘2’ buttons at the bottom right of
+each screen.</p>
+
+<h2><a name="Sell"></a>Sell</h2>
+
+<p>Click ‘Sell’.</p>
+
+<p><a name="swit_opt"></a>The following window is now displayed, where you are prompted to choose whether you wish to enter Unit Prices or Sale Values for the funds you are switching out from:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit6.jpg" alt="Instruction Option Screen" /></p>
+
+  <p>Instruction Option Screen</p>
+</div>
+
+<p><a name="unit_price"></a>If you select to enter Unit Prices then the following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit3.jpg" alt="Unit Price Entry Screen" /></p>
+
+  <p>Unit Price Entry Screen</p>
+</div>
+
+<p><a name="sale_value"></a>If you select to enter Sale Values then the following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_swit7.jpg" alt="Sale Value Entry Screen" /></p>
+
+  <p>Sale Value Entry Screen</p>
+</div>
+
+<p>Either window has one line for each of the fund(s) you requested a switch out of. Enter
+the sale date for those funds you have received proceeeds from.</p>
+
+<p>If you have selected to enter Unit Prices, then if the unit price for the sale date entered exists on the system, then the unit price field is automatically filled in with this. If it’s not then the user will be prompted to enter one.</p>
+
+<p>If you have selected to enter Sale Values, then you will need to enter them in the Sale Value field.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The sale of investments for the entered fund(s) is now processed and you will be presented
+with the <a href="#results_reports">Results Reports</a> window as for the ‘Add’ option.</p>
+
+<p>When you have finished with the reports window, click on ‘OK’ to proceed or ‘Cancel’
+to return to the main menu.</p>
+
+<p>If you have entered sale details for all old fund(s), the switch status will be automatically
+set to ‘Switch finished’. If there are still some fund(s) for which you have not yet
+received the proceeds, the switch status will be automatically set to ‘Partially finished’
+and you should use the ‘Sell’ option again when you receive notification of the proceeds
+from the remaining fund(s).</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+<h2><a name="switch_status_codes"></a>Switch Status Codes</h2>
+
+<p>The possible switch status codes are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Description</th>
+          <th style="text-align: left">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Switch failed</td>
+          <td style="text-align: left">exception report produced</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Switch pending</td>
+          <td style="text-align: left">awaiting unit prices</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Partially finished</td>
+          <td style="text-align: left">some funds left to sell</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Switch finished</td>
+          <td style="text-align: left">fully processed</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="monetary_amount"></a>Switches Based On A Monetary Amount</h2>
+
+<p>If a request to switch funds based on a monetary amount is to be processed, it is <strong>imperative</strong> that
+the current unit sell price for that fund is ascertained and that is then used to
+determine the number of units to sell for the member. If the unit sell price drops
+between this time and the time of actual sale, the administrator should be aware that
+they will not realise the full amount required and vice-versa if the unit price increases
+in the meantime.</p>
+
+<p>It may be possible (and indeed desirable) for the scheme to have an agreement with
+their investment funds to sell units by telephone instruction at a sell price agreed
+in the phone call. This would then guarantee the correct amount would be realised
+for the sale.</p>
+
+<p>It is anticipated that this method of sale would be more suited to the insurance company
+in-house managed scheme where the unit sell prices are known in advance.</p>
+
+<h2><a name="Overview"></a>Overvew Of The Switch Process</h2>
+
+<h3>Stage 1 - Input the switch</h3>
+
+<ol>
+  <li>Use the ‘Add’ option to select the members you wish to apply the switch to.</li>
+  <li>Establish basic switch details such as date instruction received and any expenses to be taken in respect of the switch.</li>
+  <li>Establish what fund(s) to sell from and how much to sell. Sale method can be one of:
+    <ul>
+      <li>Monetary amount</li>
+      <li>Percentage of units</li>
+      <li>Number of units</li>
+    </ul>
+  </li>
+  <li>Now we must indicate where the proceeds from the switch are to be re-invested. This
+is done by entering a list of fund code(s) and percentage(s). The total of the percentage
+column must be 100% across all funds to switch into.</li>
+  <li>A unit sale report is then produced showing the number of units to sell for each fund
+concerned, each fund starting on a new page. The report has a summary section at the
+end and an option to print just the summary section is available. Send this printout (plus perhaps a covering letter) to each fund concerned requesting
+the sale of the requisite number of units.</li>
+</ol>
+
+<h3>Stage 2 - Sell Units From Old Fund(s)</h3>
+
+<p>The old fund(s) will inform us of:</p>
+
+<ul>
+  <li>number of units sold</li>
+  <li>sale date</li>
+  <li>unit price at which the units were sold</li>
+  <li>sale proceeds value</li>
+</ul>
+
+<p>Use the ‘Sell’ option to enter the sale date and value realised for each fund(s) to
+switch out of.</p>
+
+<p>Pension Master will then calculate each members share of the sale proceeds value.
+This is the amount each member has available to invest in the new fund(s). Any switch
+expenses are taken off the amounts (as appropriate) before sending the money to the
+new investment funds.</p>
+
+<h3>Stage 3 - Sell From All Old Fund(s)</h3>
+
+<p>Repeat stage 2 above until we have received and input the proceeds from <strong>all</strong> old
+fund(s). The switch process as far as Pension Master is concerned is now finished.</p>
+
+<h3>Stage 4 - Re-Invest Proceeds</h3>
+
+<p>Each members sale proceeds are split up between the new fund(s). A cheque for the
+total amount for each new fund(s) will be sent to each respective new investment fund(s).</p>
+
+<p>The new investment history entries against the new funds just become normal un-allocated
+contributions and can be picked up from here in the same way as normal un-allocated
+contributions.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

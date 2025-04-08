@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>#pay_elements_field(code)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the Member’s Pay Elements screen for
+the specified code. This will be taken from the pay elements file (py_melem).</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#pay_elements_field(code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>code - refers to the Elements Code that you wish to retrieve a Pay Elements Field
+for. This must be in UPPERCASE and must exist as a valid Pay Element Code. If a member
+does not have a Pay Elements record with a matching code, this function call will
+return a value of 0.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pay_elements_field must be a valid field on the Pay Elements file (py_melem).</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pym_amount(PA766)
+#pym_ytd(PD12) 
+</code></pre>
+
+<h2><a name="02"></a>paymem_hist(hist_fld,date)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this function to extract member’s pay history details depending on the history
+field and date entered.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>paymem_hist(hist_fld,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>hist_fld - is a reference to a pay history field.</li>
+  <li>date - refers to the Date Processed on the pay history table.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The pay history field must exist on the Member’s History table (py_hist).</li>
+  <li>The date entered must either be in the format yyyymmdd or be a reference to a previous line.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>paymem_hist(pyh_gross,20020101)
+paymem_hist(pyh_net,@1) 
+</code></pre>
+
+<h2><a name="03"></a>#payroll_history_field(date)</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>This is only available to Payroll Master users.</p>
+</div>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this to refer to the value of a field on the Member’s History screen for the specified
+code. This will be taken from the history file (py_hist).</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>#payroll_history_field(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - refers to the Date Processed on the history table. If a member does not have
+a history record, this function call will return a value of 0.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date entered must either be in the format yyyymmdd, a reference to a previous
+line or a valid date from the Basic Member Details screen.</li>
+  <li>payroll_history_field must be a valid field on the history file (py_hist).</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pyh_gross(20020101)
+#pyh_net(@1) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

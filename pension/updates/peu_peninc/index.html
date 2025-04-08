@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Pension Increase Run</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Pension Increase Run</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Provisional Increase">Provisional Increase</a></li>
+  <li><a href="#Actual Increase">Actual Increase</a></li>
+  <li><a href="#Undo Increase">Undo Increase</a></li>
+  <li><a href="#Delete Increase Parameter">Delete Increase Parameter</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>The Pension Increase Run calculates new pension values based upon either a percentage
+rate or the result of a formula.</p>
+
+<p>The program is split into 4 main sections described as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Provisional</strong></td>
+          <td>This allows an increase run to be performed but <strong>does not update</strong> the Pension/Deferred Pension History.</td>
+        </tr>
+        <tr>
+          <td><strong>Actual</strong></td>
+          <td>This allows an increase run to be performed and <strong>does update</strong> the Pension/Deferred Pension History.</td>
+        </tr>
+        <tr>
+          <td><strong>Undo</strong></td>
+          <td>This allows an increase run to be removed from the Pension/Deferred Pension Increase History screen and reverts the values on the History screen back to before the Actual Increase run was performed.</td>
+        </tr>
+        <tr>
+          <td><strong>Delete</strong></td>
+          <td>This allows a previously saved Increase Parameter to be removed.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The members that are increased can be selected using standard <a href="/pension/appendices/app_b/#Simple Selection Criteria">Simple
+Selection Criteria</a> (i.e. Scheme, Company, Category, Status, Special Code and Member).
+A list of Pension Codes currently allocated to the scheme is displayed allowing either
+all the codes to be updated with a global Formula/Fixed Rate or to be increased individually.</p>
+
+<p>The information used to select the members and the specific increase information used
+against each Pension Code can be saved as an individual set of parameters (known as
+a Pension Increase Parameter Set). These parameters are specific to each scheme and
+each pension type, for either Deferred Pension or Pension increases. This allows them
+to be saved, using a descriptive name, for future use.</p>
+
+<p>Select the Pension Increase Run option from the Updates menu.</p>
+
+<p>The following options and screen is displayed:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Undo</li>
+  <li>Delete</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pisel1.jpg" alt="Pension Increase Run Screen" /></p>
+
+  <p>Pension Increase Run Screen</p>
+</div>
+
+<h2><a name="Provisional Increase"></a><a name="prov"></a>Provisional Increase</h2>
+
+<p>Click ‘Run’, and then select the ‘Provisional’ option from the pop-up window.</p>
+
+<p>This option allows an increase run to be performed but <strong>does not update</strong> the
+Pension/Deferred Pension History.</p>
+
+<p>A small Run Parameters window is displayed allowing basic details of the Pension Increase
+Run to be entered:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pirp2.jpg" alt="Run Parameters Window" /></p>
+
+  <p>Run Parameters Window</p>
+</div>
+
+<p>This window allows additional run parameters to be entered as follows:</p>
+
+<p><a name="pp_scheme"></a><strong>SCHEME</strong> - Enter the Scheme Code or select a code from
+the lookup list. The code that is entered will be used to select only members for
+this scheme. It will also allow any increase parameters that are saved to be re-used
+for increases to this scheme.</p>
+
+<p><a name="pp_type"></a><strong>PENSIONER/DEFERRED PENSIONER</strong> - Click on a button to select
+either Pensioners or Deferred Pensioners to be increased. If no option is selected
+then Pensioner will be selected by default.</p>
+
+<p><a name="incr_pp_date"></a><strong>INCREASE DATE</strong> - Enter the date from which your pension
+increases are applicable in the format ddmmyy or dd/mm/yyyy. A value must be entered
+in this field and the date must be a valid date.</p>
+
+<p>This date is used to update the Date of Last Increase on the History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension History Screen">Pension
+History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension History Screen">Deferred Pension
+History</a>) and also to generate a new line on the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a>).</p>
+
+<p><a name="incr_pp_saved"></a><strong>USE A SAVED INCREASE PARAMETER?</strong> - Check the tick
+box if you wish to select a previously saved Increase Parameter.</p>
+
+<p>If you are using a saved Increase Parameter then a lookup list will be displayed showing
+all the saved parameters for that particular scheme and pension type (either Pensioner/Deferred
+Pensioner).</p>
+
+<p>When the Run Parameters have been entered, click ‘OK’ to proceed or click ‘Cancel’
+to return to the main menu.</p>
+
+<p>The following selection criteria screen will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pisel2.jpg" alt="Provisional Pension Increase Run Screen" /></p>
+
+  <p>Provisional Pension Increase Run Screen</p>
+</div>
+
+<p>If an Existing Increase has been selected from the Run Parameter window then the name
+of the parameter file selected will appear at the top of the screen. The screen will
+also be pre-filled with any information that was used as selection criteria when the
+original increase as saved.</p>
+
+<p><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><a name="psft_code"></a><a name="pm_member"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to run pension increases for
+using the Company, Category, Status, Special Code and Member fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed or click on
+‘Cancel’ to return to the main menu.</p>
+
+<p>A confirmation message will be displayed if no selection criteria has been entered.
+This simply states that all members have been selected and that the processing could
+possibly take some time.</p>
+
+<p>The following screen is displayed if Pensioners have been selected using the Run Parameter
+window:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_picod1.jpg" alt="Provisional Pension Increase Run Screen" /></p>
+
+  <p>Provisional Pension Increase Run Screen</p>
+</div>
+
+<p>The following screen is displayed if Deferred Pensioners have been selected using
+the Run Parameter window:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_picod2.jpg" alt="Provisional Pension Increase Run Screen" /></p>
+
+  <p>Provisional Pension Increase Run Screen</p>
+</div>
+
+<p>When the increase information has been entered click on ‘OK’ to proceed or click on
+‘Cancel’ to return to the main menu.</p>
+
+<p>NOTE: If an Existing Increase has been selected: A check is made at this point
+to ensure that there is no descrepancy between the Pension Codes saved and Pension
+Codes allocated to the scheme. A message will be displayed showing any Pension Codes
+that have been allocated to, or removed from, the scheme since the increase was saved.
+Any new Pension Codes will be displayed with no formula or fixed rate against it.</p>
+
+<p>This screen displays all the Pension Codes, and descriptions, of the members that
+have been selected using the selection criteria. The screen allows global or individual
+Pension Codes to be increased by either the result of a Formula Code or by a Fixed
+% Rate. For example to increase Pensioners:</p>
+
+<ul>
+  <li>If you want to increase all the Pension Codes, for the members, by the same percentage
+then enter a Fixed % Rate in the global section on the member line. The Global Pro
+Rata field can be ticked as required and a Global Reason for Increase Code must be
+entered. When the global details have been entered the information will be copied
+down the screen against each of the Pension Codes.</li>
+  <li>If you want to increase a single Pension Code, for spouses, using the result of a
+formula then click in the field required, and enter a valid Formula Code against the
+Pension Code on the spouses line. Also a valid Reason for Increase Code must be entered.</li>
+</ul>
+
+<p>The fields on this screen vary depending on whether you have selected Pensioner or
+Deferred Pensioner in the Run Parameter window:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>For Pensioners</td>
+          <td>Members and Spouses pension values can be increased.</td>
+        </tr>
+        <tr>
+          <td>For Deferred Pensioners</td>
+          <td>Members and Spouses (Before and After the Normal Pension Date) pension values can be increased.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The fields are described as follows:</p>
+
+<p><a name="pm_formula"></a><a name="ps_formula"></a><a name="pb_formula"></a><a name="pa_formula"></a><strong>FORMULA
+CODE</strong> - Enter a valid Formula Code or select a code from the lookup list. If a
+Formula Code is entered with a Fixed % Rate on the same line then an error message
+is displayed indicating that one of them must be removed. Any Formula Code that is
+entered on the global line will be automatically entered into the Formula Code fields
+against each of the Pension Codes.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The Formula must have previously been entered into the formula file using <a href="/pension/file_maintenance/calculation_setup/pem_form/#Introduction">Formulae</a>.
+It should be checked to ensure that the formula correctly calculates an INCREASE VALUE
+ONLY. If the formula generates an inaccurate value, then the Exception Report will
+ONLY detect any new pension value that is more or less than 100% different from the
+original value.</p>
+</div>
+
+<p>The calculation used is as follows (All the calculations should be rounded to 8 decimal
+places unless otherwise stated):</p>
+
+<div class="well">
+  <p>New Pension Value = (Current Pension + Formula Result) / Pay Frequency (Rounded to 2 decimal places)</p>
+
+  <p>New Pension Value = Pay Frequency * New Pension Value</p>
+</div>
+
+<p><a name="pm_rate"></a><strong>FIXED % RATE</strong> - Enter a Fixed Percentage Rate. If a Fixed
+Percentage Rate is entered with a Formula Code on the same line then an error message
+is displayed indicating that one of them must be removed. Any rate that is entered
+on the global line will be automatically entered into the Fixed Percentage Rate fields
+against each of the Pension Codes.</p>
+
+<p>The calculation used is as follows (All the calculations should be rounded to 8 decimal
+places unless otherwise stated):</p>
+
+<div class="well">
+  <p>New Pension Value = (Current Pension / Pay Frequency) * (Fixed % Rate / 100 + 1) (Rounded to 2 decimal places)</p>
+
+  <p>New Pension Value = Pay Frequency * New Pension Value</p>
+</div>
+
+<p><a name="pm_pro_rata"></a><a name="ps_pro_rata"></a><a name="pb_pro_rata"></a><a name="pa_pro_rata"></a><strong>PRO
+RATA</strong> - Tick this box if a Pro Rata increase should be calculated. This will determine
+the fraction of the Formula/Fixed % Rate increase based on the following:</p>
+
+<ul>
+  <li>If the member is a New Pensioner (a pensioner that has had no previous increases)
+then the partial year is determined from the <a href="/pension/file_maintenance/pem_mem/#ppa_dt_commence">Date
+to Commence</a> to the Increase Date.</li>
+  <li>If the member is a New Widower (a widower that has had no previous increases) then
+the partial year is determined from the <a href="/pension/file_maintenance/pem_mem/#pps_orig_mem_st_dt">Original
+Members Start Date</a> to the Increase Date.</li>
+  <li>If the member is a New Deferred Pensioner (a deferred pensioner that has had no previous
+increases) then the partial year is determined from the <a href="/pension/file_maintenance/pem_mem/#pm_dtlft">Date
+Left</a> to the Increase Date.</li>
+  <li>If the member is a Pensioner/Widower/Deferred Pensioner who has had a previous increase
+for a pension element then the partial year is determined from the Date of Last Increase
+to the Increase Date.</li>
+</ul>
+
+<p>Note: When using a Pro Rata increase, the increase will be calculated for both new
+and existing Pensioners/Deferred Pensioners using the rules above.</p>
+
+<p>If the partial year includes the 29th February, obviously of a leap year, then the
+number of days in the calculation below will be 366. Otherwise the number of days
+will be 365.</p>
+
+<p>The calculation used for a Fixed % Rate is as follows (All the calculations should
+be rounded to 8 decimal places unless otherwise stated):</p>
+
+<div class="well">
+  <p>New Pension Value = (Current Pension / Pay Frequency) * ((Fixed % Rate * (Period in Days / 365)) / 100 + 1) (Rounded to 2 decimal places)</p>
+
+  <p>New Pension Value = Pay Frequency * New Pension Value</p>
+</div>
+
+<p>The calculation used for a Formula is as follows:</p>
+
+<div class="well">
+  <p>New Pension Value = (Current Pension + ((Formula Result / 365) * Period in Days)) / Pay Frequency (Rounded to 2 decimal places)</p>
+
+  <p>New Pension Value = Pay Frequency * New Pension Value</p>
+</div>
+
+<p><a name="pm_rounding"></a><a name="ps_rounding"></a><a name="pb_rounding"></a><a name="pa_rounding"></a><strong>ROUNDING</strong> - Enter a figure here if you want Rounding to be applied to the final figure. 
+An entry of 0.05 will round the final figure to the nearest 5c.</p>
+
+<p><a name="p_reason_code"></a><strong>REASON FOR INCREASE CODE</strong> - Enter a valid Reason
+for Increase Code or select a code from the lookup list. A Reason Code must be entered
+if a Formula Code or Fixed % Rate is entered on the line.</p>
+
+<p>This code is used to describe the type of increase that has been performed. It is
+shown on the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a>) on the new line generated by the increase run.</p>
+
+<p>When the increase information has been entered, click ‘OK’ to proceed or click ‘Cancel’
+to return to the main menu. Only codes that have a Formula or a Fixed % Rate are processed.</p>
+
+<p><a name="save"></a>If you selected a New Increase in the Run Parameters window or
+if you selected an Existing Increase (and have changed some of the parameters) then
+you will be asked if you wish to save this set of parameters. A small window will
+appear prompting you to enter a suitable name. If the name you have entered already
+exists then you will be asked to confirm that you want to overwrite these details.</p>
+
+<p>Two reports are generated after the calculation of the pension increases:</p>
+
+<p><strong>EXCEPTION REPORT</strong> - If any exceptions have been found then the number of exceptions
+will be displayed and you will be asked if you wish to view or print the report.</p>
+
+<p>This report details any problems that have been found during the calculation of 
+pension increases. Usually a problem may occur because of existing pension details.
+Where applicable the Pension Code and it’s Description are printed along with a comment
+describing the problem that has been found. Possible exception messages are:</p>
+
+<ul>
+  <li>No Pensioner Records Found.</li>
+  <li>Reason for Increase Code (RPENINC) is not allocated to this Scheme.</li>
+  <li>Date to Commence (07/07/1999) is after the Increase Date.</li>
+  <li>Date of Cessation (01/01/1999) is before the Increase Date.</li>
+  <li>Date of Last Inc. (02/02/1999) is on or after the Increase Date.</li>
+  <li>Formula Code (A550) not found in Scheme.</li>
+  <li>Pension increase (from 10123.45 to 20123.45) is greater than 100%.</li>
+  <li>Pension increase (from 20123.45 to 10123.45) is less than -100%.</li>
+  <li>The formula has not returned a numeric value.</li>
+</ul>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p><strong>INCREASE REPORT</strong> - If any pension increases have been successfully calculated
+then the number of increases will be displayed and you will be asked if you wish to
+view or print the report.</p>
+
+<p>The report shows:</p>
+
+<ul>
+  <li>Member details.</li>
+  <li>The Pension Code that has been increased and it’s description.</li>
+  <li>Details of the calculation used for the Pension Code.</li>
+  <li>The pension values both before and after the increase.</li>
+</ul>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Actual Increase"></a>Actual Increase</h2>
+
+<p>Click ‘Run’, and then select the ‘Actual’ option from the pop-up window.</p>
+
+<p>This option allows an increase run to be performed and <strong>does update</strong> the Pension/Deferred
+Pension History.</p>
+
+<p>The Actual Increase run is performed in the same way as the Provisional Increase run
+except that the members details are updated.</p>
+
+<p>When you have checked that the selected members will be increased by the amount required,
+you will be asked to confirm that you wish to update the number of increases generated.
+If you have selected ‘Yes’ you will then be asked to re-confirm that you wish to update
+these increases. If you select ‘No’ at any time you will be returned to the menu with
+no further action taking place.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>When the Actual Increase is performed the program may encounter Pensioner or Deferred
+Pensioner records that are locked by other users on the system. These locked records
+will appear on the Exception Report with a comment of ‘Record locked’. It is
+therefore important that this report is checked to ensure that ALL the selected members
+values have been increased by the required amount.</p>
+</div>
+
+<h2><a name="Undo Increase"></a>Undo Increase</h2>
+
+<p>Click ‘Undo’.</p>
+
+<p>This allows an increase run to be removed from the Pension/Deferred Pension Increase
+History screen and reverts the values on the History screen back to before the Actual
+Increase run was performed.</p>
+
+<p>A small Run Parameters window is displayed allowing basic details of the Pension Increase
+Undo to be entered:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pirp4.jpg" alt="Run Parameters Window" /></p>
+
+  <p>Run Parameters Window</p>
+</div>
+
+<p>This window allows additional undo parameters to be entered as follows:</p>
+
+<p><a name="pp_scheme"></a><strong>SCHEME</strong> - Enter the Scheme Code or select a code from
+the lookup list. The code that is entered will be used to select only members for
+this scheme.</p>
+
+<p><a name="pp_type"></a><strong>PENSIONER/DEFERRED PENSIONER</strong> - Click on a button to select
+either Pensioners or Deferred Pensioners to be undone. If no option is selected then
+Pensioner will be selected by default.</p>
+
+<p><a name="undo_pp_date"></a><strong>UNDO INCREASE DATE</strong> - Enter the date that you want
+to undo in the format ddmmyy or dd/mm/yyyy. A value must be entered in this field
+and the date must be a valid date.</p>
+
+<p>This date is used to change the Date of Last Increase on the History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension History Screen">Pension
+History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension History Screen">Deferred Pension
+History</a>) to the previous increase date, if any. Also it will delete the corresponding
+lines on the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a>).</p>
+
+<p><a name="undo_pp_saved"></a><strong>UNDO A SAVED INCREASE?</strong> - Check the tick box if
+you wish to select a previously saved Increase Parameter to undo.</p>
+
+<p>When the Run Parameters have been entered, click ‘OK’ to proceed or click ‘Cancel’
+to return to the main menu.</p>
+
+<p>If New Undo has been selected then the following selection criteria screen will be
+displayed:</p>
+
+<p>If Undo Existing Increase has been selected then a lookup list will be displayed showing
+all the saved parameters for that particular scheme and pension type (either Pensioner/Deferred
+Pensioner). Upon selecting a parameter from the list the following selection criteria
+screen will be displayed showing the saved information:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pisel3.jpg" alt="Pension Increase Undo Screen" /></p>
+
+  <p>Pension Increase Undo Screen</p>
+</div>
+
+<p>When the selection criteria has been entered, click ‘OK’ to proceed or click ‘Cancel’
+to return to the main menu.</p>
+
+<p>The following screen shows all the codes that have been found using the above criteria.
+This criteria also includes the Scheme, Pension type and the Date of Increase that
+was entered using the Run Parameter Window.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_piundo.jpg" alt="Pension Increase Undo Screen" /></p>
+
+  <p>Pension Increase Undo Screen</p>
+</div>
+
+<p><a name="p_undo"></a><strong>UNDO</strong> - Tick the box to select the Pension Code to undo.
+If the undo box on the global line is ticked then all the Pension Codes will be undone.</p>
+
+<p>NOTE: Only the last increase can be removed from Pension/Deferred Pension Increase
+History. If a date is entered that is not the last increase then a ‘No Members have
+been selected with this criteria.’ error message will be displayed. This is because
+checks will be made against the Pension/Deferred Pension History screen to find information
+that matches the criteria entered.</p>
+
+<p>After the processing has been completed you will be asked if you wish to view the
+increases that will be undone. The Undo Report contains the following information:</p>
+
+<ul>
+  <li>Member details.</li>
+  <li>The Pension Code that has been changed and it’s Description.</li>
+  <li>Details from the Increase History screen (see <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> and <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a>). This shows all the pension details that will be removed
+and also the information which will then be current. If only the existing data is
+printed and no historical data, then the existing data will be deleted from the <a href="/pension/file_maintenance/pem_mem/#Pension Increase History Screen">Pension
+Increase History</a> or <a href="/pension/file_maintenance/pem_mem/#Deferred Pension Increase History Screen">Deferred
+Pension Increase History</a> screen.</li>
+</ul>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>When you have checked that the procedure will remove the correct increase details,
+you will be asked to confirm that you wish to remove the number of increases found.
+If you have selected ‘Yes’ you will then be asked to re-confirm that you wish to remove
+these increases. If you select ‘No’ at any time you will be returned to the menu with
+no further action taking place.</p>
+
+<h2><a name="Delete Increase Parameter"></a><a name="delete"></a>Delete Increase Parameter</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>This option allows Increase Parameters to be deleted.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_pidel.jpg" alt="Delete Pension Increase Parameters Screen" /></p>
+
+  <p>Delete Pension Increase Parameters Screen</p>
+</div>
+
+<p>The fields are described as follows:</p>
+
+<p><a name="pd_type"></a><strong>PENSIONER/DEFERRED PENSIONER</strong> - Click on a button to select
+either Pensioner or Deferred Pensioner Increase Parameters to delete. If no option
+is selected then Pensioners will be selected by default.</p>
+
+<p><a name="pd_scheme"></a><strong>SCHEME</strong> - Enter the Scheme Code or select a code from
+the lookup list. The code that is entered will be used to select the increase parameters
+for this scheme.</p>
+
+<p><a name="pprh_incr_desc"></a><strong>DESCRIPTION</strong> - Double click on the description
+required or move the cursor using the arrow keys and press return.</p>
+
+<p>You will be asked to confirm that these are the Increase Parameters that you wish
+to remove. If you have selected ‘Yes’ you will be asked to re-confirm that you wish
+to remove these Increase Parameters. If you select ‘No’ at any time you will be returned
+to the menu with no further action taking place.</p>
+
+<h2><a name="Exit"></a>Exit</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

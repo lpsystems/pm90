@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Pay Elements Load</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085244" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Pay Elements Load</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Data Load">Run A Data Load</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to load pay element data from a file. The data
+is loaded into a batch held in <a href="/payroll/maintenance/py_elem/">Pay Elements</a>.
+By entering the required details through the selection criteria, the program will
+first check that the details are correctly entered. Secondly, the fields
+which make up the data line will be checked for the correct format, which is show
+below:</p>
+
+<ul>
+  <li>Identifier</li>
+  <li>Pay Element Code</li>
+  <li>Start Date</li>
+  <li>End Date</li>
+  <li>Pay Element Amount</li>
+</ul>
+
+<p>If all the data lines held within the data file are correct, they are loaded into
+the database. If the data is incorrect, a report is produced informing the
+user of the errors in the file. Examples of good and bad data lines are shown
+in the table below:</p>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Good Data Lines</th>
+          <th style="text-align: left">Bad Data Lines</th>
+          <th style="text-align: left">Reason for Bad Data Line</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">987654,PA12,01/01/2020,01/02/2020,90.00</td>
+          <td style="text-align: left">987654,hello,01/01/2020,01/02/2020,TEST</td>
+          <td style="text-align: left">Character(s) in numeric field</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A2345,PD23,01/01/2020,,7.00</td>
+          <td style="text-align: left">ZZZZZZZZZZ,PX12,01/01/2020,,8.00</td>
+          <td style="text-align: left">Invalid Pay Element Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A456A,PA12,,01/02/2020,19.00</td>
+          <td style="text-align: left">AB1234,P234,,01/02/2020,19.00,10.00</td>
+          <td style="text-align: left">Incorrect number of columns</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">A456A,PA12,01/01/2020,01/02/2020,19.00</td>
+          <td style="text-align: left">AB1234,P234,01/03/2020,01/02/2020,19.00</td>
+          <td style="text-align: left">Start Date cannot be after End Date</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The program has one main objective; which is to load pay element data provided by
+the user via a data file:</p>
+
+<ol>
+  <li>The data file must be in the required format.</li>
+  <li>To achieve this the user should use a software package, like Microsoft Excel,
+to reformat the data file prior to using this program.</li>
+</ol>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Load</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_eload.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="Run a Data Load"></a>Run a Data Load</h2>
+
+<p>Click ‘Load’.</p>
+
+<p>Enter the selection criteria required.</p>
+
+<p><a name="sch_code"></a><strong>SCHEME CODE</strong> - Enter the scheme code. This is the scheme
+that the pay element data will be loaded onto. Click the lookup icon to see a
+list of scheme codes. This field must be input for the process to continue.</p>
+
+<p><a name="ref_code"></a><strong>REFERENCE CODE</strong> - Enter the reference code for the
+data. This is used to determine which member record on Payroll Master each line
+of data applies to. You can link data records to Payroll Master members by using
+NI/PRSI Number, Payroll Number or Member Number.</p>
+
+<p>For the Data Load to work the first data item on each line must be the identifier.
+For example; if the data file holds NI/PRSI numbers as the first field on each line
+of data, NI/PRSI Number should be selected as the ‘Reference Code’ field on Payroll
+Master. The system will match up lines of data by using NI/PRSI Number to load information
+onto specific records.</p>
+
+<p>If Payroll Master is unable to match up any data lines with member records an
+errors report will be produced. This will outline details of the records involved
+and suggest how to enable the data load to work. An example of this is outlined
+below.</p>
+
+<p>To select, click on the required reference code. This field is mandatory. Data must
+be entered so that the loading process can continue.</p>
+
+<p><a name="filename"></a><strong>FILENAME</strong> - A window opens as follows:</p>
+
+<p><img src="/payroll/images/py_eload2.jpg" /></p>
+
+<p>This window allows you to load up data, held in a data file, directly from your
+PC’s hard drive or floppy drive.</p>
+
+<p>Select your data file, then click on the Open button.</p>
+
+<p>If the data file is held on the Payroll Master server it is possible to enter the
+name of the file straight onto the screen. To do this, click ‘Cancel’ and type the
+name of the file. Please note, in these circumstances the data file needs to be
+in the same directory as the Payroll Master programs on the server.</p>
+
+<p>If a filename is input that does not exist then an error message will display informing
+the user of this and a valid filename should be re-input.</p>
+
+<p>If the data file contains blank lines or is empty the program will display an appropriate
+message and return the user to the main menu.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>The program expects the data file entered to be complete with no blank lines. Also
+it assumes that the data file contains a block of data only and does not contain
+field headers or footers.</p>
+
+  <p>Any errors found in the data file will be reported to the Exceptions Report detailed
+later in this section.</p>
+
+</div>
+
+<p>This field is mandatory. A filename must be entered so that the loading process
+can continue.</p>
+
+<p><a name="delimiter"></a><strong>DELIMITER</strong> - Enter the Delimiter, which is a character
+used to separate each of the fields in the data file. This should be either
+of the following:</p>
+
+<ul>
+  <li>a comma (,)</li>
+  <li>a pipe (|)</li>
+  <li>a colon (:)</li>
+  <li>a semi-colon (;)</li>
+</ul>
+
+<p>The program checks to make sure that the delimiter entered by the user is the same
+as the delimiter used in the data file. If the delimiter is not the same,
+then the program displays the following error message:</p>
+
+<div class="well">
+
+  <p>Delimiter not found in data line n.</p>
+
+</div>
+
+<p>where n represents the line number.</p>
+
+<p>The program will then send the user back to the beginning of the selection criteria,
+prompting them to enter the information again, this time correctly.</p>
+
+<p>This field must have a delimiter entered into it in order for the loading process
+to continue.</p>
+
+<p>When the selection criteria has been entered click ‘OK’ to proceed. You can
+click ‘Cancel’ to return to the proceed menu and to abort the selection fields.</p>
+
+<p>When the selection is complete a message is displayed at the bottom of the screen:</p>
+
+<p>Checking Data. Please Wait…</p>
+
+<p><a name="pop-up window"></a>If any of the data lines use an indicator that belongs
+to more than one member e.g. two members have the same NI Number, a pop-up window
+is displayed which asks the user to select which member they require.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_eload3.jpg" alt="Pop-up Window" /></p>
+
+  <p>Pop-up Window</p>
+</div>
+
+<p>If the user clicks ‘Cancel’ then the pop-up window is closed. An error message
+is then sent to the exceptions report as the user has not selected which member
+the data line is intended for.</p>
+
+<p>When the data has been checked, if there are any errors found in the data then an
+error message box appears on the screen stating:</p>
+
+<div class="well">
+
+  <p>There are n error(s) in this file. Do you wish to print the exception report?</p>
+
+</div>
+
+<p>where n represents a number.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_eload4.jpg" alt="Error Warnings" /></p>
+
+  <p>Error Warnings</p>
+</div>
+
+<p>After clicking ‘Yes’ on this message, a report is displayed to the screen.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Payroll Master</a>.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>If errors are found, then it is the user’s responsibility to go into the data file
+and correct these errors, as listed in the exceptions report.</p>
+
+</div>
+
+<p>However, when the data has been checked, and there are no errors found in the data
+then the program will display another message:</p>
+
+<div class="well">
+
+  <p>Your data is in the required format and does not contain any formatting errors.</p>
+
+  <p>Do you want to continue and load the data?</p>
+
+</div>
+
+<p>On clicking ‘No’ the program will return back to the main menu.</p>
+
+<p>On clicking ‘Yes’ the program displays a message window showing the batch number
+this data has been loaded into.</p>
+
+<p>On clicking ‘OK’ the program will return back to the first screen ready for the
+next data load.</p>
+
+<p>Once the data has been loaded into a batch file, see <a href="/payroll/updates/py_ebat/#Introduction">
+Pay Element Batch Input,</a> it should be checked by the user. This can be done
+by viewing the screen or using the printer options before the data is posted to
+the member records.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:52:44.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Contribution Request Run</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085401" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Contribution Request Run</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program calculates expected contributions for a specified group of members. If
+successful, these are loaded into a <a href="/pension/updates/pem_bat/">Contribution Batch</a> for
+onward processing.</p>
+
+<p>It is intended that you send the schedule produced by this program to your client
+to request the contributions that are then due. The client should then ensure they
+deduct these contributions from the member and send you full details. These will then
+be reconciled against what was expected in <a href="/pension/updates/pem_bat/">Batch Data Input</a>.</p>
+
+<p>The contribution amounts are calculated by reference to the <a href="/pension/file_maintenance/pem_mem/#Contribution Rate Percentages">Contribution
+Rate Percentages</a> screen in the member file for each selected member. If, for a
+selected member, there are no details held in this screen, the values are defaulted
+to those set up in the <a href="/pension/file_maintenance/pem_cat/#Contribution Rate % Defaults">Contribution
+Rate Defaults</a> screen in Categories for the members category.</p>
+
+<p>Note that types EEPR and ERPR are only calculated for members who are on NI Table
+F i.e. an entry of ‘F’ is in the <a href="/pension/file_maintenance/pem_mem/#pm_nitab">NI Table</a> field
+on the <a href="/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a> 
+in the members record.</p>
+
+<p>If a contribution type is setup to use a <a href="/pension/file_maintenance/calculation_setup/pem_form/">Formulae</a>, the
+calculation date used will be the date you enter into <a href="#pmc_due">DATE DUE</a> on
+screen 2 of the Contribution Request Run. Thus, for example, if the formulae
+used involved <a href="/pension/file_maintenance/calculation_setup/pem_fac/">factor</a> tables, these will be looked up using
+the date due you enter.</p>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Exit">Exit</a></li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_cont1.jpg" alt="Contributions Request Run Selection Screen" /></p>
+
+  <p>Contributions Request Run Selection Screen</p>
+</div>
+
+<h2><a name="Run"></a>Run</h2>
+
+<p>Click ‘Run’.</p>
+
+<p>You will first be asked if you wish this to be a Provisional or an Actual run. A provisional
+run is the same as an actual run except no details are saved to the database.</p>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to run the Contributions
+Request Run for using the Scheme, Company, Category, Status, Special Code and Member
+fields. When the selection criteria have been entered click ‘OK’ to proceed or click
+‘Cancel’ to return to the main menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_cont2.jpg" alt="Contributions Request Run Options Screen" /></p>
+
+  <p>Contributions Request Run Options Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pmc_due"></a><strong>DATE DUE</strong> - Enter the date due for your contributions.
+This is the date the contributions are or should have been deducted from the members
+salaries.</p>
+
+<p><a name="pmc_type"></a><strong>TRANSACTION TYPE</strong> - Enter a transaction type for your
+contributions. Click the lookup icon to see a list of the available transaction types.</p>
+
+<p><a name="s_report_type"></a><strong>REPORT TYPE</strong> - Specify whether you want to produce
+a summary or detailed report. These reports are the same except that the detailed
+report gives a member by member breakdown of the contribution request details.</p>
+
+<p><a name="s_group_by"></a><strong>GROUP BY COMPANY</strong> - Check this option if you wish to
+sort your report by company code. Otherwise all records will be grouped as if they
+are from the same company. This option is useful if you are sending out contribution
+request schedules to multiple locations.</p>
+
+<p>When you have entered these details, click ‘OK’ to proceed or ‘Cancel’ to return to
+the main menu.</p>
+
+<p>The contribution request amounts will now be calculated.</p>
+
+<p>A report may be generated after the calculation:</p>
+
+<p><strong>EXCEPTION REPORT</strong> - If any exceptions have been found then you will be asked
+if you wish to view or print the report.</p>
+
+<p>This report details any problems that have been found during the calculation of 
+the contribution request amounts. Details are printed describing the problem that
+has been found. Possible exception messages are:</p>
+
+<ul>
+  <li>Contribution frequency is not setup for this category of members.</li>
+  <li>For percentage of salary calculations, no salary is available for a member in the
+scheme year of the contribution due date.</li>
+  <li>A contribution type has been found for which there are no details set up on the members
+Contribution Rate Defaults screen.</li>
+  <li>If a contribution is being calculated by a <a href="/pension/file_maintenance/calculation_setup/pem_form/">formula</a>, the
+formula is returning a non-numeric value.</li>
+</ul>
+
+<p>On closing the exceptions report, you will be returned to the main menu and any calculated
+contribution request amounts will not be saved.</p>
+
+<p><strong>RUN REPORT</strong> - If exceptions have not been found then a run report will be displayed
+to the screen.</p>
+
+<p>This report details the contribution request amounts which will be saved to a batch.
+The number of the generated batch will be displayed to the screen. You should take
+a note of this.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The program will then return to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:01.</p>
+      </div>
+    </div>
+  </body>
+</html>

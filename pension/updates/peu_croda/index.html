@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Croda Monthly Data Load</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Croda Monthly Data Load</h1>
+        </div>
+      
+
+      
+<h2><a name="index"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#format">Datafile Layouts</a></li>
+  <li><a href="#dataload">Data Load</a></li>
+  <li><a href="#run_a_data_load">Run a Data Load</a></li>
+  <li><a href="#exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to load data into Pension Master from external data
+files for contributions/nis, salaries and addresses.</p>
+
+<p>The program goes through a checking process, to check that the format and validity of the data is correct. If any problems are found, e.g. a date value is trying to be put into
+a decimal field, or if a staff number/NI number doesn’t exist on Pension Master then a warnings report will be generated informing the user of
+this. The warnings report will not stop the user from continuing to load the data, however, any data lines found with a warning will not be processed.</p>
+
+<p>The external data files being used must be tab delimitered. In order for
+the user to ensure this, they should use a software package, like Microsoft Excel, to save the spreadsheets as Text (Tab delimitered) prior to using this program.</p>
+
+<h2><a name="format"></a>Datafile Layouts</h2>
+
+<p>This program can load from up to a maximum of 4 datafiles. Each datafile chosen MUST be in a certain layout/format and contain no headers or footers.</p>
+
+<p><strong>CONTRIBUTION AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+
+<p>Staff Number
+<br />Name
+<br />Exec 6% E&amp;M
+<br />Exec 6% H
+<br />Exec Vol
+<br />Group 6% B
+<br />Group 6% SL
+<br />Group Vol
+<br />Pen Specials 1/80
+<br />EE/ET up to ER/ET
+<br />NI Code
+<br />Pens Scheme No</p>
+
+<p><strong>SALARY AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+
+<p>Staff Number
+<br />Name
+<br />Commission
+<br />Shift Allowance
+<br />Bonus
+<br />Xmas Bonus
+<br />Annual Salary
+<br />NI Code
+<br />Div/Unit
+<br />NI Number
+<br />D.O.L
+<br />Pens Scheme No</p>
+
+<p><strong>PENSIONER ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+
+<p>Pens Scheme No
+<br />Name
+<br />Address Line 1
+<br />Address Line 2
+<br />Address Line 3
+<br />Address Line 4
+<br />Postcode
+<br />NI Number</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The Pens Scheme No for this datafile only is expected in the format of xxxxy, where xxxx are 4 numbers and y is a character.</p>
+</div>
+
+<p><strong>ACTIVE ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+
+<p>Staff Number
+<br />Name
+<br />Address Line 1
+<br />Address Line 2
+<br />Address Line 3
+<br />Address Line 4
+<br />Postcode
+<br />Pens Scheme No</p>
+
+<h2><a name="dataload"></a>Data Load</h2>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Run</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_croda.jpg" alt="Data Load Screen" /></p>
+
+  <p>Data Load Screen</p>
+</div>
+<p><a name="run"></a></p>
+
+<h2><a name="run_a_data_load"></a>Run a Data Load</h2>
+
+<p>Click ‘Run’.</p>
+
+<p>Enter the fields required to run the load you want.</p>
+
+<p><a name="s_cont_date"></a><strong>CONTRIBUTION DATE</strong> - If loading a file for Contribution Amounts then you must enter a contribution date in this field. This date will then be used for all lines within the Contribution Amount datafile.</p>
+
+<p><a name="s_ni_year"></a><strong>NI DATE 5TH APRIL</strong> - If loading a file for Contribution Amounts, which should also contain NI amounts, then enter the year for year ending 5th April. This year will then be used for all lines within the Contribution Amounts datafile.</p>
+
+<p><a name="s_cont_file"></a><strong>CONTRIBUTION AMOUNTS</strong> - Enter the filename path of the datfile you are going to use to load on contribution/NI amounts. The window, shown at the end of this section, will pop-up on entering this field.</p>
+
+<p><a name="s_sal_file"></a><strong>SALARY AMOUNTS</strong> - Enter the filename path of the data
+file you are going to use to load on salary amounts. The window, shown at the end of this section, will pop-up on entering this field.</p>
+
+<p><a name="s_penaddr_file"></a><strong>PENSIONER ADDRESSES</strong> - Enter the filename path of the data
+file you are going to use to load on pensioner addresses. The window, shown at the end of this section, will pop-up on entering this field.</p>
+
+<p><a name="s_actaddr_file"></a><strong>ACTIVE ADDRESSES</strong> - Enter the filename path of the data
+file you are going to use to load on active addresses. The following window will pop-up on entering this field.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/file_open.jpg" alt="" /></p>
+
+</div>
+
+<p>Select your data file, then click ‘Open’.</p>
+
+<p>If the data file is held on the Pension Master server then
+click ‘Cancel’ and enter the filename straight into the filename field on the screen.
+Note that in this case, the data file is expected to be in the same directory as the
+Pension Master programs on the server.</p>
+
+<p>If a filename is entered which does not exist then an error message will appear informing
+you of this, and you will be invited to re-enter a valid filename for your data file.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The program expects the datafile(s) entered to be complete with no blank lines.</p>
+</div>
+
+<p>At least one filename needs to be entered in order for the loading process to
+continue.</p>
+
+<p>Once all neccessary fields have been entered click ‘OK’ to continue and the following pop-up window appears informing the user of where the data is being loaded, and then asking them if they wish to continue:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_croda2.gif" alt="Continue window" /></p>
+
+  <p>Continue window</p>
+</div>
+
+<p>Click ‘Yes’ to continue loading the data, or click ‘No’ to stop the process and return to the menu.
+The process starts by checking that the datafiles entered do not contain blank lines
+nor are empty. If any of them are then an appropriate message will be displayed informing the
+user of this. The process is then abandoned.</p>
+
+<p>The process will continue to check that the data inside the datafiles is correct and
+valid. If any errors are found, then a Warnings report will be produced
+listing these errors. The user will be asked if they wish to view the report, and then asked if they wish to continue and load the data that have no errors.</p>
+
+<p>On continuing with loading the data, reports for each datafile will be produced out to Microsoft Excel, which will list all the data that will be loaded. Once these reports have been produced then the user will finally be asked if they wish to load this data. Click ‘Yes’ to load the data onto Pension Master.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>For Contribution Amounts, if data already exists on Pension Master for the member and contribution data entered, then the data in the datafile will overwrite the data found on Pension Master, else it will be added on as a new record.</p>
+
+  <p>For NI Amounts, if data already exists on Pension Master for the member and NI year entered, then the data in the datafile will be added to the amount found on Pension Master, else it will be added on as a new record.</p>
+
+  <p>For Salary Amounts, if data already exists on Pension Master for the member and salary date, found in the datafile, then the data in the datafile will overwrite data found on Pension Master, else it will be added on as a new record.</p>
+
+  <p>For Pensioner and Active Addresses, if an address already exists for the member and address number 1, then the address in the datafile will overwrite the address found on Pension Master, else it will be added on as a new record and the current flag for the address will be flagged as ‘Yes’.</p>
+
+</div>
+
+<h2><a name="exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

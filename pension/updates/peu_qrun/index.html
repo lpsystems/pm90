@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Batch Quotation Run</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Batch Quotation Run</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Batch Of Quotations">Run a Batch Of Quotations</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows you to run quotations for a batch (or group) of members.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_qrun1.jpg" alt="Batch Quotations Screen" /></p>
+
+  <p>Batch Quotations Screen</p>
+</div>
+
+<h2><a name="Run"></a><a name="Run A Batch Of Quotations"></a>Run A Batch Of Quotations</h2>
+
+<p>Click ‘Run’.</p>
+
+<p><a name="pm_scheme"></a><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><a name="psft_code"></a><a name="pm_member"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to run quotations for using
+the Scheme, Company, Category, Status, Special Code and Member fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed.</p>
+
+<p>You can click on ‘Cancel’ to return to the main menu and abort the quotation run.</p>
+
+<p>The following screen now appears to the screen.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_qrun2.jpg" alt="Batch Quotations Screen" /></p>
+
+  <p>Batch Quotations Screen</p>
+</div>
+
+<p><a name="pq_type"></a><strong>UPDATE TYPE</strong> - a window will appear listing all the available
+Quotation Types for this scheme. Move the cursor to the Quotation Type you require
+using the arrow keys and click on ‘OK’ to select it. The Quotation Type code and description
+will be displayed to the screen.</p>
+
+<p><a name="pq_calcdate"></a><strong>CALCULATION DATE</strong> - Enter the calculation date to
+be used in your quotations. This date is the effective date of the quotation. The
+calculation date field is held for each members quotation (pmqh_calcdate).</p>
+
+<p><a name="pq_qdate"></a><strong>QUOTATION DATE</strong> - Enter your quotation date. This date
+is used when extracting factors.</p>
+
+<p>Click on ‘OK’ to proceed with the batch quotation. If you click on ‘Cancel’, the batch
+quotation process will be abandoned and the user will be returned to the main menu.</p>
+
+<p>If you choose to proceed with the process, then you will be asked ‘Do you wish to
+run the batch quotations?’. On selecting ‘Yes’, the program will continue to process
+the quotations.</p>
+
+<p><a name="reports"></a>You will then be prompted to see if you wish to print/view various
+reports as follows:</p>
+
+<ul>
+  <li>Warnings report - This report lists any errors or warnings that have been generated
+in running the quotations e.g. Attempt to divide by zero..</li>
+  <li>Calculation Exceptions report - This report lists those members whose quotation failed
+followed by an appropriate reason e.g. ‘Quote already finalised’ or ‘Quote not valid
+for Schm/Cat’.</li>
+  <li>Calculation Trace report - This report will display the quotation formulae that have
+been processed and is often a very useful debugging tool.</li>
+</ul>
+
+<p>The system will then return to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

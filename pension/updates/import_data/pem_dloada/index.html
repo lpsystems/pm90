@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Database Tables</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085408" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Database Tables</h1>
+        </div>
+      
+
+      
+<h2>Introduction</h2>
+
+<p>The following table lists all database tables held on Pension Master, which can be
+used in the General Data Load program.</p>
+
+<h2>Data File Formats &amp; Field Default Values.</h2>
+
+<p>Templates can be found in the General Data Load program which the user can use to
+create their own load. These templates are based on the formats shown below for each database table the template load codes are listed beside the description. Query the template load code and then press update to assigned it to a scheme for loading.
+Also, during the load some fields may not be included in the data file, or the data in the data file is found to be blank. In these cases the fields are automatically updated by the General Data Load with a default value. The fields with default values are also listed below for each database table</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Table Names</th>
+          <th style="text-align: left">Mandatory Database Fields</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"><a href="#schaddr">Addresses</a></td>
+          <td style="text-align: left">Scheme Code/Address Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#basicdpen">Basic Deferred Pensioner Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date First Payment Due</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#basicmem">Basic Member Details</a></td>
+          <td style="text-align: left">Category Code<br />Company Code<br />Staff Number<br />NI Number<br />Scheme Code<br />Status Code<br />Surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#basicpen">Basic Pensioner Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date Retired</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#caredef">Care Deferred Member Numbers</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Deferred Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#carehist">Care History Screen</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Care Code<br />Revaulation Date<br />Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#chargeunithistory">Charging Unit Price Load</a></td>
+          <td style="text-align: left">Fund Code<br />Unit Price Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#mbrupdt">Company Code Update</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Company Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#conthist">Contribution History Batch Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Contribution<br />Batch Number<br />Order Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#death">Death Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date of Death</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#defpen">Deferred Pension History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Pension Code<br /> Date to Commence</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#deathdep">Dependant Death Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Death Dependants Reference</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#deps">Dependants Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Dependant’s Number<br /> Dependants Name<br /> Dependants Type<br /> Dependants Proportion Of Benefit</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#diary">Diary Entry</a></td>
+          <td style="text-align: left">Diary Date<br />Diary Reference<br /> Diary Entry Action<br /> Diary User</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#factors">Factor Tables</a></td>
+          <td style="text-align: left">Factor Code/Type/Sex/Date/Index/Value</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#memaddr">Member Address Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Member Address Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#memcont">Member Contribution History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Date Due<br />Contribution type<br /> Date Received<br /> Transaction Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#memcove">Member Cover Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Effective Date<br />Cover Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#meminv">Member Investment History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Investment Fund<br /> Date Due<br /> Date Received<br /> Date Invested<br /> Transaction Type<br /> Contribution Type<br /> Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#meminvsetup">Member Investment Setup Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Effective Date<br /> Contribution Type<br /> Scheme/Member Flag</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#mbrupdt">Marital Status Update</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Marital Status</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#memcontrate">Member Contribution Rate Percentage Load</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Contribution Type<br />Effective Date<br />Formula Code<br />Matrix Code<br />Percent/Annual Flatrate<br />Salary Type<br />Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#memnotes">Member Notes</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Notes Number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#multiplebatcon">Multiple Contribution Batch Load</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br /> Contribution Type<br />Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#nihist">NI History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />NI History Year</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#nihistbatch">NI History Batch Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Batch Number<br /> N.I. Order</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#pthrs">Part Time Service</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Part Time From Date<br /> Part Time Hours<br /> Full Time Hours</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#pen">Pension History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Pension Code<br /> Date to Commence</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#salbatch">Salary Batch Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Batch Number<br /> Salary Batch Order</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#salhist1">Salary History 1</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#salhist2">Salary History 2</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#salhist3">Salary History 3</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#salhist4">Salary History 4</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Salary Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#speccode">Special Codes</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Code Group<br /> Special Code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#tvin">Transfer In Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Transfer In Code<br /> Transfer In Date<br /> Transfer In Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#tvout">Transfer Out Details</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Transfer Out Code<br /> Transfer Date Agreed<br /> Transfer Amount</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#prices">Unit Prices Details</a></td>
+          <td style="text-align: left">Fund Code<br />Unit Price Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#udh">User Defined History</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />User Defined History Type<br /> User Defined History Date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#uds">User Defined Screens</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />User Defined Screen Type</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><a href="#YTD">Year to Date</a></td>
+          <td style="text-align: left">Member Number/NI Number/Staff Number<br />Gross Pay for Tax P45<br />Scheme Code<br /> Tax Paid P45</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="schaddr"></a>Addresses - ‘New’ type load only - Template TEMPSADD</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>schemecode,addresscode,addressname,addressline1,addressline2,addressline3,addressline4,postcode,telephone,fax,email</p>
+
+</div>
+
+<h2><a name="schaddr"></a>Addresses - ‘Update’ type load only - Template TEMPSADU</h2>
+
+<p>Any of the fields on the scheme address screen table can be updated, apart from the Scheme Code and Address Code, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>schemecode,addresscode,addressname,addressline1,addressline2,addressline3,addressline4,postcode,telephone,fax,email</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a scheme code and address code that do not exist on Pension Master e.g. there is a dataline that references address code TEST but there is no TEST address for the scheme on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the data file before you try to load the data again.</p>
+</div>
+
+<h2><a name="basicdpen"></a>Basic Deferred Pensioner Details - ‘New’ type load only - Template TEMPDPNS</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,date1stpay,irmaxpen,irmaxcsh,maxschcsh,payfreq</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Payment Frequency</td>
+          <td style="text-align: left">12 - Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="basicdpen"></a>Basic Deferred Pensioner Details - ‘Update’ type load only - Template TEMPUDPS</h2>
+
+<p>Any of the fields on the basic deferred pensioner details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
+
+<p>The data file format is:</p>
+
+<ul>
+  <li>identifier, date1stpay,irmaxpen,irmaxcsh,maxschcsh,payfreq</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number that does not have a basic deferred pensioner details record already existing on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+</div>
+
+<h2><a name="basicmem"></a>Basic Member Details - ‘New’ type load only - Template TEMPMEM</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>sch,comp,cat,title,sname,fname,stat,sec,sex,marstat,staff,dob,djc,djla,djp,dsp,dco,npd,npa,spd,age,dtlft,ni</p>
+
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">sch</td>
+          <td style="text-align: left">scheme code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">comp</td>
+          <td style="text-align: left">company code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">cat</td>
+          <td style="text-align: left">category code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">title</td>
+          <td style="text-align: left">member’s title</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">sname</td>
+          <td style="text-align: left">surname</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">fname</td>
+          <td style="text-align: left">forename</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">stat</td>
+          <td style="text-align: left">status code</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">sec</td>
+          <td style="text-align: left">member’s security</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">sex</td>
+          <td style="text-align: left">member’s sex</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">marstat</td>
+          <td style="text-align: left">marital status</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">staff</td>
+          <td style="text-align: left">staff number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">dob</td>
+          <td style="text-align: left">date of birth</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">djc</td>
+          <td style="text-align: left">date joined company</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">djla</td>
+          <td style="text-align: left">date joined life assurance</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">djp</td>
+          <td style="text-align: left">date joined pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">dsp</td>
+          <td style="text-align: left">date started pension</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">dco</td>
+          <td style="text-align: left">date member contracted out</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">npd</td>
+          <td style="text-align: left">normal pension date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">npa</td>
+          <td style="text-align: left">normal pension age</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">spd</td>
+          <td style="text-align: left">state pension date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">age</td>
+          <td style="text-align: left">member’s age</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">dtlft</td>
+          <td style="text-align: left">date left</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ni</td>
+          <td style="text-align: left">ni number</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-10">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Additional Benefits Present</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Address Present Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Age</td>
+          <td style="text-align: left">Calculated from the member’s date of birth and today’s date. N.B. If ‘Calculate Age’ is set to Next Birthday at System Parameters level, then an extra year is added on.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Allow Access (internet)</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CPF Opt Out Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Initials</td>
+          <td style="text-align: left">The first character of member’s forename(s)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Last Amended By</td>
+          <td style="text-align: left">User who’s running the General Data Load</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Last Amended Date</td>
+          <td style="text-align: left">Today’s date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Lock Out Flag (internet)</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Marital Status</td>
+          <td style="text-align: left">UN - Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member Medically Loaded?</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member Security</td>
+          <td style="text-align: left">Scheme Security level</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Nomination Form Received Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Normal Pension Age</td>
+          <td style="text-align: left">If member is male, then Normal Pension Age - Male, held at Category level.<br />If member is female, then Normal Pension Age - Female, held at Category level.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Notes Present Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Part Time Hours Details Present</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Payroll YTD History</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Proof Of Age Received Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Salary History Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">State Pension Date</td>
+          <td style="text-align: left">If the member belongs to an Irish scheme, then 65 years is added to the member’s date of birth.<br />If the member belongs to a UK scheme, then equlaisation is used, based on the member’s date of birth.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Title</td>
+          <td style="text-align: left">If member’s sex and marital status are known then:<br />if the member is male, his title will be Mr;<br />if the member is female, her title will be Mrs if she’s married; Miss if she’s single; otherwise Ms.<br />If just the member’s sex is known then:<br />if the member is male, his title will be Mr;<br />if the member is female, her title will be Ms.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Transfer Received Indicator</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="mbrupdt"></a>Basic Member Details - ‘Update’ type load only - Templates TEMPCOMP/TEMPMAR</h2>
+
+<p>Any field on the Basic Member Details table can be updated, apart from the Member Number, as this is the member’s unique identifier on Pension Master. The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,fieldname</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If the user is updating a member’s company, category or status code then they will be prompted with a pop-up window which will ask them to either enter a ‘Start’ position or a ‘Default Date’, which will be used to set the Effective Date of the code amendment. This will be displayed on the corresponding company/category/status history screen for the member.</p>
+
+  <p>The ‘Start’ field allows the user to have an effective date present in the datafile for each member, so the user should enter the field position of where this date is in the datafile being used.</p>
+
+  <p>If the ‘Start’ field is left blank, or the data is found to be blank in the datafile, then the ‘Default Date’ will be used instead.</p>
+</div>
+
+<h2><a name="basicpen"></a>Basic Pensioner Details - ‘New’ type load only - Template TEMPPENS</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,dateretired,datepencommenced,precommpen,postcommpen,lumpsumamt,datelumpsumpaid,payfreq</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Account Type</td>
+          <td style="text-align: left">BANK - Bank</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">On Hold Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Payment Frequency</td>
+          <td style="text-align: left">12 - Monthly</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Payment Method</td>
+          <td style="text-align: left">B - Bacs</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Week1/Month1 Basis</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="basicpen"></a>Basic Pensioner Details - ‘Update’ type load only - Template TEMPUPNS</h2>
+
+<p>Any of the fields on the basic pensioner details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
+
+<p>The data file format is:</p>
+
+<ul>
+  <li>identifier,dateretired,datepensioncommenced,precommutationpension,postcommutationpension,lumpsumamount,datelumpsumpaid,payfrequency</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number that does not have a basic pensioner details record already existing on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+</div>
+
+<h2><a name="caredef"></a>Care Deferred Member Details - ‘New’ type load only - Template TEMPCARM</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,caremember1,caremember2,caremember3,caremember4,caremember5</p>
+
+</div>
+
+<h2><a name="caredef"></a>Care Deferred Member Details - ‘Update’ type load only - Template TEMPUCRM</h2>
+
+<p>Any of the fields on the care deferred member details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
+
+<p>The data file format is:</p>
+
+<ul>
+  <li>identifier,caremember1,caremember2,caremember3,caremember4,caremember5</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number that does not have a care deferred member details record already existing on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+</div>
+
+<h2><a name="carehist"></a>Care Pension History - ‘New’ type load only - Template TEMPCARA</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,carecode,effectivedate,amount1,amount2,amount3,amount4,amount5,amount6</p>
+
+</div>
+
+<h2><a name="carehist"></a>Care Pension History - ‘Update’ type load only - Template TEMPUCRA</h2>
+
+<p>Any of the fields on the care history details screen table can be updated, apart from the Member Number, as this is the table’s mandatory field.</p>
+
+<p>The data file format is:</p>
+
+<ul>
+  <li>identifier,identifier,carecode,effectivedate,amount1,amount2,amount3,amount4,amount5,amount6</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number that does not have a care member details record already existing on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again. As the datafile can contain a number of lines for the same identifier and CARE code, where the dates are different, then it is imperative that the data is ordered chronologically in the file prior to loading, this is because it is the last line for the identifier and CARE code loaded that will be displayed on screen 1 of the CARE screens.</p>
+</div>
+
+<h2><a name="chargeunithistory"></a>Charging Unit Prices - ‘New’ type load only - Template TEMPCPRC</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>fundcode,unitpricedate,grossprice,netprice</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Gross Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Net Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="conthist"></a>Contribution History Batch Details - ‘New’ type load only - Template TEMPCONT</h2>
+
+<p>Pension Master has been changed so that an unlimited number of Contributions can now
+be held against a scheme, rather than just the standard five (EEORD, EEAVC, ERORD,
+EEPR and ERPR). Due to this enhancement, the database tables, which hold all the Contribution
+details, have also been changed to allow for this.</p>
+
+<p>It would be unpractical and unfair to expect the user to change their old data file
+format of:</p>
+
+<div class="well">
+
+  <p>identifier,amount1,amount2,amount3,amount4,amount5</p>
+
+</div>
+
+<p>to the new data file format of:</p>
+
+<div class="well">
+
+  <p>identifier,batchnumber,ordernumber,contribution,amount,expenses</p>
+
+</div>
+
+<p>where batchnumber and ordernumber are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
+
+<p>The General Data Load program would ideally like the data file to be in the new format,
+however, the user can still use the old format.</p>
+
+<p>If the old format is being used then it is recommended to use the template TEMPCONT to add the load on, and then the user should leave the details in screen 2 as they appear. However, as the template uses the Staff Number as the default identifier, the user must change the first line in screen 2 to either Member Number or NI/PRSI Number if needs be.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>It is left soley down to the user to instruct the program of the data file format
+they are using, during the running process.</p>
+</div>
+
+<h2><a name="death"></a>Death Details - ‘New’ type load only - Template TEMPDTH</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,dateofdeath,lumpsum,contsrefunded</p>
+
+</div>
+
+<h2><a name="defpen"></a>Deferred Pension History - ‘New’ type load only - Template TEMPDPNA</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,pensioncode,datetocommence,initpen</p>
+
+</div>
+
+<h2><a name="defpen"></a> Deferred Pension History - ‘Update’ type load only - Template TEMPUDPA</h2>
+
+<p>Any of the fields on the deferred pension history screen table can be updated, apart from the Member Number, Pension Code and Date to Commence, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,pensioncode,datetocommence,initialpension,dateoflastinc,currentpension,currentspouses,dateofcessation</p>
+
+</div>
+
+<h2><a name="deathdep"></a>Dependant Death Details - ‘New’ type load only - Template TEMPDDEP</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,deathdepref,deathdepname,deathdeplumpsum</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Death Dependants Name</td>
+          <td style="text-align: left">Forename and Surname based on the death dependants member number</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Death Dependants Pension Indicator</td>
+          <td style="text-align: left">Y - Yes</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="deps"></a>Dependants Details - ‘New’ type load only - Template TEMPDEP</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,dependantsnumber,dependantsname,dependantstype,dependantspropben</p>
+
+</div>
+
+<p>Valid dependent types are as follows :</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">AU</td>
+          <td style="text-align: left">Aunt</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BR</td>
+          <td style="text-align: left">Brother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">BL</td>
+          <td style="text-align: left">Brother In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CH</td>
+          <td style="text-align: left">Child</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CS</td>
+          <td style="text-align: left">Common Law Spouse</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CT</td>
+          <td style="text-align: left">Contingent Trustee</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CO</td>
+          <td style="text-align: left">Cousin</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">CP</td>
+          <td style="text-align: left">Civil Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DA</td>
+          <td style="text-align: left">Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DL</td>
+          <td style="text-align: left">Daughter In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DC</td>
+          <td style="text-align: left">Descendent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DP</td>
+          <td style="text-align: left">Dependant</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">EH</td>
+          <td style="text-align: left">Estranged Husband</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ES</td>
+          <td style="text-align: left">Estranged Wife</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FM</td>
+          <td style="text-align: left">Family</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FA</td>
+          <td style="text-align: left">Father</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FL</td>
+          <td style="text-align: left">Father In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FI</td>
+          <td style="text-align: left">Fiance(e)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">FR</td>
+          <td style="text-align: left">Friend</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GD</td>
+          <td style="text-align: left">God-Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GS</td>
+          <td style="text-align: left">God-Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RD</td>
+          <td style="text-align: left">Granddaughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GF</td>
+          <td style="text-align: left">Grandfather</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">GM</td>
+          <td style="text-align: left">Grandmother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RS</td>
+          <td style="text-align: left">Grandson</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">HU</td>
+          <td style="text-align: left">Husband</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MO</td>
+          <td style="text-align: left">Mother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ML</td>
+          <td style="text-align: left">Mother In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NE</td>
+          <td style="text-align: left">Nephew</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">NI</td>
+          <td style="text-align: left">Niece</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">DE</td>
+          <td style="text-align: left">No Relation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OT</td>
+          <td style="text-align: left">Other</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PA</td>
+          <td style="text-align: left">Parent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">PT</td>
+          <td style="text-align: left">Partner</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">RE</td>
+          <td style="text-align: left">Relative/Relation</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SI</td>
+          <td style="text-align: left">Sister</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SL</td>
+          <td style="text-align: left">Sister In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SO</td>
+          <td style="text-align: left">Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">OL</td>
+          <td style="text-align: left">Son In Law</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SP</td>
+          <td style="text-align: left">Spouse</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SB</td>
+          <td style="text-align: left">Step-Brother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SD</td>
+          <td style="text-align: left">Step-Daughter</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SF</td>
+          <td style="text-align: left">Step-Father</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SM</td>
+          <td style="text-align: left">Step-Mother</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SR</td>
+          <td style="text-align: left">Step-Sister</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">SN</td>
+          <td style="text-align: left">Step-Son</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">TR</td>
+          <td style="text-align: left">Trust</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UN</td>
+          <td style="text-align: left">Uncle</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">UK</td>
+          <td style="text-align: left">Unknown</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">WI</td>
+          <td style="text-align: left">Wife</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>where dependantsnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
+
+<h2><a name="diary"></a>Diary Entry for Members - ‘New’ type load only - Template TEMPDRYM</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>diarydate,diaryref,diaryaction</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Diary Entry Status</td>
+          <td style="text-align: left">N - New</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Diary Reference</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Diary Time</td>
+          <td style="text-align: left">00:00:00</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Source of Diary Entry</td>
+          <td style="text-align: left">MEM - Member</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="factors"></a>Factors - ‘New’ type load only - Template TEMP</h2>
+
+<p>A new type load will be used to add a brand new table, a new index on an exsisting table or to add a new date to an exsisting table. If a description is not present in the data field the table code will be used as the description.
+If a new index is being added and other indexes with the range weren’t included those indexes are set to zero. Example range currently 1 to 5 new index of 8 to 10 added the index of 6 and 7 is set to zero.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>factorcode,description,type,sex,date,index,value,</p>
+
+</div>
+
+<h2><a name="factors"></a>Factor - ‘Update’ type load only - Template TEMP</h2>
+
+<p>The only field that can be updated is an exsisting Factor Value.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>factorcode,type,sex,date,index,value,</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a factor code and type code that do not exist on Pension Master e.g. there is a dataline that references factor code TEST but there is no TEST code on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the data file before you try to load the data again.</p>
+</div>
+
+<h2><a name="memaddr"></a>Member Address Details - ‘New’ type load only - Template TEMPADDR</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
+
+</div>
+
+<p>where addressnumber is defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Member’s Current Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member’s Suspect Flag</td>
+          <td style="text-align: left">N - No</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="memaddr"></a>Member Address Details - ‘Update’ type load only - Template TEMPADDU</h2>
+
+<p>Any of the fields on the member address screen table can be updated, apart from the Member Number and Member Address Number, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,addressnumber,addressline1,addressline2,addressline3,addressline4,addressline5,postcode,telephoneeve,telephoneday</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number and member address number that do not exist on Pension Master e.g. there is a dataline that references address number 2 but there is only 1 address for the member on Pension Master, then an exception will be produced for this dataline and the line will need to be removed from the datafile before you try to load the data again.</p>
+</div>
+
+<h2><a name="memcont"></a>Member Contribution History - ‘New’ type load only - Template TEMPCHST</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,datedue,daterecvd,transtype,conttype,amount</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
+type, date due, member number, date received and transaction type, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="memcove"></a>Member Cover Details - ‘New’ type load only - Template TEMPCOVE</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,effectivedate,covercode,calculationtype,fixedamount,percentage%,multiple,salary,factorcode</p>
+
+  <p>To determine the salary code lookup the column on the Members Salary History screen:</p>
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th style="text-align: left">Code</th>
+            <th style="text-align: left">Record</th>
+            <th style="text-align: left">Column</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align: left">A</td>
+            <td style="text-align: left">Record 1</td>
+            <td style="text-align: left">Column 1</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">B</td>
+            <td style="text-align: left">Record 1</td>
+            <td style="text-align: left">Column 2</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">C</td>
+            <td style="text-align: left">Record 1</td>
+            <td style="text-align: left">Column 3</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">D</td>
+            <td style="text-align: left">Record 1</td>
+            <td style="text-align: left">Column 4</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">E</td>
+            <td style="text-align: left">Record 1</td>
+            <td style="text-align: left">Column 5</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">F</td>
+            <td style="text-align: left">Record 2</td>
+            <td style="text-align: left">Column 1</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">G</td>
+            <td style="text-align: left">Record 2</td>
+            <td style="text-align: left">Column 2</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">H</td>
+            <td style="text-align: left">Record 2</td>
+            <td style="text-align: left">Column 3</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">I</td>
+            <td style="text-align: left">Record 2</td>
+            <td style="text-align: left">Column 4</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">J</td>
+            <td style="text-align: left">Record 2</td>
+            <td style="text-align: left">Column 5</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">K</td>
+            <td style="text-align: left">Record 3</td>
+            <td style="text-align: left">Column 1</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">L</td>
+            <td style="text-align: left">Record 3</td>
+            <td style="text-align: left">Column 2</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">M</td>
+            <td style="text-align: left">Record 3</td>
+            <td style="text-align: left">Column 3</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">N</td>
+            <td style="text-align: left">Record 3</td>
+            <td style="text-align: left">Column 4</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">O</td>
+            <td style="text-align: left">Record 3</td>
+            <td style="text-align: left">Column 5</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">P</td>
+            <td style="text-align: left">Record 4</td>
+            <td style="text-align: left">Column 1</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">Q</td>
+            <td style="text-align: left">Record 4</td>
+            <td style="text-align: left">Column 2</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">R</td>
+            <td style="text-align: left">Record 4</td>
+            <td style="text-align: left">Column 3</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">S</td>
+            <td style="text-align: left">Record 4</td>
+            <td style="text-align: left">Column 4</td>
+          </tr>
+          <tr>
+            <td style="text-align: left">T</td>
+            <td style="text-align: left">Record 4</td>
+            <td style="text-align: left">Column 5</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same effective date and cover code then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="meminv"></a>Member Investment History - ‘New’ type load only - Template TEMPIHST</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,fund,datedue,daterecvd,dateinvested,transtype,conttype,amount,units</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number, investment fund, contribution
+type, date due, date received, date invested and transaction type, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="meminvsetup"></a>Member Investment Setup Details - ‘New’ type load only - Template TEMPFUND</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,schmemflag,effdate,fundcode,conttype,allocate%</p>
+
+</div>
+
+<p>where schmemflag is defaulted to M, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of M</a>.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
+type, effective date, fund code, member number and sch/mem flag, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘New’ type load only - Template TEMPRATE</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
+
+</div>
+
+<p>All the field above have to be listed but they can refer to blank columns in your file.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same contribution
+type, effective date, member number, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="memcontrate"></a>Member Contribution Rate Percentage Details - ‘Update’ type load only - Template TEMPURAT</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,effectivedate,contributiontype,type,perflatrate,salary,formula,matrix</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number, contribution code and effective date that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed..</p>
+</div>
+
+<h2><a name="memnotes"></a>Member Notes - ‘New’ type load only - Template TEMPNOT</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,notenum,note</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Notes Date</td>
+          <td style="text-align: left">Today’s date</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Notes User</td>
+          <td style="text-align: left">User running the General Data Load</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Due to the possibility of notes containing characters such as commas (,), colons (:) etc, which are examples of delimiters, then L&amp;P Systems Ltd recommend that a tab delimitered file is used when loading member notes.</p>
+</div>
+
+<h2><a name="multiplebatcon"></a>Multiple Contribution Batch - ‘New’ type load only - Template TEMPCONM</h2>
+
+<p>Pension Master can hold an unlimited number of Contributions type now against a scheme, rather than just the standard five (EEORD, EEAVC, ERORD,EEPR and ERPR. So this load is use if you want to create a batch with more than one contribution type.</p>
+
+<div class="well">
+
+  <p>identifier,amount1,amount2,amount3,amount4,amount5</p>
+
+  <p>The batchnumber is created when the load is completed and the user get a popup to select the date due and received.</p>
+</div>
+
+<h2><a name="nihist"></a>NI History - ‘New’ type load only - Template TEMPNIH</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,year,amount</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
+and history year, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="nihistbatch"></a>NI History Batch Details - ‘New’ type load only - Template TEMPNI</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,batchnumber,niorder,amount</p>
+
+</div>
+
+<p>where batchnumber and niorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
+
+<h2><a name="pthrs"></a>Part Time Service - ‘New’ type load only - Template TEMPPTHR</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,fromdate,parttimehours,fulltimehours</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Part Time Equivalent Service</td>
+          <td style="text-align: left">Same equation used to calculate this that is<br />used in the Part Time screen in Members</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="pen"></a>Pension History - ‘New’ type load only - Template TEMPPENA</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,pensioncode,datetocommence,initpen</p>
+
+</div>
+
+<h2><a name="pen"></a>Pension History - ‘Update’ type load only - Template TEMPUPNA</h2>
+
+<p>Any of the fields on the pension history screen table can be updated, apart from the Member Number, Pension Code and Date to Commence, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,pensioncode,datetocommence,initialpension,dateoflastinc,currentpension,currentspouses,dateofcessation</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If any of the datalines in the datafile reference a member number, pension code and date to commence that do not exist on Pension Master, then that particular dataline will be ignored but will not stop the rest of the datalines being processed.</p>
+</div>
+
+<h2><a name="salbatch"></a>Salary Batch Details - ‘New’ type load only - Template TEMPSAL</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,batchnumber,batchorder,amount1,amount2,amount3,amount4,amount5</p>
+
+</div>
+
+<p>where batchnumber and batchorder are defaulted to 0, with the use of <a href="/pension/updates/import_data/pem_dload/#rule">Rule
+1</a> and <a href="/pension/updates/import_data/pem_dload/#value">Value of 0</a>.</p>
+
+<h2><a name="salhist1"></a>Salary History 1 - ‘New’ type load only - Template TEMPSAL1</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
+and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="salhist1"></a>Salary History 1 - ‘Update’ type load only - Template TEMPUSL1</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
+
+<h2><a name="salhist2"></a>Salary History 2 - ‘New’ type load only - Template TEMPSAL2</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
+and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="salhist2"></a>Salary History 2 - ‘Update’ type load only - Template TEMPUSL2</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
+
+<h2><a name="salhist3"></a>Salary History 3 - ‘New’ type load only - Template TEMPSAL3</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
+and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="salhist3"></a>Salary History 3 - ‘Update’ type load only - Template TEMPUSL3</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
+
+<h2><a name="salhist4"></a>Salary History 4 - ‘New’ type load only - Template TEMPSAL4</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number
+and salary date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="salhist4"></a>Salary History 4 - ‘Update’ type load only - Template TEMPUSL4</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,saldate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only the amount can be updated and there needs to be a salary record on at the effective date in the load.</p>
+</div>
+
+<h2><a name="speccode"></a>Special Codes - ‘New’ type load only - Template TEMPSPEC</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,codegroup,specialcode</p>
+
+</div>
+
+<h2><a name="tvin"></a>Transfer In Details - ‘New’ type load only - Template TEMPTVIN</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,transferincode,transferintype,transferindate,transfervalue</p>
+
+</div>
+
+<h2><a name="tvout"></a>Transfer Out Details - ‘New’ type load only - Template TEMPTVO</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,transferoutcode,transferdateagree,transfervalue</p>
+
+</div>
+
+<h2><a name="prices"></a>Unit Price Details - ‘New’ type load only - Template TEMPPRC</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>fundcode,unitpricedate,bidprice,midprice,offerprice</p>
+
+</div>
+
+<p>The fields with default values are:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Default Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">Bid Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Mid Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Offer Price</td>
+          <td style="text-align: left">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same fund code and unit price date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="udh"></a>User Defined History - ‘New’ type load only - Template TEMPUDH</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,udhtype,udhdate,amount1,amount2,amount3</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number,
+user defined history type and date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="udh"></a>User Defined History - ‘Update’ type load only - Template TEMPUDHU</h2>
+
+<p>Any of the fields on the User Defined History table can be updated, apart from the Member Number, User Defined History Type and User Defined History Date, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,udhtype,udhdate,amount1,amount2,amount3,amount4,amount5</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number,
+user defined history type and date, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="uds"></a>User Defined Screens - ‘New’ type load only - Template TEMPUDS</h2>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number and
+user defined screen type, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+<h2><a name="uds"></a>User Defined Screens - ‘Update’ type load only - Template TEMPUDSU</h2>
+
+<p>Any of the fields on the User Defined Screens table can be updated, apart from the Member Number and User Defined Screen Type, as these are the table’s mandatory fields.</p>
+
+<p>The data file format is:</p>
+
+<div class="well">
+
+  <p>identifier,udstype,field1,field2,field3,field4,field5,field6,field7,field8,field9,field10,field11,field12</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If there are any datalines in the datafile which exist for the same member number and
+user defined screen type, then an exception report will be created with the line number and the load will be abandoned.</p>
+</div>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:08.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Payroll Schemes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085244" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Payroll Schemes</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Query/Search For A Scheme">Query/Search For A Scheme</a></li>
+  <li><a href="#Viewing Scheme Details">Viewing Scheme Details</a></li>
+  <li><a href="#Updating Scheme Details">Updating Scheme Details</a>
+    <ul>
+      <li><a href="#ADDR">Scheme Details</a></li>
+      <li><a href="#BANK">Scheme Bank Details</a></li>
+      <li><a href="#RTI">RTI Details</a></li>
+    </ul>
+  </li>
+  <li><a href="#print">Printing Scheme Details</a></li>
+  <li><a href="#action">Instigating A Workflow Action</a></li>
+  <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows maintenance of the Scheme file. This is where you will find
+data relating to a scheme. There are two screens in Scheme File, which can
+be accessed via the ‘Menu’ menu option, described in more detail later in this section.
+You are not able to Add new schemes in this program. This can be done through the
+Scheme File in Pension Master.</p>
+
+<p>The different screens of information that you may find in the Scheme File are as follows:</p>
+
+<ul>
+  <li>Scheme Details</li>
+  <li>Scheme Bank Details</li>
+  <li>RTI Details</li>
+</ul>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Menu</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch1.jpg" alt="Scheme Details Screen" /></p>
+
+  <p>Scheme Details Screen</p>
+</div>
+
+<h2><a name="Query/Search For A Scheme"></a><a name="query"></a>Query/Search For A Scheme</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch3.jpg" alt="Query Scheme Details" /></p>
+
+  <p>Query Scheme Details</p>
+</div>
+
+<p>You may select records using the Scheme Code field. You may also use any combination
+(or even partial combination) of these fields to select the required scheme record(s).
+Click the lookup icon for a list of scheme codes.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the main menu.</p>
+
+<p>If a match with the selection criteria is found then the first record will be displayed
+to the screen and a message displayed at the bottom of the screen:</p>
+
+<div class="well">
+
+  <p>Record 00001 of 0000x</p>
+
+</div>
+
+<p>If you wish to view any other screen in Scheme File, click ‘Menu’, then select the
+appropriate screen by moving the highlight bar and click ‘OK’.</p>
+
+<h2><a name="Viewing Scheme Details"></a>Viewing Scheme Details</h2>
+
+<p>To view the other records selected click ‘Next’ to view the next record, and ‘Previous’
+to view the previous record. If ‘Next’ is chosen and there are no records after
+the current record an error message is displayed. If ‘Previous’ is chosen and there
+are no previous records an error message is displayed.</p>
+
+<h2><a name="Updating Scheme Details"></a>Updating A Scheme</h2>
+
+<h3><a name="ADDR"></a>Scheme Details</h3>
+
+<p>Click ‘Menu’, then double click “Scheme Details screen” and then click ‘Update’.</p>
+
+<p>The Scheme’s Details screen is used to hold the address details and tax office
+details of the scheme.</p>
+
+<p>Enter the fields required as follows:</p>
+
+<p><a name="psa_addr_name"></a><strong>NAME</strong> - Enter the scheme’s name. This will be used on the P60 form in the Year End Process.</p>
+
+<p><a name="psa_addr1"></a>
+<a name="psa_addr2"></a>
+<a name="psa_addr3"></a>
+<a name="psa_addr4"></a>
+<a name="psa_addr5"></a>
+<a name="psa_postcode"></a><strong>ADDRESS LINES &amp; POSTCODE</strong>
+- Enter the scheme’s address and postcode (if known). These will be used on
+the P14 and P60 forms in the Year End process.</p>
+
+<p><a name="psa_tel"></a><a name="psa_fax"></a><strong>TELEPHONE &amp; FAX NUMBER</strong>
+- Enter the telephone and fax number of the scheme (if known).</p>
+
+<p><a name="psa_email"></a><strong>E-MAIL ADDRESS</strong>
+- Enter the scheme’s e-mail address (if known). This must contain the ‘@’ symbol,
+which is present in all e-mail addresses.</p>
+
+<p><a name="pys_taxname"></a><strong>TAX NAME</strong>
+- Enter the name of the Tax Office used for this scheme.</p>
+
+<p><a name="pys_dist"></a><a name="pys_ref"></a><strong>TAX DISTRICT &amp; REFERENCE</strong>
+- Enter the district and reference code for the tax office used for this scheme.</p>
+
+<p><a name="pys_payslip_mess"></a><strong>PAYSLIP MESSAGE?</strong>
+- Tick this field if you wish to be prompted during the payroll run to enter a message
+on each member’s payslip.</p>
+
+<p><a name="pys_payslip_tol"></a><strong>PAYSLIP TOLERANCE</strong>
+- Enter a tolerance for member’s payslips. This field works alongside the <a href="/payroll/maintenance/py_mem/#pps_payslip">Print Payslip?</a>
+field in the Payroll Members – Pension Details screen where the ‘Print Payslip?’ field is
+set to ‘Tolerance’. If 0.00 is entered in this field, then the payslip will always be printed.
+If a non-zero value is entered, then the payslip will be printed if the member’s net pay is in excess of the tolerance when compared to the member’s previous Net Pay. If the payroll run is the first run of the new tax
+year then payslips will be printed regardless of what the tolerance is. This field
+will default to 0.00.</p>
+
+<p><a name="pys_netpay_tol"></a><strong>NET PAY TOLERANCE</strong>
+- Enter a tolerance % for the member’s net pay between 0 and 100. During the payroll run this field is looked at. If the tolerance is set to 0.00% then nothing is done. If the tolerance is set to anything else, then the last payment made to the member is taken and the net pay tolerance is applied to it to generate a net pay tolerance range. The Net Pay calculated in the payroll run is then checked to see if it is outside the net pay tolerance range. If it is then the member will be produced out to the Net Pay Tolerance Information Report.</p>
+
+<p><a name="pys_pay_adv"></a><strong>PAY IN ADVANCE?</strong>
+- Tick this field if this scheme pays their pensioners in advance. This will allow members whose date pension commenced is after the current payroll run date, but before the next payroll run date, to be included in the current payroll run.</p>
+
+<p><a name="pys_date_ceased"></a><strong>DATE SCHEME CEASED</strong>
+- Enter the scheme ceased date only when a scheme is either being wound up or closed down. The date entered cannot be in the future and it must be within the current tax year. The field works alongside the ‘Scheme Ceased?’ field in the Submit option of the Run Payroll program and it inform HMRC that the scheme has finished.</p>
+
+<p>Click ‘OK’ to save the Scheme’s Details, or click ‘Cancel’ to exit the screen without
+saving the details entered.</p>
+
+<h3><a name="BANK"></a>Scheme Bank Details</h3>
+
+<p>Click ‘Menu’ then double click “Scheme Bank Details”. Then click ‘Update’.</p>
+
+<p>The following screen appears when selected.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch2.jpg" alt="Scheme Bank Details Screen" /></p>
+
+  <p>Scheme Bank Details Screen</p>
+</div>
+
+<p>The Scheme’s Bank Details screen is used to hold the bank details of the scheme.</p>
+
+<p>Enter the fields required as follows:</p>
+
+<p><a name="pys_type"></a><strong>ACCOUNT TYPE</strong>
+- Select the Account Type.</p>
+
+<p><a name="pys_bank_name"></a><strong>BANK NAME</strong>
+- Enter the name of the scheme’s Bank/Building Society.</p>
+
+<p><a name="pys_bank_addr1"></a>
+<a name="pys_bank_addr2"></a>
+<a name="pys_bank_addr3"></a>
+<a name="pys_bank_addr4"></a>
+<a name="pys_bank_postcode"></a><strong>BANK ADDRESS LINES, POSTCODE &amp; COUNTRY</strong>
+- Enter the address, postcode and country of the scheme’s Bank/Building Society.</p>
+
+<p><a name="pys_bank_ac_name"></a><strong>ACCOUNT NAME</strong>
+- Enter the name of the account of the scheme.</p>
+
+<p><a name="pys_bank_ac_no"></a><strong>ACCOUNT NUMBER</strong>
+- Enter the account number of the scheme.</p>
+
+<p><a name="pys_bank_sortcode"></a><strong>SORT CODE</strong>
+- Enter the sort code of the scheme’s account. The “-“ seperators are added
+automatically.</p>
+
+<p><a name="pys_bs_roll_no"></a><strong>ROLL NUMBER</strong>
+- Enter the Building Society Roll Number. This field will only be displayed
+if the Account Type, that has been selected is Building Society (BSOC).</p>
+
+<p><a name="pys_bank_mess"></a><strong>STATEMENT MESSAGE</strong>
+- Enter an appropriate message which will be displayed on the bank statement of
+those members who are to be paid by BACS. If a message is not entered, then the
+message will default to the first 18 characters of the Scheme Name.</p>
+
+<p>Click ‘OK’ to save the Scheme’s Bank Details, or click ‘Cancel’ to exit the screen
+without saving the details entered.</p>
+
+<h3><a name="RTI"></a>RTI Details</h3>
+
+<p>Click ‘Menu’ then double click “RTI Details”. Then click ‘Update’.</p>
+
+<p>The following screen appears when selected.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch7.jpg" alt="RTI Details Screen" /></p>
+
+  <p>RTI Details Screen</p>
+</div>
+
+<p>The Scheme’s RTI Details screen is used to hold the HMRC RTI details for the scheme.</p>
+
+<p>Enter the fields required as follows:</p>
+
+<p><a name="pys_sender"></a><strong>SENDER</strong>
+- Select the Sender.</p>
+
+<p><a name="pys_accounts_office_ref"></a><strong>ACCOUNTS OFFICE REFERENCE</strong>
+- Enter the Accounts Office Reference.</p>
+
+<p><a name="pys_gateway_id"></a><strong>GATEWAY ID</strong>
+- Enter the Gateway ID.</p>
+
+<h2><a name="print"></a><a name="Printing Scheme Details"></a>Printing Scheme Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch4.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Print current screen</strong></td>
+          <td>Produce listing of scheme details only for the screen the user is in.</td>
+        </tr>
+        <tr>
+          <td><strong>Print full scheme details</strong></td>
+          <td>Produce listing of all scheme details, including all screens.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>You can also select the records to print in this dialog box. Further details of
+these options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
+
+<p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
+or ‘Help’ to display this help text.</p>
+
+<h3><a name="fschprint"></a>Full Scheme Details</h3>
+
+<p>If you chose to print a Full Scheme Details Report, a window will now appear
+which asks which screens you wish to print for this scheme. All screens are
+defaulted to Yes.</p>
+
+<p>If you wish to alter these defaults for this printout, simply tick the box against
+the desired screen for yes or leave the box blank for no.</p>
+
+<p>Click ‘None’ to de-select all screens for the printout.</p>
+
+<p>Click ‘All’ to select all screens for the printout.</p>
+
+<p>When you have finished, click ‘OK’ to proceed to the printing stage. The
+screen selection screen is as follows:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch5.jpg" alt="Report Selection Screen" /></p>
+
+  <p>Report Selection Screen</p>
+</div>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Payroll Master</a>.</p>
+
+<h2><a name="Instigating A Workflow Action"></a><a name="action"></a>Instigating A Workflow Action</h2>
+
+<p>Select the ‘Workflow’ button to instigate a workflow action for the current
+scheme. A scheme record must be selected using the Query option before you can instigate
+a workflow action.</p>
+
+<p>The following pop-up window is now displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch6.jpg" alt="Workflow Instigation Popup" /></p>
+
+  <p>Workflow Instigation Popup</p>
+</div>
+
+<p>Enter the workflow code for the workflow action you wish to instigate or click the lookup icon
+for a list of the available workflow codes. To set up a workflow,
+use the <a href="/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow Management</a>
+option.</p>
+
+<p>You can click ‘OK’ to continue or click ‘Cancel’ to abort the this workflow
+action.</p>
+
+<h2><a name="navigate"></a>Navigating Between Screens</h2>
+
+<p>Click ‘Menu’. A pop-up menu will appear on the screen which allows the user
+access to the two screens of the Scheme File. You simply highlight the desired screen
+and click ‘OK’. You can also click ‘Cancel’ to abort the screen selection process.</p>
+
+<p><a name="menu"></a>The menu selection pop-up is as follows:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_sch8.jpg" alt="Screen Selection Screen" /></p>
+
+  <p>Screen Selection Screen</p>
+</div>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:52:44.</p>
+      </div>
+    </div>
+  </body>
+</html>

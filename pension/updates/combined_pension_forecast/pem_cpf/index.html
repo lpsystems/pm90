@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>CPF Export</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085407" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>CPF Export</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run An Export">Run An Export</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a data file for members who fall in the selection criteria entered by the user and whose ‘Opt Out’ field, on the <a href="/pension/file_maintenance/pem_mem/#CPF">Combined Pension Forecast</a> screen in Members, is unticked. The data file contains data
+such as member’s NI Number, surname, forename, date of birth and sex. The data file will
+then be sent to the Department of Widows and Pensions (DWP) as part of the initial stage of the CPF process.</p>
+
+<p>The following options and appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_cpf1.jpg" alt="CPF Export Screen" /></p>
+
+  <p>CPF Export Screen</p>
+</div>
+
+<h2><a name="Run An Export"></a>Run An Export</h2>
+
+<p>Press <kbd>P</kbd>, or selected the ‘Proceed’ menu option.</p>
+
+<p>You will be prompted to choose between a Provisional or Actual Export. Both options work exactly the same, however, the actual will create the datafile and save the file number created.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a>Enter
+the selection criteria required (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the
+selection criteria has been entered click on ‘OK’. You can click on ‘Cancel’ to return
+to the proceed menu and abort report selection.</p>
+
+<p><a name="media_type"></a>The media type must be selected. You can click on ‘lookup’ to give you a list of valid media types.</p>
+
+<p>If there are no records to match the selection criteria, the following message is
+displayed to the screen:</p>
+
+<div class="well">
+
+  <p>There are no records to match the selection criteria</p>
+
+</div>
+
+<p>If there are records, then a message is displayed at the bottom of the screen:</p>
+
+<p>Checking member’s data</p>
+
+<p>The program is checking that the data is all present and correct. For example, that
+the NI Number is in the correct format of AA123456A, that the first character of the
+surname is alphabetic etc. If any of the data isn’t correct then an exceptions report
+will be produced and the CPF Export run is abandoned.</p>
+
+<p>If all the data is correct, then a message will be displayed at the bottom of the
+screen:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>A report and a data file will now be produced, and the report will be displayed to
+the screen. This report will list the member’s who have been included in the data
+file.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+from Pension Master</a>.</p>
+
+<p>The name of the data file will be displayed to the screen. This data file can be located
+in the programs driectory on the Pension Master server.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:07.</p>
+      </div>
+    </div>
+  </body>
+</html>

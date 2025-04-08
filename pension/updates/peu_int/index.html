@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Contribution Interest Run</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Contribution Interest Run</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Undo">Undo</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program can either calculate interest on contributions, or remove contribution
+interest records for a specified group of members. This is used for certain types
+of defined benefit scheme, usually where there is a return of member contributions
+with interest to date on death or early withdrawal from the scheme.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Undo</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_int.jpg" alt="Contribution Interest Run Screen" /></p>
+
+  <p>Contribution Interest Run Screen</p>
+</div>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>It is intended that this program be run once a year at renewal time to update the
+interest on contributions for each member in the scheme. This should generally be
+done <strong>after</strong> you have loaded the last years contribution details onto each members
+contribution history record.</li>
+  <li>The Undo process will actually <strong>remove</strong> the contribution interest records for
+the selected members. Please ensure that this is what you want to do, as this process
+is irreversible.</li>
+</ol>
+
+<h2><a name="Run"></a>Run</h2>
+
+<p>Click ‘Run’.</p>
+
+<p>You will be prompted to select a Provisional or Actual run.</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Provisional</strong></td>
+          <td>This allows an interest run to be performed but <strong>does not update</strong> the Contribution &amp; Interest Details.</td>
+        </tr>
+        <tr>
+          <td><strong>Actual</strong></td>
+          <td>This allows an interest run to be performed and <strong>does update</strong> the Contribution &amp; Interest Details.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to run the Contribution
+Interest Run for using the Scheme, Company, Category, Status, Special Code and Member
+fields. When the selection criteria have been entered click on ‘OK’ to proceed or
+click on ‘Cancel’ to return to the main menu.</p>
+
+<p>A window is displayed asking for the run date for your annual interest posting. This
+will normally be the same as the scheme renewal date. Enter a date and click on ‘OK’
+to proceed or ‘Cancel’ to return to the main menu.</p>
+
+<p>The interest amounts will now be calculated and a progress meter is displayed informing
+you of calculation progress.</p>
+
+<p>A report may be generated after the calculation of the annual interest amounts:</p>
+
+<p><strong>EXCEPTION REPORT</strong> - If any exceptions have been found then the number of exceptions
+will be displayed and you will be asked if you wish to view or print the report.</p>
+
+<p>This report details any problems that have been found during the calculation of 
+the annual interest amounts. Details are printed describing the problem that has been
+found. Possible exception messages are:</p>
+
+<ul>
+  <li>The last interest run for a member is on or after the date of the current interest
+run i.e. you are only allowed to do interest runs for dates after you last ran an
+interest run for the member.</li>
+  <li>The formula ‘incr’ has not returned a numeric value.</li>
+  <li>The formula ‘incr’ has returned a value greater than 100%.</li>
+</ul>
+
+<p>If any exceptions are found then the annual interest amounts will not be saved.</p>
+
+<p><strong>RUN REPORT</strong> - If exceptions have not been found then a run report will be displayed
+to the screen.</p>
+
+<p>This report details the annual interest amounts which will be saved to each member’s
+contribution &amp; interest details screen in Members.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>When the interest has been calculated for all members in the selection criteria the
+program will return to the main menu.</p>
+
+<h2><a name="Undo"></a>Undo</h2>
+
+<p>Click ‘Undo’.</p>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to remove Contribution
+Interest records for using the Scheme, Company, Category, Status, Special Code and
+Member fields. When the selection criteria have been entered click on ‘OK’ to proceed
+or click on ‘Cancel’ to return to the main menu.</p>
+
+<p>A window is displayed asking for the run date you wish to undo interest records for.
+Enter a date and click on ‘OK’ to proceed or ‘Cancel’ to return to the main menu.</p>
+
+<p>The interest records will now be selected and a progress meter is displayed informing
+you of the undoing progress.</p>
+
+<p>A report may be generated after the selected interest records have been found:</p>
+
+<p><strong>UNDO REPORT</strong> - If any records have been found, then a report will be displayed
+to the screen.</p>
+
+<p>This report details all records that will be removed during this process. The records
+listed will be for either on or before the run date entered by the user.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

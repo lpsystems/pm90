@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Member Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085403" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Member Report</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A New Report">Add a New Report</a></li>
+  <li><a href="#To Output A Particular Field">To Output a Particular Field</a></li>
+  <li><a href="#To Output The Results Of A Particular Formula">To Output The Results Of A Particular Formula</a></li>
+  <li><a href="#Search For An Existing Report">Search For An Existing Report</a></li>
+  <li><a href="#Re-Run An Existing Report">Re-Run An Existing Report</a></li>
+  <li><a href="#Update An Existing Report">Update An Existing Report</a></li>
+  <li><a href="#Delete A Member Report">Delete A Member Report</a></li>
+  <li><a href="#List Reports Currently Set Up">List Reports Currently Set Up</a></li>
+  <li><a href="#Where To Find The Resulting Exported Data File">Where To Find The Resulting Exported Data File</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a report of member details as selected by the user. You can:</p>
+
+<ul>
+  <li>Select the group of members you wish to appear on the report.</li>
+  <li>Define a report title which will appear at the top of each page of your report.</li>
+  <li>Select how to group the member data on the report e.g. by date of birth.</li>
+  <li>Select which data fields you wish to appear on the report.</li>
+  <li>Select which numeric data fields you wish to total up and how you wish the total to be applied to the data.</li>
+  <li>Select whether you wish the report to be output in report format or comma-delimited
+data format (.CSV format) and exported to Microsoft Excel. The .CSV format is suitable
+for importing into other applications like spreadsheets.</li>
+  <li>Define the headings you wish to appear for each column of data output to your report.</li>
+  <li>Produce a list of all Member Reports on Pension Master for either a specific scheme
+or all schemes currently on Pension Master.</li>
+</ul>
+
+<p>The following options and screen appear when this program is selected. Certain menu
+options may only be visible when you have selected a member report using the ‘Query’
+menu option:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>List</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem1.jpg" alt="Member Report Main Screen" /></p>
+
+  <p>Member Report Main Screen</p>
+</div>
+
+<h2><a name="Add A New Report"></a>Add A New Report</h2>
+
+<p>Click ‘Add’</p>
+
+<p>The following window will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_memw.jpg" alt="Add Report Options" /></p>
+
+  <p>Add Report Options</p>
+</div>
+
+<p><strong>Copy an existing report?</strong> - Checking this box will allow you to copy an existing
+Member Report rather than input the complete report from scratch. You will then be
+able to edit the report as required and save it using a different name.</p>
+
+<p>Enter the report code of the report you wish to copy. You can also click on the lookup
+icon to see a list of reports. Once this has been done, the window closes and you will be returned
+to the report Code field for your new report.</p>
+
+<p><strong>Export to Microsoft Excel?</strong> - Checking this box will create a Microsoft Excel
+spreadsheet on your PC that will contain the selected data.</p>
+
+<p>The report will produce a data export file in .CSV (comma separated value) file format
+and also export the data directly into a Microsoft Excel spreadsheet on your PC.</p>
+
+<p>Details of where these data files can be found is set out in the <a href="#Where To Find The Resulting Exported Data File">Where
+To Find The Resulting Exported Data File</a> section later in this document.</p>
+
+<p><strong>Print column headings on your exported data?</strong> - If you have chosen to export
+your report data, you will then be able to check this box if you wish to print column
+headers on the exported data. If you are doing a data extract for electronic transmission
+onto another software system, you would normally not export column headings and just
+send a block of data which can then be easily imported into other software systems.
+If, however you wish to export the data to an Excel spreadsheet that can be easily
+understood by another user we would recommend that you export column headings.</p>
+
+<p>If you choose not to output the report in export format, the report will be produced
+in normal report format and be available to view/print in the same way as all other
+reports in Pension Master.</p>
+
+<p><a name="pm_member"></a>
+<a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="pm_marital_stat"></a>
+<a name="pm_sex"></a>
+<a name="pm_dob"></a>
+<a name="psft_code"></a>
+<a name="advance"></a>You are then requested to enter the selection criteria required in order to select the
+members you wish to output to the report (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the
+selection criteria has been entered click on ‘OK’ to proceed to the report date field.</p>
+
+<p>If you wish to enter more specific selection criteria, click on the ‘Advanced Search’
+button. The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem6.jpg" alt="Advanced Search Screen" /></p>
+
+  <p>Advanced Search Screen</p>
+</div>
+
+<p>Enter your advanced selection criteria using any combination of the fields in the
+first column of this screen and click on ‘OK’ to proceed. Click on ‘Cancel’ to exit
+from the Advanced Search window.</p>
+
+<p>You will now be moved to the right hand column of this window. This is where you can
+enter details that will specify how salary, contribution, unit or NI history colums
+are output to your report. Each of the four sections is the same so let’s take the
+case of salary history:</p>
+
+<p><strong>SALARY SELECT</strong> - This determines how salaries are extracted from the members
+salary history record as follows:</p>
+
+<ul>
+  <li><strong>LA</strong> - last salary on the history record i.e. most recent salary.</li>
+  <li><strong>FI</strong> - first salary on the history record i.e. oldest salary.</li>
+  <li><strong>AT</strong> - salary at a date.</li>
+  <li><strong>NH</strong> - no salary at a date.</li>
+  <li><strong>TD</strong> - total to date i.e. total the salary up to and including the date entered.</li>
+  <li><strong>ED</strong> - effective at date i.e. the salary on or before the date entered.</li>
+</ul>
+
+<p><strong>DATE</strong> - The date you wish to select salary at. This is only relevant for SALARY
+SELECT options AT, NH, TD and ED.</p>
+
+<p>The following two fields will allow members to be selected that had a specific Status
+Code at a certain date.</p>
+
+<p><strong>HISTORIC STATUS CODE</strong> - Enter the Historic Status Code required. Individual
+or a range of Status Codes can be entered as described in <a href="/pension/appendices/app_b/">Selection Criteria</a>.</p>
+
+<p><strong>HISTORIC STATUS DATE</strong> - The Status Date at which the Status Code was effective.</p>
+
+<p>Click on ‘OK’ to proceed or click on ‘Cancel’ to exit from the Advanced Search window
+and abort report selection.</p>
+
+<p><a name="rep_date"></a><strong>REPORT DATE</strong> - This defaults to today’s date, but it
+may be overwritten with any date in the format ddmmyy or dd/mm/yyyy. This is used
+in conjunction with the <strong>DATE ENTERED COMPARISON</strong> field to only include those
+members who have joined the scheme before a certain date.</p>
+
+<p><a name="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
+field are:</p>
+
+<ul>
+  <li><strong>1</strong> - Include members whose Date Joined For Pension is less than or equal to the report date.</li>
+  <li><strong>2</strong> - Include members whose Date Entered Company is less than or equal to the report date.</li>
+  <li><strong>3</strong> - Include members whose Date Joined For Life Assurance is less than or equal to the report date.</li>
+  <li><strong>’ ‘</strong> - Include All members.</li>
+</ul>
+
+<p><a name="head_1"></a><a name="head_2"></a><strong>HEADINGS</strong> - Enter up to two lines
+that you wish to use as headings for your report. If the first heading is left blank
+the default heading is the name of the scheme implied by the report selection criteria.
+If the second heading is left blank the default heading is “Membership Report”.</p>
+
+<p><a name="group_1"></a><a name="group_2"></a><a name="group_3"></a><a name="group_4"></a><a name="group_5"></a><a name="group_6"></a><strong>GROUP
+BY</strong> - These fields can be optionally used to specify how you wish to group the
+member records that are output to the report e.g. you may wish to group the records
+by age. In this case you would enter <em>pm_age</em> in the first GROUP BY field. The
+field entered must exist on the member file. If the field entered does not exist on
+the member file an error message will be displayed and the group by field should be
+re-entered. If you are unsure of the name of the field you wish to group by,
+click on the lookup icon for a list of the available fields.</p>
+
+<p><a name="tot_gr_1"></a>
+<a name="tot_gr_2"></a>
+<a name="tot_gr_3"></a>
+<a name="tot_gr_4"></a>
+<a name="tot_gr_5"></a>
+<a name="tot_gr_6"></a><strong>TOTAL</strong> - This indicates that a total of a field/fields specified is required after the group.</p>
+
+<p>e.g. If total is ticked for group by pm_scheme, after the members in the Scheme
+have been printed a total line will be printed as follows:</p>
+
+<pre><code>--------------------------------------------------------------
+
+                                           999999999 999999999
+
+--------------------------------------------------------------
+</code></pre>
+
+<p><strong>HEADING</strong> - This indicates that a heading will precede the group on the report.</p>
+
+<p>e.g. If heading is ticked for group by pm_scheme then a heading will be printed
+as follows before the members in the Scheme are printed.</p>
+
+<div class="well">
+
+  <p>Scheme Code : Scheme name</p>
+
+</div>
+
+<p><a name="cnt_gr_1"></a>
+<a name="cnt_gr_2"></a>
+<a name="cnt_gr_3"></a>
+<a name="cnt_gr_4"></a>
+<a name="cnt_gr_5"></a>
+<a name="cnt_gr_6"></a><strong>COUNT</strong> - This indicates that a count of members in a group is required after the members in the group have been printed.</p>
+
+<p>e.g. If there were 23 members in a scheme and count is ticked for group by pm_scheme
+the following line will be printed after all members in the scheme have been printed:</p>
+
+<div class="well">
+
+  <p>Total number of members in Scheme : 23</p>
+
+</div>
+
+<p><a name="seq_gr_1"></a>
+<a name="seq_gr_2"></a>
+<a name="seq_gr_3"></a>
+<a name="seq_gr_4"></a>
+<a name="seq_gr_5"></a>
+<a name="seq_gr_6"></a><strong>SEQUENCE</strong> -
+The valid entries for this field are ‘A’ for Ascending and ‘D’ for Descending. The
+default is ‘A’. If any other value is entered in this field an error message will
+be displayed. This specifies that a group be sorted into ascending or descending order
+as required.</p>
+
+<p>e.g. If a report is created, using both the scheme and members age as groups. The
+age could be sorted into descending sequence to produce a report listing the oldest
+members first for each scheme.</p>
+
+<p>When all groups have been entered click on ‘OK’, or press <kbd>Return</kbd> down through
+the remaining fields to proceed to the following screen.</p>
+
+<p><a name="2"></a>The second screen is displayed as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem2.jpg" alt="Field Selection Screen" /></p>
+
+  <p>Field Selection Screen</p>
+</div>
+
+<p><a name="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
+appear on your report or the result of a particular formula to output to the report.
+Which one is dependent on how you enter the field:</p>
+
+<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+
+<p>Enter the fieldname you wish to appear in the output. If you are unsure of the name
+of the field, click on the lookup icon to see a list of the available fields.</p>
+
+<p>Certain fields require you to add an argument, for example, telling them which investment
+fund to look the field up in. These are shown in the following table:</p>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Table</th>
+          <th style="text-align: left">Argument 1</th>
+          <th style="text-align: left">Argument 2</th>
+          <th style="text-align: left">Argument 3</th>
+          <th style="text-align: left">Argument 4</th>
+          <th style="text-align: left">Argument 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"><strong>pe_addb</strong> (Additional Benefits)</td>
+          <td style="text-align: left"><strong>padb_code</strong> (Benefit Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_broker</strong> (Broker Details)</td>
+          <td style="text-align: left"><strong>pbr_code</strong> (Broker Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_b</strong> (Bulk Switch Out Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>psbb_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>psbb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>psbb_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_h</strong> (Bulk Switch Header Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>psbh_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_m</strong> (Bulk Switch Member Details)</td>
+          <td style="text-align: left"><strong>psbm_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left"><strong>psbm_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>psbm_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_n</strong> (Bulk Switch In Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received</td>
+          <td style="text-align: left"><strong>psbh_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_deathdep</strong> (Dependant Death Details)</td>
+          <td style="text-align: left"><strong>pdep_ref</strong> (Reference)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dec_str</strong> (History Details)</td>
+          <td style="text-align: left"><strong>pdec_type</strong> (History Type)</td>
+          <td style="text-align: left"><strong>pdec_date</strong> (Effective Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dep</strong> (Dependant Details)</td>
+          <td style="text-align: left"><strong>pd_curr_flag</strong> (Current Dependant Flag)</td>
+          <td style="text-align: left"><strong>pd_ben_flag</strong> (Beneficiary Flag)</td>
+          <td style="text-align: left"><strong>pd_num</strong> (Dependant Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_divorce</strong> (Divorce Details)</td>
+          <td style="text-align: left"><strong>pdi_number</strong> (Dependant Details)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dpena</strong> (Deferred Pension History)</td>
+          <td style="text-align: left"><strong>pdpa_code</strong> (Deferred Pension Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dpenh</strong> (Deferred Pension Increase History)</td>
+          <td style="text-align: left"><strong>pdph_code</strong> (Deferred Pension Code)</td>
+          <td style="text-align: left"><strong>pdph_eff_dt</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_exp_b</strong> (Expense Assumptions Body)</td>
+          <td style="text-align: left"><strong>pexb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_fsavc</strong> (FSAVC Details)</td>
+          <td style="text-align: left"><strong>pfsavc_number</strong> (FSAVC Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_invfun</strong> (Investment Fund Details)</td>
+          <td style="text-align: left"><strong>pif_fund</strong> (Fund Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_maddr</strong> (Member Address Details)</td>
+          <td style="text-align: left"><strong>pmad_index</strong> (Address Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mcon</strong> (Member Contribution History)</td>
+          <td style="text-align: left"><strong>TOT</strong> (total contributions)</td>
+          <td style="text-align: left"><strong>pmc_type</strong> (Transaction Type)</td>
+          <td style="text-align: left"><strong>pmc_due or pmc_recvd</strong> (Contribution Date Due or Received)</td>
+          <td style="text-align: left"><strong>flag</strong> (denotes which date to use for comparisons)</td>
+          <td style="text-align: left"><strong>pmc_cont</strong> (Contribution Type)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mcontp</strong> (Member Contribution Rate Percentages)</td>
+          <td style="text-align: left"><strong>pcp_date</strong> (Effective Date)</td>
+          <td style="text-align: left"><strong>pcp_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mint</strong> (Member Contributions Plus Interest Details)</td>
+          <td style="text-align: left"><strong>pmin_date</strong> (Date Interest Applied)</td>
+          <td style="text-align: left"><strong>pmin_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_minv</strong> (Member Investment History)</td>
+          <td style="text-align: left"><strong>pmi_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pmi_type</strong> (Transaction Type)</td>
+          <td style="text-align: left"><strong>pmi_due, pmi_recvd or pmi_invested</strong> (Contribution Date Due, Received or Invested)</td>
+          <td style="text-align: left"><strong>flag</strong> (denotes which date to use for comparisons)</td>
+          <td style="text-align: left"><strong>pmi_cont</strong> (Contribution Type)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_minvf</strong> (Member Investment Setup Details)</td>
+          <td style="text-align: left"><strong>pminf_date</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left"><strong>pminf_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pminf_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>flag</strong> (M - Member S - Scheme)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mallow</strong> (Lifetime/Annual Allowance)</td>
+          <td style="text-align: left"><strong>pmal_date</strong> (Calculation Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote</strong> (Quotation Results)</td>
+          <td style="text-align: left"><strong>pmq_type</strong> (Quotation Type)</td>
+          <td style="text-align: left"><strong>pmq_index</strong> (Quotation Index)</td>
+          <td style="text-align: left">Length of the result as a number between 10 and 50.</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote_h</strong> (Quotation Header)</td>
+          <td style="text-align: left"><strong>pmqh_type</strong> (Quotation Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote_hist</strong> (Quotation History Results)</td>
+          <td style="text-align: left"><strong>pmqhh_type</strong> (Quotation Type)</td>
+          <td style="text-align: left"><strong>pmqhh_rec_num</strong> (History Record Number)</td>
+          <td style="text-align: left"><strong>pmqhh_index</strong> (Quotation Index)</td>
+          <td style="text-align: left">Length of the result as a number between 10 and 50.</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mtax</strong> (Tax Simplification Results)</td>
+          <td style="text-align: left"><strong>pmtx_eff_date</strong> (Effective Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mua</strong> (User Defined History Fields)</td>
+          <td style="text-align: left"><strong>pma_type</strong> (User Defined History Type)</td>
+          <td style="text-align: left"><strong>pma_date</strong> (User Defined History Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_muds</strong> (User Defined Screen Fields)</td>
+          <td style="text-align: left"><strong>pmu_type</strong> (User Defined Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_not</strong> (Member Freehand Notes)</td>
+          <td style="text-align: left"><strong>pn_num</strong> (Notes Line Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_pena</strong> (Pension History)</td>
+          <td style="text-align: left"><strong>ppa_code</strong> (Pension Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_penh</strong> (Pension Increase History)</td>
+          <td style="text-align: left"><strong>pph_code</strong> (Pension Code)</td>
+          <td style="text-align: left"><strong>pph_eff_dt</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_prices</strong> (Unit Prices)</td>
+          <td style="text-align: left"><strong>ppr_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>flag</strong> (1 - Most Recent Unit Date                        2 - Popup Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_pthrs</strong> (Part Time Hours)</td>
+          <td style="text-align: left"><strong>number</strong> (denotes the line on the Part Time Hours screen)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_saddr</strong> (Scheme Address Details)</td>
+          <td style="text-align: left"><strong>psa_addr_code</strong> (Address Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_scont</strong> (Scheme Contribution Type Setup)</td>
+          <td style="text-align: left"><strong>psct_code</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_schmat_b</strong> (Scheme Contribution Matrix Body)</td>
+          <td style="text-align: left"><strong>psmb_matrix</strong> (Matrix)</td>
+          <td style="text-align: left"><strong>flag</strong> AGE or SERVICE</td>
+          <td style="text-align: left"><strong>psmb_age</strong> (Age) or <strong>psmb_service</strong> (Service)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_schmat_h</strong> (Scheme Contribution Matrix Header)</td>
+          <td style="text-align: left"><strong>psmh_matrix</strong> (Matrix)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_sfeat</strong> (Special Codes)</td>
+          <td style="text-align: left"><strong>psft_code</strong> (Special Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_sfunds</strong> (Scheme Investment Fund Setup)</td>
+          <td style="text-align: left"><strong>psf_fund</strong> (Fund Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_slife_b</strong> (Scheme Lifestyle Matrix Body)</td>
+          <td style="text-align: left"><strong>pslb_matrix</strong> (Lifestyle Matrix Code)</td>
+          <td style="text-align: left"><strong>pslb_index</strong> (Start Age/Term to Retirement)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_slife_h</strong> (Scheme Lifestyle Matrix Header)</td>
+          <td style="text-align: left"><strong>pslh_matrix</strong> (Lifestyle Matrix Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_strus</strong> (Scheme Trustee Details)</td>
+          <td style="text-align: left"><strong>pstr_index</strong> (Scheme Trustee Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_suds</strong> (Scheme User Defined Details)</td>
+          <td style="text-align: left"><strong>psud_type</strong> (Scheme User Defined Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_b</strong> (Switch Out Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (from Date Received)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (to Date Received)</td>
+          <td style="text-align: left"><strong>pswb_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pswb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_h</strong> (Switch Header Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_n</strong> (Switch In Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (from Date Received)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (to Date Received)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvin</strong> (Transfer In Details)</td>
+          <td style="text-align: left"><strong>ptvi_code</strong> (Transfer In Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvout</strong> (Transfer Out Details)</td>
+          <td style="text-align: left"><strong>ptvo_code</strong> (Transfer Out Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uda_b</strong> (User Defined History Body Details)</td>
+          <td style="text-align: left"><strong>puab_type</strong> (History Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uda_h</strong> (User Defined History Header Details)</td>
+          <td style="text-align: left"><strong>puah_type</strong> (History Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uds_b</strong> (User Defined Screen Body Details)</td>
+          <td style="text-align: left"><strong>pudb_type</strong> (Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uds_h</strong> (User Defined Screen Header Details)</td>
+          <td style="text-align: left"><strong>pudh_type</strong> (Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>e.g. if you wished to output total employee ordinary contributions for investment
+fund 2, you would enter pdh_tee_ordc(02).</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The arguments have to be enclosed in brackets () and where there is more than one
+argument, the arguments are separated by a comma e.g. pmq_current(NORM,1) - this selects
+the first quotation result for Quotation Type NORM.</p>
+</div>
+
+<p><a name="popup"></a></p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
+Only one popup window appears per run, no matter how many flag 2 references are used throughout the report set up.
+A date must be entered in this field.</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
+</div>
+
+<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+
+<p>To reference calculations in your report, enter the appropriate formula code in the
+format:</p>
+
+<div class="well">
+
+  <p>#calc(formula_code,width)</p>
+
+</div>
+
+<ul>
+  <li>where formula_code is a valid formula code for the scheme implied by the current selection
+criteria. If an invalid formula code is entered, you will be warned of this and invited
+to re-enter a valid formula code.</li>
+  <li>where width is a number that is between 10 and 100. The minimum width of the result
+of a formula is 10, this is the width of the standard date format (dd/mm/yyyy). The
+maximum width, 100, is the longest character string that can be produced by a formula.</li>
+</ul>
+
+<p>If you are unsure of a particular formula code, type at least the # of the #calc and
+then click on the lookup icon to see a list of formula codes
+for the current implied scheme. Upon selecting a formula code, the report field will
+automatically be filled in with the correct #calc(formula_code,width) syntax e.g.</p>
+
+<p>#calc(092,10). The width of the formula result is defaulted to 10 but may be changed as required.</p>
+
+<p>The field must be set up in <a href="/pension/reports/report_writer/pem_rep/">Member Report Units</a>
+or can be a direct link to a valid formula for the current scheme.
+In the case of a field, if it does not exist in Member Report Units an error message
+will be displayed and the fieldname must be re-entered. Click on the lookup icon
+to see a list of fields for the report.</p>
+
+<p>When a field is entered a message will be displayed:</p>
+
+<div class="well">
+
+  <p>Report Width : xx</p>
+
+</div>
+
+<p><strong>TOTAL</strong> - This denotes whether you wish a total to appear for this field and
+is only relevant for numeric fields.
+If the field is numeric this field may be ticked to specify that this is a field
+to be included in the totals line which was specified in the group by section. If
+the field is ticked for a character or date field the field will be unticked.</p>
+
+<p>e.g. if you have entered pm_scheme in the GROUP BY field on the first screen
+with a tick against the corresponding total line, then if you have a field pds_grsal on
+your report with a tick against the TOTAL field, when your report is produced, after
+each scheme the report will total up the gross salary column and print the total on
+the report.</p>
+
+<p><a name="3"></a>The third screen is displayed as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem7.jpg" alt="Heading Selection Screen" /></p>
+
+  <p>Heading Selection Screen</p>
+</div>
+
+<p><strong>HEADING 1/ HEADING 2</strong> - Enter up to two lines of column headings for each field
+that is to be output to the report. The column headings default to the appropriate
+values that have been set up in <a href="/pension/reports/report_writer/pem_rep/">Member Report Units</a>
+and can be overwritten by the user. These are then saved with the report for future use.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If you are producing the report in Report and not Export format, the width of the
+report should not go over 180 characters. If the report width goes over 180 characters,
+an error message will be displayed and you should then remove any fields that you
+do not require from your report so that the total report width is less than 180 characters.</p>
+</div>
+
+<p>When all fields have been entered click on ‘OK’ to process the report or click on
+‘Cancel’ to abort without processing your report. A message will be displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>If you have opted to export your data, Microsoft Excel will be started automatically
+and your data placed into a fresh spreadsheet within Excel. The filename for this
+spreadsheet is c:\penmast.xls. Once you have finished with this spreadsheet, exit
+Microsoft Excel to return control to the Member Report program.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
+data export if you run the Member Report with the export option. Any data that is
+currently in that file will thus be overwritten.</p>
+
+  <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
+to another directory prior to running your data export.</p>
+</div>
+
+<p><a name="save"></a></p>
+
+<p>When the report has been processed you will be asked if you wish to save this report for later use.</p>
+
+<p><strong>REPORT CODE</strong> - Enter a short alphanumeric code of up to 8 characters to save
+your report under. If the report code already exists on the report file for the current
+scheme then you will be asked if you want to overwrite it, or enter another report
+code.</p>
+
+<p><strong>SCHEME CODE</strong> - Enter the scheme code for this report. This is the scheme code
+that corresponds to the scheme you wish to use this report for. You should note, however,
+that this will not preclude you using this report for other schemes if you so wish.
+The scheme code must be a valid code on the scheme file and if it is not, an error
+message will be displayed. If you are unsure of the scheme code, click on the lookup icon
+for a list of available schemes.</p>
+
+<p><strong>REPORT DESCRIPTION</strong> -The report description must be entered. This is a more
+lengthy description for your report which you can use to identify the report for future
+use e.g. “Basic Membership Listing”.</p>
+
+<p>When the report description has been entered click on ‘OK’ to save the report to file,
+or click on ‘Cancel’ to cancel saving the report to file.</p>
+
+<p>If you do not wish to save the report, click on the ‘No’ menu option .</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Search For An Existing Report"></a>Search For An Existing Report</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>The following window will now be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem4.jpg" alt="Report Selection Screen" /></p>
+
+  <p>Report Selection Screen</p>
+</div>
+
+<p>Enter the selection criteria for the report and click on ‘OK’, or <kbd>Return</kbd> when
+in the report description field. Pension Master defaults to selecting all available
+reports for the scheme implied by the current selection criteria, which is usually
+the scheme the current member is in.</p>
+
+<p>All reports that match the selection criteria will be displayed. If more than 10 records
+are selected click on the ‘Next Record’ button to view the next screen of reports,
+and click on the ‘Prev Record’ button to view the previous screen.</p>
+
+<p>Using the arrow keys, go to the report that is required and click on ‘OK’ to select
+it.</p>
+
+<p>If the existing report used Advanced Selection Criteria then this window will automatically
+displayed. Otherwise the main Member Report screen will be shown. Enter the selection
+criteria for members as required and click on ‘OK’. If no member records are found
+then an error message will be displayed.</p>
+
+<p>You will then be returned to the main menu and can select the appropriate menu option
+as required.</p>
+
+<h2><a name="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
+
+<p>Click ‘Run’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+the ‘Run’ menu option. If you have not done this then an error message will
+be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>You are now prompted as to whether you wish the output of the report to be in export
+file format.</p>
+
+<p>The report will produce a data export file in .CSV (comma separated value) file format
+and also export the data directly into a Microsoft Excel spreadsheet on your PC.</p>
+
+<p>Details of where these data files can be found is set out in the <a href="#Where To Find The Resulting Exported Data File">Where
+To Find The Resulting Exported Data File</a> section later in this document.</p>
+
+<p>If you have chosen to export your report data, you will then be asked if you wish
+to print column headers on the exported data. Answer ‘Yes’ or ‘No’ as appropriate.
+If you are doing a data extract for electronic transmission onto another software
+system, you would normally not export column headings and just send a block of data
+which can then be easily imported into other software systems. If, however you wish
+to export the data to an Excel spreadsheet that can be easily understood by another
+user we would recommend that you export column headings.</p>
+
+<p>If you choose not to output the report in export format, the report will be produced
+in normal report format and be available to view/print in the same way as all other
+reports in Pension Master.</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>If you have selected the eXport option from the menu, Microsoft Excel will be started
+automatically and your data placed into a fresh spreadsheet within Excel. The filename
+for this spreadsheet is c:\penmast.xls. Once you have finished with this spreadsheet,
+exit Microsoft Excel to return control to the Member Report program.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Pension Master will automatically overwrite the file c:\penmast.xls with the new
+data export if you run the Member Report with the eXport menu option. Any data that
+is currently in that file will thus be overwritten.</p>
+
+  <p>If you wish to keep this data, we suggest you manually copy the file c:\penmast.xls
+to another directory prior to running your data export.</p>
+</div>
+
+<h2><a name="Update An Existing Report"></a>Update An Existing Report</h2>
+
+<p>Click ‘Update’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+the ‘Update’ menu option. If you have not done this then an error message will
+be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>The report advance selection ciretia can be overwritten if required, or click on ‘OK’ to go on to the
+next screen. If you need to make changes to the fields saved in this report tick screen 2. If the change is to the column headings tick screen 3.</p>
+
+<p>The fields saved for this report will be displayed to the second screen. These fields
+may be overwritten if required by pressing update in that screen. Each screen is dealt with individually.</p>
+
+<p>To add a field in the middle of the report click on the ‘Add Row’ button, and enter
+the fieldname.</p>
+
+<p>To delete a field in the middle of the report click on the ‘Delete Row’ button.</p>
+
+<p>To append extra fields to the end of the report go to the next blank field and enter
+extra fields. To process the report click on ‘OK’. A message will be displayed:</p>
+
+<p>When you have made your changes to the screen press ok. To rerun the report with the changes simply press ‘Run’.</p>
+
+<h2><a name="Delete A Member Report"></a>Delete A Member Report</h2>
+
+<p>Click ‘Delete’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to delete using the ‘Query’ menu option prior to
+selecting the ‘Delete’ menu option. If you have not done this then an error
+message will be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>This option allows you to delete an existing Member Report from Pension Master.</p>
+
+<p>When the delete option is selected you will be asked to confirm and re-confirm that you wish to delete the current Member Report.</p>
+
+<h2><a name="List Reports Currently Set Up"></a><a name="list"></a>List Reports Currently Set Up</h2>
+
+<p>Click on the ‘List’ menu option.</p>
+
+<p>This allows you to produce a list of all the Member Reports that are currently on
+Pension Master, sorted by scheme code and report code.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_mem5.jpg" alt="Scheme Selection Screen" /></p>
+
+  <p>Scheme Selection Screen</p>
+</div>
+
+<p>Enter the selection criteria to select the scheme or schemes you require for the report
+and click on ‘OK’ to proceed.</p>
+
+<p>The following message is now displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>Once the report has been produced, options are displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
+
+<p>The data is written into a file, c:\penmast.csv, as a comma seperated values (CSV)
+formatted file.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:03.</p>
+      </div>
+    </div>
+  </body>
+</html>

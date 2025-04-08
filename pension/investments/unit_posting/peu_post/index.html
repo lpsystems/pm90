@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Post Units</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Post Units</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#RunPurchase">Run Purchase</a></li>
+  <li><a href="#Undo">Undo</a></li>
+  <li><a href="#Dividend">Dividend</a></li>
+  <li><a href="#Charge">Charge</a></li>
+  <li><a href="#ChargePost">Change Post</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows you to post <a href="/pension/investments/allocate_contributions/peu_alloc/">allocated contributions</a> to units.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post1.jpg" alt="Unit Posting Screen" /></p>
+
+  <p>Unit Posting Screen</p>
+</div>
+
+<h2><a name="RunPurchase"></a>Run Purchase</h2>
+
+<p>Click ‘Run Purchase’.</p>
+
+<p>You will be asked if you wish to do a Provisional or an Actual run. A Provisional
+run does all that an actual run does, but does not write any results to the database.</p>
+
+<p>You are only allowed to post units for a member if there are no unposted units for
+the member prior to the current date due. If unposted units exist for the member prior
+to the current date due, you should post all unposted units for the member in date
+order, starting with the earliest date due. You can get a list of the unposted units
+for the member by using the <a href="/pension/investments/unit_posting/per_post/">Unposted Units Report</a>.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a></p>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to post units for using the
+Scheme, Company, Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the unit post run.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post2.jpg" alt="Date Selection Screen" /></p>
+
+  <p>Date Selection Screen</p>
+</div>
+
+<p><a name="pmi_due"></a><strong>DATE DUE</strong> - Enter the date due for the contributions you
+are posting to units.</p>
+
+<p><a name="pmi_recvd"></a><strong>DATE RECEIVED</strong> - Enter the date you received the contributions
+you are posting to units.</p>
+
+<p><a name="pmi_invested"></a><strong>DATE INVESTED</strong> - Enter the unit price date for the
+units you are posting. This should be found on the statement from the investment fund
+that shows how many units were bought by the contribution.</p>
+
+<p><a name="pmi_type"></a><strong>TRANSACTION TYPE</strong> - Enter the transaction type for the
+contributions you are posting to units. If you are unsure of what code to use, click
+the lookup icon to see a list of transaction codes. If the transaction type of SWIN, LIFEIN or REBALIN is entered. The screen will include a column for Origin Fund.</p>
+
+<p><strong>LOAD DETAILS FROM</strong> - Select a CSV file from a folder on your hard drive. This enables the user to populate the screen by loading the Fund and Date Invested from a CSV file. The CSV file should simply have 2 columns, column A for the Fund Code and column B for the Date Invested. No headers or footers are permitted. The file will be checked for invalid data in the process. The user will be able to amend the unit price date once the data from the load file is displayed to the screen.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post6.jpg" alt="Type Selection Screen" />
+Type Selection Screen</p>
+</div>
+
+<p>This allows you to only post the funds of the SWIN based on the origin of the Fund. So you may only have received the funds from a certain part of the switch and you can post those without having to wait for all of the funds.</p>
+
+<p><a name="report_type"></a><a name="s_rep_type"></a><strong>REPORT TYPE</strong> - Select the
+report type as follows:</p>
+
+<ul>
+  <li><strong>Summary</strong> - For each member selected, produce a report which shows the total amount of contribution
+received, total contribution allocated and total number of new units bought by the
+unit posting. Each fund starts on a new page.</li>
+  <li><strong>Detailed</strong> - As for the Summary report, but the detail is broken down into individual contribution
+types for each member.</li>
+</ul>
+
+<p><a name="pmi_fund"></a><strong>FUND</strong> - The investment funds that have unposted units at the selected dates will be listed, if you wish to posted units for a fund insert a date in the date invested field. You can have different dates for each of the rows, or if you don’t wish to post the units at this time leave the field blank. If you want to post units for all investment funds with unposted units at this date for the selected members, enter a date in the first row under ‘ALL’.</p>
+
+<p>Pension Master then proceeds to calculate and post the units for the contributions
+to each member selected. The unit price used for this will be based on the <a href="/pension/investments/pem_invfun/#pif_buy_basis">unit
+buy basis</a> field in Investment Funds and is looked up on the <a href="/pension/investments/pem_invfun/#Unit Prices">Unit
+Prices file</a> at the date you have entered in Date Invested. Full account of any
+unit <a href="/pension/file_maintenance/pem_sch/#Investment Funds">allocation percentage</a> for the fund
+concerned is allowed for.</p>
+
+<p><a name="p_price"></a>If no unit buy basis price exists for the funds an exception report is produced.</p>
+
+<p>The number of new units is calculated as follows:</p>
+
+<p>UNITS = ALLOCRATE * CONT / UNITPRICE</p>
+
+<p>where:</p>
+
+<p>UNITS = new units bought</p>
+
+<p>ALLOCRATE = <a href="/pension/investments/pem_invfun/#pif_allocation">allocation percentage</a> for
+fund concerned, expressed as a percentage</p>
+
+<p>CONT = amount of gross contribution</p>
+
+<p>UNITPRICE = unit buy price</p>
+
+<p>If successful, a report detailing the proposed
+unit posting is displayed and can be printed at this time. The type of report produced
+depends on the <a href="#report_type">Report Type</a> field.</p>
+
+<p>If the unit posting was un-successful, an exception report will be produced which
+details the records that were rejected and the reason why. You must address each exception
+before being able to post the contributions to units successfully.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The system will then return to the main menu.</p>
+
+<h2><a name="Undo"></a>Undo</h2>
+
+<p>Click ‘Undo’.</p>
+
+<p>An undo unit posting run effectively reverses an actual unit posting run as set out
+above and brings the selected member records back to the situation immediately before
+the actual unit posting run was performed.</p>
+
+<p>You are only allowed to unpost units for a member if there are no posted units for
+the member after the current date due. If posted units exist for the member after
+the current date due, you should unpost all unposted units for the member in date
+descending order, starting with the latest date due.</p>
+
+<p>If you undo a unit dividend run, then the corresponding entries are deleted from the
+members <a href="/pension/file_maintenance/pem_mem/#Investment History">Investment History</a> screen.</p>
+
+<p>Details of how this works can be found in the ‘Run’ section detailed above.</p>
+
+<h2><a name="Dividend"></a>Dividend</h2>
+
+<p>Click ‘Dividend’.</p>
+
+<p>You will be asked if you wish to do a Provisional or an Actual run. A Provisional
+run does all that an actual run does, but does not write any results to the database.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to calculate unit dividends
+for using the Scheme, Company, Category, Status, Special Code and Member Number fields
+(see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the unit dividend run.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post4.jpg" alt="Dividend Details Screen" /></p>
+
+  <p>Dividend Details Screen</p>
+</div>
+
+<p><strong>DATE DUE</strong> - Enter the date for your unit dividend.</p>
+
+<p><strong>DATE RECEIVED</strong> - Enter the date for your unit dividend. This is generally going
+to be the same as DATE DUE.</p>
+
+<p><strong>DATE INVESTED</strong> - Enter the date the units in respect of your unit dividend were
+allocated at. This should be found on the statement from the investment fund that
+shows how many units were bought by the dividend run. This is generally going to be
+the same as DATE DUE.</p>
+
+<p><strong>TRANSACTION TYPE</strong> - This is set to ‘DIVIDEND’ and is display only.</p>
+
+<p><a name="p_rate"></a><strong>DIVIDEND %</strong> - Against each applicable fund, enter the percentage
+you wish to apply as a dividend for investments in that fund. For example, if you
+enter 1% against the fund called ‘MANAGED’, the unit dividend for a member will be
+1% of the total number of units up to and including DATE DUE in the MANAGED fund.</p>
+
+<p>Pension Master then proceeds to calculate and post the unit dividends for each member
+selected.</p>
+
+<p>If successful, a report detailing the proposed unit dividends is displayed and can
+be printed at this time. The type of report produced depends on the <a href="#report_type">Report
+Type</a> field.</p>
+
+<p>If the unit dividend run was un-successful, an exception report will be produced which
+details the records that were rejected and the reason why. You must address each exception
+before being able to post the unit dividend successfully.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The system will then return to the main menu.</p>
+
+<h2><a name="Charge"></a>Charge</h2>
+
+<p>Click ‘Charge’.</p>
+
+<p>You will be asked if you wish to do a Provisional or an Actual run. A Provisional
+run does all that an actual run does, but does not write any results to the database. Then you will be asked if it should be completed on a value of unit basis.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to calculate unit dividends
+for using the Scheme, Company, Category, Status, Special Code and Member Number fields
+(see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+When the selection criteria have been entered click on ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the unit charge run.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_post5.jpg" alt="Charge Details Screen" /></p>
+
+  <p>Charge Details Screen</p>
+</div>
+
+<p><strong>END DATE FOR UNIT/VALUE CALCUATIONS</strong> - Enter the date the units/value in respect of your charge are to be
+calculated at.</p>
+
+<p><strong>DATE TYPE FOR UNIT/VALUE CALCUATIONS</strong> - Enter the date type from the investment history screen that should be used in conjunction with the end date.</p>
+
+<p><strong>TRANSACTION TYPE</strong> - Insert or select a type from the drop-down list.</p>
+
+<p><strong>DATE DUE</strong> - Enter the date for your charge.</p>
+
+<p><strong>DATE RECEIVED</strong> - Enter the date for your charge. This is generally going
+to be the same as DATE DUE.</p>
+
+<p>All the funds and descriptions are now listed for you to insert a charge %.</p>
+
+<p>Pension Master then proceeds to calculate the charge on each fund for each member
+selected.</p>
+
+<h2><a name="ChargePost"></a>Charge Post</h2>
+
+<p>Click ‘Charge Post’.</p>
+
+<p>The opton is for the Charge runs that are completed on a value basis. When the unit price is known you complete the charge in the same way as the run purchase process.</p>
+
+<p>If successful, a report detailing the proposed charge is displayed and can
+be printed at this time. The type of report produced depends on the <a href="#report_type">Report
+Type</a> field.</p>
+
+<p>If the charge run was un-successful, an exception report will be produced which
+details the records that were rejected and the reason why. You must address each exception
+before being able to proceed.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The system will then return to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

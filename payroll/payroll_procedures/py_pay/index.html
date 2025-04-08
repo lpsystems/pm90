@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Payroll Run</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085244" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Payroll Run</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Payroll">Run A Payroll</a></li>
+  <li><a href="#Exceptions Report">Exceptions Report</a></li>
+  <li><a href="#Information Report">Information Report</a></li>
+  <li><a href="#print">Printing Standard Payslips, Export Data for Mail Merge &amp; Payment Reports</a>
+    <ul>
+      <li><a href="#payslips">Standard Payslips</a></li>
+      <li><a href="#export">Export Data for Mail Merge</a></li>
+      <li><a href="#paysum">Payment Summary Report</a></li>
+      <li><a href="#bulkpay">Bulk Payment Report</a></li>
+    </ul>
+  </li>
+  <li><a href="#commit">Committing the Payroll Data</a></li>
+  <li><a href="#payelem">Setting Pay Element Amounts to zero post run</a></li>
+  <li><a href="#bacs">Creating a BACS Data File</a></li>
+  <li><a href="#chq">Creating a Cheque Report</a></li>
+  <li><a href="#backup">Backup of Payroll Data</a></li>
+  <li><a href="#submit">Submit</a></li>
+  <li><a href="#error">HMRC Error Messages</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to run a payroll for a specified scheme. From this
+program the user can print the payslips and payment summary reports for the members
+of the scheme.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>Only users set up as a System Administrator can access this program.</p>
+
+  <p>If another user is running either the Backup Data program, the Restore Data program,
+or the Year End program, then you are unable to process the Payroll Run until the
+other program has completed.</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>There must be Government Legislation details set up for the tax year, you wish to
+run the Payroll in. If there isn’t, then the user will be informed of this when
+they attempt to run a payroll.</p>
+
+  <p>The user will be allowed to use the previous tax year’s Government Legislation details,
+however, they must update the Government Legislation program with the new tax year
+details as soon as they receive them.</p>
+
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Submit</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay1.jpg" alt="Payroll Run Screen" /></p>
+
+  <p>Payroll Run Screen</p>
+</div>
+
+<h2><a name="Run A Payroll"></a>Run A Payroll</h2>
+
+<p>Click ‘Run’.</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong>
+- Enter the scheme code required. To get a list of valid scheme codes click on the lookup icon.
+When a valid scheme code has been entered the scheme description will be displayed.
+This field must be entered.</p>
+
+<p><a name="pm_category"></a><strong>CATEGORY CODE</strong>
+- Enter the category code required. To get a list of valid category codes click on the lookup icon.
+When a valid category code has been entered the category description will be displayed.
+This field should be left blank if you wish to run the payroll for every category of the scheme.</p>
+
+<p><a name="run_date"></a><strong>RUN DATE</strong> - Enter the run date of the backup in the
+format dd/mm/yyyy or ddmmyyyy. This field is defaulted as today’s date, however,
+this can be altered to another date. Click on the calendar icon to display a calendar on
+the screen. This field must be entered.</p>
+
+<p>Click ‘OK’ to proceed with the payroll run. You can click ‘Cancel’ to return to
+the payroll menu.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>If the run date entered is before the date of the last payroll run, an error message
+will be displayed informing the user that there are no members ready for payroll
+together with the date the payroll was last run. They will then be asked to input
+a different date in the run date field.</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>If the run date entered falls inside a new tax year and the last run date falls
+in the previous tax year, Payroll Master checks if the <a href="/payroll/payroll_procedures/py_yend/#Introduction">
+Year End</a> procedure has been carried out. If it hasn’t then the user is informed
+of this and they will not be allowed to continue with the payroll until the year
+end procedure has been completed.</p>
+
+</div>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>If the scheme pays their members in advance then members whose date pension commenced is after the run date entered, but before the next payroll run date, then they will be included in the current payroll run.</p>
+
+</div>
+
+<p>The following message is now displayed to the screen:</p>
+
+<div class="well">
+
+  <p>Do you wish to continue running the Payroll?</p>
+
+</div>
+
+<p>If ‘Yes’ is selected, then the payroll run will continue. If ‘No’ is selected,
+then the program returns to the payroll menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay2.jpg" alt="Payroll Run Screen" /></p>
+
+  <p>Payroll Run Screen</p>
+</div>
+
+<p>The members of the scheme selected for the payroll run are displayed in
+this screen. You can use the arrow buttons to scroll through the selected members.
+Some of the fields can be adjusted as follows:</p>
+
+<p><a name="pym_code"></a><strong>CODE</strong>
+- The payment element code is displayed to this field. You cannot enter into this
+field.</p>
+
+<p><a name="pym_desc"></a><strong>DESCRIPTION</strong>
+- The payment element description is displayed to this field. You cannot enter into
+this field.</p>
+
+<p><a name="code_type"></a><strong>TYPE</strong>
+- The type of payment element is displayed to this field. This will either be Addition
+or Deduction. You cannot enter into this field.</p>
+
+<p><a name="code_tax"></a><strong>TAX</strong>
+- The taxability of the amount is displayed to this field. This will either be Pre
+or Post. You cannot enter into this field.</p>
+
+<p><a name="multiple"></a><strong>MULTIPLE</strong>
+- The multiple of the member’s payment element rate is displayed to this field.
+This is defaulted to 1. The user can adjust this value accordingly.</p>
+
+<p><a name="rate"></a><strong>RATE</strong>
+- The rate of the member’s payment element is displayed to this field. This is retrieved
+from the Payment Element screen in Payroll Members. The PENSION code rate is calculated
+by Payroll Master by dividing the member’s pension amount by the member’s payment
+frequency e.g. Monthly = 12, Weekly = 52 etc. The user can adjust this value accordingly.</p>
+
+<p><a name="amount"></a><strong>AMOUNT</strong>
+- The amount of the member’s payment element is displayed to this field. This is
+calculated by Payroll Master by multiplying the ‘Multiple’ value by the ‘Rate’ value.
+You cannot enter into this field.</p>
+
+<p><a name="tax_code"></a><strong>TAX CODE</strong>
+- The tax code of the member is displayed to this field. You cannot enter into this
+field.</p>
+
+<p><a name="basis"></a><strong>BASIS</strong>
+- The tax basis of the member is displayed to this field. You cannot enter into this
+field.</p>
+
+<p><a name="gross_pay"></a><strong>GROSS PAY</strong>
+- The amount of the member’s gross pay is displayed to this field. This is calculated
+by Payroll Master by adding the pension amount with any other Addition type payment
+elements. You cannot enter into this field.</p>
+
+<p><a name="paye"></a><strong>PAYE</strong>
+- The amount of PAYE the member is to pay is displayed to this field. This is calculated
+by Payroll Master. You cannot enter into this field.</p>
+
+<p><a name="nic"></a><strong>NIC</strong>
+- The amount of nic the member is to pay is displayed to this field. This is calculated
+by Payroll Master. You cannot enter into this field.</p>
+
+<p><a name="net_pay"></a><strong>NET PAY</strong>
+- The amount of net pay the member is to be paid is displayed to this field. This
+is calculated by Payroll Master. You cannot enter into this field.</p>
+
+<p>Click ‘OK’ to continue with the payroll run. Click ‘Cancel’ to return to the payroll
+menu.</p>
+
+<h2><a name="summary"></a>Summary Screen</h2>
+
+<p>Click ‘Summary’. The following screen will be displayed to the screen.</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay10.jpg" alt="Summary Screen" /></p>
+
+  <p>Summary Screen</p>
+</div>
+
+<p>This screen will summarise all the selected member’s details. These details will
+be listed in this screen.</p>
+
+<h2><a name="Exceptions Report"></a>Exceptions Report</h2>
+
+<p>When a payroll is run, all the members in the scheme must have all the information
+required in Pension Master and Payroll Master. If any vital information does not
+exist, e.g. Tax Code, Payment Frequency, Pension Amount or Bank Details, then an
+exceptions report is generated.</p>
+
+<p>The following window will pop up:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay5.jpg" alt="Exceptions Found Window" /></p>
+
+  <p>Exceptions Found Window</p>
+</div>
+
+<p>The information must be entered onto Pension Master and Payroll Master before the
+Payroll Run can be successfully carried out.</p>
+
+<h2><a name="Information Report"></a>Information Report</h2>
+
+<p>When a payroll is run, if any members in the scheme have a negative net pay calculated,
+then they will be listed in this report. The user should then check that the pension
+amounts and tax codes have been entered correctly against these members before they
+continue with the Payroll Run.</p>
+
+<h2><a name="message"></a><a name="Printing A Payslip Message"></a>Printing A Payslip Message</h2>
+
+<p>If the ‘Payslip message?’ field is ticked in Schemes and there are payslips
+to print, then the following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay9.jpg" alt="Payslip Message" /></p>
+
+  <p>Payslip Message</p>
+</div>
+
+<p>If you enter a message in this window, then the message entered will appear on all
+the payslips generated in the current payroll run.</p>
+
+<h2><a name="print"></a><a name="Printing Standard Payslips &amp; Payment Reports"></a>Printing Standard Payslips, Export Data for Mail Merge &amp; Payment Reports</h2>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay3.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>Standard Payslips</td>
+          <td>Print off payslips for the members of the scheme.</td>
+        </tr>
+        <tr>
+          <td>Export Data for Mail Merge</td>
+          <td>Export payslip data for the members of the scheme to be used in a mail merge.</td>
+        </tr>
+        <tr>
+          <td>Payment Summary</td>
+          <td>Print off the payment summary report for the members of the scheme.</td>
+        </tr>
+        <tr>
+          <td>BACS Bulk Payment</td>
+          <td>Print off the bulk payment report for the members of the scheme who are to be paid by BACS.</td>
+        </tr>
+        <tr>
+          <td>Cheque Payment Listing</td>
+          <td>Print off the cheque payment listing report for the members of the scheme who are to be paid by Manual Cheque.</td>
+        </tr>
+        <tr>
+          <td>Other Payment Listing</td>
+          <td>Print off the other payment listing report for the members of the scheme who are to be paid by Other methods.</td>
+        </tr>
+        <tr>
+          <td>Continue</td>
+          <td>Continue with the Payroll Run.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>Select the appropriate option and click on ‘OK’. Click on ‘Cancel’ to exit the window
+or ‘Help’ to display this help text.</p>
+
+<h3><a name="payslips"></a>Payslips</h3>
+
+<p>The member’s payslips will now be displayed to the screen. Further details of the
+printing options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>. Please
+ensure that there are pre-printed payslips ready in the printer before you send
+the payslips to print.</p>
+
+<h3><a name="export"></a>Export Data for Mail Merge</h3>
+
+<p>The member’s payslip data will now be exported out to a pipe delimitered file, which the user can then use in Mail Merge to print payslips using their own designed payslip layout. Once the pipe delimitered file has been created, it is copied to the local path of the user’s pc, as defined in <a href="/pension/system_administration/pem_sysp/#pp_local_path">System Parameters</a>. The data that is exported out to the pipe delimitered file is:</p>
+
+<ul>
+  <li>Scheme Description</li>
+  <li>Payslip Message</li>
+  <li>Department</li>
+  <li>Payment Method</li>
+  <li>Payment Period</li>
+  <li>Pension Multiple</li>
+  <li>Pension Rate</li>
+  <li>Pension Amount</li>
+  <li>Pay Element 1 Description</li>
+  <li>Pay Element 1 Multiple</li>
+  <li>Pay Element 1 Rate</li>
+  <li>Pay Element 1 Amount</li>
+  <li>Pay Element 2 Description</li>
+  <li>Pay Element 2 Multiple</li>
+  <li>Pay Element 2 Rate</li>
+  <li>Pay Element 2 Amount</li>
+  <li>Pay Element 3 Description</li>
+  <li>Pay Element 3 Multiple</li>
+  <li>Pay Element 3 Rate</li>
+  <li>Pay Element 3 Amount</li>
+  <li>Pay Element 4 Description</li>
+  <li>Pay Element 4 Multiple</li>
+  <li>Pay Element 4 Rate</li>
+  <li>Pay Element 4 Amount</li>
+  <li>Pay Element 5 Description</li>
+  <li>Pay Element 5 Multiple</li>
+  <li>Pay Element 5 Rate</li>
+  <li>Pay Element 5 Amount</li>
+  <li>PAYE Tax</li>
+  <li>National Insurance</li>
+  <li>Total Gross Pay To Date</li>
+  <li>Gross For tax To Date</li>
+  <li>Tax Paid To Date</li>
+  <li>Earnings For National Insurance To Date</li>
+  <li>National Insurance To Date</li>
+  <li>Total Gross Pay</li>
+  <li>Gross For Tax</li>
+  <li>National Insurance Number</li>
+  <li>Tax Rebate</li>
+  <li>Roundings B/F</li>
+  <li>Roundings C/F</li>
+  <li>Period Number</li>
+  <li>Payroll Date</li>
+  <li>Company Name</li>
+  <li>Tax Code</li>
+  <li>Payroll Number</li>
+  <li>Title</li>
+  <li>Initials</li>
+  <li>Forename</li>
+  <li>Surname</li>
+  <li>Address Line 1</li>
+  <li>Address Line 2</li>
+  <li>Address Line 3</li>
+  <li>Address Line 4</li>
+  <li>Address Line 5</li>
+  <li>Postcode</li>
+  <li>Net Pay</li>
+</ul>
+
+<h3><a name="paysum"></a>Payment Summary Report</h3>
+
+<p>The payment summary report will now be displayed to the screen. Further details
+of the printing options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
+
+<h3><a name="bulkpay"></a>Bulk Payment Report</h3>
+
+<p>The bulk payment report will now be displayed to the screen. Further details of
+the printing options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
+
+<h2><a name="commit"></a><a name="Committing the Payroll Data"></a>Committing the Payroll Data</h2>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay4.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>If ‘Yes’ is selected then the program continues to commit the payroll data generated.
+If ‘No’ is selected then the program returns back to the payroll menu.</p>
+
+<h2><a name="payelem"></a><a name="Setting Pay Element Amounts to zero post run"></a>Setting Pay Element Amounts to zero post run</h2>
+
+<p>If pay elements have been used for members in the payroll run, where the amount is greater than 0 (zero), then the user will be asked if they wish for these amounts to be set to zero in the Pay Element screen of Members. The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay11.jpg" alt="Pay Element Amounts to be set to zero Window" /></p>
+
+  <p>Pay Element Amounts to be set to zero Window</p>
+</div>
+
+<p>If ‘Yes’ is selected then each pay element amount used will be set to zero in the Pay Element screen of Members.
+If ‘No’ is selected then the pay elements amounts are not set to zero, and the program continues committing the payroll data.</p>
+
+<h2><a name="bacs"></a>Creating a BACS Data File</h2>
+
+<p>Members who run their payroll on Payroll Master can have their payment made
+by BACS. In order for BACS to be used, a data file must be created to hold the payroll
+data of the members.</p>
+
+<p>A data file is created by many data lines. On each of these lines there must be
+a description of the payroll data which can be displayed on each member’s bank statement
+once they have been paid. This would usually be the name of the scheme who is paying
+the members, however, the description entered is solely down to the user. The description
+is held in the Bank Details screen of Schemes, and can only be up to 18 characters
+long.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>The data file created through Payroll Master is made up from data lines. Each data
+line consists of the following data: Sort Code, Account Number, Account Name, Amount,
+Building Society Roll Number, Description.</p>
+
+  <p>For example, ‘64466615498325MR D M LANG 5000000000000000000000L&amp;P SYSTEMS LTD’</p>
+
+</div>
+
+<h2><a name="chq"></a>Creating a Cheque Report</h2>
+
+<p>Members who run their payroll on Payroll Master can have their payment made by manual
+cheque. To inform the user of which members are to be paid by cheque, a Cheque Report
+will be generated during the Payroll Run, which can then be accessed through the
+Cheque Listing Report program.</p>
+
+<p>Once the Payroll Run has been successfully completed, the following window pops
+up:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_pay7.jpg" alt="BACS Data File Successful Window" /></p>
+
+  <p>BACS Data File Successful Window</p>
+</div>
+
+<p>It is now left to the user to use the recommended WinBACS Software to transfer the
+BACS data file containing payroll data. Any manual cheques which need to be written
+out will also be left to the user.</p>
+
+<h2><a name="backup"></a>Backup of Payroll Data</h2>
+
+<p>The Payroll Run program automatically creates backups of the Scheme’s payroll data.</p>
+
+<p>These backups are done before and after records are written to the database, and only once the user has confirmed the payroll run. The two backups have descriptions of ‘Pre Payroll dd/mm/yyyy’ and ‘Post Payroll dd/mm/yyyy’ where dd/mm/yyyy is the Run Date.</p>
+
+<h2><a name="submit"></a>Submit</h2>
+
+<div class="screen">
+  <p><img src="/payroll/images/py_paysub.jpg" alt="Submit File" /></p>
+
+  <p>Submit File</p>
+</div>
+
+<p>You will run the payroll through the same ‘Payroll Run’ program. Once the payroll run has completed you will then use the ‘Submit’ menu option.</p>
+
+<p>Selecting the ‘Submit’ menu option will open up a new screen where you will enter the Scheme Code, Category Code (if applicable) and Run Date. It is important that you enter the Scheme, Category and Run Date exactly as you did for the payroll run itself. The Sender, Accounts Office Reference and Gateway ID will auto-populate from the information held in the RTI Details screen in Payroll Schemes for the scheme. You will need to enter the Password that has been provided by HMRC.</p>
+
+<p><strong>Final Submission For Year?</strong> - If this is the last payroll payment of the tax year then tick this check box.</p>
+
+<p><strong>Transferring Scheme?</strong> - This field should only be selected when you (the client) are transferring the scheme to another provider and are therefore no longer running the payroll. When this field is selected all payroll members within the scheme must have the Date Finished Pension and Last Payment fields filled in, and it’s only members with a Last Payment field ticked that are picked up.</p>
+
+<p>When you know you are transferring a scheme you must do the following:</p>
+
+<ul>
+  <li>Run the last payroll as normal.</li>
+  <li>Fill in the Date Finished Pension and tick the Last Payment field on every member of the scheme’s record.</li>
+  <li>Go to the ‘Submit’ option in Payroll Run and fill in all the details making sure the ‘Transferring Scheme?’ field is ticked then click ‘OK’.</li>
+</ul>
+
+<p>N.B. It is important that the final FPS (Transferring Scheme submission) is submitted to HMRC before the new provider submits their first FPS.</p>
+
+<p><strong>Scheme Ceased?</strong> - This field should be selected when you (the client) are closing down a scheme. When this field is ticked, it automatically ticks the ‘Final Submission For Year?’ field as well. This is done to ensure all the relevant information is sent to HMRC telling them that this scheme has finished and no more payroll will be run on it.</p>
+
+<p>When you know you are closing a scheme down you must do the following:</p>
+
+<ul>
+  <li>Ensure all members of the payroll scheme have had their Date Finished Pension field filled in and Last Payment field ticked in the Pension screen in Payroll Members.</li>
+  <li>Ensure that the Date Scheme Ceased field is filled in in the Scheme Details screen in Payroll Schemes. The Date Scheme Ceased cannot be in the future and it must also be within the current tax year. If it’s not then you will be warned of this at the point of doing the submission.</li>
+</ul>
+
+<p><strong>Reason for Late Submission</strong> - This field should only be selected when you (the client) are submitting an FPS after the Run Date. You will only be allowed access to this field if the Run Date is before today’s date.</p>
+
+<p>The option available in this field is ‘Reasonable Excuse’, and by using this option it attaches the LateReason element to each member of the submission in the FPS file. If you are submitting an FPS late to HMRC then you should use this option. This option should be selected with caution as HMRC might require you to provide evidence of what your ‘Reasonable excuse’ is at a later date.</p>
+
+<div class="alert alert-danger" role="alert">
+
+  <p>The Payroll Run doesn’t pick up members whose Date Finished Pension is before the Payroll Run Date, however, the Submit option in the Payroll Run does pick up extra members who have their Last Payment field ticked. When a leaver is picked up only the members figures to date will be sent along with the leaving date. Once the submission has been successful the Last Payment indicator will be unticked.</p>
+
+</div>
+
+<p>On clicking ‘OK’ the program will generate an XML file which will then be sent to HMRC.</p>
+
+<p>After the XML file has been sent to HMRC you will receive a confirmation message. This only indicates that HMRC have received the submission and not that the data is valid and has been accepted.</p>
+
+<p>The program then waits for 20 seconds, a time limit imposed by HMRC, before checking your submission. The response will either be:</p>
+
+<ul>
+  <li>A report will be produced if errors have been found. Any errors will need to be rectified and the scheme data submitted and checked again.</li>
+  <li>A message saying ‘The submission has been acknowledged by the Government Gateway’ indicates that HMRC have received your request and are currently processing the data submission.</li>
+</ul>
+
+<p>If you are running payroll for multiple Scheme and Scheme/Category combinations then it is important that you keep track of the stages that have been completed.</p>
+
+<h2><a name="error"></a>HMRC Error Messages</h2>
+
+<p>If a member is being paid for the first time and has no Current Pension value then a HMRC submission could return the following error:</p>
+
+<pre><code>If [STARTDATE] is completed, at least one of [STARTINGDECLARATION], [INTENDTOSTAYOVER183DAYS], [INTENDTOSTAYLESSTHAN183DAYS], [INTENDTOWORKBOTHINANDOUTOFUK] must be present or [ANNUALAMOUNTOFPENSION] must be greater than zero. Please check
+</code></pre>
+
+<p>A User Defined Screen has been setup called Additional HMRC RTI Data for Payroll Members in Pension Master. It currently contains 4 fields that hold additional infromation:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>Starting Declaration</td>
+          <td>described as [STARTINGDECLARATION] in the error message can be one of the following: A - This is my first job since 6th April, B - This is my only job and C - I have another job or pension</td>
+        </tr>
+        <tr>
+          <td>Int. Stay &gt; 183 Days</td>
+          <td>described as [INTENDTOSTAYOVER183DAYS] in the error message is the ‘Indicator if intention to live in UK for 183 days or more’ and should be set to ‘yes’.</td>
+        </tr>
+        <tr>
+          <td>Int. Stay &lt; 183 Days</td>
+          <td>described as [INTENDTOSTAYLESSTHAN183DAYS] in the error message is the ‘Indicator if intention to live in UK for less than 183 days’ and should be set to ‘yes’.</td>
+        </tr>
+        <tr>
+          <td>Int. Work In&amp;Out UK</td>
+          <td>described as [INTENDTOWORKBOTHINANDOUTOFUK] in the error message is the ‘Indicator if individual will be working both in / out of the UK but living abroad’ and should be set to ‘yes’.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:52:44.</p>
+      </div>
+    </div>
+  </body>
+</html>

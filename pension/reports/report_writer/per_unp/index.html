@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Mail Merge Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085403" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Mail Merge Report</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A New Report">Add A New Mail Merge Report</a></li>
+  <li><a href="#To Output A Particular Field">To Output A Particular Field</a></li>
+  <li><a href="#To Output The Results Of A Particular Formula">To Output The Results Of A Particular Formula</a></li>
+  <li><a href="#Search For An Existing Mail Merge Report">Search For An Existing Mail Merge Report</a></li>
+  <li><a href="#Re-Run An Existing Mail Merge">Re-Run An Existing Mail Merge Report</a></li>
+  <li><a href="#Edit An Existing Template Document">Edit An Existing Template Document</a></li>
+  <li><a href="#Delete A Mail Merge">Delete A Mail Merge Report</a></li>
+  <li><a href="#List Mail Merge Reports Currently Set">List Mail Merge Reports Currently Set Up</a></li>
+  <li><a href="#Where To Find The Resulting Mail Merge Data File">Where To Find The Resulting Mail Merge Data File</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+
+<p>Use this program to set up the data sets needed to produce the various different kinds
+of standard letters and benefit statements for members of your pension scheme.</p>
+
+<p>It produces a data file containing member details as selected by you that is suitable
+for reading into the mail merge facility of Microsoft Word. The full mail merge process
+is automated.</p>
+
+<p>Creation of a mail merged letter is a three step process:</p>
+
+<ol>
+  <li>Create a Microsoft Word mail merge template document that contains your letter, but
+with special mail merge tags indicating where the data coming from Pension Master
+is to be inserted.</li>
+  <li>In Pension Master, create a mail merge report specifying the name and path of the
+Word template document created in the above step and which items of data from Pension
+Master you wish to output to this template document.</li>
+  <li>Merge the data from Pension Master into the MS Word template document to create the
+finished letter.</li>
+</ol>
+
+<p>Anyone familiar with the mail merge facility of MS Word will have no problem creating
+mail merged letters from Pension Master.</p>
+
+<p>The following options and screen appear when this program is selected. Certain menu
+options may only be visible when you have selected a mail merge report using the ‘Query’
+option:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Run</li>
+  <li>edIt</li>
+  <li>Delete</li>
+  <li>List</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp1.jpg" alt="Mail Merge Report Main Screen" /></p>
+
+  <p>Mail Merge Report Main Screen</p>
+</div>
+
+<h2><a name="Add A New Report"></a>Add A New Mail Merge Report</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>When adding a new mail merge report, you should first of all create an empty Microsoft
+Word document that you wish to eventually be your mail merge template document.
+As part of the process of adding a mail merge report, Pension Master will automatically
+convert this blank document into a mail merge template document and invite you to
+add text and/or graphics to it to create the finished document.
+This should be in a location that is accessible to all Pension Master users at
+your site e.g. a shared network drive.</p>
+</div>
+
+<p><a name="Add"></a>Click ‘Add’.</p>
+
+<p>You will be asked if you wish to copy an existing Mail Merge Report. If you select ‘Yes’ you will be prompted to select the Mail Merge Report to copy or select one from the lookup list.</p>
+
+<p><a name="pm_member"></a>
+<a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="pm_marital_stat"></a>
+<a name="pm_sex"></a>
+<a name="pm_dob"></a>
+<a name="psft_code"></a>You are then requested to enter the selection criteria required in order to select the
+members you wish to output to the report (see the <a href="/pension/appendices/app_b/">Data Dictionary</a> of
+this manual for further details on selection of records in Pension Master). When the
+selection criteria has been entered click on ‘OK’ to proceed to the report date field.	When initially setting up a mail merge it is best to select just an individual member or at least a very small group of members.</p>
+
+<p>You can click on ‘Cancel’ to return to the menu and abort report selection.</p>
+
+<p><a name="rep_date"></a><strong>REPORT DATE</strong> - The report date defaults to today’s date,
+but it may be overwritten with any date in the format ddmmyy or dd/mm/yyyy. This date
+is used in conjunction with the <strong>DATE ENTERED COMPARISON</strong> field to include only
+those members who have joined the scheme before a certain date.</p>
+
+<p><a name="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
+field are:</p>
+
+<ul>
+  <li><strong>1</strong> - Include members whose Date Joined For Pension is less than or equal to the report date</li>
+  <li><strong>2</strong> - Include members whose Date Entered Company is less than or equal to the report date</li>
+  <li><strong>3</strong> - Include members whose Date Joined For Life Assurance is less than or equal to the report date</li>
+  <li><strong>’ ‘</strong> - Include All members</li>
+</ul>
+
+<p><a name="document"></a><strong>DOCUMENT PATH</strong> - This is the name and full path of the
+mail merge template document you have set up for merging the data in this Mail Merge
+Report into. This field is used to indicate which template document to open for which
+letter when doing a mail merge. See <a href="/pension/file_maintenance/pem_mem/#Producing Benefit Statements And Standard Letters">Members</a> for
+further details of how this works when merging letters/certificates directly from
+the member record. An example would be g:\docs\benstat.doc.</p>
+
+<p><strong>When adding a new mail merge report, you should create an empty Microsoft Word
+document that you wish to eventually be your mail merge template document.</strong></p>
+
+<p>If you are unsure of the name or location of your template document, press the Search
+button to display a pop-up browse for file window. Select the directory you require
+using the mouse, then enter a name for your new template document in the ‘File
+name’ field, then click on ‘OK’. The filename and path will automatically be displayed
+in the ‘Document Path’ field.</p>
+
+<p><strong>Your template file should be in a location that is accessible to all Pension Master
+users at your site e.g. a shared network drive. Otherwise you will find that only
+users that can access the template file can run mail merges for this letter/certificate.</strong></p>
+
+<p><a name="gns_macro"></a><strong>MACRO AFTER MERGE</strong> - Tick this box if you want to run
+your own Microsoft Word macro in the form letters that are produced by the mail merge
+process. You may want to do this for example if you want to make sure the user saves
+the resulting form letters. If you are unsure what this option means, it is likely
+you will not need it and so should set this field to unticked.</p>
+
+<p><a name="gns_macro_name"></a><strong>MACRO NAME</strong> - Enter the name of your Microsoft
+Word macro that you wish to run after the mail merge process has completed.</p>
+
+<p><a name="gns_mem_lab"></a><strong>USE FOR MEMBER LABELS?</strong> - Check this box if you want
+this mail merge report to be used to generate member labels.</p>
+
+<p>Any selection criteria that is entered will be used if this report is run from the
+Mail Merge Report screen. But, if this report is run as a Member Label report then
+the Member Label report selection criteria will be used.</p>
+
+<p><a name="group_1"></a>
+<a name="group_2"></a>
+<a name="group_3"></a>
+<a name="group_4"></a>
+<a name="group_5"></a>
+<a name="group_6"></a><strong>GROUP
+BY</strong> - These fields can be optionally used to specify how you wish to group the
+member records that are output to the report e.g. you may wish to group the records
+by date of birth. In this case you would enter <em>pm_dob</em> in the first GROUP BY
+field. The field entered must exist on the member file. If the field entered does
+not exist on the member file an error message will be displayed and the group by field
+should be re-entered. If you are unsure of the name of the field you wish to group
+by, simply click on the lookup icon for a list of fields.</p>
+
+<p>When all groups have been entered click on ‘OK’, or press <kbd>Return</kbd> down through
+the remaining fields to proceed to the following screen.</p>
+
+<p><a name="2"></a>The second screen is displayed as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp2.jpg" alt="Field Selection Screen" /></p>
+
+  <p>Field Selection Screen</p>
+</div>
+
+<p><a name="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
+appear in the data file or the result of a particular formula to output to the data
+file. Which one is dependent on how you enter the field:</p>
+
+<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+
+<p>Enter the fieldname you wish to appear in the output. If you are unsure of the name
+of the field, click on the lookup icon to see a list of fields.</p>
+
+<p>Certain fields require you to add an argument, for example, telling them which investment
+fund to look the field up in. These are shown in the following table:</p>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Table</th>
+          <th style="text-align: left">Argument 1</th>
+          <th style="text-align: left">Argument 2</th>
+          <th style="text-align: left">Argument 3</th>
+          <th style="text-align: left">Argument 4</th>
+          <th style="text-align: left">Argument 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"><strong>pe_addb</strong> (Additional Benefits)</td>
+          <td style="text-align: left"><strong>padb_code</strong> (Benefit Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_assmix</strong> (Investment Asset Mix)</td>
+          <td style="text-align: left"><strong>pam_fund</strong> (Fund Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_broker</strong> (Broker Details)</td>
+          <td style="text-align: left"><strong>pbr_code</strong> (Broker Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_b</strong> (Bulk Switch Out Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>psbb_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>psbb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>psbb_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_h</strong> (Bulk Switch Header Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>psbh_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_m</strong> (Bulk Switch Member Details)</td>
+          <td style="text-align: left"><strong>psbm_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left"><strong>psbm_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>psbm_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_bulksw_n</strong> (Bulk Switch In Details)</td>
+          <td style="text-align: left"><strong>psbh_recvd</strong> (Date Received</td>
+          <td style="text-align: left"><strong>psbh_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_deathdep</strong> (Dependant Death Details)</td>
+          <td style="text-align: left"><strong>pdep_ref</strong> (Reference)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dec_str</strong> (History Details)</td>
+          <td style="text-align: left"><strong>pdec_type</strong> (History Type)</td>
+          <td style="text-align: left"><strong>pdec_date</strong> (Effective Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dep</strong> (Dependant Details)</td>
+          <td style="text-align: left"><strong>pd_curr_flag</strong> (Current Dependant Flag)</td>
+          <td style="text-align: left"><strong>pd_ben_flag</strong> (Beneficiary Flag)</td>
+          <td style="text-align: left"><strong>pd_num</strong> (Dependant Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_divorce</strong> (Divorce Details)</td>
+          <td style="text-align: left"><strong>pdi_number</strong> (Dependant Details)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dpena</strong> (Deferred Pension History)</td>
+          <td style="text-align: left"><strong>pdpa_code</strong> (Deferred Pension Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_dpenh</strong> (Deferred Pension Increase History)</td>
+          <td style="text-align: left"><strong>pdph_code</strong> (Deferred Pension Code)</td>
+          <td style="text-align: left"><strong>pdph_eff_dt</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_exp_b</strong> (Expense Assumptions Body)</td>
+          <td style="text-align: left"><strong>pexb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_fsavc</strong> (FSAVC Details)</td>
+          <td style="text-align: left"><strong>pfsavc_number</strong> (FSAVC Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_invfun</strong> (Investment Fund Details)</td>
+          <td style="text-align: left"><strong>pif_fund</strong> (Fund Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_maddr</strong> (Member Address Details)</td>
+          <td style="text-align: left"><strong>pmad_index</strong> (Address Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mcon</strong> (Member Contribution History)</td>
+          <td style="text-align: left"><strong>TOT</strong> (total contributions)</td>
+          <td style="text-align: left"><strong>pmc_type</strong> (Transaction Type)</td>
+          <td style="text-align: left"><strong>pmc_due or pmc_recvd</strong> (Contribution Date Due or Received)</td>
+          <td style="text-align: left"><strong>flag</strong> (denotes which date to use for comparisons)</td>
+          <td style="text-align: left"><strong>pmc_cont</strong> (Contribution Type)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mcontp</strong> (Member Contribution Rate Percentages)</td>
+          <td style="text-align: left"><strong>pcp_date</strong> (Effective Date)</td>
+          <td style="text-align: left"><strong>pcp_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mint</strong> (Member Contributions Plus Interest Details)</td>
+          <td style="text-align: left"><strong>pmin_date</strong> (Date Interest Applied)</td>
+          <td style="text-align: left"><strong>pmin_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_minv</strong> (Member Investment History)</td>
+          <td style="text-align: left"><strong>pmi_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pmi_type</strong> (Transaction Type)</td>
+          <td style="text-align: left"><strong>pmi_due, pmi_recvd or pmi_invested</strong> (Contribution Date Due, Received or Invested)</td>
+          <td style="text-align: left"><strong>flag</strong> (denotes which date to use for comparisons)</td>
+          <td style="text-align: left"><strong>pmi_cont</strong> (Contribution Type)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_minvf</strong> (Member Investment Setup Details)</td>
+          <td style="text-align: left"><strong>pminf_date</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left"><strong>pminf_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pminf_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>flag</strong> (M - Member S - Scheme)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mallow</strong> (Lifetime/Annual Allowance)</td>
+          <td style="text-align: left"><strong>pmal_date</strong> (Calculation Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote</strong> (Quotation Results)</td>
+          <td style="text-align: left"><strong>pmq_type</strong> (Quotation Type)</td>
+          <td style="text-align: left"><strong>pmq_index</strong> (Quotation Index or Range)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote_h</strong> (Quotation Header)</td>
+          <td style="text-align: left"><strong>pmqh_type</strong> (Quotation Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote_hist</strong> (Quotation History Results)</td>
+          <td style="text-align: left"><strong>pmqhh_type</strong> (Quotation Type)</td>
+          <td style="text-align: left"><strong>pmqhh_rec_num</strong> (History Record Number)</td>
+          <td style="text-align: left"><strong>pmqhh_index</strong> (Quotation Index)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mtax</strong> (Tax Simplification Results)</td>
+          <td style="text-align: left"><strong>pmtx_eff_date</strong> (Effective Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mua</strong> (User Defined History Fields)</td>
+          <td style="text-align: left"><strong>pma_type</strong> (User Defined History Type)</td>
+          <td style="text-align: left"><strong>pma_date</strong> (User Defined History Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_muds</strong> (User Defined Screen Fields)</td>
+          <td style="text-align: left"><strong>pmu_type</strong> (User Defined Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_not</strong> (Member Freehand Notes)</td>
+          <td style="text-align: left"><strong>pn_num</strong> (Notes Line Number)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_pena</strong> (Pension History)</td>
+          <td style="text-align: left"><strong>ppa_code</strong> (Pension Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_penh</strong> (Pension Increase History)</td>
+          <td style="text-align: left"><strong>pph_code</strong> (Pension Code)</td>
+          <td style="text-align: left"><strong>pph_eff_dt</strong> (Effective Date) or <strong>TODAY</strong> to use todays date</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_prices</strong> (Unit Prices)</td>
+          <td style="text-align: left"><strong>ppr_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>flag</strong> (1 - Most Recent unit Date 2- Popup Date)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_pthrs</strong> (Part Time Hours)</td>
+          <td style="text-align: left"><strong>number</strong> (denotes the line on the Part Time Hours screen)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_saddr</strong> (Scheme Address Details)</td>
+          <td style="text-align: left"><strong>psa_addr_code</strong> (Address Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_scont</strong> (Scheme Contribution Type Setup)</td>
+          <td style="text-align: left"><strong>psct_code</strong> (Contribution Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_schmat_b</strong> (Scheme Contribution Matrix Body)</td>
+          <td style="text-align: left"><strong>psmb_matrix</strong> (Matrix)</td>
+          <td style="text-align: left"><strong>flag</strong> AGE or SERVICE</td>
+          <td style="text-align: left"><strong>psmb_age</strong> (Age) or <strong>psmb_service</strong> (Service)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_schmat_h</strong> (Scheme Contribution Matrix Header)</td>
+          <td style="text-align: left"><strong>psmh_matrix</strong> (Matrix)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_sfeat</strong> (Special Codes)</td>
+          <td style="text-align: left"><strong>psft_code</strong> (Special Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_sfunds</strong> (Scheme Investment Fund Setup)</td>
+          <td style="text-align: left"><strong>psf_fund</strong> (Fund Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_slife_b</strong> (Scheme Lifestyle Matrix Body)</td>
+          <td style="text-align: left"><strong>pslb_matrix</strong> (Lifestyle Matrix Code)</td>
+          <td style="text-align: left"><strong>pslb_index</strong> (Start Age/Term to Retirement)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_slife_h</strong> (Scheme Lifestyle Matrix Header)</td>
+          <td style="text-align: left"><strong>pslh_matrix</strong> (Lifestyle Matrix Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_suds</strong> (Scheme User Defined Details)</td>
+          <td style="text-align: left"><strong>psud_type</strong> (Scheme User Defined Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_b</strong> (Switch Out Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (from Date Received)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (to Date Received)</td>
+          <td style="text-align: left"><strong>pswb_fund</strong> (Fund Code)</td>
+          <td style="text-align: left"><strong>pswb_cont</strong> (Contribution Type)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_h</strong> (Switch Header Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (Date Received)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_switch_n</strong> (Switch In Details)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (from Date Received)</td>
+          <td style="text-align: left"><strong>pswh_recvd</strong> (to Date Received)</td>
+          <td style="text-align: left"><strong>pswh_bulk_id</strong> (Bulk Switch ID)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvin</strong> (Transfer In Details)</td>
+          <td style="text-align: left"><strong>ptvi_code</strong> (Transfer In Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvout</strong> (Transfer Out Details)</td>
+          <td style="text-align: left"><strong>ptvo_code</strong> (Transfer Out Code)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uda_b</strong> (User Defined History Body Details)</td>
+          <td style="text-align: left"><strong>puab_type</strong> (History Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uda_h</strong> (User Defined History Header Details)</td>
+          <td style="text-align: left"><strong>puah_type</strong> (History Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uds_b</strong> (User Defined Screen Body Details)</td>
+          <td style="text-align: left"><strong>pudb_type</strong> (Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_uds_h</strong> (User Defined Screen Header Details)</td>
+          <td style="text-align: left"><strong>pudh_type</strong> (Screen Type)</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+          <td style="text-align: left">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If a field has been selected from the Scheme Address Details table, then the argument
+must be one of the following:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Argument</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">SCHEME</td>
+          <td style="text-align: left">Scheme Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">TRUSTEE</td>
+          <td style="text-align: left">Trustee Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ADMIN</td>
+          <td style="text-align: left">Administrator Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ACTUARY</td>
+          <td style="text-align: left">Actuary Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">AUDITOR</td>
+          <td style="text-align: left">Auditor Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">LEGAL</td>
+          <td style="text-align: left">Legal Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MISC1</td>
+          <td style="text-align: left">Miscellaneous 1 Address</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">MISC2</td>
+          <td style="text-align: left">Miscellaneous 2 Address</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>The arguments have to be enclosed in brackets () and where there is more than one
+argument, the arguments are separated by a comma e.g. pmq_current(NORM,1) - this selects
+the first quotation result for Quotation Type NORM.</p>
+</div>
+
+<p><a name="popup"></a></p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
+Only one popup window appears per run, no matter how many flag 2 references are used throughout the report set up.
+A date must be entered in this field.</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
+</div>
+
+<p>The speed of data extraction during the Mail-Merge Report can be improved in two ways:</p>
+
+<p>Fields that belong to the same database table only have the user security check performed once. As soon as the table changes the security check is performed again. For example:</p>
+
+<ol>
+  <li>pm_member</li>
+  <li>ps_sal1</li>
+  <li>pmq_current(CERT,1)</li>
+  <li>pmu_fld1(INFO)</li>
+  <li>pm_dob</li>
+</ol>
+
+<p>will have the security check performed 5 times, for each time the source table changes.</p>
+
+<ol>
+  <li>pm_member</li>
+  <li>pm_forename</li>
+  <li>pm_surname</li>
+  <li>pm_sex</li>
+  <li>pm_dob</li>
+</ol>
+
+<p>will only have the security checked once for the Basic Member Details (pe_mem) table.</p>
+
+<p>So to improve performance it is advisable to group fields that belong to the same database table.</p>
+
+<p>It is now possible to use a range of Quotation Indexes when extracting information from the Member Quotation Results (pe_mquote) table. Instead of listing 5 quotation lines individually:</p>
+
+<ol>
+  <li>pmq_current(CERT,1)</li>
+  <li>pmq_current(CERT,2)</li>
+  <li>pmq_current(CERT,3)</li>
+  <li>pmq_current(CERT,4)</li>
+  <li>pmq_current(CERT,5)</li>
+</ol>
+
+<p>it is faster to use a range:</p>
+
+<ol>
+  <li>pmq_current(CERT,1-5)</li>
+</ol>
+
+<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+
+<p>To reference calculations in your report, enter the appropriate formula code in the
+format:</p>
+
+<pre><code>#calc(formula_code)
+</code></pre>
+
+<p>Where formula_code is a valid formula code for the scheme implied by the current selection
+criteria. If an invalid formula code is entered, you will be warned of this and invited
+to re-enter a valid formula code.</p>
+
+<p>If you are unsure of a particular formula code, type at least the # of the #calc and
+then click on the lookup icon to see a list of formula codes
+for the current implied scheme. Upon selecting a fomula code, the report field will
+automatically be filled in with the correct #calc(formula_code) syntax e.g. #calc(092).</p>
+
+<p>The field must be set up on the Report Units file (see Member Report Units) or can
+be a direct link to a valid formula for the current scheme. If the field entered does
+not exist on the report units file an error message will be displayed and the fieldname
+must be re-entered.</p>
+
+<p>If you attempt to click on ‘OK’ to save the report whilst still in the last field
+and the last field of the report is blank, a message will be displayed asking you
+if you wish to save the report and run it immediately, or return to input another
+field.</p>
+
+<p>When all fields have been entered click on ‘OK’, to proceed to the following screen.</p>
+
+<p><a name="3"></a>The third screen is displayed as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp6.jpg" alt="Mail Merge Output Settings" /></p>
+
+  <p>Mail Merge Output Settings</p>
+</div>
+
+<p><a name="gnu_email"></a><strong>EMAIL ADDRESS</strong> - You should have your email address in the email address field; if it is not present you will need to add this in the “Users” program. (For larger mail merges this is used to notify the user that the mail merge has completed).</p>
+
+<p><a name="gns_file_type"></a><strong>PDF/WORD DOCUMENT</strong> - Select from the drop-down list whether you want the final document in PDF or DOC format.</p>
+
+<p><a name="gns_split"></a><strong>SPILT THE DOCUMENT</strong> - If you wish the final mail merge document to be split into individual documents you should check the “Split Document” check box. The remaining text boxes and drop-down lists on this screen should now become available and they determine the naming convention of the final merged documents. If you don’t click ‘OK’ to proceed.</p>
+
+<p>When all fields have been entered click on ‘OK’ to process the report. A message will
+be displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>You will be asked if you wish to save your report. If you wish to save the report
+for later use press <kbd>Y</kbd>, or click on the ‘Yes’ menu option. A window will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp3.jpg" alt="Save Report Screen" /></p>
+
+  <p>Save Report Screen</p>
+</div>
+
+<p><strong>REPORT CODE</strong> - Enter a short alphanumeric code of up to 8 characters to save
+your report under. If the report code already exists on the report file for the current
+scheme then you will be asked if you want to overwrite it, or enter another report
+code.</p>
+
+<p><strong>SCHEME CODE</strong> - Enter the scheme code for this report. This is the scheme code
+that corresponds to the scheme you wish to use this report for. You should note, however,
+that this will not preclude you using this report for other schemes if you so wish.
+The scheme code must be a valid code on the scheme file and if it is not, an error
+message will be displayed.</p>
+
+<p><strong>REPORT DESCRIPTION</strong> -The report description must be entered. This is a more
+lengthy description for your report which you can use to identify the report for future
+use e.g. “Standard Leaver Letter”.</p>
+
+<p>When the report description has been entered click on ‘OK’ to save the report to file,
+or click on ‘Cancel’ to cancel saving the report to file.</p>
+
+<p>If you do not wish to save the report click ‘No’.</p>
+
+<p>Along the top of the window click the button “Download Template” button
+Microsoft Word will now be automatically started and the mail merge data file created.</p>
+
+<p>You should now design your letter/certificate using all the features and abilities
+of Microsoft Word you need. When you wish to insert a data field from Pension Master
+at the current cursor location point, click on the ‘Insert Merge Field’ button in
+Microsoft Word and select the appropriate field. A lookup of the field names is available
+in the <a href="/pension/appendices/app_a/">Data Dictionary</a>.</p>
+
+<p>When you have finished designing your template file, click on File &gt; Save to save
+your template file and then exit Microsoft Word.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Search For An Existing Mail Merge Report"></a>Search For An Existing Mail Merge Report</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>The following window will be displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp4.jpg" alt="Report Selection Screen" /></p>
+
+  <p>Report Selection Screen</p>
+</div>
+
+<p>Enter the selection criteria for the report and click on ‘OK’, or <kbd>Return</kbd> when
+in the report description field. Pension Master defaults to selecting all available
+reports for the scheme implied by the current selection criteria, which is usually
+the scheme the current member is in.</p>
+
+<p>All reports that match the selection criteria will be displayed. If more than 10 records
+are selected click on the ‘Next Record’ button to view the next screen of reports,
+and click on the ‘Prev Record’ button to view the previous screen.</p>
+
+<p>Using the arrow keys, go to the report that is required and click on ‘OK’. The window
+will close and the report details saved for that report will be displayed automatically.
+Enter the selection criteria and click on ‘OK’. If no records are found to match the
+selection criteria an error message will be displayed.</p>
+
+<p>You will then be returned to the main menu and can select the appropriate menu option
+as required.</p>
+
+<h2><a name="Re-Run An Existing Mail Merge"></a>Re-Run An Existing Mail Merge Report</h2>
+
+<p>Click ‘Run’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+the ‘Run’ menu option. If you have not done this then an error message will
+be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>To process the report click on ‘OK’. A message will then be displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>Once finished you will click the “Download Merged Document” button which can be found along the top of the screen.</p>
+
+<p>If the number of members processed falls beneath a pre-determined number (this will usually be no more than 10 members) then the completed merged document will be opened and presented to the user. If the numbers exceeds this limit then you will be advised that the mail merge is being processed and you will be notified by email once it is completed.</p>
+
+<p>Microsoft Word will now be automatically started and the mail merge data file created.
+The mail merge process will then be completed, with the mail merge data being inserted
+into the template document for this letter/certificate. The resulting merged document
+will then be displayed on the screen.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If, for some reason, the mail merge template file (as indicated by the ‘Document
+Path’ field) has been changed e.g. so that it now contains different data field tags
+than the current Mail Merge Report, Microsoft Word will complain when trying to do
+the mail merge as it may find data fields in the template document that are not in
+the mail merge data file. If this is the case, immediately exit Microsoft Word and
+use the edIt option in the Mail Merge Report to adjust your template document as required.
+This is only likely to happen if you decide to edit your template files directly
+in Microsoft Word rather than using the template document creation and amendment facilities
+within the Mail Merge Report.</p>
+</div>
+
+<p>Once you have finished with your merged document, exit Microsoft Word.</p>
+
+<h2><a name="Edit An Existing Template Document"></a>Edit An Existing Template Document</h2>
+
+<p>Click ‘edIt’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to run using the ‘Query’ menu option prior to selecting
+the ‘Run’ menu option. If you have not done this then an error message will
+be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>This option allows you to amend your template documents in Microsoft Word in a more
+controlled way that just amending the document directly in Word itself. We would recommend
+you use the edit option to do all changes to your document templates as this avoids
+potential confusion if amending documents directly in Word.</p>
+
+<p>You must select at least one member record to output data for. This is then used to
+create a dummy mail merge data file that will be attached to your template document
+so you have the correct mail merge fields available to you when editing your template
+document.</p>
+
+<p>The report details can be overwritten if required, or click on ‘OK’ to go on to the
+next screen.</p>
+
+<p>The fields saved for this report will be displayed to the second screen. These fields
+may be overwritten if required.</p>
+
+<p>To add a field in the middle of the report click on the ‘Add Row’ button, and enter
+the fieldname.</p>
+
+<p>To delete a field in the middle of the report click on the ‘Delete Row’ button.</p>
+
+<p>To append extra fields to the end of the report go to the next blank field and enter
+extra fields.</p>
+
+<p>To process the report click on ‘OK’. A message will then be displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>You will be asked if you wish to save your report. If you wish to save the report
+for later use press <kbd>Y</kbd>, or click on the ‘Yes’ menu option. The report will be saved
+with the code and description that it was originally saved with.</p>
+
+<p>If you do not wish to save the report click ‘No’.</p>
+
+<p>Once finished you will click the “Download Merged Document” button which can be found along the top of the screen.</p>
+
+<p>If the number of members processed falls beneath a pre-determined number (this will usually be no more than 10 members) then the completed merged document will be opened and presented to the user. If the numbers exceeds this limit then you will be advised that the mail merge is being processed and you will be notified by email once it is completed.</p>
+
+<p>Microsoft Word will now be automatically started in the background and the mail merge
+data file created. The mail merge template file (as specified in the ‘Document Path’
+field) is then loaded into Microsoft Word and displayed to your screen. You should
+then edit the template document as required, adding additional fields if necessary
+using the ‘Insert Merge Field’ button within Microsoft Word.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If you wish numeric items that are merged into your document to appear in certain
+formats other than the defaults, you can use the MS Word field formatting as follows:
+With the mail merge template document open in Word, press <kbd>Alt-F9</kbd>. This
+expands the details of your mail merge fields e.g. {pds_grsal} becomes {MERGEFIELD
+pds_grsal}. If you wanted salaries to appear, for example, with commas in (e.g. 3,000.00),
+amend the {MERGEFIELD pds_grsal} to {MERGEFIELD pds_grsal# #,##0.00}.
+Further details of the options available can be found in the MS Word on-line help
+text.</p>
+</div>
+
+<p>Once you have finished with your template document, exit Microsoft Word.</p>
+
+<p>The program will return to the main menu.</p>
+
+<h2><a name="Delete A Mail Merge"></a>Delete A Mail Merge Report</h2>
+
+<p>Click ‘Delete’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must have selected a report to delete using the ‘Query’ menu option prior to
+selecting the ‘Delete’ menu option. If you have not done this then an error
+message will be displayed and you will be returned to the main menu.</p>
+</div>
+
+<p>This option allows you to delete an existing Mail Merge Report from Pension Master.</p>
+
+<p>When the delete option is selected a window is displayed with the options yes and
+no.</p>
+
+<p>If you do not wish to delete the report click ‘No’. You will return to the main menu.</p>
+
+<p>If you wish to delete the report click ‘Yes’. Another window is displayed asking if
+you are sure.</p>
+
+<p>If you do not wish to delete the report click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the report, click ‘Yes’. The Member Report is deleted, and the
+program returns to the main menu.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The mail merge template document as specified in the ‘Document Path’ field is not
+deleted when you delete a Mail Merge Report as it is concievable that you may wish
+to keep this document for other uses.
+If this is not the case, you should now manually delete this template document
+using standard Windows tools e.g. Windows Explorer.</p>
+</div>
+
+<h2><a name="List Mail Merge Reports Currently Set"></a>List Mail Merge Reports Currently Set Up</h2>
+
+<p>Click List.</p>
+
+<p>This allows you to produce a list of all the Mail Merge Reports that are currently
+on Pension Master, sorted by scheme code and report code.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_unp5.jpg" alt="Scheme Selection Screen" /></p>
+
+  <p>Scheme Selection Screen</p>
+</div>
+
+<p>Enter the selection criteria to select the scheme or schemes you require for the report
+and click on ‘OK’ to proceed.</p>
+
+<p>The following message is now displayed:</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>Once the report has been produced, options are displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Where To Find The Resulting Mail Merge Data File"></a>Where To Find The Resulting Mail Merge Data File</h2>
+
+<p>A data file is written as follows. This is suitable for reading into the mail merge
+facility of your selected word processor, the full mail merge process is automatically
+carried out for you, so you don’t need to worry about the details set out here). See
+the appropriate word processor user manuals for further details on how to use them
+to perform mail merges.</p>
+
+<p>The mail merge data file will be created as c:\penmast.doc or otherwise as specified in the Report Path field of <a href="/pension/system_administration/pem_sysp/">System Parameters</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:03.</p>
+      </div>
+    </div>
+  </body>
+</html>

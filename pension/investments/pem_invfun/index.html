@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Investment Funds</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Investment Funds</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add">Add an Investment Fund</a>
+    <ul>
+      <li><a href="#Basic Fund Details Screen">Basic Fund Details Screen</a></li>
+      <li><a href="#Fund Restrictions Screen">Fund Restrictions Screen</a></li>
+    </ul>
+  </li>
+  <li><a href="#Query">Query/Search for an Investment Fund</a></li>
+  <li><a href="#View">Viewing Investment Funds</a></li>
+  <li><a href="#Update">Updating Investment Funds</a></li>
+  <li><a href="#Delete">Deleting Investment Funds</a></li>
+  <li><a href="#Report">Printing Investment Fund Details</a></li>
+  <li><a href="#Menu">Navigating Between Screens</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu1.jpg" alt="Basic Fund Details Screen" /></p>
+
+  <p>Basic Fund Details Screen</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.</p>
+
+  <p>The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.</p>
+
+  <p>If you do not have Supervisor status, you will not be permitted access to this program.</p>
+</div>
+
+<h2><a name="Add"></a>Add</h2>
+
+<p>Click ‘Add’.</p>
+
+<h3><a name="FUND"></a><a name="Basic Fund Details Screen"></a>Basic Fund Details Screen</h3>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pif_fund"></a><strong>FUND CODE</strong> - Enter a code for your fund to be saved by.
+This can be up to 10 characters in length and cannot contain spaces, ‘, “, /, \ or * as they are special characters. Ampersands (&amp;) are allowed.</p>
+
+<p><a name="pif_desc"></a><strong>NAME</strong> - Enter a description or name for your fund.</p>
+
+<p><a name="pif_isin"></a><strong>ISIN</strong> - Enter the ISIN number of the fund.</p>
+
+<p><a name="pif_addr1"></a>
+<a name="pif_addr2"></a>
+<a name="pif_addr3"></a>
+<a name="pif_addr4"></a><strong>ADDRESS</strong> -
+Enter the address of the fund.</p>
+
+<p><a name="pif_postcode"></a><strong>POSTCODE</strong> - Enter the postcode of the fund.</p>
+
+<p><a name="pif_tel"></a><strong>TEL NO</strong> - Enter the telephone number of the fund.</p>
+
+<p><a name="pif_fax"></a><strong>FAX NO</strong> - Enter the fax number of the fund.</p>
+
+<p><a name="pif_email"></a><strong>E-MAIL ADDRESS</strong> - Enter the e-mail address of the fund.</p>
+
+<p><a name="pif_title"></a>
+<a name="pif_ct_fname"></a>
+<a name="pif_ct_lname"></a><strong>CONTACT
+1 TITLE, FORENAME, SURNAME</strong> - Enter the details of your primary contact at the
+fund.</p>
+
+<p><a name="pif_title2"></a>
+<a name="pif_ct_fname2"></a>
+<a name="pif_ct_lname2"></a><strong>CONTACT
+2 TITLE, FORENAME, SURNAME</strong> - Enter the details of your secondary contact at the
+fund.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<h3><a name="REST"></a><a name="Fund Restrictions Screen"></a>Fund Restrictions Screen</h3>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu2.jpg" alt="Fund Restrictions Screen" /></p>
+
+  <p>Fund Restrictions Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pif_start"></a><strong>DATE FUND OPENED</strong> - Enter the date the fund opened to
+investments or leave blank. Investments will not be permitted in this fund prior to
+this date.</p>
+
+<p><a name="pif_end"></a><strong>DATE FUND CLOSED</strong> - Enter the date the fund closed to
+investments or leave blank. Investments will not be permitted in this fund after to
+this date.</p>
+
+<p><a name="pif_pr_invest"></a><strong>CAN PROTECTED RIGHTS BE INVESTED IN FUND?</strong> - Can
+Protected Rights contribution types be invested in this fund?</p>
+
+<p><a name="pif_sw_into"></a><strong>CAN MONIES BE SWITCHED INTO FUND?</strong> - Can monies be
+switched into this fund?</p>
+
+<p><a name="pif_sw_out"></a><strong>CAN MONIES BE SWITCHED OUT OF FUND?</strong> - Can monies be
+switched out of this fund?</p>
+
+<p><a name="pif_buy_basis"></a><strong>BUY BASIS</strong> - Select the unit buy basis for this fund:</p>
+
+<ul>
+  <li>Bid</li>
+  <li>Mid</li>
+  <li>Offer</li>
+</ul>
+
+<p><a name="pif_sell_basis"></a><strong>SELL BASIS</strong> - Select the unit sell basis for this fund:</p>
+
+<ul>
+  <li>Bid</li>
+  <li>Mid</li>
+  <li>Offer</li>
+</ul>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The details required to set up your fund have now been entered and you will be returned
+to the main menu.</p>
+
+<h2><a name="Query"></a><a name="query"></a>Query</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>The following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu5.jpg" alt="" /></p>
+
+</div>
+
+<p>You may select records by using the Fund Code field. You may also use any combination
+(or even partial combination) of this fields in order to select the required fund
+record(s).</p>
+
+<p>If you are unsure of the code(s) to Query, click on the lookup icon to see a lookup
+list of codes.</p>
+
+<p>Once you have entered your selection criteria, click on ‘OK’ to proceed and retrieve
+the records from the database or click on ‘Cancel’ to abort the selection and return
+to the Companies main menu.</p>
+
+<h2><a name="View"></a>View</h2>
+
+<p>If you have selected more than one fund using the ‘<a href="#Query">Query</a>’ option,
+you can navigate between them using the first, previous, next and last icons on the
+toolbar.</p>
+
+<h2><a name="Update"></a>Update</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Select the screen you wish to update using the ‘<a href="#Menu">Menu</a>’ option,
+then click ‘Update’.</p>
+
+<p>To update the <a href="#Basic Fund Details Screen">Basic Fund Details</a> and <a href="#Fund Restrictions Screen">Fund
+Restrictions</a> screens, see the ‘<a href="#Add">Add</a>’ option above. The other
+four screens that are available are as follows:</p>
+
+<h3><a name="PRICES"></a><a name="Unit Prices"></a>Unit Prices Screen</h3>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu3.jpg" alt="Unit Prices Screen" /></p>
+
+  <p>Unit Prices Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="ppr_date"></a><strong>DATE</strong> - Enter the date for your unit price. When posting
+units for members, the process will lookup the appropriate unit price at the date
+invested for the contribution concerned.</p>
+
+<p><a name="ppr_bprice"></a><strong>BID PRICE</strong> - Enter the unit bid price for the date
+concerned.</p>
+
+<p><a name="ppr_mprice"></a><strong>MID PRICE</strong> - Enter the unit mid price for the date
+concerned.</p>
+
+<p><a name="ppr_oprice"></a><strong>OFFER PRICE</strong> - Enter the unit offer price for the date
+concerned.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<h3><a name="INFO"></a><a name="Fund Information"></a>Fund Information Screen</h3>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu6.jpg" alt="Fund Information Screen" /></p>
+
+  <p>Fund Information Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pif_cashfu"></a><strong>CASH FUND?</strong> - Tick field if fund is a cash only fund.</p>
+
+<p><a name="pif_depfu"></a><strong>DEPOSIT FUND?</strong> - Tick field if fund is a deposit fund.</p>
+
+<p><a name="pif_prsafu"></a><strong>PRSA FUND?</strong> - Tick field if fund is classed as PRSA</p>
+
+<p><a name="pif_prsatype"></a><strong>PRSA TYPE</strong> - Select the PRSA Type from the drop-down list.</p>
+
+<p><a name="pif_curr"></a><strong>FUND CURRENCY</strong> - Select the Fund Currency from the drop-down list.</p>
+
+<p><a name="pif_funo"></a><strong>FUND NUMBER</strong> - Enter the fund number.</p>
+
+<p><a name="pif_fumgr"></a><strong>FUND MANAGER</strong> - Select the Fund Manager from the drop-down list.</p>
+
+<p><a name="pif_price"></a><strong>PRICE</strong> - Enter the price.</p>
+
+<p><a name="pif_totexratio"></a><strong>TOTAL EXPENSE RATIO</strong> - Enter the ratio.</p>
+
+<p><a name="pif_fumgr"></a><strong>ASSET CLASS</strong> - Select the Asset Class from the drop-down list.</p>
+
+<p><a name="pif_online"></a><strong>NOT ONLINE</strong> - Tick field if fund not to be shown on line.</p>
+
+<p><a name="pif_riskpro"></a><strong>RISK PROFILE</strong> - Select the Risk Profile from the drop-down list.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<h3><a name="ASSMIX"></a><a name="Asset Mix Screen"></a>Asset Mix Screen</h3>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu7.jpg" alt="Asset Mix Screen" /></p>
+
+  <p>Asset Mix Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pif_internalls"></a><strong>Internal Lifestyling?</strong> - Enter Yes or No if Fund has Internal Lifestyling.</p>
+
+<p><a name="pif_date"></a><strong>DATE</strong> - Enter the effective date.</p>
+
+<p><a name="pif_equ%"></a><strong>EQUITY %</strong> - Enter % invested in equity</p>
+
+<p><a name="pif_prop%"></a><strong>PROPERTY</strong> - Enter % invested in property.</p>
+
+<p><a name="pif_fis%"></a><strong>FIXED INTEREST</strong> - Enter % invested in fixed interest.</p>
+
+<p><a name="pif_cash"></a><strong>CASH</strong> - Enter % of invested in cash.</p>
+
+<p><a name="pif_other"></a><strong>OTHER</strong> - Enter % invested in other.</p>
+
+<p><a name="pif_total"></a><strong>TOTAL</strong> - This field is auto populate and has to be 100.</p>
+
+<p><a name="pif_amc"></a><strong>AMC - Asset Management Charge</strong> - Enter the % it can be left blank.</p>
+
+<p><a name="pif_comment"></a><strong>COMMENT</strong> - Enter any free text comments on the fund.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<h3><a name="INVVALSU"></a><a name="Investment Value Summary"></a>Investment Value Summary</h3>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_invfu4.jpg" alt="Investment Value Summary Screen" /></p>
+
+  <p>Investment Value Summary Screen</p>
+</div>
+
+<p>This is a view only screen that displays a valuation of this fund, split scheme by
+scheme, based on the latest unit price on the <a href="#Unit Prices">unit prices</a> screen
+for the appropriate <a href="#pif_sell_basis">unit sell basis</a>. This is colour
+coded as follows:</p>
+
+<ul>
+  <li><strong>Black</strong> - Valuation of units based on a unit price within the last 90 days.</li>
+  <li><strong style="color: blue">Blue</strong> - Valuation of units based on a unit price older than 90 days. A warning will also be displayed if any unit prices are used that are older than 90 days from today’s date.</li>
+  <li><strong style="color: red">Red</strong> - Unallocated contributions i.e. contributions that have not yet been used to buy units. These are taken at face value e.g. £100 of unallocated contributions has a value of £100.</li>
+</ul>
+
+<h2><a name="Delete"></a>Delete</h2>
+
+<p>Before Deleting, a record must be selected through the Query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>You cannot delete a fund that has investments in it.</p>
+
+<p>You will be asked if you really wish to delete the fund and if so, the fund and all
+details pertaining to it will be deleted.</p>
+
+<h2><a name="Report"></a><a name="report"></a>Report</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing</a>.</p>
+
+<h2><a name="Menu"></a>Navigating Between Screens</h2>
+
+<p>Click ‘Menu’ to allow you to navigate between the various screens.
+Alternatively, you can click on the ‘1’, ‘2’, ‘3’ or ‘4’ buttons at the bottom
+right of each screen.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

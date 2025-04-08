@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Actuarial Analysis</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Actuarial Analysis</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Report">Run A Report</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces an analysis report of a specified field sorted by age and sex.
+The specified field can be any valid numeric field on any of the following database
+tables (see the <a href="/pension/appendices/app_a/">Data Dictionary</a> for further details):</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Table Name</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">pe_defhst_b</td>
+          <td style="text-align: left">Contribution History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_defhst_h</td>
+          <td style="text-align: left">Contribution Totals File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_salary1</td>
+          <td style="text-align: left">Salary History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_salary2</td>
+          <td style="text-align: left">Salary History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_salary3</td>
+          <td style="text-align: left">Salary History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_salary4</td>
+          <td style="text-align: left">Salary History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_dpens</td>
+          <td style="text-align: left">Basic Deferred Pension Details File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_dpenh</td>
+          <td style="text-align: left">Deferred Pension Increase History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mem</td>
+          <td style="text-align: left">Member File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_mquote</td>
+          <td style="text-align: left">Quotation Results File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_muds</td>
+          <td style="text-align: left">User Defined Screens File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_nih</td>
+          <td style="text-align: left">NI History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_pens</td>
+          <td style="text-align: left">Basic Pension Details File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_penh</td>
+          <td style="text-align: left">Pension Increase History File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_tvin</td>
+          <td style="text-align: left">Transfer In Details File</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">pe_tvout</td>
+          <td style="text-align: left">Transfer Out Details File</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_acta1.jpg" alt="Actuarial Analysis Main Screen" /></p>
+
+  <p>Actuarial Analysis Main Screen</p>
+</div>
+
+<h2><a name="Run A Report"></a>Run A Report</h2>
+
+<p>Click ‘Proceed’.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_company"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_code"></a>
+<a name="pm_marital_stat"></a>Enter
+the selection criteria required in order to select the member records you require
+outputting to the report (see the <a href="/pension/appendices/app_b/">Data Dictionary</a> for further details
+on the selection of records in Pension Master).When the selection criteria has been
+entered click on ‘OK’ to proceed to report date.</p>
+
+<p>You can click on ‘Cancel’ to return to the proceed menu and abort report selection.</p>
+
+<p><a name="report_date"></a><strong>REPORT DATE</strong> - The report date defaults to today’s
+date, but it may be overwritten with any date in the format ddmmyy or dd/mm/yyyy.</p>
+
+<p><a name="anal_field"></a><strong>ANALYSIS FIELD</strong> - Analysis field must be entered and
+can be any field on the tables listed at the start of this section. If a field is
+entered that does not exist on any of these files an error message will be displayed.
+If you are unsure of the fieldname you require, click on the lookup icon
+to see a lookup list of available tables and fields.</p>
+
+<p>Certain fields require you to add an argument, for example, telling them which investment
+fund to look the field up in. These are as follows:</p>
+
+<div class="row">
+  <div class="col-md-8">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Table Name</th>
+          <th style="text-align: left">Argument 1</th>
+          <th style="text-align: left">Argument 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left"><strong>pe_defhst_b</strong> (Contribution History)</td>
+          <td style="text-align: left"><strong>pdb_inv_fund</strong> (Investment Fund)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_defhst_h</strong> (Contribution Totals)</td>
+          <td style="text-align: left"><strong>pdh_inv_fund</strong> (Investment Fund)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_mquote</strong> (Quotation Results)</td>
+          <td style="text-align: left"><strong>pmq_type</strong> (Quotation Type)</td>
+          <td style="text-align: left"><strong>pmq_index</strong> (Quotation Index)</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_muds</strong> (User Defined Fields)</td>
+          <td style="text-align: left"><strong>pmu_type</strong> (User Defined Screen Type)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvin</strong> (Transfer In Details)</td>
+          <td style="text-align: left"><strong>ptvi_code</strong> (Transfer Code)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><strong>pe_tvout</strong> (Transfer Out Details)</td>
+          <td style="text-align: left"><strong>ptvo_code</strong> (Transfer Code)</td>
+          <td style="text-align: left">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>e.g. if you wished to output total employee ordinary contributions for investment
+fund 2, you would enter pdh_tee_ordc(2)</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The arguments have to be enclosed in brackets () and where there is more than one
+argument, the arguments are to be separated by a comma e.g. pmq_current(NORM,1) -
+this selects the first quotation result for Quotation Type NORM.</p>
+</div>
+
+<p><a name="date_ent"></a><strong>DATE ENTERED</strong> - Date Entered must be entered. There are
+three valid entries for this field:</p>
+
+<ol>
+  <li>Specifies date comparison on Date Joined Company</li>
+  <li>Specifies date comparison on Date Joined For LA</li>
+  <li>Specifies date comparison on Date Joined For Pension</li>
+</ol>
+
+<p>If any other value is entered in this field an error message is displayed and the
+user is invited to re-enter the field or click on ‘Cancel’ to abort input.</p>
+
+<p><a name="head1"></a><a name="head2"></a><strong>HEADINGS</strong> - Headings may be entered.
+If the first heading is left blank the default heading is as follows:</p>
+
+<div class="well">
+
+  <p>ACTUARIAL ANALYSIS AS AT dd/mm/yyyy</p>
+
+</div>
+
+<p>If the second heading is left blank the default heading is as follows:</p>
+
+<div class="well">
+
+  <p>Age Analysis : xx - xx</p>
+
+</div>
+
+<p>When this field has been entered a second screen is drawn as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_acta2.jpg" alt="Age Bands Selection Screen" /></p>
+
+  <p>Age Bands Selection Screen</p>
+</div>
+
+<p><a name="anal_fr"></a><a name="anal_to"></a><strong>AGE ANALYSIS</strong> - The default values
+may be overwritten with different values if they do not apply. Click on the ‘Delete
+Row’ button to delete any extra rows on the screen that are not required, as the blanking
+of fields is not allowed.</p>
+
+<p>Click ‘Add Row’ to insert a blank row on the screen.</p>
+
+<p>You can click on ‘Cancel’ to exit input of age analysis and return to the report menu.</p>
+
+<p>When the age ranges have been entered a message is displayed at the bottom of the
+screen</p>
+
+<div class="well">
+
+  <p>Processing report … Please Wait</p>
+
+</div>
+
+<p>The age next birthday for members selected are then calculated and totals for age
+groups calculated. There are four situations where a selected member will not be included
+in the totals:</p>
+
+<ol>
+  <li>If the analysis field does not contain a value e.g. If Pensionable Salary is the analysis field and the member has no history records.</li>
+  <li>If the member’s age next birthday does not fall between the upper and lower age limits e.g. If members age next birthday is 67 and age analysis is 0 - 65.</li>
+  <li>If the date comparison field is blank e.g. If Date Joined Company was specified for the date comparison and date entered company for the member is blank.</li>
+  <li>If the member joined after the report date e.g. If Date Joined Company was specified as the comparison date and Date Joined Company is 01/03/92 and Report Date is 01/02/92.</li>
+</ol>
+
+<p>When the value entered in Date Entered is 1 the date field checked is pm_dec - Date
+Joined Company.</p>
+
+<p>When the value entered in Entered Field is 2 the date field checked is pm_djla - Date
+Joined For LA.</p>
+
+<p>When the value entered in Entered Field is 3 the date field checked is pm_djp - Date
+Joined For Pension.</p>
+
+<p>When the report has been processed and no records are found to match the selection
+criteria an error message is displayed:</p>
+
+<div class="well">
+
+  <p>There are no records to match the selection criteria</p>
+
+</div>
+
+<p>When the report has been processed and records are found to match the selection criteria
+the report continues.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

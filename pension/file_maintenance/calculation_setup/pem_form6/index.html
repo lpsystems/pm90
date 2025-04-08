@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085342" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>avg(field,n,fld1,fld2,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the avg function to calculate the average of a field over a particular number of years.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>avg(field,n,fld1,fld2,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>field - is a field on the salary history or user defined history files (pe_salary1, pe_salary2, pe_salary3, pe_salary4 or pe_mua respectively).
+If the field is in a user defined history then the field name must be suffixed with the user defined history type in capitals.
+e.g. pma_col1SAL with pma_col1 being one of the five user defined fields in pe_mua and SAL indicating the type of the history.</li>
+  <li>n - is the number of years to average the field over.</li>
+  <li>fld1 - is the effective start conditions of the averaging.</li>
+  <li>fld2 - is the basis of the averaging.</li>
+  <li>date - is the date which you want to include salaries upto.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Only salaries upto and including the date entered in the formula are used in the calculations.</li>
+  <li>If a user defined history is selected ensure that the data type of the field is either
+N2 or MO. If any other type is selected for this function, e.g. DT, then an error
+message is displayed.</li>
+  <li>If n = 0, the function will return a value of 0.</li>
+  <li>n can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
+  <li>fld1 can take the alphabetic values ‘e’ and ‘l’:
+    <ul>
+      <li>‘e’ will commence the averaging period from the date entered in the formula.</li>
+      <li>‘l’ will commence the averaging period from the date entered in the formula but will ignore the latest entry.</li>
+    </ul>
+  </li>
+  <li>fld2 can take the values 1, 2, 3, 4, 5, 6, 7, 8 and 9:
+    <ul>
+      <li>1 - will average extracted amounts using the highest amount if there is more than one in the same calendar year.</li>
+      <li>2 - will average extracted amounts using the first amount if there is more than one in the same calendar year.</li>
+      <li>3 - will average extracted amounts recorded at the renewal dd/mm as recorded on <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>.
+A warning will be generated if there are missing years in the salary history.</li>
+      <li>4 - will average extracted amounts using the period the amount was active for using complete days.</li>
+      <li>5 - will average extracted amounts recorded at the renewal dd/mm as recorded on <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> and
+dynamise using the appropriate RPI values. N.B. The correct calculation of an average
+salary using this basis is dependant on the relevant RPI values being present in <a href="/pension/system_data/pem_mli/#Introduction">MLI/RPI
+Factors</a>. A warning will be generated if there are missing years in the salary history.</li>
+      <li>6 - will average extracted amounts using the period the amount was active for using
+years and rounded months with 15 days being rounded up to the next month.</li>
+      <li>7 - will average extracted amounts using the period the amount was active for using years and complete months.</li>
+      <li>8 - will calculate the straight average of the last n entries on the record.</li>
+      <li>9 - will average extracted amounts using the period the amount was active for using complete days. Any zero amounts found will be ignored.</li>
+    </ul>
+  </li>
+  <li>The date must either be a field reference to date fields on the member file (pe_mem), the calculation date field reference
+(pmqh_calcdate), a constant date entered in the format YYYMMDD where YYYY is the year, MM is the month and DD is the day, or a
+reference to the result of another line of formula code within the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>avg(pma_col1SAL,3,e,1,pmqh_calcdate)
+avg(ps1_sal3,3,e,1,@2)
+avg(ps1_sal4,1,l,4,20090101)
+</code></pre>
+
+<h2><a name="02"></a>avgmax(field,n1,n2,fld1,fld2,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the avgmax function to calculate the best band of consecutive years information
+over a given period. e.g. to calculate the best three year average gross salary over
+the last ten years.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>avgmax(field,n1,n2,fld1,fld2,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>field - is a field on the salary history or user defined history files (pe_salary1, pe_salary2, pe_salary3, pe_salary4 or pe_mua respectively).
+If the field is in a user defined history then the field name must be suffixed with the user defined history type in capitals.
+e.g. pma_col1SAL with pma_col1 being one of the five user defined fields in pe_mua and SAL indicating the type of the history.</li>
+  <li>n1 - is the number of years to find the best consecutive n2 years average over.</li>
+  <li>n2 - is the number of consecutive years to average the field over.</li>
+  <li>fld1 - is the effective start conditions of the averaging.</li>
+  <li>fld2 - is the basis of the averaging.</li>
+  <li>date - is the date which you want to include salaries upto.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Only salaries upto and including the date entered in the formula are used in the calculations.</li>
+  <li>If a user defined history is selected ensure that the data type of the field is either
+N2 or MO. If any other type is selected for this function, e.g. DT, then an error message is displayed.</li>
+  <li>If n1= 0 or n2 = 0, the function will return a value of 0.</li>
+  <li>n1 can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
+  <li>If n2 &gt; number of years for a particular member then the function performs the average over the number of years data available.
+e.g. if you try to use avgmax(ps1_sal1,10,3,e,1) and there is only
+2 years gross salary details for a particular member, the function will look at consecutive
+two year averages of the first salary column to arrive at the result.</li>
+  <li>fld1 can take the values alphabetic ‘e’ and ‘l’:
+    <ul>
+      <li>‘e’ will commence the averaging period from the date entered in the formula.</li>
+      <li>‘l’ will commence the averaging period from the date entered in the formula but will ignore the latest entry.</li>
+    </ul>
+  </li>
+  <li>fld2 can take the values 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10.
+    <ul>
+      <li>1 - will average extracted amounts using the highest amount if there is more than one in the same calendar year.</li>
+      <li>2 - will average extracted amounts using the first amount if there is more than one in the same calendar year.</li>
+      <li>3 - will average extracted amounts recorded at the renewal dd/mm as recorded on <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>.
+A warning will be generated if there are missing years in the salary history.</li>
+      <li>4 - will average extracted amounts using the period the amount was active for using complete days.</li>
+      <li>5 - will average extracted amounts recorded at the renewal dd/mm as recorded on <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> and
+dynamise using the appropriate RPI values. N.B. The correct calculation of an average
+salary using this basis is dependant on the relevant RPI values being present in <a href="/pension/system_data/pem_mli/#Introduction">MLI/RPI
+Factors</a>. A warning will be generated if there are missing years in the salary
+history.</li>
+      <li>6 - will average extracted amounts using the period the amount was active for using
+years and rounded months with 15 days being rounded up to the next month.</li>
+      <li>7 - will average extracted amounts using the period the amount was active for using
+years and complete months.</li>
+      <li>8 - will average extracted amounts for each salary date and
+dynamise using the appropriate RPI values. N.B. The correct calculation of an average
+salary using this basis is dependant on the relevant RPI values being present in <a href="/pension/system_data/pem_mli/#Introduction">MLI/RPI
+Factors</a>. A warning will be generated if there are missing years in the salary
+history. <strong>Incorrect results will be produced if there is more than one salary amount in the same year.</strong></li>
+      <li>9 - will average extracted amounts using the period the amount was active for using complete days. Any zero amounts found will be ignored.</li>
+      <li>10 - will average extracted amounts using the period the amount was active for using complete days. Any zero amounts found will be ignored.
+The averaging period will be from the Scheme Renewal Date prior to the date entered in the formula.</li>
+    </ul>
+  </li>
+  <li>The date must either be a field reference to date fields on the member file (pe_mem), the calculation date field reference (pmqh_calcdate), a constant date entered in the format YYYMMDD where YYYY is the year, MM is the month and DD is the day, or a reference to the result of another line of formula code within the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>avgmax(pma_col1SAL,10,3,e,1,@3)
+avgmax(ps1_sal1,10,3,e,1,pm_dtlft)
+avgmax(ps1_sal3,3,1,l,4,pmqh_calcdate)
+</code></pre>
+
+<h2><a name="03"></a>defsal(fld,date,flag)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the defsal function to lookup a specific field on the salary history file (pe_salary1, pe_salary2, pe_salary3, pe_salary4) for a specified date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>defsal(fld,date,flag)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fld - is a valid salary field on the salary history file (pe_salary1, pe_salary2, pe_salary3, pe_salary4).</li>
+  <li>date - must be a field reference to a date field on the member file (pe_mem), a constant
+date entered in the format YYYYMMDD where YYYY is the year, MM is the month and DD
+is the day or a reference to the result of another line of formula code within the
+current formula e.g. @1.</li>
+  <li>flag - is one of the following:
+    <ul>
+      <li>a - the date will be the actual salary history date. A salary history record must exist for the date otherwise zero will be returned.</li>
+      <li>e - the date will be an effective salary history date. The previous salary history record, before the date specified, will be returned even if it is zero.</li>
+      <li>i - the date will be an effective salary history date but will ignore records with a zero value.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>defsal(ps1_sal1,19951201,a)
+defsal(ps3_sal2,pm_dtlft,a)
+defsal(ps4_sal3,@1,e)
+</code></pre>
+
+<h2><a name="04"></a>invtot(cont_type,func_type,fund,type,flag,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the invtot function to calculate the total investments between two given dates
+for a particular source.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>invtot(cont_type,func_type,fund,type,flag,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>cont_type - is the contribution type code</li>
+  <li>func_type - denotes whether you want a total for allocated contributions at unit posting (A), contributions (C), expenses (E), gross contributions (G), unallocated contributions at unit posting (N) or units (U). Note the capitalisation.</li>
+  <li>fund - is the investment fund code</li>
+  <li>type - denotes the transaction type you wish to include e.g. BUY, TRANSFER, SWITCH. This should default to BUY.</li>
+  <li>flag - denotes which date on pe_minv table to do the comparisons on as follows:
+    <ul>
+      <li>1 - date due</li>
+      <li>2 - date received</li>
+      <li>3 - date invested</li>
+    </ul>
+  </li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If date1 &gt; date2 the value the total will be calculated with a term of 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+  <li>Fund can be set to ‘TOT’, this means look at the total contribution rather than that
+part of the contribution for an individual fund in the case where a member invests
+their contribution in more than one fund.</li>
+  <li>If func_type is set to ‘U’ then the fund <strong>CANNOT EQUAL ‘TOT’.</strong></li>
+  <li>If func_type is set to ‘C’ then the type <strong>CAN ONLY EQUAL ‘ALL’ IF THE FUND DOESN’T EQUAL ‘TOT’.</strong></li>
+  <li>If fund equals ‘TOT’ then <strong>FLAG CANNOT EQUAL 3.</strong></li>
+  <li>If func_type is set to ‘U’ then the type <strong>CAN EQUAL ‘ALL’</strong> which will allow all transaction types to be included in the calculation.**</li>
+  <li>If func_type is set to ‘G’ then you are chosing to calculate gross contributions received with date invested within period.**</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>invtot(ERORD,C,EQUITY,BUY,1,19950112,pm_npd)
+invtot(EEORD,E,TOT,BUY,1,pm_dps,pm_dtlft)
+invtot(EEAVC,U,MANAGED,TRANSFER,2,19950112,20031115)
+invtot(EEAVC,U,MANAGED,ALL,1,19950112,20031115)
+</code></pre>
+
+<h2><a name="05"></a>nihist(yyyy)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the nihist function to lookup a NI History value for a specified tax year.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>nihist(yyyy)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>yyyy - is the year of which the 5 April at the end of the tax year you require falls.
+e.g. if you wish to look at the 1995/96 tax year, use 1996 as this is the year in
+which the 5 April in the 1995/96 tax year falls.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The year specified must be a valid year.</li>
+  <li>If the NI entry does not exist for a member for the year specified, the function will return a value of zero.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>nihist(1995)
+nihist(1990)
+</code></pre>
+
+<h2><a name="06"></a>pmin_inttot(cont_type,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the pmin_inttot function to calculate the total interest to date between two given dates
+for a contribution.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>pmin_inttot(cont_type,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>cont_type - is the contribution type code</li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If date1 &gt; date2, the value the total will be calculated will be 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>pmin_inttot(ERORD,19950112,pm_npd)
+pmin_inttot(EEORD,pm_dps,pm_dtlft)
+pmin_inttot(EEAVC,19950112,20031115)
+pmin_inttot(EEAVC,19950112,20031115)
+</code></pre>
+
+<h2><a name="07"></a>unalloc</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the unalloc function to calculate unallocated contributions.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>unalloc
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The function returns the value of unallocated contributions for the member. This value
+can also be found on the <a href="/pension/file_maintenance/pem_mem/#Investment Value Summary">Investment
+Value Summary</a> screen in <a href="/pension/file_maintenance/pem_mem/">Members</a>.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>unalloc
+</code></pre>
+
+<h2><a name="08"></a>saltot(sal_scrn,col_num,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the saltot function to calculate the total salaries between two given dates
+for a particular salary screen and salary column.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>saltot(sal_scrn,col_num,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>sal_scrn - denotes the salary screen number.</li>
+  <li>col_num - denotes the salary column number.</li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The sal_scrn must either be a numeric value between 1 and 4, or it must reference the result of another
+line of formula code within the current formula e.g. @1.</li>
+  <li>The col_num must either be a numeric value between 1 and 5, or it must reference the result of another
+line of formula code within the current formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value the total will be calculated with a term of 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>saltot(1,2,19900112,pm_npd)
+saltot(@1,4,pm_dps,pm_dtlft)
+saltot(2,1,@2,20031115)
+saltot(4,5,19950112,@3)
+</code></pre>
+
+<h2><a name="09"></a>tot_cont(cont_type,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the tot_cont function to calculate the total contribution amounts between two given dates.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>tot_cont(cont_type,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>cont_type - is the contribution type code</li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If date1 &gt; date2 the value the total will be calculated with a term of 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>tot_cont(ERORD,19950112,pm_npd)
+tot_cont(EEORD,pm_dps,pm_dtlft)
+</code></pre>
+
+<h2><a name="10"></a>caretot(care_code,care_col,date1,date2,care_table)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the caretot function to calculate the total care amounts between two given dates
+for a particular care code and care column. This can be done for either the permanent or temporary care tables.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>caretot(care_code,care_col,fund,date1,date2,care_table)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>care_code - is the care type code</li>
+  <li>care_col - is the column number from the care screen</li>
+  <li>date1 - is the start date for the period required</li>
+  <li>date2 - is the end date for the period required</li>
+  <li>care_table - the options are P for Permanent and T for Temporary</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The care_code must be a valid code in the scheme.</li>
+  <li>The care column has to be a value from 1-6.</li>
+  <li>If date1 &gt; date2 the value the total will be calculated with a term of 0.</li>
+  <li>The two dates must be field references to date fields on the member file (pe_mem),
+constant dates entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or references to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>caretot(CALS,5,@6,@9,P) 
+caretot(CARE1,1,pm_dps,pm_dtlft,T)
+caretot(CARE1,2,19950112,20031115,P)
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:42.</p>
+      </div>
+    </div>
+  </body>
+</html>

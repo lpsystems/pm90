@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Users</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085404" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Users</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a User">Add a User</a></li>
+  <li><a href="#Basic User Details">Basic User Details</a></li>
+  <li><a href="#Menu Option Details">Menu Option Details</a></li>
+  <li><a href="#User Access Details">User Access Details</a></li>
+  <li><a href="#Query/Search For A User">Query/Search For A User</a></li>
+  <li><a href="#Browsing User Details">Browsing User Details</a></li>
+  <li><a href="#Viewing User Records">Viewing User Records</a></li>
+  <li><a href="#Update A Users Record">Update A Users Record</a></li>
+  <li><a href="#Delete A User Record">Delete A User Record</a></li>
+  <li><a href="#Printing User Details">Printing User Details</a></li>
+  <li><a href="#password">Changing A User’s Password</a></li>
+  <li><a href="#Re-Set Default Menu Options">Re-Set Default Menu Options</a></li>
+  <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users who belong to a <a href="/pension/system_administration/gn_user_groups/">User Group</a> that has the correct permission can access this option.</p>
+
+  <p>If you do not have permission, you will not be permitted access to this option.</p>
+</div>
+
+<p>This program allows maintenance of the User file. This allows the System Administrator
+to control who is allowed access to Pension Master and what options they can access
+e.g. they can set a user up so that they do not have access to the more sensitive
+areas of the system like Formulae.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Password</li>
+  <li>Menu</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user1.jpg" alt="User File - Screen 1" /></p>
+
+  <p>User File - Screen 1</p>
+</div>
+
+<h2><a name="Add a User"></a>Add a User</h2>
+
+<h3><a name="1"></a><a name="Basic User Details"></a>Basic User Details</h3>
+
+<p>Click ‘Add’.</p>
+
+<p>You will be asked if you want to copy the user from another user on the database. Doing that will allow you to update users with the same access to menu’s and schemes.</p>
+
+<p><a name="user_id"></a><strong>USER ID</strong> - Enter the User ID. This must consist of alphanumeric characters only.</p>
+
+<p>A User ID of ‘intranet’ cannot be used. This is reserved for members of a Company
+Pension Scheme that have accessed their own information via the Company’s intranet.</p>
+
+<p><a name="user_name"></a><strong>USER NAME</strong> - Enter the full name of the user. This can
+be used when printing off standard letters. An entry must be made in this field.</p>
+
+<p><a name="user_title"></a><strong>JOB TITLE</strong> - Enter the user’s job title. This can be
+used when printing off standard letters.</p>
+
+<p><a name="user_wrkgrp"></a><strong>WORKGROUP</strong> - Enter the user’s workgroup or leave blank
+if you do not wish to assign this user to a workgroup. See the <a href="/pension/system_administration/gn_wrkgrp/">Workgroups</a> option.
+If you are unsure of the workgroups currently set up on your Pension Master
+system, click on the lookup icon to see a list of Workgroups.</p>
+
+<p><a name="passwd_changed"></a><strong>DATE PASSWORD LAST CHANGED</strong> - This is a display
+only field and shows the date the user last changed their password. This can give
+the System Administrator an indication of when the user will next be required to change
+their password if password expiration controls in <a href="/pension/system_administration/pem_sysp/#Password Option Details">System
+Parameters</a> are set.</p>
+
+<p><a name="force_change"></a><strong>FORCE PASSWORD CHANGE NEXT LOGIN</strong> - You can use this
+field to force the user to change their password the next time they logon to Pension
+Master via the<a href="/pension/general/gn_logon/"> logon screen</a>.</p>
+
+<p><a name="user_security"></a><strong>SECURITY LEVEL</strong> - Enter a security level for your
+user. This is used in conjunction with the security levels on each scheme record and
+each member record to determine if the user has access to that record. E.g. if a user
+has a security level of 99 and a scheme, screen or member record has a security level
+of 1 or 50, then the user will not be allowed access to that scheme/member record.</p>
+
+<p>The valid security ratings are any number in the range 1 to 99, with 1 being the highest
+security level and 99 being the lowest. If you are unsure of the security levels that
+are available on your system, click on the lookup icon to see a list. See the
+<a href="/pension/system_data/pem_sec/">Security Levels</a> option.</p>
+
+<p><a name="user_sysadm"></a><strong>USER GROUP</strong> - This determines what parts of the system the user has access too. Exact details of how this works can be found in the <a href="/pension/system_administration/gn_user_groups/">User Group</a> option.</p>
+
+<p><a name="user_update"></a><strong>UPDATE MEMBER RECORDS</strong> - This determines whether you wish to allow the current user to add/update/delete
+member records in <a href="/pension/file_maintenance/pem_mem/">Members</a>.</p>
+
+<p><a name="user_favourites"></a><strong>AUTOMATICALLY EXPAND FAVOURITES</strong> - This determines if the user is automatically presented with their
+favourites menu rather then the normal Pension Master menus when they log in.</p>
+
+<p><a name="user_deletembrs"></a><strong>DELETE MEMBER RECORDS</strong> -If “Delete Member Records” is set to “No” then Bulk Delete will not be a menu option in the Basic Member Details screen.</p>
+
+<p><a name="user_Internetad"></a><strong>INTERNET ADMINISTRATOR</strong> - Used by Pension Master Online in order to control access to the administration section of Pension Master Online Portal.</p>
+
+<p>When the first screen of user details have been entered click on ‘OK’ to save the
+details to the user file. You can click on ‘Cancel’ at any stage to exit the add option
+without saving the details.</p>
+
+<h3><a name="2"></a><a name="Menu Option Details"></a>Menu Option Details</h3>
+
+<p>When the first screen of details has been saved the second screen of user details
+is automatically displayed. This allows you to set up the menu options that will be
+available for this user.</p>
+
+<p><strong>Pension Master will default to allow all menu options with a ‘PE’ in the first
+column of the screen i.e. all pension related menu options. It will also default to
+allow access to the ‘Main Menu’ and ‘Diary Entry’ menu options.</strong></p>
+
+<p>The second screen of user details is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user2.jpg" alt="User File - Screen 2" /></p>
+
+  <p>User File - Screen 2</p>
+</div>
+
+<p>This screen is where you setup which of the standard Pension Master menu items will
+be available to the current user. If you untick the Access field the corresponding
+menu item will not be displayed when the user uses Pension Master. In this way, you
+can effectively and quickly restrict acces to only those menu items a user need to
+do their job.</p>
+
+<p>All available menu titles and menu options are displayed to the screen. Tick or untick the Access field
+depending on whether you wish this user to have access to this menu/menu option or not.</p>
+
+<p>When the second screen of user details have been entered click on ‘OK’ to save the
+details to the user file. You can click on ‘Cancel’ at any stage to exit the add option
+without saving the details.</p>
+
+<h3><a name="3"></a><a name="User Access Details"></a>User Access Details</h3>
+
+<p>When the second screen of details has been saved the third screen of user details
+is automatically displayed. This allows you to set up the scheme access options that
+will be available for this user.</p>
+
+<p>The third screen of user details is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user3.jpg" alt="User File - Screen 3" /></p>
+
+  <p>User File - Screen 3</p>
+</div>
+
+<p>This screen is where you can define which schemes this user has access to. This can
+be done at three different levels:</p>
+
+<ul>
+  <li>All users have access to the scheme. This option is set via the <a href="/pension/file_maintenance/pem_sch/#User Access Details">User
+Access Details</a> screen in Schemes.</li>
+  <li>All members of a particular workgroup have access to the scheme. See <a href="/pension/system_administration/gn_wrkgrp/">Workgroups</a>.
+This option is set via the <a href="/pension/file_maintenance/pem_sch/#User Access Details">User Access
+Details</a> screen in Schemes.</li>
+  <li>User level access. Here you define particular users via their user ID so as to restrict
+access to a scheme. You can set this option either using this screen or via the <a href="/pension/file_maintenance/pem_sch/#User Access Details">User
+Access Details</a> screen in Schemes.</li>
+</ul>
+
+<p>To see who is allowed access to a particular scheme, see the <a href="/pension/file_maintenance/pem_sch/#User Access Details">User
+Access Details</a> screen in Schemes.</p>
+
+<p>Amend the details for user access as appropriate.</p>
+
+<p>The last column on the screen indicates what type of access level that line refers
+to. It takes the values ‘A’ (for all), ‘W’ (for workgroup) or ‘U’ (for user) corresponding
+to each of the levels outlined above respectively.</p>
+
+<p>Click on ‘Add Row’ to insert a line and click on ‘Delete Row’ to delete the current
+line of details. Click on ‘Next Record’ to scroll down the screen or click on ‘Prev
+Record’ to scroll up the screen.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If you delete a line of data by clicking on ‘Delete Row’, that line will only be
+removed from the database if the last column is equal to ‘U’ i.e. user level security
+access. Otherwise, the line will be removed from the screen, but will re-appear once
+you click on ‘OK’ to save the details.</p>
+</div>
+
+<p>When the third screen of user details have been entered click on ‘OK’ to save the
+details to the user file. You can click on ‘Cancel’ at any stage to exit the add option
+without saving the details.</p>
+
+<p>You will be returned to the main menu.</p>
+
+<h2><a name="Query/Search For A User"></a>Query/Search For A User</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Browsing User Details"></a>Browsing User Details</h2>
+
+<p>Click on the ‘Browse’ button or the Browse icon on the toolbar to view details in
+any screen where the data does not fit on the screen.</p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data.</p>
+
+<p>Click on ‘OK’ or ‘Cancel’ to leave browse mode.</p>
+
+<h2><a name="Viewing User Records"></a>Viewing User Records</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Update A Users Record"></a>Update A Users Record</h2>
+
+<p>Before Updating, a record must be selected through the query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The User ID field cannot be changed as this is the key to the user file. When the
+changes have been made to the record click on ‘OK’ to save the changes to file, or
+click on ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Delete A User Record"></a>Delete A User Record</h2>
+
+<p>Before Deleting, a record must be selected through the query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected a window appears with the options ‘Yes’ and ‘No’.</p>
+
+<p>If you do not wish to delete the record, click ‘ No ‘. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record, click ‘Yes’. A new window is displayed asking if
+you are sure.</p>
+
+<p>If you do not wish to delete the record, click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record, ‘Yes’. The record is deleted and the program returns
+to the main menu.</p>
+
+<h2><a name="Printing User Details"></a><a name="print"></a>Printing User Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user4.jpg" alt="Print Options Screen 1" /></p>
+
+  <p>Print Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user5.jpg" alt="Print Options Screen 2" /></p>
+
+  <p>Print Options Screen 2</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using User ID or User Name.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="password"></a>Changing A User’s Password</h2>
+
+<p>Click ‘Password’.</p>
+
+<p>A popup window now appears as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/gn_user6.jpg" alt="" /></p>
+
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="us_passwd"></a><a name="password"></a><strong>NEW PASSWORD</strong> - This field is
+used to set a password for the user when they log into Pension Master. This is typically
+done by the System Administrator when adding a new user, at which time the System
+Administrator also sets the ‘Force Password Change Next Login?’ field to ‘Yes’ so that
+the user can choose their own password the first time they use Pension Master.</p>
+
+<p><strong>CONFIRM PASSWORD</strong> - Enter the pasword again to confirm the spelling. If any
+differences are found with the entry you made in the New Password field you will be
+prompted to re-confirm the password.</p>
+
+<p>Click on ‘OK’ to save the new password, click on ‘Cancel’ to abort the new password
+entry without saving any changes and click on ‘Help’ to display this help text.</p>
+
+<h2><a name="Re-Set Default Menu Options"></a>Re-Set Default Menu Options</h2>
+
+<p>Click ‘Default’.</p>
+
+<p>This option is only available when in the second screen of Users.</p>
+
+<p>This option re-sets the user’s menu options to the defaults. This will allow the user
+access to:</p>
+
+<ul>
+  <li>all menu options with a ‘PE’ in the first column of the screen i.e. all pension related menu options</li>
+  <li>the ‘Main Menu’ and ‘Diary Entry’ menu options.</li>
+</ul>
+
+<h2><a name="navigate"></a>Navigating Between Screens</h2>
+
+<p>To move between screens, click ‘Menu’. The menu options are as follows:</p>
+
+<ul>
+  <li>Basic Member Details</li>
+  <li>Menu Option Details</li>
+  <li>User Access Details</li>
+</ul>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:04.</p>
+      </div>
+    </div>
+  </body>
+</html>

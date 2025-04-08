@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>General Data Load</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085408" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>General Data Load</h1>
+        </div>
+      
+
+      
+<h2><a name="index"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#add">Add a General Data Load</a></li>
+  <li><a href="#query">Querying a General Data Load</a></li>
+  <li><a href="#update">Updating a General Data Load</a></li>
+  <li><a href="#Run a General Data Load">Running a General Data Load</a></li>
+  <li><a href="#delete">Deleting a General Data Load </a></li>
+  <li><a href="#add info">Additional Information</a></li>
+  <li><a href="#mem notes">Member Notes</a></li>
+  <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#report">Reporting a Load</a></li>
+  <li><a href="#exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to load data into Pension Master from an external data
+file. The database tables used within this program and their load templates are listed <a href="/pension/updates/import_data/pem_dloada/">here</a>,
+along with the correct format the data files should be in and the mandatory fields
+for each table.</p>
+
+<p>The program goes through a number of checking processes. Firstly the format of the
+data is checked. If any problems are found, e.g. a date value is trying to be put into
+a decimal field, then a formatting report will be generated informing the user of
+this. If no problems are found, then the program goes on to check that the data values
+are valid, e.g. if a record is being added which holds a Scheme Code, then the Scheme
+Code must be valid. If any problems are found, then an exceptions report will be generated
+informing the user of this.</p>
+
+<p>If all the data lines held within the data file are correct, then the user can continue
+and load the data into the database.</p>
+
+<p>The external data file being used must be in the required format. In order for
+the user to ensure this, they should use a software package, like Microsoft Excel,
+to reformat the data file prior to using this program.</p>
+
+<p><a name="1"></a>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload1.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="add"></a>Add a General Data Load</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>Enter the selection criteria required.</p>
+
+<p><a name="imp_name"></a><strong>IMPORT NAME</strong> - Enter an import name.</p>
+
+<p><a name="imp_desc"></a><strong>IMPORT DESCRIPTION</strong> - Enter an import description.</p>
+
+<p><a name="sch_code"></a><strong>SCHEME CODE</strong> - Enter a scheme code. Click the lookup icon for
+a list of valid scheme codes.</p>
+
+<p><a name="imp_source"></a><strong>IMPORT FROM</strong> - Enter the filename path of the data
+file you are going to use. You only have access to this field if you have “Network Source” entered in your system parmeters. If a filename is entered which does not exist then an error message will appear informing
+you of this, and you will be invited to re-enter a valid filename for your data file. However its best to use the lookup and the followig screen will pop-up.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/file_open.jpg" alt="" /></p>
+
+</div>
+
+<p>Select your data file, then click ‘Open’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>The program expects the data file entered to be complete with no blank lines.</p>
+</div>
+
+<p>This field must have a filename entered into it in order for the loading process to
+continue.</p>
+
+<p><a name="imp_dest"></a><strong>IMPORT TO</strong> - Enter the table to which you wish to load
+the data into. This field must have a table name entered into it for the loading process
+to continue. Click the lookup icon to see a list of database tables.</p>
+
+<p><a name="up_type"></a><strong>RUN TYPE</strong> - Select what type of data load you wish
+to use.</p>
+
+<ul>
+  <li><strong>New</strong> - This will allow new records to be added to Pension Master. Tables used
+for this option are Contribution History Batch Details, Salary Batch Details and N.I.
+History Batch Details.</li>
+  <li><strong>Update</strong> - This will only replace data in fields specified in the Import, all
+other data not specified will remain. Table used for this option is Basic Member Details.
+Only the updating of Marital Status or the updating of Company codes can be carried out.</li>
+</ul>
+
+<p><a name="rec_type"></a><strong>DELIMITER</strong> - Enter the Delimiter, which is a character
+used to separate each of the fields in the data file. This should be either
+of the following:</p>
+
+<ul>
+  <li>a comma (,)</li>
+  <li>a pipe (|)</li>
+  <li>a colon (:)</li>
+  <li>a semi-colon (;)</li>
+  <li>a tab</li>
+  <li>a flat file ( no separators )</li>
+</ul>
+
+<p>This field must have a delimiter entered into it in order for the loading process
+to continue.</p>
+
+<p><a name="imp_header"></a><strong>HEADER SIZE</strong> - Enter the number of lines the header
+takes up in the data file. If this box is left blank, it is assumed the data file
+has no header, and a default of 0 is entered.</p>
+
+<p><a name="imp_footer"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the footer
+takes up in the data file. If this box is left blank, it is assumed the data file
+has no footer, and a default of 0 is entered.</p>
+
+<p><a name="imp_del"></a><strong>DELETE ORIGINAL?</strong> - Tick this box if you wish to delete
+the data file, upon completion of the data load.</p>
+
+<p><a name="mem_note"></a><strong>MEMBER NOTES?</strong> - Tick this box if you wish to write out
+a note to each member in the data file. This can only be used with database tables
+that contain a member number field.</p>
+
+<p><a name="mem_validation"></a><strong>MEMBER VAILDATION</strong> - This is to help with the loading of data where you have data from more than one scheme in your data file. This field has a drop-down list with the following values displayed in it:</p>
+
+<ul>
+  <li>None</li>
+  <li>Scheme Header</li>
+  <li>Entire Database</li>
+</ul>
+
+<p>‘Scheme Header’ then the identifier used, is checked to see if it exists in the scheme header of the load. 
+‘Entire Database’ then the identifier used, is checked to see if it exists for a member across all schemes on the database.</p>
+
+<p>Some member related table loads won’t allow the ‘Entire Database’ as an option. These are:</p>
+
+<ul>
+  <li>when loading new member records onto the system the new field will be set to ‘None’, as new member records don’t require a member validation check.</li>
+  <li>when loading to a Salary, Contribution or NI batch, the new field will be set to ‘Scheme Header’ as batches can only be set up per scheme.</li>
+</ul>
+
+<p>The value in the ‘Member Vaildation’ field can only be used when either the NI/PPS Number or Pensio Master Number as the identifier in screen 2.</p>
+
+<p><a name="dup_select"></a><strong>DUPLICATE MEMBER SELECT</strong> - This is to help with the loading of data where you have several members with the same PPS/NI Number of Staff Number. This field has a drop-down list with the following values displayed in it:</p>
+
+<ul>
+  <li>None-User Select</li>
+  <li>Active</li>
+  <li>Death</li>
+  <li>Deferred</li>
+  <li>Leaver</li>
+  <li>Pensioner</li>
+  <li>Pensioner-No Liability</li>
+  <li>Widower</li>
+</ul>
+
+<p>The value in the ‘Duplicate Member Select’ field only gets used when either the NI/PPS Number or Staff Number has been selected as the identifier in screen 2. At the point in the code where the identifier is checked to see which member on PM the identifier belongs to, if there are more than one member then this new field is checked. If the value is found to be None-User Select, then the code works exactly as it used to do and the user will get a pop-up window where they can select which member they wish to make the update to. If the value is found to be something else i.e. Active, then that value is used in the checking of the duplicate members found on PM. If just one member is found, then that member has their data updated. If more than one member is found, then the user will be presented with a pop-up window where they can select which member they wish to make the update to. If no members are found, then an exception is produced.</p>
+
+<p><a name="2"></a>Once details have been entered, then click ‘OK’. Screen 2 will now appear.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload3.jpg" alt="Field entry" /></p>
+
+  <p>Field entry</p>
+</div>
+
+<p><a name="rule"></a><strong>RULE</strong> - This informs the import process of the action you
+are taking on the data, and therefore how the data, when sent to a Pension Master
+field, will be interpreted.</p>
+
+<p>There are numerous possible entries for this field from a numeric value of 0 through
+15 inclusive. These numbers relate to a particular function:</p>
+
+<ul>
+  <li><strong>0</strong> - Transfer of data from the source file to Pension Master</li>
+  <li><strong>1</strong> - Allows the import of a constant piece of data to all records</li>
+  <li><strong>2</strong> - All nulls to zero</li>
+  <li><strong>3</strong> - Converts boolean values from 0 and 1 to Y and N</li>
+  <li><strong>5</strong> - Numeric values will be set to zero.</li>
+  <li><strong>6</strong> - Adds a decimal place to non decimal values</li>
+  <li><strong>7</strong> - Used in conjunction with <a href="/pension/updates/import_data/pem_dloadt/">Import Translation</a></li>
+  <li><strong>9</strong> - mmddyyyy(mm/dd/yyyy) converted to dd/mm/yyyy</li>
+  <li><strong>11</strong> - yyyymmdd(yyyy/mm/dd) converted to dd/mm/yyyy</li>
+</ul>
+
+<p>If the rule is left blank, it is defaulted to rule 0.</p>
+
+<p><a name="field_desc"></a><strong>FIELD</strong> - Enter a field name that you wish the import
+data to be sent to. Click the lookup icon for a list of field names.</p>
+
+<p><a name="start"></a><strong>START</strong> - The Start value can represent two types of position,
+depending on the record type entered on Screen 1. If the record type is anything other
+than ‘Flat’, then the start value relates to the field’s position in the data lines.
+The following will show how this is set:</p>
+
+<p>Pipe - 123|2222.33|3333.44|4444.55|5555.66|6666.77</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload4.jpg" alt="" /></p>
+
+</div>
+
+<p><a name="length"></a><strong>LENGTH</strong> - When dealing with flat files the length column
+also gets used. The number of characters a section of data uses from the Start position
+to the end of that section of data must be entered here.</p>
+
+<p>Flat - 1232222.333333.444444.555555.666666.77</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload5.jpg" alt="" /></p>
+
+</div>
+
+<p><a name="value"></a><strong>VALUE</strong> - This field will only become available if you have
+specified rule 1 or 7.</p>
+
+<p>If rule 1 has been selected, then enter in the constant data you wish to send through
+to Pension Master during import. If the load type is ‘New’, then some database fields
+should use 0 as the constant data. This is because these fields have an auto-generated
+amount calculated for them during the running process. Click <a href="/pension/updates/import_data/pem_dloadb/">here</a> for
+a list of these fields.</p>
+
+<p>If rule 7 then enter the translation code to be used. A list of valid translation
+codes will be displayed to the screen on entering this field.</p>
+
+<p><strong>Auto Enrolment</strong></p>
+
+<ol>
+  <li>If the user is not loading the AE field then if the AE (auto enrolled) field at scheme level is ticked then the value of the member AE field will be set to Y unless the member’s date of leaving is before the staging date where the value of the field will be set to N.</li>
+  <li>If the user is loading the AE field, then the value in the file will be loaded. The values for the field must be Y or N for an AE scheme and N only for a non AE scheme. If any other values exist for the field in the data file, the load will not progress.</li>
+</ol>
+
+<p>Once all fields have been entered click ‘OK’ to save your import settings.</p>
+
+<h2><a name="query"></a>Querying a General Data Load</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>The screen below will appear.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload6.jpg" alt="" /></p>
+
+</div>
+
+<p><a name="popup"></a>Enter the Import Code and/or Scheme Code details. If any load
+details match the entered criteria, then a pop-up window will appear listing them.</p>
+
+<p>Select a load and click ‘OK’ to display the details to the screen.</p>
+
+<h2><a name="update"></a>Updating a General Data Load</h2>
+
+<p>Click ‘Update’.</p>
+
+<p>A load must have been selected before this option can be used.</p>
+
+<p>Enter the amended details and click ‘OK’ to save them.</p>
+
+<p><strong>Auto Enrolment</strong></p>
+
+<ol>
+  <li>The values for the field must be Y or N for an AE scheme and N only for a non AE scheme. If any other values exist for the field, the load will not progress. The values in the file are loaded to the member.</li>
+</ol>
+
+<h2><a name="Run a General Data Load"></a>Running a General Data Load</h2>
+
+<p>Click ‘Load’.</p>
+
+<p>A load must have been selected before this option can be used.</p>
+
+<p>The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload7.jpg" alt="" /></p>
+
+</div>
+
+<p>You have the option to either run a provisional or an actual load. They both do exactly
+the same process, however, the actual load will update the database tables. It is
+recommended that a provisional load is always run first. This is so that if any errors/conflicts
+are found within the data file, then they can be dealt with before an actual load
+is run.</p>
+
+<p>If you have local path selected in your system parmeters this is where you select the file to be used for importing. Using the drop-down list select the file from the directory and press ok. Then press ok again.</p>
+
+<p>The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload16.jpg" alt="" /></p>
+
+</div>
+
+<p>The process starts by checking that the data file entered doesn’t contains blank lines
+nor is empty. If it is then an appropriate message will be displayed informing the
+user of this. The process is then abandoned.</p>
+
+<p>The process will continue to check that the data inside the data file is correct and
+valid. If any formatting errors are found, then a Formatting report will be produced
+listing these errors. If any data is found to be invalid then an Exceptions report
+will be produced, listing the exceptions.</p>
+
+<p>If there are no formatting errors, then a report will be produced out to Microsoft Excel, which will either list all the new records that have been produced for a ‘New’ type load, or all the records which will be amended with data fro an ‘Update’ type load.</p>
+
+<p>If all data is present and correct, then the user can continue to load the data. Only
+Actual loads will load into the actual database tables.</p>
+
+<h2><a name="delete"></a>Deleting a General Data Load</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>A load must have been selected before this option can be used.</p>
+
+<p>Template loads cannot be deleted. If one is trying to be deleted, then a warning message
+will appear informing the user that this cannot happen.</p>
+
+<h2><a name="add info"></a>Additional Information</h2>
+
+<p>If the Contribution History Batch Details, Salary Batch Details or N.I. History Batch
+Details table is being loaded into, then extra information is needed in order for
+the process to complete successfully.</p>
+
+<p>During the early stage of the Run process, one of the following pop-up windows will
+appear to the screen:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload8.jpg" alt="Contribution History Batch Details" /></p>
+
+  <p>Contribution History Batch Details</p>
+</div>
+
+<p>Enter the Date Due, Date Received and Transaction Type. The Date Received cannot be
+before the Date Due. Click the calendar icon to see a calendar for the date fields and a list
+of valid transaction types for the Transaction Type field.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload9.jpg" alt="Salary Batch Details" /></p>
+
+  <p>Salary Batch Details</p>
+</div>
+
+<p>Enter the Batch Date and Salary Screen. Click the calendar icon to see a calendar for the date
+field and a list of Salary Screens for the Salary Screen field.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload10.jpg" alt="N.I. History Batch Details" /></p>
+
+  <p>N.I. History Batch Details</p>
+</div>
+
+<p>Enter the Batch Date. Click the calendar icon to see the calendar.</p>
+
+<p>When these details have been entered, they will help create a Batch Header. Once an
+actual load has been run, the batch can be viewed in the <a href="/pension/updates/pem_bat/#Introduction">Batch
+Data Input</a> program.</p>
+
+<h2><a name="mem notes"></a>Member Notes</h2>
+
+<p>If the ‘Member Notes?’ field has been ticked in Screen 1, then the following pop-up
+window will appear during the run process:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload11.jpg" alt="Member Notes" /></p>
+
+  <p>Member Notes</p>
+</div>
+
+<p><a name="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
+type entered in Screen 1. You cannot enter into this field.</p>
+
+<p><a name="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
+in the data file.</p>
+
+<p><a name="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
+file which can be attached to the note.</p>
+
+<p><a name="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
+required to enter a value here. This field has the same principle as the <a href="/pension/updates/import_data/pem_dload/#start">Start</a> field
+in Screen 2.</p>
+
+<p><a name="length"></a><strong>LENGTH</strong> - This field will only be available if the record
+type is ‘Flat’. In the case of this, then a value must be entered. This field has
+the same principle as the <a href="/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen
+2.</p>
+
+<h2><a name="navigate"></a>Navigating Between Screens</h2>
+
+<p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user to pick
+one of the screens available. Click ‘Cancel’ to abort the screen selection process.</p>
+
+<p>The menu selection pop-up is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload12.jpg" alt="Menu Screen Selection" /></p>
+
+  <p>Menu Screen Selection</p>
+</div>
+
+<h2><a name="report"></a>Reporting a Load</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_dload13.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Print current record</strong></td>
+          <td>Produces a report of the translation details currently being viewed.</td>
+        </tr>
+        <tr>
+          <td><strong>Print all selected record(s)</strong></td>
+          <td>Produces a report for all the translation codes selected.</td>
+        </tr>
+        <tr>
+          <td><strong>Select record(s) to print</strong></td>
+          <td>Allows the user to select the records for which a report will be produced for.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
+or ‘Help’ to display this help text.</p>
+
+<h2><a name="exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:08.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085342" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>cep</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cep function to calculate the Contributions Equivalent Premium available to
+the member.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cep
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>This function will use the NI History for each year that it exists for the member
+in conjunction with DSS published CEP factors to calculate the CEP available to the member.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cep
+</code></pre>
+
+<h2><a name="02"></a>cert_amt</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cert_amt function to calculate the Certified Amount in respect of the member.
+This amounts to the employees share of the Contributions Equivalent Premium (CEP).</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cert_amt
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>This function will use the NI History for each year that it exists for the member
+in conjunction with DSS published factors to calculate the Certified Amount available to the member.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cert_amt
+</code></pre>
+
+<h2><a name="03"></a>defreval</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the defreval function to calculate the revaluations on the excess of the scale
+pension over accrued GMP for leavers from a Final Salary pension scheme with deferred
+benefits. This allows for UK legislation only at this time.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>defreval
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Date of leaving the scheme is Quotation Termination Date.</li>
+  <li>The result of defreval should be multiplied by (scale pension - accrued GMP) to get
+the amount of the excess revaluations.</li>
+  <li>This function uses Date Entered Scheme (on first screen of Member File) to determine
+when the member joined the scheme for the purposes of calculating post 1/1/85 service
+/ total service for those members who left prior to 1/1/91.</li>
+  <li>It is assumed that the increase in the RPI over the period from the date the member
+left the scheme to their normal retirement date will increase on average at a rate
+of 5% per annum.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>defreval
+</code></pre>
+
+<h2><a name="04"></a>ir_defer_revmax(pp,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+for early leavers.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>ir_defer_revmax(pp,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>pp - denotes the type of Revenue Maximum. The valid Parameters are as follows:
+    <ul>
+      <li>DR - Calculate fraction for Deferred Pension</li>
+      <li>DL - Calculate fraction for Deferred Lump Sum</li>
+    </ul>
+  </li>
+  <li>date1 - denotes the date to project the revenue maximum fraction from. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dec field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+  <li>date2 - denotes the date to project the revenue maximum fraction to. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dterm_dt or pm_qtdt_c field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pp must be in uppercase.</li>
+  <li>If the date returned by the second argument to the function is blank then a value
+of zero will be returned and a message written to the warnings report.</li>
+  <li>If the date returned by the third argument to the function is blank then a value of
+zero will be returned and a message written to the warnings report.</li>
+  <li>The function uses the value evaluated by the second argument to denote the member starting service.</li>
+  <li>The function uses the value evaluated by the third argument to denote the date of early retirement.</li>
+  <li>Full account of any part time service (as defined on the <a href="/pension/file_maintenance/pem_mem/#Part Time Service Details">Part
+Time Service</a> record in Members) is taken account of. If a member has been in continuous
+part time service, they are treated as if they were in full time service in the calculation
+of the revenue maximum fraction as per Revenue Rules.</li>
+  <li>ir_defer_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+need to multiply the result of the call to ir_defer_revmax by a suitable salary.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>ir_defer_revmax(DR,@1,20000201)
+ir_defer_revmax(DL,20000201,pm_dterm_dt)
+ir_defer_revmax(DR,pm_qtdt_c,@2)
+</code></pre>
+
+<h2><a name="05"></a>ir_early_revmax(pp,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+for early retirees.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>ir_early_revmax(pp,date1,date2)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>pp - denotes the type of Revenue Maximum. The valid Parameters are as follows:
+    <ul>
+      <li>ER - Calculate fraction for Early Retirement Pension</li>
+      <li>EL - Calculate fraction for Early Retirement Lump Sum</li>
+    </ul>
+  </li>
+  <li>date1 - denotes the date to project the revenue maximum fraction from. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dec field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+  <li>date2 - denotes the date to project the revenue maximum fraction to. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dterm_dt or pm_qtdt_c field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pp must be in uppercase.</li>
+  <li>ir_early_revmax uses Date Entered Company (pm_dec) (to be found on the first screen
+of the Member File). If this date is blank for a member then a value of zero will
+be returned and a message written to the warnings report.</li>
+  <li>If the date returned by the second argument to the function is blank then a value
+of zero will be returned and a message written to the warnings report.</li>
+  <li>If the date returned by the third argument to the function is blank then a value
+of zero will be returned and a message written to the warnings report.</li>
+  <li>The function uses the value evaluated by the second argument to denote the date of early retirement.</li>
+  <li>The function uses the value evaluated by the third argument to denote the member leaving service.</li>
+  <li>Full account of any part time service (as defined on the <a href="/pension/file_maintenance/pem_mem/#Part Time Service Details">Part
+Time Service</a> record in Members) is taken account of. If a member has been in continuous
+part time service, they are treated as if they were in full time service in the calculation
+of the revenue maximum fraction as per Revenue Rules.</li>
+  <li>ir_early_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+need to multiply the result of the call to ir_early_revmax by a suitable salary.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>ir_early_revmax(ER,@1,20000201)
+ir_early_revmax(EL,pm_dec,20000201)
+ir_early_revmax(ER,19800101,pm_qtdt_c)
+</code></pre>
+
+<h2><a name="06"></a>ir_norm_revmax(pp,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this function to calculate a revenue maximum fraction under Irish Revenue Rules
+for a normal retiree.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>ir_norm_revmax(pp,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>pp - denotes the type of Revenue Maximum. The valid Parameters are as follows:
+    <ul>
+      <li>NR - Calculate fraction for Normal Retirement Pension</li>
+      <li>NL - Calculate fraction for Normal Retirement Lump Sum</li>
+    </ul>
+  </li>
+  <li>date - denotes the date to project the revenue maximum fraction to. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_npd field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pp must be in uppercase.</li>
+  <li>ir_norm_revmax uses Date Entered Company (pm_dec) (to be found on the first screen
+of the Member File). If this date is blank for a member then a value of zero will
+be returned and a message written to the warnings report.</li>
+  <li>If the date returned by the second argument to the function is blank then a value
+of zero will be returned and a message written to the warnings report.</li>
+  <li>The function uses the value evaultaed by the second argument to denote the date of
+normal retirement, which could be used to quote maximum benefits at age 60 for a scheme
+that allows retirement at any age between 60 and 65, for example.</li>
+  <li>Full account of any part time service (as defined on the <a href="/pension/file_maintenance/pem_mem/#Part Time Service Details">Part
+Time Service</a> record in Members) is taken account of. If a member has been in continuous
+part time service, they are treated as if they were in full time service in the calculation
+of the revenue maximum fraction as per Revenue Rules.</li>
+  <li>ir_norm_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue
+Maximum pension or lump sum. To get the Revenue Maximum pension or lump sum you will
+need to multiply the result of the call to ir_norm_revmax by a suitable salary.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>ir_norm_revmax(NR,@1)
+ir_norm_revmax(NL,20000201)
+ir_norm_revmax(NL,pm_npd)
+</code></pre>
+
+<h2><a name="07"></a>pen_act(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the pen_act function to calculate the fraction required under the Republic of Ireland 1990 Pensions
+Act for leavers pre 1 June 2002 from a Final Salary pension scheme with deferred benefits. This fraction
+is used to calculate the members pension on leaving the scheme.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>pen_act(date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date pensionable service commences. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dec, pm_djla, pm_djp, pm_dps or pm_dco field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Full account of any qualifying service in respect of any transfer in that the member may have is taken account of.</li>
+  <li>In the case of a member with non full-time service the pension ratio and scheme max
+ratio on the member indicator screen needs to be updated.</li>
+  <li>Any non-reckonable service for the member is taken account of. Non reckonable service
+is taken as one or more lines on the part time history screen where the part time
+hours field is 0 but the corresponding full time hours field is &gt; 0.</li>
+  <li>Date of leaving the scheme is calculated as follows:
+    <ul>
+      <li>If Date Left (on first screen of Member File) is available use this.</li>
+      <li>otherwise, use Quotation Termination Date.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>pen_act(20000201)
+pen_act(@2)
+pen_act(pm_dco)
+</code></pre>
+
+<h2><a name="08"></a>pen_act_proj(reval_rate,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the pen_act_proj function to calculate the projected fraction required under the
+Republic of Ireland Pensions Act pre 1 June 2002 for leavers from a Final Salary pension scheme with deferred benefits.
+This fraction is used to calculate the members pension on leaving the scheme, but
+revalued to normal pension age.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>pen_act_proj(reval_rate,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>reval_rate - is the rate of revaluation to be assumed for projection purposes. Legislation
+dictates this is 4%p.a. or the increase in the CPI if less. Enter any rate you require
+here, including rates with a decimal point e.g. 2.5%. reval_rate can also be the result
+of another line in your formula in the form @line_num e.g. @2.</li>
+  <li>date - date pensionable service commences. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date</li>
+      <li>pm_dec, pm_djla, pm_djp, pm_dps or pm_dco field on pe_mem.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Full account of any qualifying service in respect of any transfer in that the member may have is taken account of.</li>
+  <li>In the case of a member with non full-time service the pension ratio and scheme max
+ratio on the member indicator screen needs to be updated.</li>
+  <li>Any non-reckonable service for the member is taken account of. Non reckonable service
+is taken as one or more lines on the part time history screen where the part time
+hours field is 0 but the corresponding full time hours field is &gt; 0.</li>
+  <li>The amount of the revaluation is applied between the date of leaving the scheme (as
+calculated in 1. above) (subject to a minimum of 1/1/96) and the 1<sup>st</sup> January
+immediately prior to normal pension date, and is calculated to years and completed months.</li>
+  <li>The revaluation rate used for the projection will be that supplied by the reval_rate argument to the function.</li>
+  <li>Date of leaving the scheme is calculated as follows:
+    <ul>
+      <li>If Date Left (on first screen of Member File) is available use this.</li>
+      <li>otherwise, use Quotation Termination Date.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>pen_act_proj(3,20000201)
+pen_act_proj(3.25,@1)
+pen_act_proj(@2,pm_dco)
+</code></pre>
+
+<h2><a name="09"></a>pen_act_qservice</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the pen_act_qservice function to calculate number of years qualifying service a member has. This is used to determine if a member qualifies for preserved benefit for Republic of Ireland schemes on leaving service.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>pen_act_qservice
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Full account of any qualifying service in respect of any transfer in that the member may have is taken account of.</li>
+  <li>Any non-reckonable service for the member is taken account of. Non reckonable service
+is taken as one or more lines on the part time history screen where the part time
+hours field is 0 but the corresponding full time hours field is &gt; 0.</li>
+  <li>Date of leaving the scheme is calculated as follows:
+    <ul>
+      <li>If Date Left (on first screen of Member File) is available use this.</li>
+      <li>otherwise, use Quotation Termination Date.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>pen_act_qservice
+</code></pre>
+
+<h2><a name="10"></a>stat(fld1,fld2,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the stat function to select amounts from the Annual Statutory Amounts record given
+the type and the effective date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>stat(fld1,fld2,date)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fld1 - this is used to denote the statutory amount type and can take the following values:
+    <ul>
+      <li>s - Single Persons Basic State Pension</li>
+      <li>m - Married Persons Basic State Pension</li>
+      <li>k - New UK State Pension</li>
+      <li>w - Widows Basic State Pension</li>
+      <li>q - Disabled Basic State Pension</li>
+      <li>l - Lower Earnings Limit</li>
+      <li>u - Upper Earnings Limit</li>
+      <li>e - Earnings Cap</li>
+      <li>t - Earnings Threshold</li>
+      <li>1 - Employees Rebate %</li>
+      <li>2 - Employers Rebate %</li>
+      <li>f - Lifetime Allowance</li>
+      <li>a - Annual Allowance</li>
+      <li>b - Annual DB Multiplier</li>
+      <li>v - Pension Valuation Factor</li>
+      <li>p - Pension in Payment Multiplier</li>
+      <li>c - Change in TV Value</li>
+      <li>r - Refund Tax Allowance</li>
+      <li>d - DC Lifetime Allowance</li>
+      <li>g - MP Annual Allowance</li>
+      <li>x - Contribution Limits Age From</li>
+      <li>y - Contribution Limits Age To</li>
+      <li>z - Contribution Limits Maximum Rate %</li>
+      <li><span class="pensions_management">3 - Tax Code 2 Limit</span></li>
+      <li><span class="pensions_management">4 - Tax Code 11 Limit</span></li>
+      <li><span class="pensions_management">5 - Tax Code 33 Limit &gt; 5 Years To SPD</span></li>
+      <li><span class="pensions_management">6 - Tax Code 33 Limit Within 5 Years To SPD</span></li>
+      <li><span class="pensions_management">7 - Tax Code 45 Limit &gt; 5 Years To SPD</span></li>
+      <li><span class="pensions_management">8 - Tax Code 45 Limit Within 5 Years To SPD</span></li>
+    </ul>
+  </li>
+  <li>fld2 - is the effective date selector and can take the values y or d as follows:
+    <ul>
+      <li>y - will select the amount on or after the Effective Date. This can be used with all of the statutory amount types described above.</li>
+      <li>d - will select the amount on or after the BSP Effective Date. This can be only used
+with the ‘s’, ‘m’, ‘k’, ‘w’ or ‘q’ statutory amount types described above.</li>
+    </ul>
+  </li>
+  <li>date - is the effective date for selection.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field referenced to a date field on the member file (pe_mem) or
+a constant date entered in the format YYYYMMDD, where YYYY is the year, MM is the
+month and DD is the day.</li>
+  <li>As the values held on the Statutory Amounts/Tax Simplification table are in the same currency as the
+system default base currency which is held in <a href="/pension/system_administration/pem_sysp/#Basic System Parameters">System
+Parameters</a>, if the scheme base currency for the scheme that the member
+is in is different than the system default base currency, all values returned by stat()
+are automatically converted into the scheme base currency and a message written to
+the Quotation Warnings File informing you of the conversion.</li>
+  <li>As Tax Simplification values can be held at Member, Scheme and System levels, then during the calculation for these values in the ‘stat’ function (where fld1 = f, a, b, v, p, c, r, d or g) the Member level will be checked first for values. If any are found then they will be returned, otherwise the Scheme level is then checked. If any are found then they will be returned, otherwise the System level is checked and these are returned.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>stat(s,d,pm_dterm_dt)
+stat(e,y,19970406)
+stat(m,y,pm_qtdt_c)
+</code></pre>
+
+<h2><a name="11"></a>uk_revmax(pp)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use this function to calculate a Inland Revenue Maximum fraction under UK Inland Revenue
+Rules. This is the fraction that, when applied to an appropriate salary, will calculate
+either an Inland Revenue maximum pension or an Inland Revenue maximum lump sum.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>uk_revmax(pp)
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>pp - denotes the type of Revenue Maximum. The valid Parameters are as follows:
+    <ul>
+      <li>NR - Calculate fraction for Normal Retirement Pension</li>
+      <li>NL - Calculate fraction for Normal Retirement Lump Sum</li>
+      <li>IR - Calculate fraction for Ill-Health Retirement Pension</li>
+      <li>IL - Calculate fraction for Ill-Health Retirement Lump Sum</li>
+      <li>ER - Calculate fraction for Early Retirement Pension</li>
+      <li>EL - Calculate fraction for Early Retirement Lump Sum</li>
+      <li>DR - Calculate fraction for Deferred Pension</li>
+      <li>DL - Calculate fraction for Deferred Lump Sum</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>pp must be in uppercase.</li>
+  <li>uk_revmax uses Date Entered Company (pm_dec) (to be found on the first screen of the
+Member File). If this date is blank for a member then a value of zero will be returned
+by uk_revmax.</li>
+  <li>The date used by uk_revmax to denote the member leaving service is as follows:
+    <ul>
+      <li>for types NR/NL/IR/IL, Normal Retirement Date</li>
+      <li>otherwise, Quotation Termination Date</li>
+    </ul>
+  </li>
+  <li>uk_revmax generates the Revenue Maximum fraction and NOT the value of a Revenue Maximum
+pension or lump sum. To get the Revenue Maximum pension or lump sum you will need
+to multiply the result of the call to uk_revmax by a suitable salary.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>uk_revmax(NR)
+uk_revmax(IL)
+uk_revmax(EL)
+uk_revmax(DR)
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:42.</p>
+      </div>
+    </div>
+  </body>
+</html>

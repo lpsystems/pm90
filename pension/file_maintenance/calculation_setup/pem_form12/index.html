@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>canada(field no.,n1,n2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the canada function to calculate the best band of consecutive years information
+over a given period. e.g. to calculate the best three year average gross salary over
+the last ten years.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>canada(field no.,n1,n2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>field no. - is the number of a field on the first salary history screen (pe_salary1).</li>
+  <li>n1 - is the number of years to find the best consecutive n2 years average over.</li>
+  <li>n2 - is the number of consecutive years to average the field over.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If field no. is set to 0 then a total of all of the 5 salaries in pe_salary1 will
+be used to calculate the average.</li>
+  <li>If n1= 0 or n2 = 0, the function will return a value of 0.</li>
+  <li>n1 can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
+  <li>If n2 &gt; number of years for a particular member then the function performs the
+average over the number of years data available. e.g. if you try to use canada(1,10,3) and there is only 2 years gross
+salary details for a particular member, the function will look at consecutive two
+year averages of the first salary column to arrive at the result.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>canada(1,10,3) 
+canada(2,3,1) 
+</code></pre>
+
+<h2><a name="02"></a>esb_code(date,num,screen)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the esb_code function to extract the allowance codes applicable to a member.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>esb_code(date,num,screen) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - denotes the date you wish to lookup allowance codes for. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+  <li>num - denotes the sequential number of the allowance for the member. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a
+number in the range 1 to 15.</li>
+      <li>a number in the range 1-15.</li>
+    </ul>
+  </li>
+  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If the member does not have a code in the position indicated by num, a value of NOT_FOUND is returned by this function.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>esb_code(20020401,5,1) 
+esb_code(20010101,15,2) 
+</code></pre>
+
+<h2><a name="03"></a>esb_value(date,code,screen)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the esb_value function to extract the value corresponding to an allowance code
+applicable to a member.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>esb_value(date,code,screen) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - denotes the date you wish to lookup allowance codes for. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that evaluates to a date.</li>
+      <li>a fixed date if the format YYYYMMDD e.g. 20000201 for 1st February 2000.</li>
+    </ul>
+  </li>
+  <li>code - denotes the allowance code to be looked up. This can be either:
+    <ul>
+      <li>@line_num i.e. a reference to a previous line of your formula that contains the allowance code</li>
+      <li>an allowance code.</li>
+    </ul>
+  </li>
+  <li>screen - denotes the screen number for the allowance code to be extracted from. Valid entries are either 1 or 2.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If there is no allowance value for the selected date, allowance code and screen number,
+a value of zero is returned by this function.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>esb_value(20020401,1065,1) 
+esb_value(20010101,@1,2) 
+</code></pre>
+
+<h2><a name="04"></a>croda_avg(field,n,fld1,fld2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the croda_avg function to calculate the average of a field over a particular number
+of years.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>croda_avg(field,n,fld1,fld2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>field - is a field on the salary history or user defined history files (pe_salary1, pe_salary2, pe_salary3, pe_salary4 or pe_mua respectively). If the field is in a user defined history then the field name must be suffixed with the user defined history type in capitals. e.g. pma_col1SAL with pma_col1 being one of the five user defined fields in pe_mua and SAL indicating the type of the history.</li>
+  <li>n - is the number of years to average the field over.</li>
+  <li>fld1 - is the effective start conditions of the averaging.</li>
+  <li>fld2 - is full or part time selection.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Only salaries upto and including the <a href="/pension/file_maintenance/pem_mem/#calc_date">Calculation
+Date</a> are used in the calculations.</li>
+  <li>If a user defined history is selected ensure that the data type of the field is either
+N2 or MO. If any other type is selected for this function, e.g. DT, then an error
+message is displayed.</li>
+  <li>If n = 0, the function will return a value of 0.</li>
+  <li>n can take any value less than 40. i.e you can average the field over no more than 40 years.</li>
+  <li>fld1 can take the alphabetic values ‘e’ and ‘l’:
+    <ul>
+      <li>‘e’ will commence the averaging period from the Calculation Date.</li>
+      <li>‘l’ will commence the averaging period from the Calculation Date but will ignore the latest entry.</li>
+    </ul>
+  </li>
+  <li>fld2 can take the alphabetic values ‘f’ and ‘p’:
+    <ul>
+      <li>‘f’ will calculate the full time values as they are but the part time values will be calculated by multiplying the values by the full time hours divided by the part time hours.</li>
+      <li>‘p’ will calculate the part time values as they are but the full time values will be calculated by multiplying the values by the part time hours divided by the full time hours. The full/part time hours in this case are taken from the most recent values on the Part Time Service screen.</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>croda_avg(pma_col1SAL,3,e,f) 
+croda_avg(ps1_sal3,3,e,f) 
+croda_avg(ps1_sal4,1,l,p) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

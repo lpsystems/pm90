@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Tax Parameters</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085242" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Tax Parameters</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#proceed">Run A Tax Code Alteration</a></li>
+  <li><a href="#tax_type">Alteration Type</a>
+    <ul>
+      <li><a href="#replacement">Direct Replacement of one Tax Code with another</a></li>
+      <li><a href="#prefix">All Tax Codes with a certain Prefix by a fixed number</a></li>
+      <li><a href="#suffix">All Tax Codes with a certain Suffix by a fixed number</a></li>
+      <li><a href="#week1month1">Update Week1/Month1 Basis</a></li>
+    </ul>
+  </li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to globally alter tax codes for members of a specified
+scheme. It provides a quick and easy way for the user to either increase or decrease
+the value of a tax code, or replace one tax code with another.</p>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax1.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<h2><a name="proceed"></a>Run A Tax Code Alteration</h2>
+
+<p>Click ‘Proceed’.</p>
+
+<p>Enter the fields as required as follows:</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME</strong> - Enter the scheme code you wish to alter tax codes for. This field must be entered.</p>
+
+<p><a name="flexi_members"></a><strong>ALSO INCLUDE FLEXI-ACCESS MEMBERS?</strong> - Tick this field if you wish to include Flexi-Access members in the member selection.</p>
+
+<p><a name="tax_type"></a><strong>ALTERATION TYPE</strong> - Select the alteration type you require.</p>
+
+<p>Click ‘OK’ to continue with the tax alteration procedure, or click ‘Cancel’ to return
+to the main menu.</p>
+
+<h3><a name="replacement"></a>Direct Replacement of one Tax Code with another</h3>
+
+<p>When this alteration type is selected, the following screen appears:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax2.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="exist"></a><strong>ENTER THE EXISTING TAX CODE</strong> - Enter the tax code you wish to replace. This field must be entered.</p>
+
+<p><a name="replace"></a><strong>ENTER THE REPLACEMENT TAX CODE</strong> - Enter the new tax code. This field must be entered.</p>
+
+<p>Click ‘OK’ to continue with the tax code alteration, or click ‘Cancel’ to return
+back to the main menu.</p>
+
+<p>The following screen will now appear:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax3.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>If there are members in the specified scheme who use the existing tax code,
+then these members will be listed on the screen.</p>
+
+<p>Enter the field as follows:</p>
+
+<p><a name="change"></a><strong>CHANGE?</strong> - All members listed in the table will have this field defaulted to Yes. If you
+do not wish any of these members to have their tax code changed, then un-tick the field for No.</p>
+
+<p>Click ‘OK’ to accept the tax code alterations, or click ‘Cancel’ to return to the
+main menu.</p>
+
+<h2><a name="tax_type"></a>Alteration Type</h2>
+
+<h3><a name="prefix"></a>All Tax Codes with a certain Prefix by a fixed number</h3>
+
+<p>When this alteration type is selected, the following window is displayed to the screen:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax5.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="incr_decr"></a><strong>DO YOU WISH TO INCREASE OR DECREASE THE TAX CODE?</strong> - Select to increase or decrease the tax code value.</p>
+
+<p>Click ‘OK’ to continue with tax alteration procedure, or click ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The following screen will now appear:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax4.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="taxcode_type"></a><strong>TAX CODE TYPE</strong> - Select if the tax code you are altering is a UK, Scottish or Welsh tax code.</p>
+
+<p><a name="letter"></a><strong>ENTER THE PREFIX OF THE UK/SCOTTISH/WELSH TAX CODES YOU WANT TO INCREASE/DECREASE</strong> - Enter a valid Prefix for the tax code you wish to alter. This field must be entered.</p>
+
+<p><a name="amount"></a><strong>ENTER THE AMOUNT YOU WANT TO INCREASE/DECREASE THE UK/SCOTTISH/WELSH TAX CODES BY</strong> - Enter an amount that you want to increase/decrease the tax code value by. This field must be entered.</p>
+
+<p>Click ‘OK’ to continue with the tax code alteration, or click ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The following screen will now appear:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax7.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>If the amount to increase or decrease the tax code value causes the tax
+code to be an invalid tax code e.g. a negative amount, or too large an amount, the
+member will not be displayed.</p>
+
+<p>If there are members in the scheme who use a tax code with the stated prefix,
+then these members will be listed on the screen.</p>
+
+<p>Enter the field as follows:</p>
+
+<p><a name="change"></a><strong>CHANGE?</strong> - All members listed on the screen will have this field defaulted to Yes. If you
+do not wish any of these members to have their tax code value changed, then un-tick the field for No.</p>
+
+<p>Click ‘OK’ to accept the tax code alterations, or click ‘Cancel’ to return to the
+main menu, and no alterations will be processed.</p>
+
+<h3><a name="suffix"></a>All Tax Codes with a certain Suffix by a fixed number</h3>
+
+<p>When this alteration type is selected, the following window is displayed to
+the screen:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax5.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="incr_decr"></a><strong>DO YOU WISH TO INCREASE OR DECREASE THE TAX CODE?</strong> - Select to either increase or decrease the tax code value.</p>
+
+<p>Click ‘OK’ to continue with tax alteration procedure, or click ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The following screen will now appear:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax6.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="taxcode_type"></a><strong>TAX CODE TYPE</strong> - Select if the tax code you are altering is a UK, Scottish or Welsh tax code.</p>
+
+<p><a name="letter"></a><strong>ENTER THE SUFFIX OF THE UK/SCOTTISH/WELSH TAX CODES YOU WANT TO INCREASE/DECREASE</strong> - Enter a valid Suffix for the tax code you wish to alter. This field must be entered.</p>
+
+<p><a name="amount"></a><strong>ENTER THE AMOUNT YOU WANT TO INCREASE/DECREASE THE UK/SCOTTISH/WELSH TAX CODES BY</strong> - Enter an amount that you want to increase/decrease the tax code value by. This field must be entered.</p>
+
+<p>Click ‘OK’ to continue with the tax code alteration, or click ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The following screen will now appear:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax8.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>If the amount to increase or decrease the tax code value causes the tax
+code to be an invalid tax code e.g. a negative amount, or too large an amount, the
+member will not be displayed.</p>
+
+<p>If there are members in the scheme who use a tax code with the stated suffix,
+then these members will be listed on the screen.</p>
+
+<p>Enter the field as follows:</p>
+
+<p><a name="change"></a><strong>CHANGE?</strong> - All members listed in the array will have this field defaulted to Yes. If you
+do not wish any of these members to have their tax code value changed, then un-tick the field for No.</p>
+
+<p>Click ‘OK’ to accept the tax code alterations, or click ‘Cancel’ to return to the
+main menu, and no alterations will be processed.</p>
+
+<h3><a name="week1month1"></a>Update Week1/Month1 Basis</h3>
+
+<p>When this alteration type is selected, the following window is displayed to
+the screen:</p>
+
+<div class="screen">
+  <p><img src="/payroll/images/gn_tax9.jpg" alt="Tax Parameters Screen" /></p>
+
+  <p>Tax Parameters Screen</p>
+</div>
+
+<p>If there are members in the scheme who are a pensioner,
+then these members will be listed on the screen.</p>
+
+<p>Enter the field as follows:</p>
+
+<p><a name="wkmth"></a><strong>WK1/MTH1</strong> - Tick or un-tick any members Week1/Month1 field that needs updating. If a member’s Week1/Month1 Basis field is to remain as it is then just leave the field untouched. All members listed in the array who have had their Week1/Month1 field changed will be updated. You can use the ‘All’ and ‘None’ buttons at the bottom of the screen to set the field to either Yes or No for all selected members.</p>
+
+<p>Click ‘OK’ to accept the tax code alterations, or click ‘Cancel’ to return to the
+main menu, and no alterations will be processed.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:52:42.</p>
+      </div>
+    </div>
+  </body>
+</html>

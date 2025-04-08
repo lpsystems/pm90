@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Asset Transfer</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Asset Transfer</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Undo">Undo</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows you to transfer the existing units for a member to the scheme
+suspense account. It will transfer all or a % of units for a member to the scheme suspense
+account and write a negative unit entry to each of the members funds so that the members
+total unit holdings.</p>
+
+<p>It is envisaged that you might use this program, for example, to transfer any remaining
+units for a member to scheme level after the member has taken a refund of the value
+represented by units bought with their employee ordinary contributions.</p>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Run</li>
+  <li>Undo</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_asset1.jpg" alt="Asset Transfer Selection Screen" /></p>
+
+  <p>Asset Transfer Selection Screen</p>
+</div>
+
+<h2><a name="Run"></a>Run</h2>
+
+<p>Click ‘Run’.</p>
+
+<p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to run the Asset
+Transfer for using the Scheme, Company, Category, Status, Special Code and Member
+fields. When the selection criteria have been entered click on ‘OK’ to proceed or
+click on ‘Cancel’ to return to the main menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_asset2.jpg" alt="Asset Transfer Details Screen" /></p>
+
+  <p>Asset Transfer Details Screen</p>
+</div>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="pss_date"></a><strong>EFFECTIVE DATE</strong> - Enter the date due for your asset transfer.
+Only units bought up to an including this date will be included in the asset transfer.</p>
+
+<p><a name="pss_comments"></a><strong>COMMENTS</strong> - Enter any comments you may have about
+this asset transfer. These will then be saved to the scheme suspense account against
+each suspense account entry generated.</p>
+
+<p>Now select the contribution types required, tick ‘all’ to select them all. The default is 100% but you can changed for each contribution type.</p>
+
+<p>When you have entered these details, click on ‘OK’ to proceed or ‘Cancel’ to return
+to the main menu.</p>
+
+<p>The asset transfer process will now run.</p>
+
+<p>Note that only contribution types that are marked as non Protected Rights contribution
+types will be included in the asset transfer.</p>
+
+<p>If the asset transfer is successful, a report will be generated which shows details
+of the units transferred to the scheme suspense account, broken down member by member.</p>
+
+<p>The program will then return to the main menu.</p>
+
+<h2><a name="Undo"></a>Undo</h2>
+
+<p>This is essentially the reverse of the asset transfer run i.e. it reverses an asset
+transfer for a group of members.</p>
+
+<p>Click on ‘Undo’.</p>
+
+<p>The same two screens as for the ‘Run’ option are shown except that the comments field
+is not required.</p>
+
+<p>All suspense account entries for the selected members and for the entered effective
+date are removed from the system.</p>
+
+<p>The program will then return to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

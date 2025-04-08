@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Historical Status Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Historical Status Report</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run a Historical Status Report">Run a Historical Status Report</a></li>
+  <li><a href="#Exit Program">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a report of members status codes at a specified date in the
+past for a selected group of members. You have the option of doing this in either
+Summary or Detailed format.</p>
+
+<p>The Summary Report will provide you with the number of members held under each new
+status code using the selection criteria and the effective date entered by the user.</p>
+
+<p>The Detailed Report will provide you with details of each individual member held under
+each new status code, these including the member’s name and number, the effective
+date, old and new status codes, and the date when the status code was updated. 
+This is also done by using the selection criteria and the effective date entered by
+the user.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_hist.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="Run a Historical Status Report"></a>Run a Historical Status Report</h2>
+
+<p>Click ‘Proceed’.</p>
+
+<p>Enter the selection criteria required.</p>
+
+<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong> - This represents the code corresponding
+to the scheme the member belongs to. The scheme code must be entered and the code
+entered must exist on the scheme file. Click on the lookup icon to see a list of the scheme codes.
+When a valid scheme code has been entered the scheme
+name will be displayed.</p>
+
+<p><a name="pm_company"></a><strong>COMPANY CODE</strong> - The company code must be entered and
+the combination of scheme and company code must exist on the company file. To see
+a list of the existing combinations of scheme and company codes on the company file
+click on the lookup icon. When a valid company code has been entered the company
+description will be displayed.</p>
+
+<p><a name="pm_category"></a><strong>CATEGORY CODE</strong> - The category code must be entered
+and the combination of scheme and category code must exist on the category file. To
+see a list of the existing combinations of scheme and category codes on the category
+file click on the lookup icon. When a valid combination of scheme and category
+code has been entered the category description will be displayed.</p>
+
+<p><a name="pm_status"></a><strong>STATUS CODE</strong> - This represents the current status of
+the member in the scheme, e.g. active member, deferred pension The status code entered
+must exist on the status file. To see a list of the existing status codes click on
+the lookup icon. When a valid status code has been entered the status description
+will be entered.</p>
+
+<p><a name="psft_code"></a><strong>SPECIAL CODE</strong> - Enter the special code as set-up
+in <a href="/pension/system_data/pem_codem/#Introduction">Codes.</a></p>
+
+<p>At least one of the above fields must be entered before you can enter the effective
+date. If no fields are entered then a message appears at the top of the screen
+asking you if you are sure that you want to select all of the members. The following
+message appears:</p>
+
+<div class="well">
+
+  <p>You have selected all members. This may take some time to retrieve from the database. Proceed anyway?</p>
+
+</div>
+
+<p><a name="s_date"></a><strong>EFFECTIVE DATE</strong> - This represents the date at which
+the status will change. If the date entered is after today’s date i.e. in the
+future, then a message will be displayed prompting the user to check if this date
+is correct. This message is as follows:</p>
+
+<div class="well">
+
+  <p>The Effective Date entered is in the future. Are you sure that you want to use it as the Effective Date?</p>
+
+</div>
+
+<p>If no date is entered then the date will default to today’s date. A message
+appears at the top of the screen informing you of this:</p>
+
+<div class="well">
+
+  <p>An Effective Date has not been entered. The Effective Date will default to Today’s date. Proceed anyway?</p>
+
+</div>
+
+<p>When the selection criteria has been entered click on ‘OK’ to proceed. You can
+click on ‘Cancel’ to return to the proceed menu and to abort the selection fields.</p>
+
+<p>If no members can be found with the selection criteria you have entered, then a message
+window will be displayed informing you of this:</p>
+
+<div class="well">
+
+  <p>There are no records to match the report criteria.</p>
+
+</div>
+
+<p>If members have been found then the following menu is displayed:</p>
+
+<div class="well">
+
+  <p>REPORT: <em>Summary</em> Detailed Exit</p>
+
+</div>
+
+<p>Here you have a choice of two reports depending on how much information you require.</p>
+
+<p>To produce a Summarised Historical Status Report, click ‘Summary’.</p>
+
+<p>To produce a Detailed Historical Status Report, click ‘Detailed’.</p>
+
+<p>To exit the menu, click ‘Exit’.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit Program"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>

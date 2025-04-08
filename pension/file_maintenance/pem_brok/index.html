@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Brokers</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085343" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Brokers</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A Broker">Add a Broker</a></li>
+  <li><a href="#Query/Search For A Broker">Query/Search for a Broker</a></li>
+  <li><a href="#Viewing Brokers">Viewing Brokers</a></li>
+  <li><a href="#Updating Brokers">Updating Brokers</a></li>
+  <li><a href="#Deleting Broker Details">Deleting Broker Details</a></li>
+  <li><a href="#Printing Broker Details">Printing Broker Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.</p>
+
+  <p>The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.</p>
+
+  <p>If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This program allows maintenance of the Broker file. This is used to:</p>
+
+<ul>
+  <li>Set up each broker that you deal with. This allows you then assign the appropriate
+broker to the scheme record in <a href="/pension/file_maintenance/pem_sch/#Broker Details">Schemes</a>.</li>
+  <li>Record details of each brokers address, contact names and addresses which can be used
+to generate mail merge letters.</li>
+</ul>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_brok1.jpg" alt="Broker Details Screen" /></p>
+
+  <p>Broker Details Screen</p>
+</div>
+
+<h2><a name="Add A Broker"></a>Add A Broker</h2>
+
+<p>Click ‘Add’.</p>
+
+<p><a name="pbr_code"></a><strong>BROKER CODE</strong> - Enter a code for your new broker record.
+The code entered must not already exist on the broker file. If a valid code is not
+entered an error message will be displayed and broker code will have to be re-entered.</p>
+
+<p><a name="pbr_desc"></a><strong>BROKER NAME</strong> - Enter the name of the new broker. A value
+must be entered in this field and will be used in subsequent lookups for the broker
+details.</p>
+
+<p><a name="pbr_company"></a><strong>BROKER COMPANY</strong> - Enter the broker company using the drop-down list. If your database doesn’t use broker companies use the default already listed.</p>
+
+<p><a name="pbr_agent"></a><strong>AGENT COMPANY</strong> - Enter the agent company using the drop-down list. If your database doesn’t use agent companies use the default already listed.</p>
+
+<ul>
+  <li>Agent</li>
+  <li>Introducer</li>
+</ul>
+
+<p><a name="pbr_addr1"></a><a name="pbr_addr2"></a><a name="pbr_addr3"></a><a name="pbr_addr4"></a><a name="pbr_postcode"></a><strong>BROKER
+ADDRESS</strong> - Enter the brokers address and postcode as appropriate.</p>
+
+<p><a name="pbr_postcode"></a><strong>POSTCODE</strong> - Enter the postcode.</p>
+
+<p><a name="pbr_country"></a><strong>COUNTRY</strong> - Enter the country.</p>
+
+<p><a name="pbr_tel"></a><strong>BROKER TELEPHONE</strong> - Enter the telephone number of the
+broker.</p>
+
+<p><a name="pbr_mobile"></a><strong>BROKER MOBILE</strong> - Enter the mobile number of the
+broker.</p>
+
+<p><a name="pbr_fax"></a><strong>BROKER FAX NUMBER</strong> - Enter the fax number of the broker.</p>
+
+<p><a name="pbr_email"></a><strong>BROKER E-MAIL ADDRESS</strong> - Enter the broker’s E-Mail address.</p>
+
+<p><a name="pbr_title"></a><a name="pbr_ct_fname"></a><a name="pbr_ct_lname"></a><a name="pbr_title2"></a><a name="pbr_ct_fname2"></a><a name="pbr_ct_lname2"></a><strong>CONTACT
+DETAILS</strong> - Enter the name, surname and title of the main contacts of the broker.
+These fields are not required but can be useful as a point of reference or in a mail
+merge.</p>
+
+<p><a name="pbr_status"></a><strong>STATUS</strong> - Enter the status if applicable from the drop-down list:</p>
+
+<ul>
+  <li>Active</li>
+  <li>Pending</li>
+  <li>Closed</li>
+</ul>
+
+<p><a name="pbr_has_ifa"></a><strong>HAS IFA</strong> - Enter ‘Yes’ or ‘No’.</p>
+
+<p><a name="pbr_signed_off"></a><strong>SIGNED OFF</strong> - Enter ‘Yes’ or ‘No’.</p>
+
+<p><a name="pbr_dob"></a><strong>DATE OF BIRTH</strong> - Enter a date in the format ddmmyy or dd/mm/yyyy</p>
+
+<p><a name="pbr_ifa"></a><strong>IFA number</strong> - Enter the IFA number of the broker if applicable.</p>
+
+<p><a name="pbr_fee"></a><strong>RETENTION FEE</strong> - Enter the fee if applicable.</p>
+
+<p><a name="pbr_agent"></a><strong>AGENT OR INTRODUCER</strong> - Enter the Agent or Introducer:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Code</th>
+          <th style="text-align: left">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">A</td>
+          <td style="text-align: left">Agent</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">I</td>
+          <td style="text-align: left">Introducer</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>When the broker details have been entered click ‘OK’ to save the details to the broker
+file. You can click ‘Cancel’ at any stage to exit the add option without saving the
+details.</p>
+
+<p>Screen 2 store the broker company address if different from the broker address it can be viewed by selecting 2 The following options and screen appear when it is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_brok4.jpg" alt="Broker Details Screen" /></p>
+
+  <p>Broker Address Details Screen</p>
+</div>
+
+<p><a name="pbr_home_addr1"></a><a name="pbr_home_addr2"></a><a name="pbr_addr3"></a><a name="pbr_home_addr4"></a><strong>COMPANY ADDRESS</strong> - Enter the brokers address as appropriate.</p>
+
+<p><a name="pbr_home_postcode"></a><strong>POSTCODE</strong> - Enter the postcode.</p>
+
+<p><a name="pbr_home_country"></a><strong>COUNTRY</strong> - Enter the country.</p>
+
+<p><a name="pbr_home_tel"></a><strong>BROKER TELEPHONE</strong> - Enter the telephone number of the
+broker.</p>
+
+<p><a name="pbr_home_mobile"></a><strong>BROKER MOBILE</strong> - Enter the mobile number of the
+broker.</p>
+
+<p><a name="pbr_co_fax"></a><strong>BROKER FAX NUMBER</strong> - Enter the fax number of the broker.</p>
+
+<p><a name="pbr_home_email"></a><strong>BROKER E-MAIL ADDRESS</strong> - Enter the broker’s E-Mail address.</p>
+
+<h2><a name="Query/Search For A Broker"></a><a name="query"></a>Query/Search For A Broker</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_brok2.jpg" alt="Broker Query Screen" /></p>
+
+  <p>Broker Query Screen</p>
+</div>
+
+<p>You may select records by using the broker code field. You may also use any combination
+(or even partial combination) of these fields in order to select the required company
+record(s).</p>
+
+<p>If you are unsure of the code(s) to Query, click the lookup icon to see a list
+of Broker codes.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the main menu.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Viewing Brokers"></a>Viewing Brokers</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Updating Brokers"></a>Updating Brokers</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The broker code cannot be changed as this is the key to the broker file. When the
+changes have been made to the record click ‘OK’ to save the changes to file, or click
+‘Cancel’ to exit the update option without saving the changes.</p>
+
+<h2><a name="Deleting Broker Details"></a>Deleting Broker Details</h2>
+
+<p>Before Deleting, a record must be selected through the Query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>Also, the broker to be deleted must not be used by any scheme on your Pension Master
+system. If it is, a warning message will be displayed to the screen informing you
+of this and you will not be able to delete the broker code.</p>
+
+<p>Click ‘Delete’.</p>
+
+<p>You will be asked to confirm and then re-confirm deletion of this Broker.</p>
+
+<h2><a name="Printing Broker Details"></a><a name="report"></a>Printing Broker Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_brok3.jpg" alt="Print Options Screen" /></p>
+
+  <p>Print Options Screen</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_brok2.jpg" alt="Print Options Screen" /></p>
+
+  <p>Print Options Screen</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using Broker Code field.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:43.</p>
+      </div>
+    </div>
+  </body>
+</html>

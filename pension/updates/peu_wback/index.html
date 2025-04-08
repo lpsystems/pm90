@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Writeback Quote Results</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Writeback Quote Results</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Undo">Undo</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows you to writeback (and optionally finalise) the results for any
+quotation run on Pension Master. The data is written to that members exit screens
+or to that members user defined screens. You can also use the Undo option to reverse
+(and optionally un-finalise) a writeback that you have previously done.</p>
+
+<p>The term ‘finalise’ means to tick the finalised field on the <a href="/pension/file_maintenance/pem_mem/#Running Benefit Quotations/Calculations">members
+quotation results</a> and to update the members <a href="/pension/file_maintenance/pem_mem/#pm_status">status
+code</a> to the new specified status code. Additionally, if the member’s status code
+is changing from an active code to a non-active code, the members <a href="/pension/file_maintenance/pem_mem/#pm_dtlft">date
+left</a> is also updated.</p>
+
+<p>This has the effect of locking that quotation type for the member as Pension Master
+will not allow you to re-run finalised quotations. As an example, you might want to
+finalise a quotation type if a member retires and you have run a final retirement
+quote and written back the data to the members pensioner screens.</p>
+
+<p>‘Un-finalise’ effectively reverses the finalise process described above.</p>
+
+<p>The following options and screen appears when this program is selected:</p>
+
+<ul>
+  <li><a href="#Run">Run</a></li>
+  <li><a href="#Undo">Undo</a></li>
+  <li><a href="#Exit">Exit</a></li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_wback1.jpg" alt="Writeback Quote Results Screen" /></p>
+
+  <p>Writeback Quote Results Screen</p>
+</div>
+
+<h2><a name="Run"></a>Run</h2>
+
+<p>Click ‘Run’.</p>
+
+<p>You will be asked if you wish to do a Provisional or an Actual run. A Provisional
+run does all that an actual run does, but does not write any results to the database.</p>
+
+<p><a name="pm_scheme"></a><a name="pm_company"></a><a name="pm_category"></a><a name="pm_status"></a><a name="psft_code"></a><strong>SELECTION
+CRITERIA</strong> - Select the group of members you require to writeback quote results
+for using the Scheme, Company, Category, Status, Special Code and Member Number fields
+(see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the selection criteria have been entered
+click ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the writeback run.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_wback2.jpg" alt="Quote Type Selection Screen" /></p>
+
+  <p>Quote Type Selection Screen</p>
+</div>
+
+<p><a name="p_quote_type"></a><strong>QUOTATION TYPE</strong> - Enter the quotation type to write
+quote results back for.</p>
+
+<p><a name="p_quote_date"></a><strong>QUOTATION DATE</strong> - Enter the date for the quotes you
+wish to write back.</p>
+
+<p><a name="p_finalise"></a><strong>FINALISE QUOTES?</strong> - Check this if you want to also
+finalise the specified quotation type for the selected group of members</p>
+
+<p><a name="p_fin_status"></a><strong>FINALISED STATUS</strong> - This option is only applicable
+if you have checked the Finalise Quotes? field and is used to specify the new status
+code for all selected members for which the quotation is to be finalised.</p>
+
+<p>If you are writing back results to the Lifetime/Annual Allowance screen for the selected members, then a popup window will appear which will prompt you to enter a year for the 5th April you wish to write the results back for. The popup window is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_wback3.jpg" alt="Annual/Lifetime Allowance Date Screen" /></p>
+
+  <p>Annual/Lifetime Allowance Date Screen</p>
+</div>
+
+<p>Pension Master then proceeds to write the appropriate quotation results to the specified
+exit or user defined screens (as specified in <a href="/pension/file_maintenance/pem_cat/#pqh_table">Category
+File</a>) for each member selected. If successful and the <a href="#p_finalise">Finalise
+Quotes?</a> option was checked, it also finalises any quotations for this quotation
+type and selected group of members.</p>
+
+<p>There are several situations that can cause exceptions:</p>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>All types of writeback</strong></td>
+          <td>Quotation results must exist for the given quotation type and date.</td>
+        </tr>
+        <tr>
+          <td><strong>All types of writeback</strong></td>
+          <td>The field to be written back to must exist in <a href="/pension/reports/report_writer/pem_rep/">Report Units</a>.</td>
+        </tr>
+        <tr>
+          <td><strong>All types of writeback</strong></td>
+          <td>The result to be written back must be of the same data type as the field it is being written back to.</td>
+        </tr>
+        <tr>
+          <td><strong>Transfer In</strong></td>
+          <td>The transfer type field must be one of Additional Pension, Additional Service or DC Transfer.</td>
+        </tr>
+        <tr>
+          <td><strong>Transfer In/Out</strong></td>
+          <td>A transfer in/out cannot already exist for the given transfer in/out code.</td>
+        </tr>
+        <tr>
+          <td><strong>Deferred Pensioner/Pensioner</strong></td>
+          <td>If any deferred pensioner/pensioner basic details are included in the writeback, then a deferred pensioner/pensioner basic details record cannot already exist.<br /><br />Otherwise, A deferred pensioner/pensioner basic details record must already exist before you can writeback deferred pensioner/pensioner history.</td>
+        </tr>
+        <tr>
+          <td><strong>Deferred Pensioner/Pensioner</strong></td>
+          <td>Pay frequency (if written back) must be one of 1, 2, 4, 12, 13, 52.<br />Reason for cessation (if written back) must be one of B, C, D, E, O.<br />Account Type (if written back) must be either BANK or BSOC.<br />Sort Code (if written back) must be in the format xx-yy-zz.</td>
+        </tr>
+        <tr>
+          <td><strong>Deferred Pensioner/Pensioner</strong></td>
+          <td>An entry cannot already exist on the deferred pensioner/pensioner history for the given deferred pension/pension code.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If successful, a report detailing the proposed writebacks is displayed and can be
+printed at this time.</p>
+
+<p>If the writeback was un-successful, an exception report will be produced which details
+the records that were rejected and the reason why. You must address each exception
+before being able to writeback the quotation results successfully.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<p>The system will then return to the main menu.</p>
+
+<h2><a name="Undo"></a>Undo</h2>
+
+<p>Click ‘Undo’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You must be of Supervisor level to use this option. See <a href="/pension/system_administration/gn_user/">Users</a> for
+more details.</p>
+</div>
+
+<p>An undo quote writeback run deletes any records created by a quote writeback run as
+set out above and brings the selected member records back to the situation immediately
+before the actual quote writeback run was performed. It also un-finalises any quotations
+for this quotation type and selected group of members.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Use the Undo Writeback option with extreme caution as it will delete data in the
+appropriate area for a member. This data may have been updated manually since the
+writeback was originally performed and these changes will be lost.</p>
+</div>
+
+<p>The exact details of records removed by the Undo Writeback option are:</p>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Death</strong></td>
+          <td>All death details for the member.</td>
+        </tr>
+        <tr>
+          <td><strong>Deferred Pensioner</strong></td>
+          <td>If any deferred pensioner basic details exist in the writeback, then all deferred pension details for the member, including deferred pension history, totals and increase history.<br /><br />Otherwise, all deferred pension history and increase history for the member and specified deferred pension code.</td>
+        </tr>
+        <tr>
+          <td><strong>Annual/Lifetime Allowance</strong></td>
+          <td>The user will again be prompted to enter a year for the 5th April record you wish to delete for the member. Once entered, the details for the member and specified date will be removed.</td>
+        </tr>
+        <tr>
+          <td><strong>Pensioner Basic Details</strong></td>
+          <td>If any pensioner basic details exist in the writeback, then all pension details for the member, including pension history, totals and increase history.<br /><br />Otherwise, all pension history and increase history for the member and specified pension code.</td>
+        </tr>
+        <tr>
+          <td><strong>Protected A-Day Benefits</strong></td>
+          <td>All protected A-Day benefit details for the member.</td>
+        </tr>
+        <tr>
+          <td><strong>Refund</strong></td>
+          <td>All refund details for the member.</td>
+        </tr>
+        <tr>
+          <td><strong>Transfer In</strong></td>
+          <td>All transfer in details for the member and specified transfer in code.</td>
+        </tr>
+        <tr>
+          <td><strong>Transfer Out</strong></td>
+          <td>All transfer out details for the member and specified transfer out code.</td>
+        </tr>
+        <tr>
+          <td><strong>User Defined Screens</strong></td>
+          <td>User defined field details, based on the field number entered at writeback setup, for the member and specified user defined screen code (N.B. may include more than one user defined screen).</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>Before the process deletes any data, a warning message is displayed informing you
+of the data that is about to be deleted as per the above table. <strong>This is your final
+chance to stop the process before any data is deleted.</strong></p>
+
+<p>If successful, a report detailing the data that has been deleted is displayed and
+can be printed at this time.</p>
+
+<p>Once the process has been run you will be returned to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

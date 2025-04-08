@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Schemes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085358" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Schemes</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Adding A Scheme">Adding a Scheme</a>
+    <ul>
+      <li><a href="#Basic Scheme Details">Basic Scheme Details</a></li>
+    </ul>
+  </li>
+  <li><a href="#Query/Search For A Scheme">Query/Search for a Scheme</a></li>
+  <li><a href="#Browsing Scheme Details">Browsing Scheme Details</a></li>
+  <li><a href="#Viewing Scheme Details">Viewing Scheme Details</a></li>
+  <li><a href="#Updating Scheme Details">Updating Scheme Details</a>
+    <ul>
+      <li><a href="#Member Screen Selection">Member Screen Selection</a></li>
+      <li><a href="#User Access Details">User Access Details</a></li>
+      <li><a href="#Code Allocation">Code Allocation</a></li>
+      <li><a href="#Scheme Notes">Scheme Notes</a></li>
+      <li><a href="#Scheme User Defined Details">Scheme User Defined Details</a>
+        <ul>
+          <li><a href="#Add Scheme User Defined Details">Add Scheme User Defined Details</a></li>
+          <li><a href="#Query Scheme User Defined Details">Query Scheme User Defined Details</a></li>
+          <li><a href="#Update Scheme User Defined Details">Update Scheme User Defined Details</a></li>
+          <li><a href="#Delete Scheme User Defined Details">Delete Scheme User Defined Details</a></li>
+        </ul>
+      </li>
+      <li><a href="#User Defined Screens">User Defined Screens</a></li>
+      <li><a href="#User Defined History">User Defined History</a></li>
+      <li><a href="#Salary Descriptions">Salary Descriptions</a></li>
+      <li><a href="#Deferred Pensioner/Pensioner Fields">Deferred Pensioner/Pensioner Fields</a></li>
+      <li><a href="#Service Period Names">Service Period Names</a></li>
+      <li><a href="#Broker Details">Broker Details</a></li>
+      <li><a href="#Renewal Details">Renewal Details</a>
+        <ul>
+          <li><a href="#Add A Renewal Entry">Add a Renewal Entry</a></li>
+          <li><a href="#Update A Renewal Entry">Update a Renewal Entry</a></li>
+          <li><a href="#Delete A Renewal Entry">Delete a Renewal Entry</a></li>
+          <li><a href="#Get Next Renewal Entry">Get Next Renewal Entry</a></li>
+          <li><a href="#Get Previous Renewal Entry">Get Previous Renewal Entry</a></li>
+        </ul>
+      </li>
+      <li><a href="#Actuarial Details">Actuarial Details</a></li>
+      <li><a href="#Investment Funds">Investment Funds</a></li>
+      <li><a href="#Contribution Type Setup">Contribution Type Setup</a></li>
+      <li><a href="#Investment Setup">Investment Setup</a></li>
+      <li><a href="#Lifestyle Matrix Setup">Lifestyle Matrix Setup</a></li>
+      <li><a href="#SEXP">Contribution Expenses</a></li>
+      <li><a href="#SSEXP">Switch Assumptions</a></li>
+      <li><a href="#Suspense Account">Unit Suspense Account</a></li>
+      <li><a href="#Investment Value Summary">Investment Value Summary</a></li>
+      <li><a href="#Address Details">Address Details</a></li>
+      <li><a href="#Member Information Setup">Member Information Setup</a></li>
+      <li><a href="#Advisors" class="source ascot_lloyd">Advisors</a></li>
+      <li><a href="#CARE">Care Titles</a></li>
+      <li><a href="#Charging" class="source ascot_lloyd">Charging %</a></li>
+      <li><a href="#Contribution Rates Matrix">Contribution Rate Matrix</a></li>
+      <li><a href="#Trustee">Trustee</a></li>
+      <li><a href="#SORP Expenses">SORP Expenses</a></li>
+      <li><a href="#SMPI Expenses">SMPI Expenses</a></li>
+      <li><a href="#Tax Simplification Amounts">Tax Simplification Amounts</a></li>
+      <li><a href="#Forfeiture Matrix" class="csc">Forfeiture Matrix</a></li>
+    </ul>
+  </li>
+  <li><a href="#Printing Scheme Details">Printing Scheme Details</a>
+    <ul>
+      <li><a href="#fschprint">Full Scheme Details</a></li>
+    </ul>
+  </li>
+  <li><a href="#Instigating A Workflow Action">Instigating a Workflow Action</a></li>
+  <li><a href="#quick">Producing Ad Hoc Letters</a></li>
+  <li><a href="#navigate">Navigating Between Screens</a></li>
+  <li><a href="#Exit">Exit program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.</p>
+
+  <p>The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.</p>
+
+  <p>If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This program allows maintenance of the Scheme file and allows you to set up new schemes
+and maintain details of existing schemes. The different screens of information that
+you may find in the Scheme File are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>Basic Scheme Details</td>
+          <td>Member Screen Selection</td>
+        </tr>
+        <tr>
+          <td>User Access Details</td>
+          <td>Code Allocation</td>
+        </tr>
+        <tr>
+          <td>Scheme Notes</td>
+          <td>Scheme User Defined Details</td>
+        </tr>
+        <tr>
+          <td>User Defined Screens</td>
+          <td>User Defined History</td>
+        </tr>
+        <tr>
+          <td>Salary Descriptions</td>
+          <td>Def Pensioner/Pensioner Fields</td>
+        </tr>
+        <tr>
+          <td>Service Period Names</td>
+          <td>Broker Details</td>
+        </tr>
+        <tr>
+          <td>Renewal Details</td>
+          <td>Actuarial Details</td>
+        </tr>
+        <tr>
+          <td>Investment Funds</td>
+          <td>Contribution Type Setup</td>
+        </tr>
+        <tr>
+          <td>Investment Setup</td>
+          <td>Lifestyle Matrix Setup</td>
+        </tr>
+        <tr>
+          <td>Contribution Expenses</td>
+          <td>Switch Assumptions</td>
+        </tr>
+        <tr>
+          <td>Suspense Account</td>
+          <td>Investment Value Summary</td>
+        </tr>
+        <tr>
+          <td>Address Details</td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li><a href="#Adding A Scheme">Add</a></li>
+  <li><a href="#Query/Search For A Scheme">Query</a></li>
+  <li><a href="#Updating Scheme Details">Update</a></li>
+  <li><a href="#Printing Scheme Details">Report</a></li>
+  <li><a href="#navigate">Menu</a></li>
+  <li><a href="#Exit">Exit</a></li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_scha.jpg" alt="Basic Scheme Details Screen" /></p>
+
+  <p>Basic Scheme Details Screen</p>
+</div>
+
+<h2><a name="Adding A Scheme"></a>Adding A Scheme</h2>
+
+<h3><a name="SCH"></a><a name="Basic Scheme Details"></a>Basic Scheme Details</h3>
+
+<p>Click ‘Add’.</p>
+
+<p>You will be asked if you wish to copy an existing Scheme. If you select ‘Yes’ you will be prompted to select the Scheme Code of the Scheme you wish to copy or select one from the lookup list.</p>
+
+<p>Input the details as follows:</p>
+
+<p><a name="psc_scheme"></a><strong>SCHEME CODE</strong> - A new scheme code will be automatically
+generated for you. You will not be permitted to amend this.</p>
+
+<p><a name="psc_desc"></a><strong>SCHEME NAME</strong> - The scheme name must be entered.</p>
+
+<p><a name="psc_region"></a><strong>REGION</strong> - This will determine how a members State Pension Age is calculated
+and how certain screens are displayed. Select the Region from the drop-down list:</p>
+
+<ul>
+  <li>UK</li>
+  <li>Ireland</li>
+  <li>Belgium</li>
+  <li>Denmark</li>
+  <li>Jamaica</li>
+  <li>Gibraltar</li>
+</ul>
+
+<p><a name="psc_alt_code"></a><strong>ALTERNATIVE SCHEME CODE</strong> - Enter an alternative to
+the ‘SCHEME CODE’ for your scheme, if necessary. This field will default to the value
+set for ‘SCHEME CODE’. You can use this field to search for member records using the
+Query facility in <a href="/pension/file_maintenance/pem_mem/#Query/Search For A Member">Members</a>.</p>
+
+<p><a name="psc_base"></a><strong>BASE CURRENCY</strong> - Select a currency from the drop-down list as the
+base currency for this scheme e.g. if your scheme is UK based, enter ‘Pound Sterling’.</p>
+
+<p><strong>When your scheme opts to have it’s base currency as the Euro, you should update
+this field to be ‘Euro’.</strong></p>
+
+<p>You will then be prompted that all monetary values for this scheme are to be converted
+from the NCU to Euro and that this process in not reversible. You will be asked whether
+you have an up to date backup of the current scheme data and if not, you will be given
+an opportunity to exit the change and take a backup. Once this has been done, all
+monetary amounts for the scheme, including all membership data and historical unit
+prices for that scheme will be converted to Euro’s.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>A Euro conversion will only be performed on a <a href="/pension/file_maintenance/pem_mem/#QUOTES">Members
+Benefit Quotations/Calculations</a> if the value is numeric and it hasn’t been passed
+through the <a href="/pension/file_maintenance/calculation_setup/pem_form7/#11">format</a> function in the formula.</p>
+</div>
+
+<p><a name="psc_dd"></a><a name="psc_mm"></a><strong>RENEWAL DAY/MONTH</strong> - These are numeric
+fields and must contain valid date values i.e. A day value of 31 and month value of
+09 would be invalid. These will be used to default the Renewal Date when adding new
+categories for this scheme (see the <a href="/pension/file_maintenance/pem_cat/">Categories</a> option).</p>
+
+<p><a name="psc_maf"></a><strong>MARKET ADJUSTMENT FACTOR</strong> - This field can be used to
+record a market adjustment factor that you may use to adjust transfer values in a
+defined benefits scheme to allow for current market conditions.</p>
+
+<p><a name="psc_type"></a><strong>SCHEME TYPE</strong> - Select one of the following options from the drop-down list:</p>
+
+<ul>
+  <li>Defined Benefits</li>
+  <li>Defined Contributions</li>
+  <li>Hybrid</li>
+</ul>
+
+<p><a name="psc_c_out"></a><strong>CONTRACTED OUT</strong> - Indicates that the scheme is contracted
+out of the State Earnings Related Pension Scheme (SERPS). This field is only relevant to UK based schemes.</p>
+
+<p><a name="psc_econ"></a><strong>SCHEME ECON (UK)/REVENUE REFERENCE NUMBER (IRL)</strong> - Enter
+the Scheme ECON (UK schemes) or the Revenue Reference (Irish schemes) as appropriate.</p>
+
+<p><a name="psc_scon"></a><strong>SCHEME SCON (UK)/PENSIONS BOARD REFERENCE NUMBER (IRL)</strong> -
+Enter the Scheme SCON (UK schemes) or the Pensions Board Reference (Irish schemes)
+as appropriate. For Irish schemes, the Pensions Board Reference Number is printed
+on the new <a href="/pension/reports/miscellaneous_reports/per_board/">Pensions Board Fee Report</a>.</p>
+
+<p><a name="psc_pso_ref"></a><strong>PSO REFERENCE NUMBER (UK)</strong> - This field appears on
+the screen for UK based schemes only and holds the PSO Reference number for printing
+on reports as required.</p>
+
+<p><a name="pcpfs_cpf"></a><strong>PROVIDER REFERENCE FOR CPF (UK)</strong> - This field appears on
+the screen for UK based schemes only and holds the Provider Reference number for Combined Pension Forecast.</p>
+
+<p><a name="psc_auto_enrolled"></a><strong>AUTO ENROLLED</strong></p>
+
+<ol>
+  <li>Following confirmation that all schemes will have a staging date. If the auto enrolled field is ticked the staging date field is mandatory.</li>
+  <li>If the AE (auto enrolled) field at scheme level is ticked then the value of the member AE field will be automatically set to Y unless the members date of leaving is before the staging date where it should be set to N.</li>
+  <li>If the AE field is unticked, the value of the member AE field will be automatically set to No.</li>
+  <li>If the staging date field only is updated, no change will be made to the existing values on Pension Master. A message will be produced advising that non active members AE field may need to be updated following the staging date change.</li>
+</ol>
+
+<p><a name="psc_staging_date"></a><strong>STAGING DATE</strong></p>
+
+<p><a name="psc_director"></a><strong>DIRECTORS SCHEME</strong> - This field denotes that the scheme
+is a director scheme.</p>
+
+<p><a name="psc_test"></a><strong>TEST SCHEME</strong> - This field denotes that the scheme
+is a test scheme. Test schemes can only contain up to a maximum of 10 members. These
+members are not included in the total of chargeable members calculated on the <a href="/pension/system_administration/pem_fees/">Quarterly
+Fees Print</a>.</p>
+
+<p><a name="psc_prsa"></a><strong>PRSA SCHEME</strong> - This field denotes that the scheme
+is a PRSA scheme.</p>
+
+<p><a name="psc_tol_pct"></a><strong>TOLERANCE %</strong> - This field is used to set a tolerance
+percentage against which incoming salaries, contributions and NI history details are
+checked. E.g. if you set a tolerance percentage of 20%, any salaries, contributions
+or NI details that are more or less than 20% deviant from the value they were last
+time they were loaded onto Pension Master will produce a warning message. If you do
+not wish to use this feature, set the tolerance percentage to 0.</p>
+
+<p><a name="psc_security"></a><strong>SECURITY RATING</strong> - Select a security rating from the drop-down list
+to use for this scheme. This is used in conjunction with the Security Rating
+in the <a href="/pension/system_administration/gn_user/">Users</a> option
+to determine whether the current user has access to any member records in the current
+scheme.</p>
+
+<p><a name="psc_updcu"></a><strong>ALLOW MANUAL UPDATE OF UNITS?</strong> - Click this field if you want to allow manual update of the investment history records for members of this scheme.</p>
+
+<p><a name="psc_status"></a><strong>STATUS</strong> - This field denotes that the status of the scheme Select one of the options from the drop-down list:</p>
+
+<ul>
+  <li>Active</li>
+  <li>Frozen</li>
+  <li>Frozen DB with Active DC</li>
+  <li>In Wind Up</li>
+  <li>Inactive</li>
+  <li>Paid Up</li>
+  <li>Test</li>
+  <li>Transferred</li>
+  <li>Wound Up</li>
+  <li>Not Staged Yet</li>
+  <li>Not Proceeding</li>
+  <li>Not Decided</li>
+  <li>Transferring Out</li>
+</ul>
+
+<p><a name="psc_care"></a><strong>CARE SCHEME</strong> - This field denotes that the scheme
+is a CARE scheme. By ticking this then have access to the care screens at scheme and member level.</p>
+
+<p><a name="psc_ssas"></a><strong>SSAS SCHEME</strong> - This field denotes that the scheme
+is a SSAS scheme. By ticking this then have access to the SSAS screens at scheme and member level.</p>
+
+<p><a name="psc_tot_chrg"></a><strong>TOTAL CHARGE</strong> - This field denotes the total charge % for a scheme.</p>
+
+<p><a name="psc_tax_ref"></a><strong>TAX REFERENCE NUMBER</strong> - Enter the tax reference number for the pension scheme. The tax reference number must be in the format 12345678AB, where the first 8 characters are numeric and the last 2 characters are letters A-Z. If the user enters less than 10 characters then preceding 0s (zeros) will automatically fill up the field e.g. if the user enters 123456AB, then this will automatically be changed to 00123456AB.</p>
+
+<p><a name="psc_pip_date"></a><strong>PIP RENEWAL DATE</strong> - Enter the PIP renewal date in the format DD/MM/YYYY.</p>
+
+<p><a name="psc_sal_freq"></a><strong>SALARY FREQUENCY</strong> - This field denotes the salary frequency used in the <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>. Select a Salary Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annually</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psc_cont_sal_cap"></a><strong>CONTRIBUTION SALARY CAP</strong> - This field denotes the cap used in the <a href="/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>.</p>
+
+<p>Click ‘OK’ to save the details to the scheme file or click ‘Cancel’ to exit the add
+option without saving the details.</p>
+
+<p>You will now be returned to the main menu. If there are any other details you wish
+to add to the scheme, you should go directly to the appropriate screen and add them
+now.</p>
+
+<h2><a name="Query/Search For A Scheme"></a><a name="query"></a>Query/Search For A Scheme</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_schd.jpg" alt="Query Scheme Details Screen" /></p>
+
+  <p>Query Scheme Details Screen</p>
+</div>
+
+<p>You may select records using the Scheme Code field. You may also use any combination
+(or even partial combination) of these fields in order to select the required scheme
+record(s).</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the Schemes main menu.</p>
+
+<p>If you wish to view any other page of the Scheme File, click Menu, then select the
+appropriate screen by moving the highlight bar. See later in this chapter for more
+on the Menu option in Schemes.</p>
+
+<h2><a name="Browsing Scheme Details"></a>Browsing Scheme Details</h2>
+
+<p>Click ‘Browse’ to view details in any screen where the data does not fit on the screen.</p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data.</p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
+
+<h2><a name="Viewing Scheme Details"></a>Viewing Scheme Details</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. You can also use the First, Previous, Next and Last toolbar icons.</p>
+
+<h2><a name="Updating Scheme Details"></a>Updating Scheme Details</h2>
+
+<p>Click ‘Update’.</p>
+
+<p>The Scheme code cannot be changed as this is the key to the scheme file.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If the ‘UK/Irish scheme’ field on the basic scheme details screen is amended the
+system will warn the user that if this field is changed it will result in state pension
+dates being recalculated for all members in the selected scheme.
+A user prompt will follow this warning to allow the user to cancel this amendment.</p>
+</div>
+
+<h3><a name="SEL"></a><a name="Member Screen Selection"></a>Member Screen Selection</h3>
+
+<p>Click Menu and then select the Member Screen Selection option and press <kbd>Return</kbd>.</p>
+
+<p>This screen allows an appropriate user to customise the member record screens that
+are available for use for the selected scheme. It can also restrict access to
+those screens by reference to a security rating, as well as restrict access to viewing
+the data by reference to a view only rating. This enables the protection of
+sensitive data from unwanted viewing e.g. block access to directors salary screen
+from a junior administrator, or enables you to switch off screens that you do not
+intend to use for the selected scheme.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1a.jpg" alt="Member Screen Selection Screen" /></p>
+
+  <p>Member Screen Selection Screen</p>
+</div>
+
+<p>To update the display flags, view only ratings and security ratings, click ‘Update’.</p>
+
+<p><a name="psl_disp"></a><strong>DISPLAY</strong> - Each screen, including any <a href="#User Defined Screens">User
+Defined Screens</a> and <a href="#User Defined History">History</a> can be ‘switched
+off’ by unticking the corresponding Display flag for a screen. This will result
+in the screen not being displayed when the Menu or Report options are selected in
+Members. This could be used if it is envisaged that a particular screen is not required,
+so it could be ‘switched off’ to avoid confusion to users. If, in the future, the
+screen was needed then it could be simply switched back on by unticking the checkbox.</p>
+
+<p>This function could also be used to archive member data following a data conversion
+for instance. Data items that aren’t really needed but could be of some use in the
+future could be loaded into a <a href="#User Defined Screens">User Defined Screen</a> or <a href="#User Defined History">History</a> and
+then the screen could be ‘switched off’.</p>
+
+<p><a name="psl_view"></a><strong>VIEW ONLY</strong> - Each screen, including any <a href="#User Defined Screens">User
+Defined</a> and <a href="#User Defined History">History</a> screens, can be allocated a security rating from the drop-down list.</p>
+
+<p>The objective of this rating is to prevent unauthorised users updating/deleting
+important data i.e. a junior with a low security rating, will not be allowed to update/delete
+the data of a screen which is set to a higher rating. Once the ratings have
+been set for the <a href="/pension/file_maintenance/pem_mem/#Introduction">Members</a> screens, then if
+a junior tries to get into a corresponding screen set to a high view access then ‘VIEW
+ONLY’ will be printed on the bottom line of the screen. The Add/Update/Delete
+buttons in the screen will therefore deny access to the user, and an appropriate error
+message will be displayed to the screen.</p>
+
+<p>When all the details have been entered click on ‘OK’ to save the member screen selection
+details, or click on ‘Cancel’ to exit entry without saving the details.</p>
+
+<p><a name="psl_sec"></a><strong>SECURITY</strong> - The Security Rating will have been defaulted
+to that on the <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Basic Scheme Details</a> when
+it was first entered. This can be amended to any available <a href="/pension/system_data/pem_sec/">Security
+Rating</a> to prevent junior users being able to access that particular screen of
+members in the selected scheme. As mentioned previously, this could be implemented
+to prevent a junior administrator being able to view a directors salary screen.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the member screen selection
+details, or click ‘Cancel’ to exit entry without saving the details.</p>
+
+<h3><a name="USER"></a><a name="User Access Details"></a>User Access Details</h3>
+
+<p>Click Menu. Then select the User Access Details option from the selection screen.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1b.jpg" alt="User Access Details Screen" /></p>
+
+  <p>User Access Details Screen</p>
+</div>
+
+<p>This screen shows who has access to this scheme and the members contained therein.
+There are three types of access level:</p>
+
+<ul>
+  <li>All users have access to the scheme. This is equivalent to an entry of ‘all’ in the
+USER column of this screen.</li>
+  <li>All members of a particular workgroup have access to the scheme. See <a href="/pension/system_administration/gn_wrkgrp/">Workgroups</a></li>
+  <li>User level access. Here you define particular users via their user ID (as set up in <a href="/pension/system_administration/gn_user/#user_id">Users</a>)
+so as to restrict access to a scheme on an individual user level.</li>
+</ul>
+
+<p><a name="pse_user"></a><strong>USER</strong> - Enter ‘all’, a workgroup code or a username to
+indicate who you wish to have access to records in this scheme. In the latter two
+cases, you can click on the lookup icon for a list of the available workgroups
+and usernames. Workgroups are always displayed in uppercase,
+whilst usernames are always displayed in lower case.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>For example, the user ‘john’ may have acces to the scheme via a user entry in the
+User Access Details screen, via a workgroup entry for the workgroup that ‘john’ is
+a member of and via the ‘all’ user setting. In this case, the user level access
+settings take priority. If the entry for ‘john’ is deleted either via this screen
+or via the <a href="/pension/system_administration/gn_user/#User Access Details">User Access Details</a> screen
+in the Users, then the other two options (one for the workgroup and one for the ‘all’
+user remain) thus meaning that ‘john’ will still have access to this scheme.
+To remove ‘john’ from accessing this scheme, it will be necessary to remove ‘john’
+from the appropriate workgroup (to do this, see the <a href="/pension/system_administration/gn_user/#user_wrkgrp">Workgroup
+Code</a> section of the Users page) and also remove the ‘all’ user setting from this
+scheme.</p>
+</div>
+
+<p>When all the user access details have been entered click on ‘OK’ to save the user
+access details, or click on ‘Cancel’ to exit user access entry without saving the
+details.</p>
+
+<h3><a name="SCODE"></a><a name="Code Allocation"></a>Code Allocation</h3>
+
+<p>Click Menu and then select the Code Allocation option from the selection screen.</p>
+
+<p>This screen is used to change the codes that have been assigned to the Scheme. The
+following types of code are used to identify separate details for members of the Scheme:</p>
+
+<ul>
+  <li><a href="/pension/file_maintenance/pem_mem/#padb_code">Additional Benefits</a></li>
+  <li><a href="/pension/file_maintenance/pem_mem/#ptvi_code">Transfer In</a></li>
+  <li><a href="/pension/file_maintenance/pem_mem/#ptvo_code">Transfer Out</a></li>
+  <li><a href="/pension/file_maintenance/pem_mem/#pdpa_code">Deferred Pensioner</a></li>
+  <li><a href="/pension/file_maintenance/pem_mem/#ppa_code">Pensioner</a></li>
+  <li>Reason for Increase (for both <a href="/pension/file_maintenance/pem_mem/#pdph_reason_code">Deferred Pensioners</a> and <a href="/pension/file_maintenance/pem_mem/#pph_reason_code">Pensioners</a>)</li>
+  <li><a href="/pension/file_maintenance/pem_mem/#psft_code">Special Codes</a></li>
+  <li>Accounting</li>
+  <li><a href="/pension/file_maintenance/pem_mem/#pcah_code">Care Averaging Earnings</a></li>
+  <li><a href="/pension/file_maintenance/pem_mem/#pbda_code">Disability</a></li>
+</ul>
+
+<p>When a members details are updated the lookup list will only show the codes allocated
+to the members Scheme. New Schemes will already have a pre-set group of codes allocated
+when the scheme was created. Any additional codes that may be required for each scheme
+must first be entered using the <a href="/pension/system_data/pem_codem/#Introduction">Codes</a> option
+on the System Data menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1c.jpg" alt="Code Allocation Screen" /></p>
+
+  <p>Code Allocation Screen</p>
+</div>
+
+<p>Click ‘Update’ to Update Codes for the Scheme. The Codes must already have been entered
+using <a href="/pension/system_data/pem_codem/#Add Codes">Codes</a>.</p>
+
+<p>If you try to delete a Code that is in use by a Member then a message is displayed
+indicating the first Member number found.</p>
+
+<p>Special Codes also use Groups. This is a way of grouping similar codes together under
+a common name. For example you could report on all members who have a Special Code
+of ‘2TIMES’ or any member who has codes in the ‘LUMPSUM’ group.</p>
+
+<p>An error message is displayed if you try to delete the Reason for Increase Code called
+‘RNEWPEN’. This is because any Pension/Deferred Pension History lines that are added
+will use the ‘RNEWPEN’ as the default Reason for Increase Code.</p>
+
+<h3><a name="NOTE"></a><a name="Scheme Notes"></a>Scheme Notes</h3>
+
+<p>Click Menu and then select the Notes option.</p>
+
+<p>This screen allows you to enter any freehand notes you wish to record concerning the
+scheme.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_schc.jpg" alt="Scheme Notes Screen" /></p>
+
+  <p>Scheme Notes Screen</p>
+</div>
+
+<p><a name="psn_note"></a><a name="psn_user"></a><a name="psn_date"></a>To add a line
+of notes click on ‘Add Row’ button or to delete a line of Notes click ‘Delete Row’
+button.</p>
+
+<p>To update Notes go to the relevant line and type over existing notes.</p>
+
+<p>Click ‘OK’ to save the notes the scheme notes file or click ‘Cancel’ to exit input
+of the notes without saving the entered notes.</p>
+
+<h3><a name="SUDS"></a><a name="Scheme User Defined Details"></a>Scheme User Defined Details</h3>
+
+<p>Click Menu and then select the Scheme User Defined Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1f.jpg" alt="Scheme User Defined Details Screen" /></p>
+
+  <p>Scheme User Defined Details Screen</p>
+</div>
+
+<p>This screen is used to group scheme related information into different types.</p>
+
+<h4><a name="Add Scheme User Defined Details"></a>Add Scheme User Defined Details</h4>
+
+<p>Click ‘Add’.</p>
+
+<p>Use this option to add a new group of scheme related information.</p>
+
+<p><a name="psud_type"></a><strong>TYPE</strong> - Enter a type code to reference this information from Member Report, Mail-Merge Report, Advanced Report Generator or Formulae.</p>
+
+<p><a name="psud_desc"></a><strong>DESCRIPTION</strong> - Enter a description for this information.</p>
+
+<p><a name="psud_desc1"></a><a name="psud_desc2"></a><a name="psud_desc3"></a><a name="psud_desc4"></a><a name="psud_desc5"></a><a name="psud_desc6"></a><a name="psud_desc7"></a><a name="psud_desc8"></a><a name="psud_desc9"></a><a name="psud_desc10"></a><a name="psud_desc11"></a><a name="psud_desc12"></a><a name="psud_desc13"></a><a name="psud_desc14"></a><a name="psud_desc15"></a><a name="psud_desc16"></a><a name="psud_desc17"></a><a name="psud_desc18"></a><a name="psud_desc19"></a><a name="psud_desc20"></a><a name="psud_fmt1"></a><a name="psud_fmt2"></a><a name="psud_fmt3"></a><a name="psud_fmt4"></a><a name="psud_fmt5"></a><a name="psud_fmt6"></a><a name="psud_fmt7"></a><a name="psud_fmt8"></a><a name="psud_fmt9"></a><a name="psud_fmt10"></a><a name="psud_fmt11"></a><a name="psud_fmt12"></a><a name="psud_fmt13"></a><a name="psud_fmt14"></a><a name="psud_fmt15"></a><a name="psud_fmt16"></a><a name="psud_fmt17"></a><a name="psud_fmt18"></a><a name="psud_fmt19"></a><a name="psud_fmt20"></a><strong>FIELD
+DESCRIPTIONS/FORMATS</strong> - Enter the field descriptions and field formats for the
+schemes Scheme User Defined Details. You can leave blank lines to space your record
+out and you must enter a description if you enter a format.</p>
+
+<p>Select one of the following formats from the drop-down list:</p>
+
+<ul>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
+</ul>
+
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
+to 8 numbers before the decimal point and 1 after.</p>
+
+<p><a name="psud_val1"></a><strong>FIELD VALUES</strong> - Enter the field values for the schemes
+Scheme User Defined Details. You will only be able to enter a value if the field description
+and format are present. This will be checked by the system to ensure it is a valid
+entry for the entered field format. If a value is updated for a field with an associated
+format of MO or Nn, the existing value will be redisplayed left justified.</p>
+
+<p>When you have completed the screen click ‘OK’ to save the details to file. You can
+click ‘Cancel’ to exit the add option without saving the details.</p>
+
+<h4><a name="Query Scheme User Defined Details"></a>Query Scheme User Defined Details</h4>
+
+<p>Click ‘Query’.</p>
+
+<p>Use this option to query the information held against the scheme.</p>
+
+<h4><a name="Update Scheme User Defined Details"></a>Update Scheme User Defined Details</h4>
+
+<p>Click ‘Update’.</p>
+
+<p>Use this option to update the scheme information for a group.</p>
+
+<h4><a name="Delete Scheme User Defined Details"></a>Delete Scheme User Defined Details</h4>
+
+<p>Click ‘Delete’.</p>
+
+<p>Use this option to delete the scheme information for a group.</p>
+
+<h3><a name="UDS"></a><a name="User Defined Screens"></a>User Defined Screens</h3>
+
+<p>Click the Menu option and then select the User Defined Screen option.</p>
+
+<p>You can use this screen to set up and maintain user defined screens. These are held
+at member level.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_suds.jpg" alt="User Defined Screen" /></p>
+
+  <p>User Defined Screen</p>
+</div>
+
+<p><a name="pudh_type"></a><strong>SCREEN TYPE</strong> - Enter a code for your User Defined Screen.
+This is a 6 character field and must be unique to the current scheme e.g. you cannot
+have two User Defined Screen Types of CARS for scheme 0000. The screen type must be
+alphanumeric (uppercase letters A-Z and numbers 0-9). If you do not enter a unique
+code in this way, an error message is displayed and you will be requested to re-enter
+your User Defined Screen Type.</p>
+
+<p><a name="pudh_desc"></a><strong>SCREEN DESCRIPTION</strong> - Enter a name for your User Defined
+Screen. This will be used in subsequent lookups and menus in other parts of Pension
+Master so it is important that you use a meaningful name e.g. Company Cars.</p>
+
+<p><a name="pudh_runtime"></a><strong>RUNTIME</strong> - Please tick this box if you wish to use
+this screen for runtime quotation inputs. Ticking this will mean that the screen is
+not available in member file maintenance, but can be allocated against a quotation
+in category file maintenance.<a name="pudb_desc1"></a><a name="pudb_desc2"></a><a name="pudb_desc3"></a><a name="pudb_desc4"></a><a name="pudb_desc5"></a><a name="pudb_desc6"></a><a name="pudb_desc7"></a><a name="pudb_desc8"></a><a name="pudb_desc9"></a><a name="pudb_desc10"></a><a name="pudb_desc11"></a><a name="pudb_desc12"></a><a name="pudb_desc13"></a><a name="pudb_desc14"></a><a name="pudb_desc15"></a><a name="pudb_desc16"></a><a name="pudb_desc17"></a><a name="pudb_desc18"></a><a name="pudb_desc19"></a><a name="pudb_desc20"></a></p>
+
+<p><a name="pudb_fmt1"></a><a name="pudb_fmt2"></a><a name="pudb_fmt3"></a><a name="pudb_fmt4"></a><a name="pudb_fmt5"></a><a name="pudb_fmt6"></a><a name="pudb_fmt7"></a><a name="pudb_fmt8"></a><a name="pudb_fmt9"></a><a name="pudb_fmt10"></a><a name="pudb_fmt11"></a><a name="pudb_fmt12"></a><a name="pudb_fmt13"></a><a name="pudb_fmt14"></a><a name="pudb_fmt15"></a><a name="pudb_fmt16"></a><a name="pudb_fmt17"></a><a name="pudb_fmt18"></a><a name="pudb_fmt19"></a><a name="pudb_fmt20"></a></p>
+
+<p><a name="pudb_for1"></a><a name="pudb_for2"></a><a name="pudb_for3"></a><a name="pudb_for4"></a><a name="pudb_for5"></a><a name="pudb_for6"></a><a name="pudb_for7"></a><a name="pudb_for8"></a><a name="pudb_for9"></a><a name="pudb_for10"></a><a name="pudb_for11"></a><a name="pudb_for12"></a><a name="pudb_for13"></a><a name="pudb_for14"></a><a name="pudb_for15"></a><a name="pudb_for16"></a><a name="pudb_for17"></a><a name="pudb_for18"></a><a name="pudb_for19"></a><a name="pudb_for20"></a><strong>FIELD
+DESCRIPTIONS/FORMATS</strong> - Enter the field descriptions and field formats for your
+User Defined Screen. You can leave blank lines to space your record out and you must
+enter a description if you enter a format.</p>
+
+<p>Select one of the following formats from the drop-down list:</p>
+
+<ul>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Formula</li>
+  <li>Header - Description only. Will not allow user to enter member data against this field</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
+</ul>
+
+<p>Note: If the Formula format is selected enter a valid formula code in the formula field. This formula
+will be dynamically calculated when the <a href="/pension/file_maintenance/pem_mem/#User Defined Screens">User
+Defined Screen</a> in Members is displayed or reported upon.</p>
+
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
+to 8 numbers before the decimal point and 1 after.</p>
+
+<p>When you have completed the screen click on ‘OK’ to save the details to file. You
+can click on ‘Cancel’ to exit the add option without saving the details</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You will be able to amend field descriptions and blank lines as you wish but you
+will be prevented from amending field formats if there is a member in the current
+scheme with data present in this field for this user defined screen type.
+You will be prevented from deleting a user defined screen if there is a member
+in current scheme with data present for this user defined screen.</p>
+</div>
+
+<h3><a name="UDA"></a><a name="User Defined History"></a>User Defined History</h3>
+
+<p>Click Menu and then select the User Defined History option.</p>
+
+<p>You can use this screen to set up and maintain user defined history. These are held
+at member level.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sua.jpg" alt="User Defined History Screen" /></p>
+
+  <p>User Defined History Screen</p>
+</div>
+
+<p><a name="puah_type"></a><strong>HISTORY TYPE</strong> - Enter a code for your User Defined History.
+This is a 6 character field and must be unique to the current scheme e.g. you cannot
+have two User Defined History Types of MOBILE for scheme 0000. The history type must
+be alphanumeric (uppercase letters A-Z and numbers 0-9). If you do not enter a unique
+code in this way, an error message is displayed and you will be requested to re-enter
+your User Defined History Type.</p>
+
+<p><a name="puah_desc"></a><strong>HISTORY DESCRIPTION</strong> - Enter a name for your User Defined
+History. This will be used in subsequent lookups and menus in other parts of Pension
+Master so it is important that you use a meaningful name e.g. Mobile Phone Log.</p>
+
+<p><a name="puab_desc1_1"></a><a name="puab_desc1_2"></a><a name="puab_desc2_1"></a><a name="puab_desc2_2"></a><a name="puab_desc3_1"></a><a name="puab_desc3_2"></a><a name="puab_desc4_1"></a><a name="puab_desc4_2"></a><a name="puab_desc5_1"></a><a name="puab_desc5_2"></a><a name="puab_fmt1"></a><a name="puab_fmt2"></a><a name="puab_fmt3"></a><a name="puab_fmt4"></a><a name="puab_fmt5"></a><strong>COLUMN
+DESCRIPTIONS/FORMATS</strong> - Enter the column descriptions and field formats for your
+User Defined History. You can leave blank columns to space your record out and you
+must enter a description if you enter a format.</p>
+
+<p>Select one of the following formats from the drop-down list:</p>
+
+<ul>
+  <li>Boolean - Y - Yes or N - No</li>
+  <li>Date - dd/mm/yyyy</li>
+  <li>Indicator - Single character (uppercase only)</li>
+  <li>Money - Number with two decimal places</li>
+  <li>Numeric 0 Decimal Places</li>
+  <li>Numeric 1 Decimal Places</li>
+  <li>Numeric 2 Decimal Places</li>
+  <li>Numeric 3 Decimal Places</li>
+  <li>Numeric 4 Decimal Places</li>
+  <li>Numeric 5 Decimal Places</li>
+  <li>Numeric 6 Decimal Places</li>
+  <li>Text - Up to ten characters of free text</li>
+</ul>
+
+<p>Note: Due to field formating, a field with a Numeric format cannot contain more than
+9 numbers e.g. a field with a format of Numeric 4 Decimal Places can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of Numeric 1 Decimal Places can only have up
+to 8 numbers before the decimal point and 1 after.</p>
+
+<p>When you have completed the screen click ‘OK’ to save the details to file. You can
+click ‘Cancel’ to exit the add option without saving the details</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You will be able to amend column descriptions and blank columns as you wish but
+you will be prevented from amending column formats if there is a member in the current
+scheme with data present in this column for this user defined history type.</p>
+
+  <p><strong>You will be prevented from deleting a user defined history if there is a member
+in current scheme with data present for this user defined history.</strong></p>
+
+</div>
+
+<h3><a name="STITLE"></a><a name="Salary Descriptions"></a>Salary Descriptions</h3>
+
+<p>Click Menu and then select the Salary Descriptions option and press <kbd>Return</kbd>.</p>
+
+<p>This screen allows you to define the salary descriptions that will appear in the salary
+history screen of the member record. It also allows you to define whether or not a
+deductible will be applicable to this salary, and if that deductible is related to
+a formula.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_saltit.jpg" alt="User Defined Salary Titles Screen" /></p>
+
+  <p>User Defined Salary Titles Screen</p>
+</div>
+
+<p><a name="psal_tita1"></a><a name="psal_tita2"></a><a name="psal_tita3"></a><a name="psal_tita4"></a><a name="psal_tita5"></a><a name="psal_tita6"></a><a name="psal_tita7"></a><a name="psal_tita8"></a><a name="psal_tita9"></a><a name="psal_tita10"></a><a name="psal_tita11"></a><a name="psal_tita12"></a><a name="psal_tita13"></a><a name="psal_tita14"></a><a name="psal_tita15"></a><a name="psal_tita16"></a><a name="psal_tita17"></a><a name="psal_tita18"></a><a name="psal_tita19"></a><a name="psal_tita20"></a><strong>SALARY
+TITLE 1</strong> - In this field you may enter the first part of a salary title that you
+wish to appear on the salary history screen of the member record. Please enter the
+title exactly as you wish it to appear on the salary history screen.</p>
+
+<p><a name="psal_titb1"></a><a name="psal_titb2"></a><a name="psal_titb3"></a><a name="psal_titb4"></a><a name="psal_titb5"></a><a name="psal_titb6"></a><a name="psal_titb7"></a><a name="psal_titb8"></a><a name="psal_titb9"></a><a name="psal_titb10"></a><a name="psal_titb11"></a><a name="psal_titb12"></a><a name="psal_titb13"></a><a name="psal_titb14"></a><a name="psal_titb15"></a><a name="psal_titb16"></a><a name="psal_titb17"></a><a name="psal_titb18"></a><a name="psal_titb19"></a><a name="psal_titb20"></a><strong>SALARY
+TITLE 2</strong> - In this field you may enter the second part of a salary title that you
+wish to appear on the salary history screen of the member record. Please enter the
+title exactly as you wish it to appear on the salary history screen.</p>
+
+<p>Salary Title 1 will be displayed directly above Salary Title 2 on the salary history
+screen. e.g. If PENSIONABLE was entered in Salary Title 1 and SALARY was entered
+in Salary Title 2, then</p>
+
+<p>PENSIONABLE
+SALARY</p>
+
+<p>would be displayed.</p>
+
+<p><a name="psal_deduct2"></a><a name="psal_deduct3"></a><a name="psal_deduct4"></a><a name="psal_deduct5"></a><a name="psal_deduct7"></a><a name="psal_deduct8"></a><a name="psal_deduct9"></a><a name="psal_deduct10"></a><a name="psal_deduct12"></a><a name="psal_deduct13"></a><a name="psal_deduct14"></a><a name="psal_deduct15"></a><a name="psal_deduct17"></a><a name="psal_deduct18"></a><a name="psal_deduct19"></a><a name="psal_deduct20"></a><strong>DEDUCT?</strong> - This
+field enables you to specify if a deductible should be applied to this salary. The
+deductible can be any of the following:</p>
+
+<ul>
+  <li><strong>BM</strong> - BSP Married</li>
+  <li><strong>BS</strong> - BSP Single</li>
+  <li><strong>BW</strong> - BSP Widowed</li>
+  <li><strong>BD</strong> - BSP Disabled</li>
+  <li><strong>L</strong> - Lower Earnings Limit</li>
+  <li><strong>U</strong> - User Defined</li>
+  <li><strong>FO</strong> - Formula</li>
+  <li><strong>N</strong> - None</li>
+</ul>
+
+<p><a name="psal_for2"></a><a name="psal_for3"></a><a name="psal_for4"></a><a name="psal_for5"></a><a name="psal_for7"></a><a name="psal_for8"></a><a name="psal_for9"></a><a name="psal_for10"></a><a name="psal_for12"></a><a name="psal_for13"></a><a name="psal_for14"></a><a name="psal_for15"></a><a name="psal_for17"></a><a name="psal_for18"></a><a name="psal_for19"></a><a name="psal_for20"></a><strong>FORMULA</strong> - This
+field allows you to specify the formula you wish the result of to be the deductible
+amount. You can only enter a value in this field when the value in the ‘Deductible’
+field is FO.</p>
+
+<p>With the exception of User Defined, the data stored in the Annual Statuory Amounts
+screen of the System Data menu will be used. In the case of User Defined, the user
+will be prompted to enter the required amount when inputting salaries. The deductible
+amount will then be subtracted from the first column on the salary history screen,
+if one exists. This field also relates to the Salary Screens in <a href="/pension/updates/pem_bat/#To Add A Salary History Batch">Batch
+Data Input</a>.</p>
+
+<h3><a name="SPUD"></a><a name="Deferred Pensioner/Pensioner Fields"></a>Deferred Pensioner/Pensioner Fields</h3>
+
+<p>Click Menu. Then select the Def. Pensioner/Pensioner Fields option and press <kbd>Return</kbd>.</p>
+
+<p>This screen contains description and format information assigned to five extra user
+defined fields. The fields relate to members Deferred Pensioner/Pensioner details
+for the current Scheme. They are used to hold additional data for Deferred Pensioners
+and Pensioners as required and will be displa#yed on screen 1 of the member deferred
+pensioner and pensioner screens as appropriate.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_spud.jpg" alt="Deferred Pensioner/Pensioner Fields Screen" /></p>
+
+  <p>Deferred Pensioner/Pensioner Fields Screen</p>
+</div>
+
+<p>The first five fields relate to members Deferred Pensioner details and the last five
+fields relate to members Pensioner details.</p>
+
+<p><a name="pspud_dpen_desc1"></a><a name="pspud_dpen_desc2"></a><a name="pspud_dpen_desc3"></a><a name="pspud_dpen_desc4"></a><a name="pspud_dpen_desc5"></a><a name="pspud_pen_desc1"></a><a name="pspud_pen_desc2"></a><a name="pspud_pen_desc3"></a><a name="pspud_pen_desc4"></a><a name="pspud_pen_desc5"></a><strong>DESCRIPTION</strong> -
+Enter a description of the field that will be displayed on the Deferred Pensioner/Pensioner
+screens.</p>
+
+<p><a name="pspud_dpen_fmt1"></a><a name="pspud_dpen_fmt2"></a><a name="pspud_dpen_fmt3"></a><a name="pspud_dpen_fmt4"></a><a name="pspud_dpen_fmt5"></a><a name="pspud_pen_fmt1"></a><a name="pspud_pen_fmt2"></a><a name="pspud_pen_fmt3"></a><a name="pspud_pen_fmt4"></a><a name="pspud_pen_fmt5"></a><strong>FORMAT</strong> -
+Enter the formats for the fields. You must enter a format if you have entered a description.</p>
+
+<p>The list of valid formats can be selected by clicking the lookup icon. These are listed below:</p>
+
+<ul>
+  <li><strong>DT</strong> - Date - dd/mm/yyyy</li>
+  <li><strong>IN</strong> - Indicator - Single character (uppercase only)</li>
+  <li><strong>TX</strong> - Text - Up to ten characters of free text</li>
+  <li><strong>MO</strong> - Monetary Amount - Number with two decimal places</li>
+  <li><strong>Nn</strong> - Number with n decimal places. n can equal 0, 1, 2, 3, 4, 5 or 6 e.g. N3 - Number with 3 decimal places.</li>
+</ul>
+
+<p>Note: Due to field formating, a field with a format of Nn cannot contain more than
+9 numbers e.g. a field with a format of N4 can only have up to 5 numbers before the
+decimal point and 4 after, similarly and field with a format of N1 can only have up
+to 8 numbers before the decimal point and 1 after.</p>
+
+<p>When you have completed the screen press <kbd>Esc</kbd> to save the details to the file.
+<kbd>Del</kbd> can be pressed to exit the update option without saving the details.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You will be able to amend descriptions and formats as you wish but you will be
+prevented from doing so if there is a Member in the current Scheme with data present
+in the field.</p>
+
+  <p>You will be prevented from changing or deleting a fields details if there is a
+Member in the current Scheme with data present in the field.</p>
+</div>
+
+<p>To exit the Def Pensioner/Pensioner Fields screen, click ‘Exit’. The program will
+return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+
+<h3><a name="SERV"></a><a name="Service Period Names"></a>Service Period Names</h3>
+
+<p>Click Menu and then select the Service Period Names option and press <kbd>Return</kbd>.</p>
+
+<p>Use this screen to set up the names of any service periods you wish to define for
+the Service Period Details screen in <a href="/pension/file_maintenance/pem_mem/#Service Period Details">Members</a>.
+If all of these feilds are left blank, the Service Period Details screen in Members
+will not be displayed for members of this scheme.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1i.jpg" alt="Service Period Names Screen" /></p>
+
+  <p>Service Period Names Screen</p>
+</div>
+
+<p><a name="psc_serv_1"></a><a name="psc_serv_2"></a><a name="psc_serv_3"></a><a name="psc_serv_4"></a><a name="psc_serv_5"></a><a name="psc_serv_6"></a><a name="psc_serv_7"></a>Enter
+the names of the service periods wish to set up for this scheme. These will be used
+to label the service periods on each member of this scheme’s records. As you add a
+new scheme, the service period names automatically default to:</p>
+
+<ul>
+  <li>Period 1 - Ord A</li>
+  <li>Period 2 - Ord B</li>
+  <li>Period 3 - Ord C</li>
+  <li>Period 4 - Ord D</li>
+  <li>Period 5 - Ord E</li>
+  <li>Period 6 - Trs A</li>
+  <li>Period 7 - Tot</li>
+</ul>
+
+<p>You can update these with more meaningful names (e.g. “60ths service”) by selecting
+this screen in Schemes and typing over the default names with your new names. If you
+do not wish to use a certain field, simply blank it out.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the service period names,
+or click ‘Cancel’ to exit entry without saving the details.</p>
+
+<h3><a name="BROK"></a><a name="Broker Details"></a>Broker Details</h3>
+
+<p>Click Menu and then select the Broker Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1j.jpg" alt="Broker Details Screen" /></p>
+
+  <p>Broker Details Screen</p>
+</div>
+
+<p><a name="pbr_code"></a><strong>BROKER CODE</strong> - Enter a valid broker code, or click on
+the lookup icon for a list of broker codes.
+Upon selection of a valid broker code, the broker details from
+the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
+screen and saved to the scheme file. If the Broker you require is not available, add
+it first using the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program, then return to this
+screen to assign the broker to the scheme.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the broker details, or click
+‘Cancel’ to exit entry without saving the details.</p>
+
+<h3><a name="RENEWAL"></a><a name="Renewal Details"></a>Renewal Details</h3>
+
+<p>Click Menu and then select the Renewal Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1l.jpg" alt="Renewal Details Screen" /></p>
+
+  <p>Renewal Details Screen</p>
+</div>
+
+<p>This screen is used to hold historic details of renewals and is to be used in conjunction
+with the <a href="/pension/reports/miscellaneous_reports/per_renl/">Renewals Status Report</a>. It holds, for each constituent
+company within a scheme, details of the progress of the renewal for the current scheme
+year.</p>
+
+<p>This allows the administrator to complete the renewal process as and when data is
+received, in a case where each company runs their own individual payroll and hence
+sends in their own data. This avoids having to wait for the whole scheme to send in
+data before any work on the renewal can be processed.</p>
+
+<h4><a name="Add A Renewal Entry"></a>Add A Renewal Entry</h4>
+
+<p>Click ‘Add’.</p>
+
+<p>Use this entry if there is no renewal details screen set up for the current renewal
+date for your scheme. The company code column will be automatically filled out with
+the company codes of all the constituent companies within your scheme. Fill the remaining
+details out as follows:</p>
+
+<p><a name="r_ren_date"></a><strong>RENEWAL DATE</strong> - Enter the renewal date required. The
+day and month of the renewal date entered must correspond with the day and month of
+the renewal date as entered on the <a href="/pension/file_maintenance/pem_sch/#Basic Scheme Details">Basic
+Scheme Details</a> screen for the scheme.</p>
+
+<p><a name="prnl_date_iss"></a><strong>DATE ISSUED PRE-RENEWAL</strong> - Enter the date you issued
+the pre-renewal letter for the current company in the format dd/mm/yyyy or ddmmyyyy.</p>
+
+<p><a name="prnl_full_part"></a><strong>FULL/PARTIAL DATA RECEIVED</strong> - This denotes
+whether full, partial or no data has been received for the current renewal and current
+company. The valid entries are as follows:</p>
+
+<ul>
+  <li><strong>P</strong> - partial data received.</li>
+  <li><strong>F</strong> - full data received.</li>
+  <li><strong>N or ‘ ‘ (blank)</strong> - no data received yet.</li>
+</ul>
+
+<p><a name="prnl_latest"></a><strong>DATE LATEST RENEWAL DATA RECEIVED</strong> - Enter the date
+the latest renewal data was received from this company, whether it was full or only
+partial data in the format dd/mm/yyyy or ddmmyyyy.</p>
+
+<p><a name="prnl_completed"></a><strong>DATE RENEWAL COMPLETED</strong> - Enter the date you completed
+the renewal for this company in the format dd/mm/yyyy or ddmmyyyy.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the renewal details, or
+click ‘Cancel’ to exit entry without saving the details.</p>
+
+<h4><a name="Update A Renewal Entry"></a>Update A Renewal Entry</h4>
+
+<p>Click ‘Update’.</p>
+
+<p>Fill in the details as in the section <a href="#Add A Renewal Entry">Add A Renewal
+Entry</a>.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the renewal details, or
+click ‘Cancel’ to exit entry without saving the details.</p>
+
+<h4><a name="Delete A Renewal Entry"></a>Delete A Renewal Entry</h4>
+
+<p>Click Delete.</p>
+
+<p>A window will appear with the options yes or no.</p>
+
+<p>If you do not wish to delete the record click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’ menu option. Another window will be displayed
+asking if you are sure.</p>
+
+<p>If you do not wish to delete the record, click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’. The record is deleted, and the program
+returns to the main menu.</p>
+
+<h4><a name="Get Next Renewal Entry"></a>Get Next Renewal Entry</h4>
+
+<p>Click ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<p>The renewal entry for the next year’s renewal data is displayed (if any). You should
+then use the Update option to make any changes that you require. You can click on
+‘OK’ to save the changes or click on ‘Cancel’ to return to the menu without saving
+the changes.</p>
+
+<h4><a name="Get Previous Renewal Entry"></a>Get Previous Renewal Entry</h4>
+
+<p>Click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’.</p>
+
+<p>The renewal entry for the next year’s renewal data is displayed (if any). You should
+then use the Update option to make any changes that you require. You can click ‘OK’
+to save the changes or click ‘Cancel’ to return to the menu without saving the changes.</p>
+
+<h3><a name="ACTUARY"></a><a name="Actuarial Details"></a>Actuarial Details</h3>
+
+<p>Click Menu then select the Actuarial Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1m.jpg" alt="Actuarial Details Screen" /></p>
+
+  <p>Actuarial Details Screen</p>
+</div>
+
+<p>The actuarial details fields may be entered where applicable or left blank.</p>
+
+<p><a name="psc_doc_date"></a><a name="psc_doc_desc"></a><strong>DOCUMENT DATE &amp; DESCRIPTION</strong> -
+in the format dd/mm/yyyy or ddmmyy. Use of this field is optional and could, for example,
+be used to record the name and date of the Definitive Trust Deed And Rules for the
+scheme.</p>
+
+<p><a name="psc_lav_eff"></a><a name="psc_lmr_iss"></a><a name="psc_lmr_acc"></a><strong>LAST
+ACTUARIAL VALUATION</strong> - issued, effective from and accepted dates. These dates may
+be entered in the format dd/mm/yyyy or ddmmyy.</p>
+
+<p><a name="psc_lmr_eff"></a><a name="psc_lmr_iss"></a><a name="psc_lmr_acc"></a><strong>LAST
+MEMBER REPORT</strong> - issued, effective from and accepted dates. These dates may be
+entered in the format dd/mm/yyyy or ddmmyy.</p>
+
+<p><a name="psc_nsl"></a><strong>NON-SELECTION LIMIT</strong> - This field holds the non-selection
+limit figure calculated by the <a href="/pension/reports/miscellaneous_reports/per_life/">Underwriting/Life Assurance
+Report</a>.</p>
+
+<p><a name="psc_reassurance"></a><strong>REASSURANCE THRESHOLD</strong> - This field holds the
+reassurance threshold limit for the scheme.</p>
+
+<p><a name="psc_phi_cost"></a><strong>PHI COST</strong> - This field holds the PHI Cost for the
+current year, and is used by the <a href="/pension/reports/miscellaneous_reports/per_prem/">Premium Calculation Report</a>.</p>
+
+<p><a name="psc_fund_rate"></a><strong>CURRENT FUNDING RATE</strong> - This field holds the Current
+Funding Rate as advised by the scheme Actuary, and is used by the <a href="/pension/reports/miscellaneous_reports/per_prem/">Premium
+Calculation Report</a>.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<h3><a name="SFUNDS"></a><a name="Investment Funds"></a>Investment Funds</h3>
+
+<p>Click Menu and then select the Investment Funds option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2k.jpg" alt="Investment Funds Screen" /></p>
+
+  <p>Investment Funds Screen</p>
+</div>
+
+<p>This screen is used to allocate and make available <a href="/pension/investments/pem_invfun/">investment
+funds</a> to a scheme. Once an investment fund is allocated to a scheme, members of
+that scheme may invest in the fund.</p>
+
+<p>Fill in the details as follows:</p>
+
+<p><a name="psf_fund"></a><strong>FUND</strong> - Enter the fund code or click the lookup icon to see
+a list of available funds. The description field is automatically filled in once you
+have entered a valid fund code.</p>
+
+<p><a name="psf_allocation"></a><strong>ALLOCATION PERCENTAGE</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><a name="psf_start"></a><strong>START</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><a name="psf_end"></a><strong>END</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><a name="psf_ls_illiquid"></a><strong>LS ILLIQUID</strong> - Enter the %. This is used with the Lifestyle matrices that have been set up for the scheme.</p>
+
+<p><a name="psf_rebate_perc"></a><strong>ANNUAL REBATE</strong> - Enter the %.</p>
+
+<p><a name="psf_rebate_freq"></a><strong>REBATE FREQUENCY</strong> - Select the Rebate Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p>You cannot delete a fund from a scheme if any members of the scheme have investments
+in that fund.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click on
+‘Cancel’ to exit entry without saving the details.</p>
+
+<p>To update or add the funds investment manager or policy number details select screen 2. An investment manager code must already have been entered using <a href="/pension/system_data/pem_codem/#Add Codes">Codes</a></p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2q.jpg" alt="Investment Funds Policy Numbers " /></p>
+
+  <p>Investment Funds Policy Numbers</p>
+</div>
+
+<p>Fill in the details as follows:</p>
+
+<p><a name="psp_fund"></a><strong>FUND</strong> - Enter the fund code or click the lookup icon to see
+a list of available funds. The description field is automatically filled in once you
+have entered a valid fund code.</p>
+
+<p><a name="psp_manager"></a><strong>FUND MANAGER</strong> - Enter the unit allocation
+rate for investments in this fund. This defaults to 100%.</p>
+
+<p><strong>DESCRIPTION</strong> - This defaults to the description already held at fund level.</p>
+
+<p><a name="psp_policy"></a><strong>INV MGR SCH REF POLICY NUMBER</strong> - Enter the policy number.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click on
+‘Cancel’ to exit entry without saving the details.</p>
+
+<h3><a name="SCONT"></a><a name="Contribution Type Setup"></a>Contribution Type Setup</h3>
+
+<p>Click Menu and then select the Contribution Type Setup option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2l.jpg" alt="Contribution Type Setup Screen" /></p>
+
+  <p>Contribution Type Setup Screen</p>
+</div>
+
+<p>This screen is used to setup contribution types you wish to use for this scheme. Contribution
+types are used to split up a members contributions into distinct elements e.g. employee
+ordinary or employee AVC contributions.</p>
+
+<p>Enter the details as follows:</p>
+
+<p><a name="psct_code"></a><strong>CODE</strong> - Enter a code for your contribution type, e.g.
+EEORD.</p>
+
+<p><a name="psct_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your contribution
+type.</p>
+
+<p><a name="psct_start"></a><strong>START DATE</strong> - Enter the start date for this contribution
+type. You can leave this field blank if you wish the user to be able to input contributions
+against this contribution type for any date due. Otherwise, if you enter a valid date
+in this field, the user will not be able to enter contributions against this contribution
+type for any date due before this date.</p>
+
+<p><a name="psct_end"></a><strong>END DATE</strong> - Enter the end date for this contribution
+type. You can leave this field blank if you wish the user to be able to input contributions
+against this contribution type for any date due. Otherwise, if you enter a valid date
+in this field, the user will not be able to enter contributions against this contribution
+type for any date due after this date.</p>
+
+<p><a name="psct_pr_inv"></a><strong>PROTECTED RIGHTS TYPE?</strong> - Is this contribution type
+in respect of protected rights contributions (UK only). This field will default to
+No i.e. unticked.</p>
+
+<p><a name="psct_lifestyle"></a><strong>LIFESTYLING ALLOWED?</strong> - Is lifetyling allowed for
+this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_curr"></a><strong>CURRENCY</strong> - Is lifetyling allowed for
+this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_dc"></a><strong>DC CONTRIBUTION TYPE</strong> - Is lifetyling allowed for
+this contribution type. This field will default to No i.e. unticked.</p>
+
+<p><a name="psct_dc_type"></a><strong>REGULAR DC CONTRIBUTION TYPE</strong> - Used in conjunction with the DC
+Generic quote for the projections calculation.</p>
+
+<p><a name="psct_type"></a><strong>CONTRIBUTION TYPE</strong> - Select the Contribution Type from the drop-down list:</p>
+
+<ul>
+  <li>AVC</li>
+  <li>EE</li>
+  <li>ER</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psct_tvin"></a><strong>CONTRIBUTION TYPE SOLELY FOR TVIN</strong> - Tick if this contribution should
+only be used for TVIN’s and the transaction type of TVIN.</p>
+
+<p><a name="psct_cap"></a><strong>INCLUDED SALARY CAP?</strong> - Tick if this contribution should be used in the
+salary cap report.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<h3><a name="SINVF"></a><a name="Investment Setup"></a>Investment Setup</h3>
+
+<p>Click Menu and then select the Investment Setup option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2m.jpg" alt="Investment Setup Screen" /></p>
+
+  <p>Investment Setup Screen</p>
+</div>
+
+<p>This screen is used to record the default method of allocation of a members contributions
+to investment funds and is used by <a href="/pension/investments/allocate_contributions/peu_alloc/">Contribution Allocation</a>.</p>
+
+<p>The details are held by effective date, with the most recent effective date shown
+first. To navigate between entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<p>To add details for a new effective date, click ‘Add’. To update the displayed details,
+click ‘Update’. The following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2o.jpg" alt="" /></p>
+
+</div>
+
+<p>Move down to the contribution type you wish to enter investment setup details for
+and click ‘Select’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>For every new investment setup record created, you must cater for all existing
+contribution types, whether or not a contribution type’s setup has been altered or
+not. Not doing so will result in exceptions being created during the Contribution
+Allocation process.</p>
+</div>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2p.jpg" alt="Investment Split Entry Screen" /></p>
+
+  <p>Investment Split Entry Screen</p>
+</div>
+
+<p>Enter the fields as follows:</p>
+
+<p><a name="pminf_fund"></a><strong>FUND</strong> - Enter a valid fund code.</p>
+
+<p><a name="pminf_rate"></a><strong>% ALLOC</strong> - Enter the percent of this contribution type
+to allocate to this fund. This must add up to 100% across all funds for this contribution
+type.</p>
+
+<p><a name="pminf_matrix"></a><strong>MATRIX</strong> - If lifestyling is allowed for this contribution
+type, enter the lifestyle matrix code to be used for this contribution type.</p>
+
+<p>If you select a lifestyle matrix for this contribution type, you must also enter 100%
+in the % ALLOC field as you are not allowed to mix lifestyle matrices with direct
+fund investment for any given contribution type.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<p>You will then be returned to the ‘Select Contribution Type’ window mentioned above
+and you can continue to enter details for all your other contribution types. When
+you have done this, click ‘OK’ in the ‘Select Contribution Type’ window to return
+to the main menu.</p>
+
+<p>Screen 2 shows the investment totals.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2r.jpg" alt="Investment Total Screen" /></p>
+
+  <p>Investment Total Screen</p>
+</div>
+
+<h3><a name="SLIFE"></a><a name="Lifestyle Matrix Setup"></a>Lifestyle Matrix Setup</h3>
+
+<p>Click Menu and then select the Lifestyle Matrix Setip option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2n.jpg" alt="Lifestyle Matrix Setup Screen" /></p>
+
+  <p>Lifestyle Matrix Setup Screen</p>
+</div>
+
+<p>This screen is used to record details of any lifestyle matrices that may be applicable
+to this scheme.</p>
+
+<p>The details are held by lifestyle matrix code and either age or term. To navigate
+between entries for different lifestyle matrix codes and age/terms, use the &lt; and
+&gt; buttons on the screen.</p>
+
+<p>When a lifestyle matrix has been specified for a particular contribution type, Pension
+Master calculates the members age/term to retirement and then looks up either the
+appropriate age for the member or the appropriate term to retirement in the lifestyle
+matrix</p>
+
+<p><strong>Example 1</strong></p>
+
+<p>If a lifestyle matrix has entries for two terms to retirement, 5 years and 10 years
+and the member has a calculated term to retirement of 7 years, the lifestyle matrix
+entry for term 10 years will be the one used. When the member has 5 or less years
+to retirement, the lifestyle matrix entry for term 5 will be the one used.</p>
+
+<p><strong>Example 2</strong></p>
+
+<p>If a lifestyle matrix has entries for two start ages, 50 and 60 years and the member
+has a calculated age of 53, the lifestyle matrix entry for start age 50 will be the
+one used. When the member attains age 60, the lifestyle matrix entry for start age
+60 will be the one used.</p>
+
+<p>The <a href="/pension/investments/peu_fbal/">Fund Balancing</a> program allows you to report 
+on members who should have had a lifestyle event since the last date they invested contributions. 
+It shows you the current allocation of the members investments, and the proposed new 
+split of investments after re-investing according to the appropriate lifestyle matrix.</p>
+
+<p>A lifestyle event is where a member crosses a boundary within a lifestyle matrix e.g. 
+if the lifestyle matrix sets out that at age 50 they must switch investments into 
+cash based funds, when the member reaches age 50, they have a lifestyle event.</p>
+
+<p>To add details for a new lifestyle matrix, or to add a new age/term to an existing
+lifestyle matrix, click ‘Add’. To update the displayed details, click ‘Update’.</p>
+
+<p>Input the details as follows:</p>
+
+<p><a name="pslh_matrix"></a><strong>MATRIX CODE</strong> - Enter a code for your lifestyle matrix.</p>
+
+<p><a name="pslh_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your lifestyle
+matrix.</p>
+
+<p><a name="pslh_type"></a><strong>TYPE</strong> - Enter the type fo lifestyle matrix. This is
+only allowed when adding a completely new lifestyle matrix to Pension Master. The
+valid options are as follows:</p>
+
+<ul>
+  <li>
+    <p><strong>A</strong> - Age related - based on the member’s age at date due (as entered in <a href="/pension/investments/allocate_contributions/peu_alloc/">Contribution
+Allocations</a>). Lifestyle matrix looked up at members age, rounded down to the
+nearest age relative to their position in the matrix.</p>
+  </li>
+  <li>
+    <p><strong>T</strong> - Term related - term from date due (as entered in <a href="/pension/investments/allocate_contributions/peu_alloc/">Contribution
+Allocations</a>) to <a href="/pension/file_maintenance/pem_mem/#pm_tpd">Target Pension Date</a>.
+Lifestyle matrix looked up at term, rounded up to the nearest term relative to their position in the matrix.</p>
+  </li>
+</ul>
+
+<p><a name="pslb_index"></a><strong>START AGE/TERM TO TRD</strong>- Enter a start age or a term
+to retirement for your lifestyle matrix.</p>
+
+<p><a name="pslb_fund"></a><strong>FUND</strong> - Enter a fund for this lifestyle matrix and age/term.
+You can enter as many valid funds as you like for this lifestyle matrix and age/term.</p>
+
+<p><a name="pslb_rate"></a><strong>PERCENTAGE</strong> - Enter a percentage to allocate for this
+fund, lifestyle matrix and age/term. This must add up to 100% across all funds for
+this lifestyle matrix and age/term.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<h3><a name="SEXP"></a>Contribution Expenses</h3>
+
+<p>Click Menu and then select the Contribution Expenses option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1k.jpg" alt="Contribution Expenses Screen" /></p>
+
+  <p>Contribution Expenses Screen</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>It is important that you correctly set up the contribution expense assumptions
+at this stage as these will be used to deduct from incoming contributions and, if
+not correctly set will lead to incorrect unit allocations.</p>
+</div>
+
+<p>There are three types of expenses that are allowed in Pension Master:</p>
+
+<ul>
+  <li><strong>Percentage of contributions</strong> - This can be used to take a charge based on a percentage of the members current contribution.</li>
+  <li><strong>Percentage of salary</strong> - This can be used to take a charge based on the members
+current salary. You can choose which of the salary types you wish the charge to apply to.</li>
+  <li><strong>Member Charge</strong> - This can be used to take a fixed monetary charge off each members
+incoming contributions. This fixed charge will be applied to <strong>each</strong> member concerned.</li>
+</ul>
+
+<p>Alternatively, you can enter formula to calculate the expense values. This is useful
+when your expense setup does not conform to the simple model allowed for in this screen.</p>
+
+<p>Fill out the details as follows:</p>
+
+<p><a name="pexh_memch"></a><strong>MEMBER CHARGE</strong> - Enter the amount of flat monetary
+charge you wish to apply to each members incoming contribution e.g. if you wish to
+apply £5.00 to each contribution, then enter 5.00. Enter 0.00 if you do not wish to
+take a Member Charge off the incoming contributions.</p>
+
+<p><a name="pexh_saltype"></a><strong>SALARY TYPE</strong> - Click the lookup icon to select a salary
+type for calculating expenses as a percentage of salary.</p>
+
+<p><a name="pexb_cont"></a><strong>CONTRIBUTION TYPE</strong> - Enter the contribution type code
+for this line of expenses.</p>
+
+<p><a name="pexb_pcont"></a><strong>CONT %</strong> - This represents the percentage of each contribution
+type amount you wish to take as contribution percentage expenses, e.g. if you wish
+to take 5% of contributions, set this field to 5.00.</p>
+
+<p><a name="pexb_sal"></a><strong>SALARY %</strong> - This represents the percentage of each contribution
+type amount you wish to take as salary percentage expenses. These will take expenses
+as a percentage of the members current salary, e.g. if you wish to take 5% of salary,
+set this field to 1.00 (i.e. 1%).</p>
+
+<p><a name="pexb_mem"></a><strong>MEM CH %</strong> - This represents the percentage of each contribution
+type amount you wish to take as a member charge. These must either total up to 0%
+or 100%. 0% is used to indicate that a member charge is not to be taken.</p>
+
+<p><a name="pexb_formula"></a><strong>FORMULA</strong> - Enter the formula code you wish to use
+to calculate expenses for this contribution type. This is an optional feature and
+is only to be used when you cannot calculate your expenses using the simple method
+allowed for by the other fields on this screen.</p>
+
+<p>Entering a valid formula code in this field will automatically set the other numeric
+expense assumption fields for this contribution type to zero as they are no longer
+relevant in the calculation of expenses for this contribution type.</p>
+
+<p>In the formula you use to do this, you have access to the special formula syntax <a href="/pension/file_maintenance/calculation_setup/pem_form7/#08">cont_value</a> which
+inserts the gross amount of the current contribution type into the formula so you
+can use this to calculate your expenses.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<h3><a name="SSEXP"></a>Switch Assumptions</h3>
+
+<p>Click Menu and then select the Switch Assumptions option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_swexp.jpg" alt="Switch Assumptions Screen" /></p>
+
+  <p>Switch Assumptions Screen</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>It is important that you correctly set up the switch expense assumptions at this
+stage as these will be used to take expenses off any switches a member makes and,
+if not correctly set will lead to incorrect unit allocations.</p>
+</div>
+
+<p>You can take expenses off money that is switched out of a fund as a percentage of
+the money raised by the sale. The net amount is then available for re-investment in
+the new funds. You can also specify that a member is allowed a fixed number of free
+switches per year and specify the start date for this year.</p>
+
+<p>If you do not wish to take any expenses off swicthes, either leave this screen blank
+or set the Percentage Of Sale field to zero.</p>
+
+<p>Fill out the details as follows:</p>
+
+<p><a name="pse_num_free"></a><strong>FREE SWITCHES PER YEAR</strong> - Enter the number of free
+switches a member is allowed per year.</p>
+
+<p><a name="pse_day"></a><a name="pse_month"></a><strong>ANNIVERSARY DATE</strong> - Enter the
+day and month that the year starts for charging purposes e.g. if a member is allowed
+two free switches per year and the year starts on 1 April, set day to 1 and month
+to 4.</p>
+
+<p><a name="pse_percent"></a><strong>PERCENTAGE OF SALE</strong> - Enter the percentage of money
+realised by the sale to take as an expenses. If you do not want to take any expenses
+off switches, set this to zero.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the details, or click ‘Cancel’
+to exit entry without saving the details.</p>
+
+<h3><a name="SUSPENSE"></a><a name="Suspense Account"></a>Unit Suspense Account</h3>
+
+<p>To proceed to the scheme address, click Menu and then select the Unit Suspense Account
+option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2j.jpg" alt="Unit Suspense Account Screen" /></p>
+
+  <p>Unit Suspense Account Screen</p>
+</div>
+
+<p>This is a screen that holds details of any units held by the scheme that are not allocated
+to a particular member. This would result, for example, from a refund of a member
+non protected rights contributions, where the non protected rights employer contributions
+are retained as units.</p>
+
+<p>The screen is view only and is updated by <a href="/pension/investments/peu_assbal/">Asset
+Balance</a> or <a href="/pension/investments/peu_asset/">Asset Transfer</a>.</p>
+
+<h3><a name="SINV"></a><a name="Investment Value Summary"></a>Investment Value Summary</h3>
+
+<p>Click Menu and then select the Investment Value Summary option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2i.jpg" alt="Investment Value Summary Screen" /></p>
+
+  <p>Investment Value Summary Screen</p>
+</div>
+
+<p>This is a view only screen that displays a valuation of the investment funds this
+scheme invests in, split fund by fund, based on the latest unit price on the <a href="#Unit Prices">unit
+prices</a> screen for the appropriate <a href="#pif_sell_basis">unit sell basis</a>.
+This is colour coded as follows:</p>
+
+<ul>
+  <li><strong>Black</strong> - Valuation of units based on a unit price within the last 90 days.</li>
+  <li><strong style="color: blue">Blue</strong> - Valuation of units based on a unit price older than 90 days. A warning will also be
+displayed if any unit prices are used that are older than 90 days from today’s date.</li>
+  <li><strong style="color: red">Red</strong> - Unallocated contributions i.e. contributions that have not yet been used to buy units.
+These are taken at face value e.g. £100 of unallocated contributions has a value of
+£100.</li>
+</ul>
+
+<p>The following screen is displayed when you select screen 2:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2i.jpg" alt="Summary By Contribution Type" /></p>
+
+  <p>Summary By Contribution Type</p>
+</div>
+
+<p>The following screen is displayed when you select screen 3:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2i.jpg" alt="Summary Suspense Account" /></p>
+
+  <p>Summary Suspense Account</p>
+</div>
+
+<h3><a name="SADDR"></a><a name="Address Details"></a>Address Details</h3>
+
+<p>Click Menu and then select the Address Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch1n.jpg" alt="Address Details Screen" /></p>
+
+  <p>Address Details Screen</p>
+</div>
+
+<p>Address details can be added, updated and deleted in this screen.</p>
+
+<p><a name="psa_addr_code"></a><a name="psa_addr_name"></a><strong>ADDRESS CODE &amp; NAME</strong> -
+Enter the address code and name. The address code can only be entered in Add mode.
+The SCHEME address cannot be deleted, as this address is neccessary for the Payroll
+Schemes.</p>
+
+<p><a name="psa_addr1"></a><a name="psa_addr2"></a><a name="psa_addr3"></a><a name="psa_addr4"></a><a name="psa_postcode"></a><strong>ADDRESS
+DETAILS</strong> - Enter the address details, including the postcode.</p>
+
+<p><a name="psa_tel"></a><a name="psa_fax"></a><strong>TELEPHONE/FAX NUMBER DETAILS</strong> -
+Enter the telephone/fax number details.</p>
+
+<p><a name="psa_email"></a><strong>E-MAIL ADDRESS</strong> - Enter the E-Mail address.</p>
+
+<p><a name="psa_name1"></a><a name="psa_sig1"></a><a name="psa_name2"></a><a name="psa_sig2"></a><strong>SIGNATORY
+DETAILS</strong> - Enter the signatory details.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the address, or click “Cancel’’
+to exit entry without saving the details.</p>
+
+<h3><a name="MEMINFO"></a><a name="Member Information Setup"></a>Member Information Setup</h3>
+
+<p>To proceed to the Member Information Setup screen press <kbd>M</kbd>, or select the Menu option
+and then select the Member Information Setup option and press <kbd>Return</kbd>.</p>
+
+<p>This screens changes the way that the years and months are calculated on the <a href="/pension/file_maintenance/pem_mem/#meminfo">Member
+Information Screen</a> in Members.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sminfo.jpg" alt="Member Information Setup Screen" /></p>
+
+  <p>Member Information Setup Screen</p>
+</div>
+
+<p><a name="psmi_mem_age"></a><strong>MEMBER AGE</strong> - Enter one of the following options:</p>
+
+<ul>
+  <li><strong>CD</strong> - Years and Complete Days</li>
+  <li><strong>CM</strong> - Years and Complete Months</li>
+  <li><strong>HM</strong> - Years and Higher Months</li>
+  <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
+</ul>
+
+<p><a name="psmi_com_ser"></a><strong>COMPANY SERVICE</strong> - Enter one of the following options:</p>
+
+<ul>
+  <li><strong>CD</strong> - Years and Complete Days</li>
+  <li><strong>CM</strong> - Years and Complete Months</li>
+  <li><strong>HM</strong> - Years and Higher Months</li>
+  <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
+</ul>
+
+<p><a name="psmi_pen_ser"></a><strong>PENSIONABLE SERVICE</strong> - Enter one of the following options:</p>
+
+<ul>
+  <li><strong>CD</strong> - Years and Complete Days</li>
+  <li><strong>CM</strong> - Years and Complete Months</li>
+  <li><strong>HM</strong> - Years and Higher Months</li>
+  <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
+</ul>
+
+<p><a name="psmi_pps_tpd"></a><strong>PROSPECTIVE PENSIONABLE SERVICE TO TPD</strong> - Enter one of the following options:</p>
+
+<ul>
+  <li><strong>CD</strong> - Years and Complete Days</li>
+  <li><strong>CM</strong> - Years and Complete Months</li>
+  <li><strong>HM</strong> - Years and Higher Months</li>
+  <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
+</ul>
+
+<p><a name="psmi_pps_npd"></a><strong>PROSPECTIVE PENSIONABLE SERVICE TO NPD</strong> - Enter one of the following options:</p>
+
+<ul>
+  <li><strong>CD</strong> - Years and Complete Days</li>
+  <li><strong>CM</strong> - Years and Complete Months</li>
+  <li><strong>HM</strong> - Years and Higher Months</li>
+  <li><strong>RM99</strong> - Years and Months Rounded to 99 Days (where 99 is a valid number between 01 and 31).</li>
+</ul>
+
+<h3><a name="STAX"></a><a name="Tax Simplification Amounts"></a>Tax Simplification Amounts</h3>
+
+<p>This screen shows the tax simplification amounts to be held against the scheme.</p>
+
+<p>Select Tax Simplification Amounts from the menu.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stax.jpg" alt="Tax Simplification Amounts screen." /></p>
+
+  <p>Tax Simplification Amounts screen.</p>
+</div>
+
+<p><a name="pstx_eff_date"></a><strong>EFFECTIVE DATE</strong> - Enter the effective date. It is only possible to amend this in Add mode.</p>
+
+<p><a name="pstx_life_allow"></a><strong>LIFETIME ALLOWANCE</strong> - Enter the Lifetime Allowance for the date entered.</p>
+
+<p><a name="pstx_ann_allow"></a><strong>ANNUAL ALLOWANCE</strong> - Enter the Annual Allowance for the date entered.</p>
+
+<p><a name="pstx_ann_mult"></a><strong>ANNUAL DB MULTIPLIER</strong> - Enter the Annual DB Multiplier for the date entered.</p>
+
+<p><a name="pstx_pen_fact"></a><strong>PENSION VALUATION FACTOR</strong> - Enter the Pension Valuation Factor for the date entered.</p>
+
+<p><a name="pstx_pen_mult"></a><strong>PENSION IN PAYMENT MULTIPLIER</strong> - Enter the Pension In Payment Multiplier for the date entered.</p>
+
+<p><a name="pstx_tv_val"></a><strong>CHANGE IN TV VALUE</strong> - Enter the Change in TV Value for the date entered.</p>
+
+<p><a name="pstx_tax_allow"></a><strong>REFUND TAX ALLOWANCE</strong> - Enter the Refund Tax Allowance for the date entered.</p>
+
+<p><a name="pstx_dc_life_allow"></a><strong>DC LIFETIME ALLOWANCE</strong> - Enter the DC Lifetime Allowance for the date entered.</p>
+
+<p><a name="pstx_mp_life_allow"></a><strong>MP LIFETIME ALLOWANCE</strong> - Enter the MP Lifetime Allowance for the date entered.</p>
+
+<div>
+  <div class="source ascot_lloyd">
+    <h3><a name="ADVIS"></a><a name="Advisors"></a>Advisors</h3>
+
+    <p>Click Menu and then select the Advisors option and press <kbd>Return</kbd>.</p>
+
+    <p>The following screen is displayed:</p>
+
+    <div class="screen">
+      <p><img src="/pension/images/pem_sch1j.jpg" alt="Advisor Screen" /></p>
+
+      <p>Advisor Screen</p>
+    </div>
+
+    <p><a name="pbr_code"></a><strong>Advisor CODE</strong> - Enter a valid advisor code, or click on
+the lookup icon for a list of Advisor codes.
+Upon selection of a valid advisor code, the advisor details from
+the <a href="/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
+screen and saved to the scheme file. If the Advisor you require is not available, add
+it first using the <a href="/pension/file_maintenance/pem_advisor/">Advisors</a> program, then return to this
+screen to assign the advisor to the scheme.</p>
+
+    <p>When all the details have been entered click ‘OK’ to save the advisor details, or click
+‘Cancel’ to exit entry without saving the details.</p>
+  </div>
+</div>
+
+<h3><a name="CARE"></a><a name="Care Title Screen"></a>Care Title Screen</h3>
+
+<p>Click Menu. Then select the Care Title Screen option and press <kbd>Return</kbd>.</p>
+
+<p>This screen contains description and format information assigned to the six title fields. The fields relate to the Care Averaged Screens that will be displayed at member level. The Care Screen box needs to be ticked on the Basic Scheme Screen initially to access this screen in the scheme menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_caret.jpg" alt="Care Title Screen" /></p>
+
+  <p>Care Title Set Up Fields Screen</p>
+</div>
+
+<p>Update the description as you want them to appear at member level. A date and care code field already appears in the first two columns.</p>
+
+<p><a name="pctt_desc1"></a><a name="pctt_desc2"></a><a name="pctt_desc3"></a><a name="pctt_desc4"></a><a name="pctt_desc5"></a><a name="pctt_desc6"></a><strong>DESCRIPTION</strong> -
+Enter a description of the field that will be displayed on the Care
+screens at member level.</p>
+
+<p><a name="pctt_total1"></a><a name="pctt_total2"></a><a name="pctt_total3"></a><a name="pctt_total4"></a><a name="pctt_total5"></a><a name="pctt_total6"></a><strong>TOTAL</strong> -
+Tick the total box if you wish to see that column total on the member screen.</p>
+
+<p>The following fields need only to be updated to be used with the Recalculation of Revaluations option in the Care Run. Further details of these
+options can be found <a href="/pension/updates/peu_reval/#destdlg">here</a></p>
+
+<p><a name="pctt_freq"></a><strong>REVALUATION FREQUENCY</strong> - Select the frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Biannual</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="pctt_date_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the date type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+</ul>
+
+<p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Select the date of the revaluation from the drop-down list:</p>
+
+<ul>
+  <li>Month Start</li>
+  <li>Month End</li>
+  <li>Specific Day in Month</li>
+</ul>
+
+<p><a name="pctt_dsy"></a><strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
+
+<p>When you have completed the screen press <kbd>Esc</kbd> to save the details to the file.
+<kbd>Del</kbd> can be pressed to exit the update option without saving the details.</p>
+
+<p>To exit the Care Title Screen, click ‘Exit’. The program will
+return to the <a href="/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> menu.</p>
+
+<h3><a name="Contribution Rates Matrix"></a>Contribution Rates Matrix</h3>
+
+<p>Select the Contribution Rates Matrix screen using the menu.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_schconmat.jpg" alt="DC Generic Configuration" /></p>
+
+  <p>Matrix Details</p>
+</div>
+
+<p>This screen allows you to set up matrix for the calculations of the rates for contribution.</p>
+
+<p><a name="psmb_matrix"></a><strong>MATRIX</strong> - Enter the code.</p>
+
+<p><a name="psmh_type"></a><strong>TYPE</strong> - Select a Type from the drop-down list:</p>
+
+<ul>
+  <li>Salary</li>
+  <li>Age</li>
+  <li>Service</li>
+  <li>Combined</li>
+</ul>
+
+<p><a name="psmh_eff_dt"></a><strong>EFFECTIVE DATE</strong> - Select a date type from the drop-down list:</p>
+
+<ul>
+  <li>Immediate</li>
+  <li>Renewal Date</li>
+</ul>
+
+<p><a name="psmh_salary"></a><strong>SALARY</strong> - The salary type from the salaries set up for the scheme.</p>
+
+<p><strong>SALARY CAP FACTOR TABLE</strong></p>
+
+<p><a name="psmh_fact_code"></a><strong>CODE</strong> - Enter a valid factor code use the search if code isn’t know.</p>
+
+<p><a name="psmh_fact_index"></a><strong>INDEX</strong> - Entered the index.</p>
+
+<p><a name="psmh_pt_adj"></a><strong>PART TIME ADJUSTMENT %</strong> - Entered the % for part time members if required.</p>
+
+<p><a name="psmh_cap_inc_rate"></a><strong>SALARY CAP INCREASE RATE</strong> - Enter or select from the drop-down list:</p>
+
+<ul>
+  <li>Date Joined Company</li>
+  <li>None - Fixed Cap</li>
+  <li>CPI</li>
+  <li>Salary Growth</li>
+  <li>CPI Capped at 3%</li>
+  <li>CPI Capped at 4%</li>
+  <li>CPI Capped at 5%</li>
+</ul>
+
+<p><a name="psmh_service_dt"></a><strong>SERVICE DATE</strong> - Select the Service Date from the drop-down list:</p>
+
+<ul>
+  <li>Date Joined Company</li>
+  <li>Date Joined Scheme</li>
+  <li>Qualifying Service Date</li>
+</ul>
+
+<p><a name="psmb_age"></a><strong>AGE</strong> - Entered the age.</p>
+
+<p><a name="psmb_service"></a><strong>SERVICE</strong> - Entered the service.</p>
+
+<p><a name="psmb_perc_for_age"></a><strong>TOTAL % FOR AGE</strong> - Entered the amount.</p>
+
+<p><a name="psmb_perc_for_serv"></a><strong>TOTAL % FOR SERVICE</strong> - Entered the amount.</p>
+
+<h3><a name="STRUS"></a><a name="Trustee"></a>Scheme Trustee</h3>
+
+<p>Click Menu and then select the Trustee Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_strus.jpg" alt="Trustee Details Screen" /></p>
+
+  <p>Trustee Details Screen</p>
+</div>
+
+<p>Trustee details can be added, updated and deleted in this screen.</p>
+
+<p>To navigate between entries, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
+
+<p><a name="pstr_name"></a><a name="psa_addr_name"></a><strong>NAME</strong> -
+Enter the name of the Trustee.</p>
+
+<p><a name="pstr_addr1"></a><a name="pstr_addr2"></a><a name="pstr_addr3"></a><a name="pstr_addr4"></a><a name="pstr_postcode"></a><strong>ADDRESS
+DETAILS</strong> - Enter the address details, including the postcode.</p>
+
+<p><a name="pstr_sole_corp"></a><strong>SOLE</strong> - Tick if trustee type is sole.</p>
+
+<p><a name="pstr_indi_corp"></a><strong>CORPORATE</strong> - Tick if trustee type is a corporate.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the trustee, or click “Cancel’’
+to exit entry without saving the details.</p>
+
+<h3><a name="SORPEX"></a><a name="SORP Expenses"></a>SORP Expenses</h3>
+
+<p>Click Menu and then select the SORP Expenses option and press <kbd>Return</kbd>. This screen is only available of Irish DC Schemes.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex1.jpg" alt="SORP Expenses" /></p>
+
+  <p>SORP Expenses</p>
+</div>
+
+<p>This screen will redisplay any details already updated on the Contribution Expense Screen.
+See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> for more details.</p>
+
+<p>The following screen is displayed when you press 2:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex2.jpg" alt="Fixed Contribution Expenses by Unit Disinvestment" /></p>
+
+  <p>Fixed Contribution Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Fixed contribution expenses by unit disinvestments charges for active members.</p>
+
+<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop_down list to select a valid one.</p>
+
+<p><a name="psexpa_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
+
+<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
+
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
+
+<p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<p>The following screen is displayed when you press 3:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex3.jpg" alt="Fixed Contribution Expenses by Unit Disinvestment" /></p>
+
+  <p>Fixed Contribution Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Fixed contribution expenses by unit disinvestments charges for deferred members</p>
+
+<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop_down list to select a valid one.</p>
+
+<p><a name="psexpd_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
+
+<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
+
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
+
+<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<p>The following screen is displayed when you press 4:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex4.jpg" alt="Percentge of Fund Expenses by Unit Disinvestment" /></p>
+
+  <p>Percentage of Fund Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Expenses taken as a percentage of a fund for all members.</p>
+
+<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpf_ann"></a><strong>ANNUAL %</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpf_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<h3><a name="SMPIEX"></a><a name="SMPI Expenses"></a>SMPI Expenses</h3>
+
+<p>Click Menu and then select the SMPI Expenses option and press <kbd>Return</kbd>. This screen is only available of UK DC Schemes.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex1.jpg" alt="SMPI Expenses" /></p>
+
+  <p>SMPI Expenses</p>
+</div>
+
+<p>This screen will redisplay any details already updated on the Contribution Expense Screen.
+See <a href="/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses</a> for more details.</p>
+
+<p>The following screen is displayed when you press 2:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex2.jpg" alt="Fixed Contribution Expenses by Unit Disinvestment" /></p>
+
+  <p>Fixed Contribution Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Fixed contribution expenses by unit disinvestments charges for active members.</p>
+
+<p><a name="psexpa_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpa_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
+
+<p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
+
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
+
+<p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpa_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<p>The following screen is displayed when you press 3:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex3.jpg" alt="Fixed Contribution Expenses by Unit Disinvestment" /></p>
+
+  <p>Fixed Contribution Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Fixed contribution expenses by unit disinvestments charges for deferred members</p>
+
+<p><a name="psexpd_code"></a><strong>CONTRIBUTION TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpd_ann_fix_amt"></a><strong>ANNUAL FIXED AMOUNT</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
+
+<ul>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
+</ul>
+
+<p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
+
+<p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
+
+<ul>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
+</ul>
+
+<p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
+
+<ul>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
+</ul>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<p>The following screen is displayed when you press 4:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_smpiex4.jpg" alt="Percentge of Fund Expenses by Unit Disinvestment" /></p>
+
+  <p>Percentage of Fund Expenses by Unit Disinvestment</p>
+</div>
+
+<p>Expenses taken as a percentage of a fund for all members.</p>
+
+<p><a name="psexpf_fund"></a><strong>FUND TYPE</strong> - Insert the contribution code or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpf_ann"></a><strong>ANNUAL %</strong> - Enter the fixed amount</p>
+
+<p><a name="psexpf_freq"></a><strong>FREQUENCY</strong> - Insert the frequency or use the drop-down list to select a valid one.</p>
+
+<p><a name="psexpf_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Insert type of Calendar, Renewal or Other.</p>
+
+<p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
+
+<p><a name="psexpd_eff_mm"></a><strong>EFFECTIVE DATE</strong> - Enter a month i.e. 4 if type is Other.</p>
+
+<div>
+  <div class="source ascot_lloyd">
+    <h3><a name="CHAR"></a><a name="Charging"></a>Charging %</h3>
+
+    <p>Click Menu. Then select the Charging %  Screen option and press <kbd>Return</kbd></p>
+  </div>
+</div>
+
+<div>
+  <div class="csc">
+    <h3><a name="FORFEIT"></a><a name="Forfeiture Matrix"></a>Forfeiture Matrix</h3>
+
+    <p>Click Menu. Then select the Forfeiture Matrix Screen option and press <kbd>Return</kbd></p>
+  </div>
+</div>
+
+<h2><a name="print"></a><a name="Printing Scheme Details"></a>Printing Scheme Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2g.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Print current screen</strong></td>
+          <td>Produce listing of scheme details only for the screen the user is in of Schemes.</td>
+        </tr>
+        <tr>
+          <td><strong>Print full scheme details</strong></td>
+          <td>Produce listing of all scheme details, including all screens of Schemes.</td>
+        </tr>
+        <tr>
+          <td><strong>Companies and categories list</strong></td>
+          <td>Produce list of participating company and category codes and descriptions for all companies and categories within the currently selected scheme(s).</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>You can also select the records to print in this dialog box. Further details of these
+options can be found <a href="/pension/general/gn_printm/#destdlg">here</a>.</p>
+
+<p>Select the appropriate option and click on ‘OK’. Click on ‘Cancel’ to exit the printing
+or ‘Help’ to display this help text.</p>
+
+<h3><a name="fschprint"></a>Full Scheme Details</h3>
+
+<p>If you chose to print off a Full Scheme Details Report, a window will now appear which
+asks which screens you wish to print off for this scheme. Various default screens
+appear depending on whether the current screen is a Defined Contribution scheme or
+a Defined Benefit scheme. If the scheme is a hybrid scheme, Pension Master defaults
+to printing all the available screens for the scheme.</p>
+
+<p>Tick any screens that you wish to see on the report.</p>
+
+<p>Click the ‘All’ button to tick all screens on the report.</p>
+
+<p>Click the ‘None’ button to untick all screens for the report.</p>
+
+<p>When you have finished, click ‘OK’ to proceed to the printing stage. The screen
+selection screen is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2f.jpg" alt="Report Selection Screen" /></p>
+
+  <p>Report Selection Screen</p>
+</div>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
+
+<p>Select the ‘Workflow’ button to instigate a workflow action for the current scheme.
+A scheme record must be selected using the Query option before you can instigate a
+workflow action.</p>
+
+<p>The following pop-up window is now displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2c.jpg" alt="Workflow Instigation Popup" /></p>
+
+  <p>Workflow Instigation Popup</p>
+</div>
+
+<p>Enter the workflow code for the workflow action you wish to instigate or click on
+the lookup icon for a list of the available workflow codes.
+To set up a workflow code if one to suit your purpose does not already exist, use
+the <a href="/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow Management</a> option.</p>
+
+<p>You can click ‘OK’ to continue or click ‘Cancel’ to abort the instigation of this
+workflow action.</p>
+
+<h2><a name="quick"></a>Producing Ad-Hoc Letters</h2>
+
+<p>If you wish to send an ad-hoc letter to one of the addresses for the current scheme,
+you can easily do it using the ‘Quick Letter’ facility. All that is required is that
+you type the body of the letter, the rest is done automatically by Pension Master.</p>
+
+<p>Select the ‘Quick Letter’ button from the screen. This automatically starts your wordprocessor
+and transfers enough data to start and end the letter i.e. it transfers the schemes
+address, inserts today’s date, sets out the Dear xxx part of the letter and then does
+the Yours sincerely… at the end of the letter. If the scheme’s address it not available,
+you will be informed that one must be entered before using the ‘Quick Letter’ option.</p>
+
+<p>If there are no signatory details held against the address, then the letter will be
+printed without a contact name. If the address has one or both signatory details held,
+then you will be prompted with a window as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2h.jpg" alt="Select Contact Name Window" /></p>
+
+  <p>Select Contact Name Window</p>
+</div>
+
+<p>Select one of the names to be displayed on the letter. Alternatively you can select
+to keep the name blank. Your name and job title will be automatically filled in at
+the end of the letter.</p>
+
+<p>When you have finished your letter, print it off in the normal way. You can then exit
+from your wordprocessor as required. To return to Pension Master, simply click on
+the titlebar of an active Pension Master window.</p>
+
+<h2><a name="navigate"></a>Navigating Between Screens</h2>
+
+<p>Click ‘Menu’. A pop-up menu will appear on the screen which allows the user access
+to the various pages of the Scheme File by picking from a list of the available pages.
+Simply type in the number of the screen you wish to view/update. You can also click
+‘Cancel’ to abort the screen selection process.</p>
+
+<p>You should note that the options available on the screen selection menu differ depending
+on whether the scheme currently selected is a defined contribution, defined benefit
+or hybrid type scheme. If no record is currently selected (i.e. the details on the
+screen are blank) then all available screens in Schemes are available in the pop-up
+menu.</p>
+
+<p><a name="menu"></a>The menu selection pop-up is as follows:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_sch2e.jpg" alt="Screen Selection Screen" /></p>
+
+  <p>Screen Selection Screen</p>
+</div>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:58.</p>
+      </div>
+    </div>
+  </body>
+</html>

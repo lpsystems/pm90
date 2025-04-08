@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>@ln1 ! @ln2 goto @ln3</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the ! operator to compare two field values as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>@ln1 ! @ln2 goto @ln3 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Field names, date constants, integer constants and floating point constants can be used to replace line numbers to the left of the word goto above.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_npa ! 50 goto @5 
+</code></pre>
+
+<h2><a name="02"></a>@ln1 &lt; @ln2 goto @ln3</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the &lt; operator to compare two field values as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>@ln1 &lt; @ln2 goto @ln3 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Field names, date constants, integer constants and floating point constants can be used to replace line numbers to the left of the word goto above.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_npa &lt; 50 goto @5 
+</code></pre>
+
+<div align="right">
+  <p><a href="/pension/file_maintenance/calculation_setup/pem_form/#01">Index</a></p>
+</div>
+
+<h2><a name="03"></a>@ln1 = @ln2 goto @ln3</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the = operator to compare two field values as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>@ln1 = @ln2 goto @ln3 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Field names, date constants, integer constants and floating point constants can be used to replace line numbers to the left of the word goto above.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_npa = 50 goto @5 
+</code></pre>
+
+<h2><a name="04"></a>@ln1 &gt; @ln2 goto @ln3</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the &gt; operator to compare two field values as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>@ln1 &gt; @ln2 goto @ln3 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Field names, date constants, integer constants and floating point constants can be used to replace line numbers to the left of the word goto above.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_npa &amp;gt; 50 goto @5 
+</code></pre>
+
+<h2><a name="05"></a>fld ! ‘str’ goto @ln</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the ! operator to compare a field value with a character string as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>fld ! 'str' goto @ln 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The ‘ (single apostrophe) must be used to surround the character string you are using in the comparison.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_sex ! 'F' goto @5 
+</code></pre>
+
+<h2><a name="06"></a>fld = ‘str’ goto @ln</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the = operator to compare a field value with a character string as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>fld = 'str' goto @ln 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The ‘ (single apostrophe) must be used to surround the character string you are using in the comparison.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_sex = 'M' goto @5 
+</code></pre>
+
+<h2><a name="07"></a>fld =&gt; ‘str’ goto @ln</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the =&gt; operators to compare a field value with a character string as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>fld =&gt; 65 goto @ln 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If the comparison is a date string then the “ (double apostrophe) must be used to surround the string.</li>
+  <li>If the comparison is a character string then the ‘ (single apostrophe) must be used to surround the string.</li>
+  <li>If the comparison is a numeric/decimal value then no apostrophe is needed.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_dob =&gt; "19990101" goto @5 
+#pm_age =&gt; 65 goto @5 
+</code></pre>
+
+<h2><a name="08"></a>fld &lt;= ‘str’ goto @ln</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the &lt;= operators to compare a field value with a character string as part of an ‘if’ type branching process.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>fld &lt;= "19990101" goto @ln 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If the comparison is a date string then the “ (double apostrophe) must be used to surround the string.</li>
+  <li>If the comparison is a character string then the ‘ (single apostrophe) must be used to surround the string.</li>
+  <li>If the comparison is a numeric/decimal value then no apostrophe is needed.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>#pm_dob &lt;= "19990101" goto @5 
+#pm_age &lt;= 65 goto @5 
+</code></pre>
+
+<h2><a name="09"></a>if(condition,@then,@else)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the if function to test whether a condition is either true or false. The function
+will either return a numeric constant, field name or the result of a previous line
+depending upon the condition. If the condition is true then the first constant, field
+name or result of a previous line will be processed. If the condition is false then
+the second constant, field name or result of a previous line will be be processed.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>if(condition,@then,@else) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>condition - a test condition using either a line number or field name separated by a valid operator (either &lt;,&gt;,!,=). Compared with either a line number, constant (date, integer, character string or decimal) or field name.</li>
+  <li>@then - either a constant (date, integer, character string or decimal), field name or a previous line number that will be executed if the condition is true.</li>
+  <li>@else - either a constant (date, integer, character string or decimal), field name or a previous line number that will be executed if the condition is false.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>Date constants must be enclosed in double quotation marks (“) and be in the format YYYYMMDD.</li>
+  <li>Character constants must be enclosed in single quotation marks (‘).</li>
+  <li>Any valid operator can be used either &lt;,&gt;,! or =.</li>
+  <li>Any line numbers used in either the condition must be previous to the if function.</li>
+  <li>Any line numbers used to select results from a line must be previous to the if function.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>if(pm_sex='M',@2,@7) 
+if(pm_scheme&lt;@3,12,34) 
+if(@5!0,@5,4321) 
+if(@7&gt;pm_dob,pm_rt1,32) 
+</code></pre>
+
+<h2><a name="10"></a>max(fld1,fld2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the max function to calculate the greater of two selected fields.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>max(fld1,fld2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fld1 - is the first field to be compared.</li>
+  <li>fld2 - is the second field to be compared.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>fld1 and fld2 can be entered in several formats:
+    <ul>
+      <li>Number e.g. 1, 2.345, 6308</li>
+      <li>Date e.g. “19970101”</li>
+      <li>Previous Line e.g. @2</li>
+      <li>Member Field e.g. pm_djp</li>
+    </ul>
+  </li>
+  <li>Only date or numeric fields from Pe_mem can be entered as a member field. If you wish
+to use a field from any other record simply select this field on a previous line and
+refer to it by the line number in this function.</li>
+  <li>Dates must be entered in the format “YYYYMMDD” including the quote marks.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>max(1500,@5) 
+max(pm_djp,pm_djla) 
+max("19950101",pm_djp) 
+</code></pre>
+
+<h2><a name="11"></a>min(fld1,fld2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the min function to calculate the lower of two selected fields.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>min(fld1,fld2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>fld1 - is the first field to be compared.</li>
+  <li>fld2 - is the second field to be compared.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>fld1 and fld2 can be entered in several formats:
+    <ul>
+      <li>Number e.g. 1, 2.345, 6308</li>
+      <li>Date e.g. “19970101”</li>
+      <li>Previous Line e.g. @2</li>
+      <li>Member Field e.g. pm_djp</li>
+    </ul>
+  </li>
+  <li>Only date or numeric fields from Pe_mem can be entered as a member field. If you wish
+to use a field from any other record simply select this field on a previous line and
+refer to it by the line number in this function.</li>
+  <li>Dates must be entered in the format “YYYYMMDD” including the quote marks.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>min(1500,@5) 
+min(pm_djp,pm_djla) 
+min("19950101",pm_djp) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

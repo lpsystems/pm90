@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Status Codes</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085359" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Status Codes</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Adding Status Details">Adding Status Details</a></li>
+  <li><a href="#Query/Search For Status Details">Query / Search for Status Details</a></li>
+  <li><a href="#Viewing Status Details">Viewing Status Details</a></li>
+  <li><a href="#Updating Status Details">Updating Status Details</a></li>
+  <li><a href="#Deleting Status Details">Deleting Status Details</a></li>
+  <li><a href="#Printing Status Details">Printing Status Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.</p>
+
+  <p>The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.</p>
+
+  <p>If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This allows you to define status codes which can then be used to assign to
+individual member records on Pension Master.</p>
+
+<p>A status code is a way of telling Pension Master what kind of member of a pension
+scheme a member record is e.g. Active, Active Paying AVCs, Deferred Pensioner or Pensioner.</p>
+
+<p>This allows you to:</p>
+
+<ul>
+  <li>Define as many status codes as you require to suit your individual pension scheme needs.</li>
+  <li>Assign a Status Type to each Status Code so as to indicate whether the current Status
+Code is Active, Deferred, Leaver, Death, Pensioner or Widower. This can then be used
+in reports and other parts of Pension Master, for example, to run a report only for
+active members of the scheme.</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+  <p>Pension Master can be delivered with a standard set of status codes pre-installed. 
+You can customise these as you wish. We would, however recommend the following
+conventions:</p>
+
+  <ul>
+    <li><strong>0-9</strong> - Active Members</li>
+    <li><strong>10-19</strong> - Deferred Pensioners</li>
+    <li><strong>20-29</strong> - Pensioners</li>
+    <li><strong>30-39</strong> - Deaths</li>
+    <li><strong>40-49</strong> - Leavers</li>
+    <li><strong>&gt;49</strong> - Any other ad-hoc status codes</li>
+  </ul>
+</div>
+
+<p>The following options and screen appear when this program is selected.</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stat1.jpg" alt="Status File Screen" /></p>
+
+  <p>Status File Screen</p>
+</div>
+
+<h2><a name="Adding Status Details"></a>Adding Status Details</h2>
+
+<p>Click ‘Add’.</p>
+
+<p><a name="ps_status"></a><strong>STATUS CODE</strong> - The status code entered cannot already
+exist on the status file. If the code entered already exists on the status file an
+error message is displayed and a status code that does not exist on the file should
+be re-entered.</p>
+
+<p><a name="ps_desc"></a><strong>STATUS DESCRIPTION</strong> - The status description must be entered.
+If the status description is not entered an error message will be displayed, and a
+status description should be entered.</p>
+
+<p><a name="ps_type"></a><strong>STATUS TYPE</strong> - The status type must be entered. Select the Status Type from the drop-down list:</p>
+
+<ul>
+  <li>Active</li>
+  <li>Death</li>
+  <li>Deferred</li>
+  <li>Leaver</li>
+  <li>Pensioner</li>
+  <li>Pensioner - No Liability</li>
+  <li>Risk Only</li>
+  <li>Widower</li>
+</ul>
+
+<p><strong>LIFE ASSURANCE ONLY</strong> - This field will default to ‘No’ for all status codes,
+but can be set to ‘Yes’ for those status codes that are for life assurance only type
+benefits. This will then be used within the Pensions Board Fee Invoice Report to determine
+which active members are pension members (and not just life assurance only members)
+and hence should be included in the Pensions Board Fee Invoice calculations. It is
+also used on the Underwriting/Life Assurance Report to determine which members to
+total up salary roll for when working out the total funding amount and the total employee
+contributions due.</p>
+
+<p>If the status type entered is not one of these, an error message is displayed to the
+screen and you will be requested to re-enter a valid status type. When a valid status
+type is entered, the description of the type is automatically displayed to the screen,
+e.g. if you entered ‘A’ as the status type, the description ‘Active’ would automatically
+appear on the screen next to the status type field.</p>
+
+<p>You can click ‘OK’ to save the status details, or click ‘Cancel’ to exit the add option
+without saving the entered details.</p>
+
+<h2><a name="Query/Search For Status Details"></a><a name="query"></a>Query/Search For Status Details</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stat2.jpg" alt="Query Status Details Screen" /></p>
+
+  <p>Query Status Details Screen</p>
+</div>
+
+<p>You may select records using the Status Code or Status Type fields. You may also use
+any combination (or even partial combination) of these fields in order to select the
+required status record(s).</p>
+
+<p>If you are unsure of the status code to query, click the lookup icon to see a list
+of the status codes.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Viewing Status Details"></a>Viewing Status Details</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Updating Status Details"></a>Updating Status Details</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The status code cannot be changed as this is a key to the status file. When the changes
+have been made to the status description click ‘OK’ to save the changes to file, or
+click ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Deleting Status Details"></a>Deleting Status Details</h2>
+
+<p>Before Deleting, a record must be selected through the query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You cannot delete a status code that is currently referenced to by some or all
+of your member records.</p>
+
+  <p>If you try to do this, an error message will be displayed and you will be returned
+to the main menu without deleting the status code.</p>
+</div>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected a window will appear with the options ‘Yes’ and ‘No’.</p>
+
+<p>If you do not wish to delete the record click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’. The following menu is displayed</p>
+
+<p>Another window will appear asking if you are sure.</p>
+
+<p>If you do not wish to delete the record click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’. The record is deleted and the program
+returns to the main menu.</p>
+
+<h2><a name="Printing Status Details"></a><a name="print"></a>Printing Status Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stat3.jpg" alt="Print Options Screen 1" /></p>
+
+  <p>Print Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stat4.jpg" alt="Print Options Screen 2" /></p>
+
+  <p>Print Options Screen 2</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using the Status Code field.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:59.</p>
+      </div>
+    </div>
+  </body>
+</html>

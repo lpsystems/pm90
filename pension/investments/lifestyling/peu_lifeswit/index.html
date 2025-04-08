@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Lifestyle Switches</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085401" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Lifestyle Switches</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Create Lifestyle Switches">Create Lifestyle Switches</a></li>
+  <li><a href="#Undo">Undo a Lifestyle Switch</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program creates switches for members, as selected by the user, who have a lifestyle event on the switch date entered by the user, where there are units present in the investment funds. The transaction type codes used for lifestyle switches are LIFEIN for switching in and LIFEOUT for switching out. There are two types of Lifestyles either ‘Event’ or ‘Continuous’. An event is actually when the member moves to the next stage of the lifestyle i.e. 2 years to retirement. A continuous type is where the switch can be carry out at all time.   The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Proceed</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_lifeswit1.jpg" alt="Selection Criteria Screen" /></p>
+
+  <p>Selection Criteria Screen</p>
+</div>
+
+<h2><a name="Create Lifestyle Switches"></a>Create Lifestyle Switches</h2>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_comany"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_group"></a>
+<a name="psft_code"></a>
+<a name="pm_member"></a><strong>SELECTION CRITERIA</strong> - Select the group of members you require to create lifestyle switches for by using the Scheme, Company, Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the selection criteria have been entered click ‘OK’ to proceed.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the lifestyle switches program.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_lifeswit2.jpg" alt="Switch Date" /></p>
+
+  <p>Switch Date</p>
+</div>
+
+<p><a name="p_type"></a><strong>TYPE</strong> - Select either Event or Continuous Fund Rebalancing</p>
+
+<p><a name="p_basis"></a><strong>BASIS</strong> - Select either value or unit.</p>
+
+<p><a name="p_date"></a><strong>SWITCH DATE</strong> - Enter the switch date for the lifestyle switches you wish to create.</p>
+
+<p><a name="p_effdate"></a><strong>UNIT PRICE EFFECTIVE DATE</strong> - Enter the date.</p>
+
+<p>When the switch date has been entered, click on ‘OK’ to proceed. You can click on ‘Cancel’ to return to the main menu and abort the lifestyle switches program. The program will now check through each members data and if any warnings are found then they will be reported out to Excel. Examples of warnings are listed below:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Warnings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">No lifestyle matrix entry available for matrix code XXXX and start age nn.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member has a blank DOB. Cannot calculate age for age related lifestyle event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Member has a blank TRD. Cannot calculate term for term related lifestyle event.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">No lifestyle matrix entry available for matrix code XXXX and term to TRD nn.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>The lifestyle switches report that gets produced, will list out any members, from within the selection criteria, who have a lifestyle event on the date entered. The investment setup, for the lifestyle event, will be reported out along with the date that the event will first occur on. All the lifestyle matrices used within the investment setup will also be reported out showing the investment split.</p>
+
+<p>Once the report has been produced, a message will appear to the screen asking the user “Do you wish to set up switches for the selected members who have a lifestyle event occurring on the entered switch date?”. Click on ‘Yes’ to continue and create the switches, or click ‘No’ to return to the main menu.</p>
+
+<p>If any members are found, within the selection criteria, who have a lifestyle event but who don’t have any units at that time to be switched then a report will be produced listing these members.</p>
+
+<p>Also, a switch report will be produced that lists out any members found within the selectin criteria, who have units to switch. The switch report will display all the unit amounts for the LIFEIN and LIFEOUT parts of each member’s switch.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>To reduce the size of the LIFEIN and LIFEOUT parts of the switch, the program will just create amounts based on the differences between the two. For example, if a member is changing from 50% into Fund A and 50% into Fund B, to 55% into Fund A and 45% into Fund B, then rather than showing 50% going out of Fund A and 55% coming into Fund A, it’ll just show the 5% coming in.</p>
+</div>
+
+<p><a name="reports"></a>The following popup window is now displayed to the screen which allows the user to choose which reports they wish to view.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_lifeswit3.jpg" alt="View/Print Report Selection Screen" /></p>
+
+  <p>View/Print Report Selection Screen</p>
+</div>
+
+<p>On clicking ‘OK’ in the ‘View/Print Report Selection’ screen, any reports the user has selected to view will be displayed out to Excel. Once the report(s) have been viewed the user will then be asked ‘Do you wish to create these switches?’. On clicking ‘Yes’, the switches will be created directly onto the Investment History screen for the selected members. Clicking ‘No’, will return the user to the main menu.</p>
+
+<h2><a name="Undo"></a>Undo a Lifestyle Switch</h2>
+
+<p>There is no Undo option available in the Lifestyle Switches program, so if a switch needs to be removed then the user must use the Undo options in the Post Units and Contribution Allocation programs.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:01.</p>
+      </div>
+    </div>
+  </body>
+</html>

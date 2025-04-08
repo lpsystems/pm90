@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Section 148 Orders</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085407" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Section 148 Orders</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A Section 148 Order Record">Add A Section 148 Order Record</a></li>
+  <li><a href="#Query/Search For A Section 148 Order Record">Query/Search For A Section 148 Order Record</a></li>
+  <li><a href="#Viewing Section 148 Order Records">Viewing Section 148 Order Records</a></li>
+  <li><a href="#Update Section 148 Order Records">Update Section 148 Order Records</a></li>
+  <li><a href="#Printing Section 148 Order Details">Printing Section 148 Order Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users who belong to a <a href="/pension/system_administration/gn_user_groups/">User Group</a> that has the correct permission can access this option.</p>
+
+  <p>If you do not have permission, you will not be permitted access to this option.</p>
+</div>
+
+<p>This program allows maintenance of the Section 148 Orders Table. These are the GMP
+revaluation factors formerly know as Section 21 Orders and apply to UK schemes only.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_gmpf1.jpg" alt="Section 148 Orders Screen" /></p>
+
+  <p>Section 148 Orders Screen</p>
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <p>The deletion of Section 148 Orders is not allowed because one set of orders per
+year are required for GMP calculations, and the absence of any of these records would
+cause erroneous results in GMP calculations.</p>
+</div>
+
+<h2><a name="Add A Section 148 Order Record"></a>Add A Section 148 Order Record</h2>
+
+<p>Click ‘Add’.</p>
+
+<p><a name="pgv_year"></a><strong>YEAR</strong> - A value must be the year entered may not already
+exist on the Section 148 Orders file as this is a key to the file. The year entered
+should correspond with the year of the 5<sup>th</sup> April in the tax year e.g. for
+the tax year 92/93 enter the year 1993 as the 5<sup>th</sup> April in that tax year
+is 5/4/93.</p>
+
+<p><a name="pgv_desc"></a><strong>DESCRIPTION</strong> - Enter a description for the Orders.</p>
+
+<p><a name="pgv_estimated"></a><strong>ESTIMATED</strong> - Indicates whether
+the displayed year’s Section 148 Orders are just estimates or actually the finalised
+figures. If you run a calculation in Pension Master that uses estimated Section 148
+Orders, a warning will be writtenm to the Quotation Warnings file at that time.</p>
+
+<p><a name="pgv_79_fc"></a><a name="pgv_80_fc"></a><a name="pgv_81_fc"></a><a name="pgv_82_fc"></a><a name="pgv_83_fc"></a><a name="pgv_84_fc"></a><a name="pgv_85_fc"></a><a name="pgv_86_fc"></a><a name="pgv_87_fc"></a><a name="pgv_88_fc"></a><a name="pgv_89_fc"></a><a name="pgv_90_fc"></a><a name="pgv_91_fc"></a><a name="pgv_92_fc"></a><a name="pgv_93_fc"></a><a name="pgv_94_fc"></a><a name="pgv_95_fc"></a><a name="pgv_96_fc"></a><a name="pgv_97_fc"></a><strong>GMP
+FACTORS</strong> - Enter the Section 148 Orders for the year.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If entering factors for the year 1992/93 the Section 148 Order for 1993 will default
+to 1 and no further factors may be entered.</p>
+</div>
+
+<p>When the Section 148 Order details have been entered click on ‘OK’ to save the details
+to file. You can click on ‘Cancel’ at any stage to exit the add option without saving
+the entered Section 148 Order details.</p>
+
+<h2><a name="Query/Search For A Section 148 Order Record"></a><a name="query"></a>Query/Search For A Section 148 Order Record</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_gmpf2.jpg" alt="Section 148 Orders Query Selection Screen" /></p>
+
+  <p>Section 148 Orders Query Selection Screen</p>
+</div>
+
+<p>You may select records using the Section 148 Order Year.</p>
+
+<p>Once you have entered your selection criteria, click on ‘OK’ to proceed and retrieve
+the records from the database or click on ‘Cancel’ to abort the selection and return
+to the Section 148 Orders main menu.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Viewing Section 148 Order Records"></a>Viewing Section 148 Order Records</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Update Section 148 Order Records"></a>Update Section 148 Order Records</h2>
+
+<p>Before Updating, a record must be selected through the query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The Section 148 Order Year cannot be changed as this is a key to the file. When the
+changes have been made to the record click on ‘OK’ to save the changes to file, or
+click on ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Printing Section 148 Order Details"></a><a name="report"></a>Printing Section 148 Order Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been queried in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_gmpf3.jpg" alt="Print Options Screen 1" /></p>
+
+  <p>Print Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_gmpf4.jpg" alt="Print Options Screen 2" /></p>
+
+  <p>Print Options Screen 2</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected record.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using the Section 148 Order Year.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:07.</p>
+      </div>
+    </div>
+  </body>
+</html>

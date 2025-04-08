@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Factors</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Factors</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a Factor Table">Add a Factor Table</a></li>
+  <li><a href="#Query/Search For A Factor Table">Query/Search for a Factor Table</a></li>
+  <li><a href="#Viewing Factor Tables">Viewing Factor Tables</a></li>
+  <li><a href="#Updating Factor Tables">Updating Factor Tables</a></li>
+  <li><a href="#Deleting Factor Tables">Deleting Factor Tables</a></li>
+  <li><a href="#Printing Factor Tables">Printing Factor Tables</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users who belong to a <a href="/pension/system_administration/gn_user_groups/">User Group</a> that has the correct permission can access this option.</p>
+
+  <p>If you do not have permission, you will not be permitted access to this option.</p>
+</div>
+
+<p>This module allows you to define factor tables for use in your benefit calculation
+formulae. These are made up as follows:</p>
+
+<ul>
+  <li>Header information which holds details of the factor table code and a brief description of the factor table.</li>
+  <li>Sets of rates for various indices, one rate for each index.</li>
+</ul>
+
+<p>The details can then be accessed during formulae calculation and can be used to store
+details of both actuarial (age and sex related) and term (period and sex) related
+factor tables. These could represent, for example, transfer value factors for a defined
+benefit scheme, or fund projection factors for a defined contribution scheme.</p>
+
+<p>As you might expect, actuarial factors are indexed by age and sex and term related
+factor tables are indexed by term (in years) and sex.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_fac1.jpg" alt="Factors Screen" /></p>
+
+  <p>Factors Screen</p>
+</div>
+
+<h2><a name="Add a Factor Table"></a>Add a Factor Table</h2>
+
+<p>Click ‘Add’.</p>
+
+<p><a name="pfac_code"></a><strong>FACTOR TABLE CODE</strong> - this is the code by which you can
+refer to this factor table in your formulae and must be entered. If the code already
+exists on the Factor Table File an error message will be displayed and you will be
+required to enter a unique factor code. Enter the code as appropriate. You can use
+up to 8 characters for your code. Spaces are not allowed in Factor Table Codes as
+these would be interpreted incorrectly in any formulae using these factors, and only
+uppercase is allowed.</p>
+
+<p>You should note that where the factor table is not defined as unisex, you will be
+allowed to enter two separate factor tables under the same code, one for males and
+one for females.</p>
+
+<p><a name="pfac_desc"></a><strong>DESCRIPTION</strong> - A description for your factor table must
+be entered. If a description is not entered an error message will be displayed and
+you will be required to enter a description for your factor table. The description
+will be used in the lookups, which are brought up when you click the lookup icon, in other
+parts of the system to identify each factor table, so we suggest you choose a meaningful
+description e.g. <em>Immediate Annuities 9% Int, 0% Esc.</em></p>
+
+<p><a name="pfac_type"></a><strong>TYPE</strong> - Enter a factor table type for your factor table.
+You must enter a valid option here. The valid options are:</p>
+
+<ul>
+  <li><strong>A</strong> - Actuarial</li>
+  <li><strong>S</strong> - System</li>
+  <li><strong>T</strong> - Term Related</li>
+</ul>
+
+<p>If any other value is entered, an error message will be displayed and the table type
+should be re-entered.</p>
+
+<p><a name="pfac_sex"></a><strong>SEX</strong> - Valid entries for this field are:</p>
+
+<ul>
+  <li><strong>M</strong> - Male</li>
+  <li><strong>F</strong> - Female</li>
+  <li><strong>U</strong> - Unisex</li>
+</ul>
+
+<p>If any other value is entered, an error message will be displayed and sex should be
+re-entered.</p>
+
+<p><a name="pfac_date"></a><strong>DATE</strong> - Enter a factor table date for your factor table.
+This should be entered either in the format “dd/mm/yy” or “dd/mm/yyyy”. This date
+will allow you to store historical factor tables. In formulae a factor code as of
+a certain date may be used.</p>
+
+<p><a name="range_from"></a><strong>RANGE FROM</strong> - Enter the lower range limit you wish
+your table to apply from e.g. if you wish to enter a table for ages 18-65, enter 18
+here. This value must be entered and must be greater than 0. This value, combined
+with the RANGE TO field will be used to set up the indices in the lower portion
+of the screen so that you can input valid factors against each index.</p>
+
+<p><a name="range_to"></a><strong>RANGE TO</strong> - Enter the upper range limit you wish your
+table to apply to e.g. if you wish to enter a table for ages 18-65, enter 65 here.
+This value must be entered and must be no less that the value you entered in the RANGE FROM
+field. This value, combined with the RANGE FROM field will be used to set up the indices
+in the lower portion of the screen so that you can input valid factors against each
+index.</p>
+
+<p><strong>FACTOR</strong> - Enter the value of the factor for each index. The factors will initially
+all default to 0 and can be overtyped with the appropriate values.</p>
+
+<p>When the Factor Table details have been entered click ‘OK’ to save Factor Table details.
+You can click ‘Cancel’ at any stage to exit the add option without saving the entered
+Factor table details.</p>
+
+<p>If, at this stage, any of your factors are still equal to 0, an error message is displayed
+warning you of this and then the following message appears at the top of the screen:</p>
+
+<div class="well">
+
+  <p>Are You Sure You Want To Save The Factor Table (Y/N)?</p>
+
+</div>
+
+<p>Enter Y if you wish to continue and save the factor table details or N if you wish
+to continue editing the factors prior to saving them.</p>
+
+<p>Factor Tables can also be added or update via the <a href="/pension/updates/import_data/pem_dload/">General Data Load</a> progam and details of the templates avilable can be found there.</p>
+
+<h2><a name="Query/Search For A Factor Table"></a><a name="query"></a>Query/Search</h2>
+
+<p>For A Factor Table</p>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_fac2.jpg" alt="Factor Table Selection Screen" /></p>
+
+  <p>Factor Table Selection Screen</p>
+</div>
+
+<p>You may select records using the Table Code, Type or Sex fields. You may also use
+any combination (or even partial combination) of these fields in order to select the
+required factor table record(s).</p>
+
+<p>If you are unsure of the factor table code to query, click the lookup icon to see a
+list of the factor tables. The Table Type and
+Sex fields will automatically be filled in based on the Factor Table Code chosen.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the Factors main menu.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Viewing Factor Tables"></a>Viewing Factor Tables</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Updating Factor Tables"></a>Updating Factor Tables</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as system administrator status in <a href="/pension/system_administration/gn_user/">Users</a> may
+update system factor tables.</p>
+
+  <p>If you do not have system administrator status, you will not be permitted access
+to this option for system factor tables.</p>
+</div>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The Factor table code cannot be changed as this is one of the fields which is a key
+to the factor table file.</p>
+
+<p>Changing the date at this point, will result in a new factor table being created for
+this date. Please use the delete option if you do not require the amended factor table.</p>
+
+<p>If you wish to add or delete factors for a certain range, then amend the RANGE FROM
+and/or RANGE TO fields to reflect the new factor table range. The factors themselves
+will be added to or deleted as appropriate. If new factors are added in this way,
+they will initially default to 0 and should be overtyped with their new values.</p>
+
+<p>When changes have been made to the record click ‘OK’ to save the changes to file,
+or click ‘Cancel’ to exit the update option.</p>
+
+<h2><a name="Deleting Factor Tables"></a>Deleting Factor Tables</h2>
+
+<p>A record must be selected through the Query option before a Factor can be deleted.</p>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected the following window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_fac_del.jpg" alt="Delete Factors Screen" /></p>
+
+  <p>Delete Factors Screen</p>
+</div>
+
+<p>Select one of the following options:</p>
+
+<ul>
+  <li>Delete all Factor Tables for this code</li>
+  <li>Delete all Factor Tables for this code and type</li>
+  <li>Delete all Factor Tables for this code, type and sex</li>
+  <li>Delete current Factor Table</li>
+</ul>
+
+<p>You will then be prompted to confirm the deletion of the Factor Table.</p>
+
+<h2><a name="print"></a><a name="Printing Factor Tables"></a><a name="report"></a>Printing Factor Tables</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_fac5.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<ul>
+  <li><strong>Current screen</strong> - Prints the current screen record.</li>
+  <li><strong>List of factor tables</strong> - Prints a list of all factor tables that meet the selection criteria.</li>
+</ul>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

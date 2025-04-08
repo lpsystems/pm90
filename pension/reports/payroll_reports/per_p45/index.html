@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>P45 Report</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085403" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>P45 Report</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Report">Run A Report</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows the user to produce a P45 for a selection of members. P45 information is extracted from the member’s records and used in the P45, along with any data entered into the P45 Details screen.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_p451.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="Run A Report"></a>Run A Report</h2>
+
+<p>Click ‘Run’.</p>
+
+<p><a name="pm_scheme"></a>
+<a name="pm_comany"></a>
+<a name="pm_category"></a>
+<a name="pm_status"></a>
+<a name="psft_group"></a>
+<a name="psft_code"></a>
+<a name="pm_member"></a><strong>SELECTION CRITERIA</strong> - Select the group of members you require to produce this report for using the  Scheme, Company,
+Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>). When the selection
+criteria has been entered click ‘OK’ to proceed. The scheme code must be entered.</p>
+
+<p>You can click ‘Cancel’ to return to the main menu and abort the P45 report.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_p452.jpg" alt="P45 Details Screen" /></p>
+
+  <p>P45 Details Screen</p>
+</div>
+
+<p><a name="pys_dist"></a>
+<a name="pys_ref"></a><strong>EMPLOYER PAYE REF</strong> - These fields are populated with the Tax Office Number/Reference held for the scheme in Payroll Schemes - Scheme Details screen.</p>
+
+<p>Once the Employer PAYE Ref has been entered, click on ‘OK’ to proceed to the bottom part of the screen.</p>
+
+<p>If there are no members found for the selection criteria entered you will get the warning</p>
+
+<div class="well">
+
+  <p>There are no records that match the selection criteria.</p>
+
+</div>
+
+<p>For each of the members selected, a check will be made to ensure that the following information is held for them. If anything is missing then a Missing Data report will be produced. If the report is produced, then it is advised that any missing data is completed to ensure the P45 is created as complete as possible.</p>
+
+<ul>
+  <li>NI Number</li>
+  <li>Sex</li>
+  <li>Date of Birth</li>
+  <li>Title, Forename and Surname</li>
+  <li>Current member address lines 1 to 5, and postcode</li>
+  <li>Scheme address lines 1 to 4, and postcode</li>
+</ul>
+
+<p><a name="pm_member"></a><strong>MEMBER</strong> - This is populated with the member number. This field cannot be updated.</p>
+
+<p><a name="p_fullname"></a><strong>NAME</strong> - This is populated with the member’s fullname made up from title, forename and surname. This field cannot be updated.</p>
+
+<p><a name="pps_dt_cess"></a><strong>LEAVING DATE</strong> - This is populated with the member’s Date Finished Pension from the <a href="/payroll/maintenance/py_mem/#pps_dt_cess">Payroll Members - Pension Details screen</a>/<a href="/pension/file_maintenance/pem_mem/#pps_dt_cess">member’s Cessation Date from the Members - Pensioner screen</a>.</p>
+
+<p><a name="pps_tax"></a><strong>TAX CODE</strong> - This is populated with the member’s Tax Code from the <a href="/payroll/maintenance/py_mem/#pps_tax">Payroll Members - Pension Details screen</a>.</p>
+
+<p><a name="pps_wkmth"></a><strong>WK1/MTH1</strong> - This is populated with the member’s Week 1/Month 1 Basis from the <a href="/payroll/maintenance/py_mem/#pps_wkmth">Payroll Members - Pension Details screen</a>.</p>
+
+<p><a name="pyh_week"></a><strong>WEEK NUMBER</strong> - This is populated with the member’s Tax Week for the latest payment made from the <a href="/payroll/maintenance/py_mem/#pyh_week">Payroll Members - Current History Details screen</a>. This field only needs to be populated when the member is paid on a cumulative basis.</p>
+
+<p><a name="pyh_month"></a><strong>MONTH NUMBER</strong> - This is populated with the member’s Tax Month for the latest payment made from the <a href="/payroll/maintenance/py_mem/#pyh_month">Payroll Members - Current History Details screen</a>. This field only needs to be populated when the member is paid on a cumulative basis.</p>
+
+<p><a name="pytd_tot_ytd"></a><strong>TOTAL PAY TO DATE</strong> - This is populated with the member’s Total Gross Pay - Tax Year Values To Date from the <a href="/payroll/maintenance/py_mem/#pytd_tot_ytd">Payroll Members - Year To Date Details screen</a>. This field only needs to be populated when the member is paid on a cumulative basis.</p>
+
+<p><a name="pytd_tax_ytd"></a><strong>TOTAL TAX TO DATE</strong> - This is populated with the member’s Tax Paid - Tax Year Values To Date from the <a href="/payroll/maintenance/py_mem/#pytd_tax_ytd">Payroll Members - Year To Date Details screen</a>. This field only needs to be populated when the member is paid on a cumulative basis.</p>
+
+<p><a name="pytd_tot_emp"></a><strong>TOTAL PAY IN THIS EMPLOYMENT</strong> - This is populated with the member’s Total Gross Pay - Current Employment from the <a href="/payroll/maintenance/py_mem/#pytd_tot_emp">Payroll Members - Year To Date Details screen</a>. This field only needs to be populated when the member is paid on a week1/month1 basis.</p>
+
+<p><a name="pytd_tax_emp"></a><strong>TOTAL TAX IN THIS EMPLOYMENT</strong> - This is populated with the member’s Tax Paid - Current Employment from the <a href="/payroll/maintenance/py_mem/#pytd_tax_emp">Payroll Members - Year To Date Details screen</a>. This field only needs to be populated when the member is paid on a week1/month1 basis.</p>
+
+<p><a name="p_works_number"></a><strong>WORKS NUMBER</strong> - This is populated with the member’s Payroll Number from the <a href="/payroll/maintenance/py_mem/#pps_pay_num">Payroll Members - Personal Details screen</a>/<a href="/pension/file_maintenance/pem_mem/#pps_pay_num">Members - Pensioner screen</a>.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Details in this screen can be deleted or overwritten. If fields are blank on the screen then they will be blank in the report. All values displayed in this screen will be printed out to the P45 report. No values will be written back to Pension Master.</p>
+</div>
+
+<p>Once the report has been produced, a message will appear to the screen stating that the report has completed successfully.</p>
+
+<div class="well">
+
+  <p>Report successfully completed.</p>
+
+</div>
+
+<p>Click ‘OK’ to return to the report menu.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing From Payroll Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:03.</p>
+      </div>
+    </div>
+  </body>
+</html>

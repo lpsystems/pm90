@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>$table_code(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the $ symbol to refer to a particular actuarial factor table in your formula.
+This looks up the factor table at age nearest birthday. The argument is used to find
+the factor table that was effective at that date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>$table_code(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - is the effective date for the Factor Table. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If you are unsure of the factor table required and you have already entered the $
+part of the formula line, click the lookup icon for a list of the factor tables available.</li>
+  <li>The member’s age and sex determine which factor is to be applied. A member’s age is
+calculated by subtracting his/her date of birth from the quotation date (which is
+entered by the user, and which is defaulted to today’s date).</li>
+  <li>This table lookup interpolates between two factors if a member’s birthday does not
+fall exactly on the quotation date. e.g. $ER000 will extract a certain factor from
+table ER000, depending on a member’s age and sex.</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent actuarial factor.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>$00001(TODAY)
+$00001(20020101)
+</code></pre>
+
+<p>The first example refers to factor table 00001. The factor table used will be the one dated on or before today’s date.</p>
+
+<p>The second example refers to factor table 00001. The factor table used will be the one dated on or before 01/01/2002.</p>
+
+<h2><a name="02"></a>$$table_code(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the $$ symbol to refer to a particular actuarial factor table in your formula.
+This looks up the factor table at age next birthday. The argument is used to find
+the factor table that was effective at that date.</p>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - is the effective date for the Factor Table. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>$$table_code(date) 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>If you are unsure of the factor table require and you have already entered the $$
+part of the formula line, click the lookup icon to see a list of factor tables.</li>
+  <li>The member’s age and sex determine which factor is to be applied. A member’s age is
+calculated by subtracting his/her date of birth from the quotation date (which is
+entered by the user, and which is defaulted to today’s date).</li>
+  <li>This table lookup extracts the factor corresponding to member’s age next birthday
+( if a member’s age = 30.5 then the factor for age 31 is returned ).</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent actuarial factor.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>$$00001(TODAY)
+$$00001(20020101)
+</code></pre>
+
+<p>The first example refers to factor table 00001. The factor table used will be the one dated on or before today’s date.</p>
+
+<p>The second example refers to factor table 00001. The factor table used will be the one dated on or before 01/01/2002.</p>
+
+<h2><a name="03"></a>:table_code(@n,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the : symbol to refer to a particular term related factor table in your formula.
+This looks up the factor table at nearest term. The second argument is used to find
+the factor table that was effective at that date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>:table_code(@n,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>@ - is the symbol “@”. This is used to denote the start of the line number you wish to refer to in the function argument.</li>
+  <li>n - is a valid formula line number which equates to the term you wish to look your term related factor at.</li>
+  <li>date - is the effective date. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The member’s sex and relevant term determines which factor is to be applied.</li>
+  <li>If you are unsure of the factor table required and you have already entered the :
+part of the formula line, click the lookup icon for a list of factor tables.</li>
+  <li>This table lookup interpolates between two factors if a member’s term does not exactly match a full year.</li>
+  <li>The “@” symbol is optional but we would recommend that you use it as it makes the
+formula more readable and immediately indicates to anyone looking at your formula
+that the number in the function argument refers to a formula line number and not a
+constant number.</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent term related factor.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>:00001(@1,TODAY)
+:00001(@1,20001231)
+</code></pre>
+
+<p>The first example refers to term related factor table 00001 which is to be looked up
+at a term equal to the result of line 1 in the formula. The factor table used will
+be the one dated on or before todays date.</p>
+
+<p>The second example refers to term related factor table 00001 which is to be looked
+up at a term equal to the result of line 1 in the formula. The factor table used will
+be the one dated on or before 31/12/2000.</p>
+
+<h2><a name="04"></a>::table_code(@n,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the :: symbol to refer to a particular term related factor table in your formula.
+This looks up the factor table at the highest term to retirement. The second argument
+is used to find the factor table that was effective at that date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>::table_code(@n,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>@ - is the symbol “@”. This is used to denote the start of the line number you wish to refer to in the function argument.</li>
+  <li>n - is a valid formula line number which equates to the term you wish to look your term related factor at.</li>
+  <li>date - is the effective date. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The member’s sex and relevant term determines which factor is to be applied.</li>
+  <li>If you are unsure of the factor table required and you have already entered the ::
+part of the formula line, click the lookup icon for a list of factor tables.</li>
+  <li>This table lookup extracts the factor corresponding to the higher term to retirement
+(if a member’s term to retirement = 30.5 then the factor for term 31 is returned ).</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent term related factor.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>:00001(@1,TODAY)
+:00001(@1,20001231)
+</code></pre>
+
+<p>The first example refers to term related factor table 00001 which is to be looked up
+at the higher term equal to the result of line 1 in the formula. The factor table
+used will be the one dated on or before todays date.</p>
+
+<p>The second example refers to term related factor table 00001 which is to be looked
+up at the higher term equal to the result of line 1 in the formula. The factor table
+used will be the one dated on or before 31/12/2000.</p>
+
+<h2><a name="05"></a>%table_code(@n,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the % symbol to refer to a particular term related factor table in your formula.
+This looks up the term using the factor.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>%table_code(@n,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>@ - is the symbol “@”. This is used to denote the start of the line number you wish to refer to in the function argument.</li>
+  <li>n - is a valid formula line number which equates to the factor you wish to look the term for.</li>
+  <li>date - is the effective date. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The member’s sex and relevant term determines which factor is to be applied.</li>
+  <li>If you are unsure of the factor table required and you have already entered the %
+part of the formula line, click the lookup icon for a list of factor tables.</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent term related factor.</li>
+</ol>
+
+<p><strong>EXAMPLE</strong></p>
+
+<pre><code>%CTALLOW(@1,TODAY)
+</code></pre>
+
+<p>This refers to term related factor table CTALLOW which is to be looked up
+at a factor equal to the result of line 1 in the formula. The factor table
+used will be the one dated on or before TODAY.</p>
+
+<h2><a name="06"></a>factor(@x,term_act_flag,@y,date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the factor function to refer to a particular term related or actuarial factor table in your formula.
+This looks up the factor table at nearest term or age nearest birthday. The fourth argument is used to find
+the factor table that was effective at that date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>factor(@x,term_act_flag,@y,date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>@ - is the symbol “@”. This is used to denote the start of the line number you wish to refer to in the function argument.</li>
+  <li>x - is a valid formula line number which equates to the factor table you wish to use to look up the factor for.</li>
+  <li>term_act_flag - takes the value of either T or A, which denotes whether the factor you wish to look up is term related or actuarial.</li>
+  <li>@ - is the symbol “@”. This is used to denote the start of the line number you wish to refer to in the function argument.</li>
+  <li>y - is a valid formula line number which equates to the term or age you wish to look your term related or actuarial factor at.</li>
+  <li>date - is the effective date. If no table exists at this date then the previous table will be used.</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The member’s sex and relevant term determines which factor is to be applied.</li>
+  <li>This table lookup interpolates between two factors, if a member’s term/age does not exactly match a full year.</li>
+  <li>The “@” symbol is optional but we would recommend that you use it as it makes the
+formula more readable and immediately indicates to anyone looking at your formula
+that the number in the function argument refers to a formula line number and not a
+constant number.</li>
+  <li>The date argument can be set to TODAY. This will then use the most recent term related/actuarial factor.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>factor(@1,T,@2,TODAY)
+factor(@1,A,@2,20001231)
+</code></pre>
+
+<p>The first example refers to the term related factor table, that it referenced on line 1 in the formula, which is to be looked up at a term equal to the result of line 2 in the formula. The factor table used will be the one dated on or before todays date.</p>
+
+<p>The second example refers to the actuarial factor table, that is referenced on line 1 in the formula, which is to be looked up at an age equal to the result of line 1 in the formula. The factor table used will be the one dated on or before 31/12/2000.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

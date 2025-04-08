@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Load Rebalance Switches</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085409" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Load Rebalance Switches</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#loaddata">Load Data</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>Rebalance switches are designed to allow the user to perform a mini lifestyle on the members investment portfolio for members whose investment set up is currently not lifestyling. This program allows the user to load data into Pension Master from an external data
+file onto the switch and investment history screens.</p>
+
+<p>The program goes through a number of checking processes. Firstly the format of the
+data is checked. If any problems are found, e.g. a date value is trying to be put into
+a decimal field, then a formatting report will be generated informing the user of
+this. If no problems are found, then the program goes on to check that the data values
+are valid, e.g. if a record is being added which holds a Scheme Code, then the Scheme
+Code must be valid. If any problems are found, then an exceptions report will be generated
+informing the user of this.</p>
+
+<p>The columns should be in the following order:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th style="text-align: left">Column</th>
+          <th style="text-align: left">Field</th>
+          <th style="text-align: left">Conditions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: left">a.</td>
+          <td style="text-align: left">Unique Identifier</td>
+          <td style="text-align: left">This column must have a label to indicate the identifier type. The column label should be on row one. If the unique identifier is Member Number, the label has to be Member Number, if it is Staff Number, the label has to be Staff Number and if it is PPS Number, the label has to be PPS Number. The column label is not case sensitive.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">b.</td>
+          <td style="text-align: left">Surname</td>
+          <td style="text-align: left">The surname and forename values in column b and column c are not mandatory. But the columns must exist.If there are values in the columns, they will be checked to ensure they match the unique identifier.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">c.</td>
+          <td style="text-align: left">Forename</td>
+          <td style="text-align: left">Linked to column b above.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">d.</td>
+          <td style="text-align: left">Switch Date</td>
+          <td style="text-align: left">The switch date should not be earlier than the most recent rebalance switch for the member.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">e.</td>
+          <td style="text-align: left">Expenses</td>
+          <td style="text-align: left">Values can only be Y or N.</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">f.</td>
+          <td style="text-align: left">Fund Codes</td>
+          <td style="text-align: left">The fund code columns must have a label on row 1 to indicate the fund code. The fund code labels must represent the fund codes on pension master and must be attached to the scheme. The fund code labels must be in upper case to reflect the fund codes on pension master. Up to 50 funds are catered for and should reside from column f on. If there is a 51st fund or more, you will be warned that the data will be will be ignored.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<ul>
+  <li>The file should only have the one header as detailed below. This header will facilitate the labelling of the columns as indicated in 2 above.</li>
+  <li>The file should have no footers.</li>
+  <li>The file should not have any blank lines.</li>
+  <li>The file should not be any larger than 32,000 rows.</li>
+</ul>
+
+<p>If all the data lines held within the data file are correct, then the user can continue and load the data into the database. If not an exception report is created and the load it abandoned. Warnings will be issued in the following circumstances but the load will be allowed to proceed:</p>
+
+<ul>
+  <li>Member has positive unposted transactions where units are null or zero.</li>
+  <li>
+    <p>Member has a lifestyling investment setup post the switch date.</p>
+  </li>
+  <li>Load Data</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/peu_rebalance_load1.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="loaddata"></a>Load Data</h2>
+
+<p>Click ‘Load Data’.</p>
+
+<p>Enter or lookup your scheme number.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/file_open.jpg" alt="" /></p>
+
+</div>
+
+<p>Then click ‘Ok’.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:09.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A Formula">Add a Formula</a></li>
+  <li><a href="#Query/Search For A Formula">Query/Search for a Formula</a></li>
+  <li><a href="#Browsing Formulae Details">Browsing Formulae Details</a></li>
+  <li><a href="#Viewing Formulae">Viewing Formulae</a></li>
+  <li><a href="#Updating Formulae">Updating Formulae</a></li>
+  <li><a href="#Deleting Formulae">Deleting Formulae</a></li>
+  <li><a href="#Bulk Copy Formulae">Bulk Copying Formulae</a></li>
+  <li><a href="#Printing Formulae">Printing Formulae</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+  <li><a href="/pension/file_maintenance/calculation_setup/gn_wiz">Formulae Wizard</a></li>
+  <li><a name="comp_func">Comparison Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#01">@ln1 ! @ln2 goto @ln3</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#02">@ln1 &lt; @ln2 goto @ln3</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#03">@ln1 = @ln2 goto @ln3</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#04">@ln1 &gt; @ln2 goto @ln3</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#05">fld ! ‘str’ goto @ln</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#06">fld = ‘str’ goto @ln</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#07">fld =&gt; ‘str’ goto @ln</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#08">fld &lt;= ‘str’ goto @ln</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#09">if(condition,@then,@else)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#10">max(fld1,fld2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form1/#11">min(fld1,fld2)</a></li>
+    </ul>
+  </li>
+  <li><a name="date_func">Date Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#01">TODAY</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#02">addday(date,num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#03">addmonth(date,num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#04">addyear(date,num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#05">cd(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#06">cm(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#07">cty(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#08">cy(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#09">date_day(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#10">date_first(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#11">date_fixed(date,day)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#12">date_last(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#13">date_month(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#14">date_next(date,month,day)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#15">date_prev(date,month,day)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#16">date_year(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#17">date_ymd(year,month,day)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#18">hm(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#19">hy(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#20">pt(date1,date2,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#21">ptratio(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#22">rm(date1,date2,r,cat_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#23">service(type,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#24">subday(date,num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#25">submonth(date,num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form2/#26">subyear(date,num)</a></li>
+    </ul>
+  </li>
+  <li><a name="factor_tables">Factor Table Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#01">$table_code(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#02">$$table_code(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#03">:table_code(@n,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#04">::table_code(@n,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#05">%table_code(@n,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form3/#06">factor(@x,term_act_flag,@y,date)</a></li>
+    </ul>
+  </li>
+  <li><a name="field_access">Field Access Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#01">addben(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#02">#additional_benefit_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#03">#adviser_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#04">#adviser_assoc_fund_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#05">#adviser_assoc_scheme_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#06">#adviser_bank_transactions_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#07">#basic_deferred_pensioner_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#86">#basic_disability_benefit_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#08">#basic_pensioner_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#09">#broker_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#10">#bulk_switch_header_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#11">#bulk_switch_member_field(bulk_id,fund_code,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#12">#bulk_switch_new_fund_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#13">#bulk_switch_old_fund_field(date,fund_code,cont_type,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#14">#care_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#15">#care_revaluation_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#16">#category_auto_enrolment_min_cont_rate_body_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#17">#category_contribution_interest_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#18">#category_forfeiture_matrix_header_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#19">#category_rate_defaults_body_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#20">#category_rate_defaults_header_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#21">#charging_unit_prices_field(fund,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#22">#cont_exp_head_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#23">#cont_exp_body_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#24">#contribution_history_field(fund_code,type,date,flag,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#25">#cont_plus_int_field(date,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#26">#cont_rate_field(date,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#27">#cont_setup_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#28">#death_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#29">#death_dep_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#30">#deferred_pension_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#31">#deferred_pension_history_totals_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#32">#deferred_pension_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#33">#dep_field(curr_flag,ben_flag,dep_flag,nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#34">#dep_trustee_field(curr_flag,ben_flag,dep_flag,nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#35">#disability_benefit_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#36">#disability_benefit_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#37">#divorce_and_spouses_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#38">#fsavc_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#39">#history_field(type,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#85">#investment_asset_mix_and_amc_field(fund_code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#40">#investment_fund_field(fund_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#41">#investment_history_field(fund_code,tran_type,date,cont_date,cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#42">#investment_setup_field(date,fund_code,cont_type,indicator)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#43">#lifestyle_header_field(matrix_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#44">#lifestyle_body_field(matrix_code,index)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#45">#member_address_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#46">#member_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#47">#member_lifetime/annual_allowance_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#48">#member_note_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#49">#member_tax_simplification_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#50">#ni_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#51">#part_time_hours_field(nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#52">#pension_history_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#53">#pension_history_totals_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#54">#pension_increase_history_field(code,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#55">#quotation_field(type,index)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#56">#quotation_header_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#57">#refund_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#58">#salary_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#59">#scheme_address_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#60">#scheme_field</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#61">#scheme_forfeiture_matrix_header_field(cont_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#62">#scheme_investment_fund_field(fund_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#63">#scheme_tax_simplification_field(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#64">#scheme_user_defined_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#65">#special_code_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#66">#status_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#67">#switch_header_field(date,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#68">#switch_new_fund_field(date_from,date_to,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#69">#switch_old_fund_field(date_from,date_to,fund_code,cont_type,bulk_id)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#70">tot_tvin(field,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#71">tot_tvout(field,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#72">#transfer_in_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#73">#transfer_out_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#74">tvin(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#75">udh(type,col,yyyymmdd,basis)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#76">udhtot(type,col,date_1,date_2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#77">unit_price(fund,basis,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#78">#unit_prices_field(fund,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#79">#user_defined_history_field(type,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#80">#user_defined_history_body_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#81">#user_defined_history_header_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#82">#user_defined_screen_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#83">#user_defined_screen_body_field(type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form4/#84">#user_defined_screen_header_field(type)</a></li>
+    </ul>
+  </li>
+  <li><a name="gmp_func">GMP Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#01">post_88_gmp_death(p,a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#02">post_88_gmp_exit(a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#03">post_88_gmp_inc(p,a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#04">post_88_gmp_npd(p,a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#05">post_88_gmp_spd(p,a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#06">post_88_gmp_calcdate(p,a,r,e,m,o)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#07">pre_88_gmp_death(p,a,r,e,m)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#08">pre_88_gmp_exit(a,r,e,m)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#09">pre_88_gmp_inc(p,a,r,e,m)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#10">pre_88_gmp_npd(p,a,r,e,m)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#11">pre_88_gmp_spd(p,a,r,e,m)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form5/#12">pre_88_gmp_calcdate(p,a,r,e,m)</a></li>
+    </ul>
+  </li>
+  <li><a name="hist_func">History Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#01">avg(field,n,fld1,fld2,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#02">avgmax(field,n1,n2,fld1,fld2,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#03">defsal(fld,date,flag)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#04">invtot(cont_type,func_type,fund,type,flag,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#05">nihist(yyyy)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#06">pmin_inttot(cont_type,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#07">unalloc</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#08">saltot(sal_scrn,col_num,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#09">tot_cont(cont_type,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form6/#10">caretot(care_code,care_col,fund,date1,date2,care_table)</a></li>
+    </ul>
+  </li>
+  <li><a name="misc_func">Miscellaneous Other Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#01">“YYYYMMDD”</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#02">‘Character String’</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#03">+ - * / ^</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#04">999 or 999.99</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#05">@line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#06">Example Formula</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#07">annuity(int_rate,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#08">cont_value</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#09">eur_to_ncu(@line_num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#10">euro_rate(currency_code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#11">format(field,Nn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#12">fund_val(fund)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#13">loop(line_ref,max_loop)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#14">mess(n)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#15">ncu_to_eur(@line_num)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#16">popup(msg_text,field_type)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#17">result</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#18">rpi(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#19">special(group,code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#20">value(uds_type, field_no)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#21">{ comment line }</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#22">smpi(date,age)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#23">internet</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#24">curformat(line_ref,Cn)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form7/#25">dateformat(line_ref,Dn)</a></li>
+    </ul>
+  </li>
+  <li><a name="rounding_func">Rounding Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#01">int @line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#02">int2 @line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#03">mod @line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#04">mod2 @line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#05">round @line_number</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form8/#06">round2 @line_number</a></li>
+    </ul>
+  </li>
+  <li><a name="stat_func">Statutory Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#01">cep</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#02">cert_amt</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#03">defreval</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#04">ir_defer_revmax(pp,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#05">ir_early_revmax(pp,date1,date2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#06">ir_norm_revmax(pp,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#07">pen_act(date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#08">pen_act_proj(reval_rate,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#09">pen_act_qservice</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#10">stat(fld1,fld2,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form9/#11">uk_revmax(pp)</a></li>
+    </ul>
+  </li>
+  <li><a name="temp_vars">Temporary Variables</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form10/#01">temp_numx</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form10/#02">temp_datex</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form10/#03">temp_textx</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form10/#04">temp_decix</a></li>
+    </ul>
+  </li>
+  <li><a name="payroll_func">Payroll Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form11/#01">#pay_elements_field(code)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form11/#02">paymem_hist(hist_fld,date)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form11/#03">#payroll_history_field(date)</a></li>
+    </ul>
+  </li>
+  <li><a name="client_func">Client Specific Functions</a>
+    <ul>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form12/#01">canada(field no.,n1,n2)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form12/#02">esb_code(date,num,screen)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form12/#03">esb_value(date,code,screen)</a></li>
+      <li><a href="/pension/file_maintenance/calculation_setup/pem_form12/#04">croda_avg(field,n,fld1,fld2)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users who belong to a <a href="/pension/system_administration/gn_user_groups/">User Group</a> that has the correct permission can access this option.</p>
+
+  <p>If you do not have permission, you will not be permitted access to this option.</p>
+</div>
+
+<p>This program allows maintenance of the Formula File, which is where you can define
+benefit calculation formulae for the current scheme. The following options and screen
+appear when this program is selected.</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Browse</li>
+  <li>Copy</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_forma.jpg" alt="Formula Details Screen" /></p>
+
+  <p>Formula Details Screen</p>
+</div>
+
+<h2><a name="Add A Formula"></a><a name="copy"></a>Add A Formula</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>You will be asked if you wish to copy an existing Formula. If you select ‘Yes’ you will be prompted to select the Formula Code of the Formula you wish to copy or select one from the lookup list.</p>
+
+<p><a name="pfh_code"></a><strong>FORMULA CODE</strong> - Enter a Formula code. The formula code
+must be entered and cannot already exist on the formula file. The code can be up to
+8 characters in length and cannot contain any embedded spaces.</p>
+
+<p><a name="pfh_desc"></a><strong>FORMULA DESCRIPTION</strong> - Enter the formula description.
+The description must be entered. If the formula description is not entered an error
+message will be displayed and you will be required to enter a description for the
+formula.</p>
+
+<p><a name="pfh_sch_code"></a><strong>SCHEME CODE</strong> - Enter a Scheme Code. The scheme code
+must be entered and must exist on the Scheme File. To get a list of the existing scheme
+codes click the lookup icon. When a valid scheme code has been entered the scheme name will
+be displayed to the screen.</p>
+
+<p><a name="pfor_formula"></a><strong>FORMULA TEXT</strong> - Enter the formula calculations. If
+information about the search functions and mathematical functions available for use
+in formulae entry is required click ‘Help’.</p>
+
+<p>For any help on entering a field access field or formula function which requires arguments,
+click on the lookup icon. The field access field or formula function wizard will appear to the
+screen. Click <a href="/pension/file_maintenance/calculation_setup/gn_wiz/">here</a> for more information on formulae wizards.</p>
+
+<p>Validation of syntax, function calls, file lookups and line accessing is carried out
+as each line of formula text is entered and an error message will be displayed if
+any incorrect information is entered. See the end of this section of the User Manual
+for a more detailed description of all the possible functions you may use in your
+formulae. The line numbers for your formula are automatically generated for you by
+Pension Master as you move around the screen.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>Each formula must have at least one ‘result’ line as this is the line that outputs
+the result of the formula calculation.
+If you omit to put a result line in your formula, an error message will be displayed
+informing you of this and if the formula is subsequently used in calculations without
+first adding a result line, it will just produce a result of 0.</p>
+</div>
+
+<p>When the formula details have been entered click ‘OK’ to save the details to the formula
+file. You can click ‘Cancel’ at any stage to exit the add option without saving the
+details.</p>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>At this point the checking for a ‘result’ line is processed, and if no ‘result’
+line exists two error messages are displayed.
+If these error messages are displayed you must go back and insert a ‘result’ line
+to avoid miscalculation of quotes.</p>
+</div>
+
+<h2><a name="Query/Search For A Formula"></a><a name="query"></a>Query/Search For A Formula</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_formc.jpg" alt="Query Formula Details Screen" /></p>
+
+  <p>Query Formula Details Screen</p>
+</div>
+
+<p>You may select records by using the Scheme Code, Category Code, Quotation Type or
+Formula Code. You may also use any combination (or even partial combination) of these
+fields in order to select the required formula records(s).</p>
+
+<p>If you are unsure of the Scheme, Category, Quotation or Formula code to use, click
+the lookup icon for a context-sensitive lookup list of the codes currently available on Pension
+Master.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the Formulae main menu.</p>
+
+<p>If any match to the selection criteria is found then the first record will be displayed
+to the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Browsing Formulae Details"></a>Browsing Formulae Details</h2>
+
+<p>Click ‘Browse’ to view details in any screen where the data does not fit on the screen.</p>
+
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data.</p>
+
+<p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
+
+<h2><a name="Viewing Formulae"></a>Viewing Formulae</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Updating Formulae"></a>Updating Formulae</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The formula code cannot be changed as this is a key to the formula file.</p>
+
+<p>When the changes have been made to the record click ‘OK’ to save the changes to file,
+or click ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Deleting Formulae"></a>Deleting Formulae</h2>
+
+<p>Before Deleting, a record must be selected through the Query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>Click ‘Delete’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You cannot delete a formula if it already exists on the category file for any quotation
+type i.e. a particular category already uses this formula.
+If you try to do this an error message will be displayed and you will be returned
+to the Formulae main menu without deleting the formula.</p>
+</div>
+
+<p>When the delete option is selected a window will appear with the options ‘Yes’ and ‘No’.</p>
+
+<p>If you do not wish to delete the record, click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’.</p>
+
+<p>Another window will now be displayed asking if you are sure.</p>
+
+<p>If you do not wish to delete the record, click ‘No’.The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record click ‘Yes’.</p>
+
+<p>The record is deleted and the program returns to the main menu.</p>
+
+<h2><a name="bulk"></a><a name="Bulk Copy Formulae"></a>Bulk Copying Formulae</h2>
+
+<p>Click ‘Copy’. The following pop-up is displayed to the screen.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_formg.jpg" alt="Bulk Copy Formula Details Screen" /></p>
+
+  <p>Bulk Copy Formula Details Screen</p>
+</div>
+
+<p>Enter the scheme code you wish to copy formulae from, and the scheme code you wish
+to copy formulae to. You can click the lookup icon to see a list of scheme codes.
+The ‘Scheme Code To’ must be different to the ‘Scheme Code From’. Once this has been
+done, the window closes. If any formulae is held against the ‘Scheme Code From’, then
+the following window will be displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_formh.jpg" alt="Bulk Copy Formula Details Screen" /></p>
+
+  <p>Bulk Copy Formula Details Screen</p>
+</div>
+<p><a name="bulkcopy"></a></p>
+
+<p>If you wish to copy any of the listed formula codes, then highlight the formula and
+click ‘Select’. An asterisk (*) will be displayed against the formula code selected.
+To de-select a formula code, then highlight the selected code and click ‘Select’.
+The asterisk will now be removed. You can use ‘All’ and ‘None’ to select either all
+or none of the formula codes listed.</p>
+
+<p>A check will always be made against the formula code and the scheme being copied into,
+to make sure that there isn’t a formula code already existing with the same name.
+If there is then the formula code you are trying to select will not be able to be
+selected. At least one of the formula codes must be selected, to allow copying to
+continue.</p>
+
+<p>Click ‘OK’ to continue copying the formula codes you have selected. Click ‘Cancel’
+to return to the main menu.</p>
+
+<h2><a name="print"></a><a name="Printing Formulae"></a>Printing Formulae</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>The following window now appears:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_formf.jpg" alt="Select Report Options Window" /></p>
+
+  <p>Select Report Options Window</p>
+</div>
+
+<p>The options are as follows:</p>
+
+<ul>
+  <li><strong>Current screen</strong> - Print off full formula details, including formula code.</li>
+  <li><strong>List of formulae</strong> - Print off list of all formulae on Pension Master, ordered by Scheme Code and Formula
+Code. For each formula currently on Pension Master this prints Formula Code, Scheme
+Code and Formula Description.</li>
+</ul>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

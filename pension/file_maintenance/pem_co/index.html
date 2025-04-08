@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Companies</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085343" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Companies</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add A Company">Add a Company</a></li>
+  <li><a href="#Query/Search For A Company">Query/Search for a Company</a></li>
+  <li><a href="#Viewing Companies">Viewing Companies</a></li>
+  <li><a href="#Updating Companies">Updating Companies</a></li>
+  <li><a href="#Deleting Companies">Deleting Companies</a></li>
+  <li><a href="#Printing Company Details">Printing Company Details</a></li>
+  <li><a href="#Instigating A Workflow Action">Instigating a Workflow Action</a></li>
+  <li><a href="#Mail Merge Company">Mail Merge Company Details</a></li>
+  <li><a href="#Exit">Exit program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users set up as Supervisor status in <a href="/pension/system_administration/gn_user/">Users</a> may
+access this program.</p>
+
+  <p>The type of access granted can be view only or full access. For the view only option,
+you will not be permitted access to any menu option that allows you to add/update/delete
+data.</p>
+
+  <p>If you do not have Supervisor status, you will not be permitted access to this
+program.</p>
+</div>
+
+<p>This program allows maintenance of the Company file. This is used to:</p>
+
+<ul>
+  <li>Set up each company/location/paypoint for your scheme. This allows you to split up
+membership of a scheme into distinct sections that the scheme sponsors will recognise,
+and can be used, for example, to group a batch of benefit statements so as to ease
+distribution.</li>
+  <li>Record details of each companies address, contact names and addresses which can be
+used to generate mail merge letters to companies within your scheme.</li>
+</ul>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Report</li>
+  <li>Letter/Cert</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co1.jpg" alt="Company Details Screen" /></p>
+
+  <p>Company Details Screen</p>
+</div>
+
+<h2><a name="Add A Company"></a>Add A Company</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>You will be asked if you wish to copy an existing Company. If you select ‘Yes’ you will be prompted to select the company code of the company you wish to copy or select one from the lookup list.</p>
+
+<p><a name="pc_scheme"></a><strong>SCHEME CODE</strong> - The scheme code must exist on the scheme
+file. To get a lookup list list of existing scheme codes click the lookup icon. When a valid
+scheme code has been entered the scheme description will be displayed, otherwise an
+error message will be displayed and the scheme code will have to be re-entered.</p>
+
+<p><a name="pc_company"></a><strong>COMPANY CODE</strong> - Enter a code for your new Company.
+The combination of scheme and company code may not already exist on the company file.
+If a valid combination is not entered an error message will be displayed and company
+code will have to be re-entered.</p>
+
+<p><a name="pc_desc"></a><strong>COMPANY NAME</strong> - Enter the name of the new Company. A value
+must be entered in this field.</p>
+
+<p><a name="pc_addr1"></a><a name="pc_addr2"></a><a name="pc_addr3"></a><a name="pc_addr4"></a><strong>COMPANY ADDRESS</strong> - Enter the address for the Company.</p>
+
+<p><a name="pc_postcode"></a><strong>POSTCODE</strong> - Enter the postcode.</p>
+
+<p><a name="pc_country"></a><strong>COUNTRY</strong> - Enter the country.</p>
+
+<p><a name="pc_language"></a><strong>LANGUAGE</strong> - Enter the language for the Company.</p>
+
+<p><a name="pc_add_language"></a><strong>ADDITIONAL LANGUAGE</strong> - Enter the other language for the Company</p>
+
+<p><a name="pc_telephone"></a><strong>TELEPHONE NUMBER</strong> - Enter the telephone number for the Company</p>
+
+<p><a name="pc_fax"></a><strong>FAX NUMBER</strong> - Enter the fax number for the Company.</p>
+
+<p><a name="pc_email"></a><strong>E-MAIL ADDRESS</strong> - Enter the E-Mail address for the Company.</p>
+
+<p><a name="pc_title"></a><a name="pc_ct_fname"></a><a name="pc_ct_lname"></a><a name="pc_title2"></a><a name="pc_ct_fname2"></a><a name="pc_ct_lname2"></a><strong>CONTACT
+DETAILS</strong> - Enter the name, surname and title of the main contacts at the Company.
+These fields are not required but can be useful as a point of reference or in a mail
+merge.</p>
+
+<p><a name="pc_econ"></a><strong>COMPANY ECON</strong> - (UK schemes) Enter the number for the Company</p>
+
+<p><a name="pc_scon"></a><strong>COMPANY SCON</strong> - (UK schemes) Enter the number for the Company</p>
+
+<p><a name="pc_account_no"></a><strong>ACCOUNT NUMBER</strong> - Enter the account number for the Company.</p>
+
+<p><a name="pc_tax_ref"></a><strong>TAX REFERENCE NUMBER</strong> - Enter the number for the Company</p>
+
+<p>When the Company details have been entered click ‘OK’ to save the details to the company
+file. You can click ‘Cancel’ at any stage to exit the add option without saving the
+details.</p>
+
+<h2><a name="Query/Search For A Company"></a><a name="query"></a>Query/Search For A Company</h2>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co2.jpg" alt="Company Query Screen" /></p>
+
+  <p>Company Query Screen</p>
+</div>
+
+<p>You may select records by using the Scheme Code or Company Code fields. You may also
+use any combination (or even partial combination) of these fields in order to select
+the required company record(s).</p>
+
+<p>If you are unsure of the code(s) to Query, click the lookup icon to see a list of codes.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the Companies main menu.</p>
+
+<h2><a name="Viewing Companies"></a>Viewing Companies</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to view the next record, and <kbd>P</kbd> to view
+the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
+an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
+an error message is displayed.</p>
+
+<h2><a name="Updating Companies"></a>Updating Companies</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The scheme and company codes cannot be changed as this is a key to the company file.
+When the changes have been made to the record click ‘OK’ to save the changes to file,
+or click ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Deleting Companies"></a>Deleting Companies</h2>
+
+<p>Before Deleting, a record must be selected through the Query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>You will not be allowed to delete companies that contain some member records and if
+you try to do so, a warning message will be displayed to the screen and you will be
+returned to the main menu.</p>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected a window will appear with the options yes or no.</p>
+
+<p>If you do not wish to delete the record click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record, click ‘Yes’.</p>
+
+<p>A new window is displayed asking if you are sure.</p>
+
+<p>If you do not wish to delete the record click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record, click ‘ Yes’. The record is deleted and the program
+returns to the main menu.</p>
+
+<h2><a name="Printing Company Details"></a><a name="report"></a>Printing Company Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co3.jpg" alt="Print Options Screen 1" /></p>
+
+  <p>Print Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co4.jpg" alt="Print Options Screen 2" /></p>
+
+  <p>Print Options Screen 2</p>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using Scheme Code and Company Code fields.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
+
+<p>Click ‘Workflow’ to instigate a workflow action for the current company. A company
+record must be selected using the <a href="/pension/file_maintenance/pem_mem/#Query/Search For A Member">Query </a>option
+before you can instigate a workflow action.</p>
+
+<p>The following pop-up window is now displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co5.jpg" alt="Workflow Instigation Popup" /></p>
+
+  <p>Workflow Instigation Popup</p>
+</div>
+
+<p>Enter the workflow code for the workflow action you wish to instigate or click the lookup icon
+for a list of workflow codes. To set
+up a workflow code if one to suit your purpose does not already exist, use the <a href="/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow
+Management</a> option.</p>
+
+<p>Click ‘OK’ to continue or click ‘Cancel’ to abort the instigation of this workflow
+action.</p>
+
+<h2><a name="Mail Merge Company"></a>Mail Merge Company Details</h2>
+
+<p>This option is used to create a mail merge file, either for a single company or a
+group of companies. The data output to the merge file is as follows:</p>
+
+<ul>
+  <li>Company Name</li>
+  <li>Contact Title</li>
+  <li>Contact Forename and Surname</li>
+  <li>Company Address</li>
+</ul>
+
+<p>Click ‘Letter/Cert’.</p>
+
+<p>If records have been selected in the program before the Letter/Cert option was selected
+the following window opens:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co7.jpg" alt="Letter/Cert Options Screen 1" /></p>
+
+  <p>Letter/Cert Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the Letter/Cert option was
+selected the following window opens:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_co8.jpg" alt="Letter/Cert Options Screen 2" /></p>
+
+  <p>Letter/Cert Options Screen 2</p>
+</div>
+
+<p>The menu options are as follows:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints all the currently selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the mail merge using the Scheme Code and Company Code fields.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the Letter/Cert option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and a new selection criteria should be entered.</p>
+
+<p>The data has now been output to the merge file and is ready to be picked up by your
+wordprocessor as part of the mail merge. Please see your System Administrator for
+the location of the merge file.</p>
+
+<p>You are now returned to the main menu.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:43.</p>
+      </div>
+    </div>
+  </body>
+</html>

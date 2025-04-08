@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Statutory Amounts</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085407" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Statutory Amounts</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add">Adding Annual Statutory Amounts</a></li>
+  <li><a href="#Query">Query Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</a></li>
+  <li><a href="#Update">Update Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</a></li>
+  <li><a href="#Delete">Delete Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</a></li>
+  <li><a href="#Report">Printing Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<div class="alert alert-danger" role="alert">
+  <p>Only users who belong to a <a href="/pension/system_administration/gn_user_groups/">User Group</a> that has the correct permission can access this option.</p>
+
+  <p>If you do not have permission, you will not be permitted access to this option.</p>
+</div>
+
+<p>This program allows users to record the main Annual Statutory Amounts:</p>
+
+<ul>
+  <li>Single Persons Basic State Pension</li>
+  <li>Married Persons Basic State Pension</li>
+  <li>New UK State Pension</li>
+  <li>Widowed Persons Basic State Pension</li>
+  <li>Disabled Persons Basic State Pension</li>
+  <li>Lower Earnings Limit</li>
+  <li>Upper Earnings Limit</li>
+  <li>Earnings Cap</li>
+  <li>Earnings Threshold</li>
+  <li>Employees Rebate %</li>
+  <li>Employers Rebate %</li>
+</ul>
+
+<p>It also allows the user to record the Tax Simplification amounts to be held at system level:</p>
+
+<ul>
+  <li>Lifetime Allowance</li>
+  <li>Annual Allowance</li>
+  <li>Annual DB Multiplier</li>
+  <li>Pension Valuation Factor</li>
+  <li>Pension In Payment Multiplier</li>
+  <li>Change in TV Value</li>
+  <li>Refund Tax Allowance</li>
+  <li>DC Lifetime Allowance</li>
+  <li>MP Annual Allowance</li>
+</ul>
+
+<p>It also allows the user to record contributions limits related to age.</p>
+
+<p>These amounts are held against the appropriate year and, in the case of the Basic
+State Pension figures, the date the Basic State Pensions became effective from. These
+amounts can be selected in formulae using the appropriate syntax.</p>
+
+<p><a name="1"></a>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li><a href="#Add">Add</a></li>
+  <li><a href="#Query">Query</a></li>
+  <li><a href="#Delete">Update</a></li>
+  <li><a href="#Delete">Delete</a></li>
+  <li><a href="#Report">Report</a></li>
+  <li><a href="#Exit">Exit</a></li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stf.jpg" alt="Annual Statutory Amounts Screen" /></p>
+
+  <p>Annual Statutory Amounts Screen</p>
+</div>
+
+<h2><a name="Add"></a>Adding Annual Statutory Amounts</h2>
+
+<p>Click ‘Add’.</p>
+
+<p>Use this option to add a new year’s Statutory Amounts.</p>
+
+<p><a name="stf_year"></a><strong>EFFECTIVE DATE</strong> - Enter the effective date. It is only
+possible to amend this in Add mode.</p>
+
+<p><a name="stf_sbsp"></a><strong>SINGLE BSP</strong> - Enter the Single Persons Basic State Pension
+for the year selected.</p>
+
+<p><a name="stf_mbsp"></a><strong>MARRIED BSP</strong> - Enter the Married Persons Basic State
+Pension for the year selected.</p>
+
+<p><a name="stf_uksp"></a><strong>NEW UK STATE PENSION</strong> - Enter the New UK State
+Pension for the year selected.</p>
+
+<p><a name="stf_wbsp"></a><strong>WIDOWED BSP</strong> - Enter the Widowed Persons Basic Pension
+for the year selected.</p>
+
+<p><a name="stf_dbsp"></a><strong>DISABLED BSP</strong> - Enter the Disabled Persons Basic Pension
+for the year selected.</p>
+
+<p><a name="stf_bsp_effdt"></a><strong>BSP EFFECTIVE DATE</strong> - Enter the date that the Basic
+State Pensions became effective from. The year of the date must match up with the
+year of the selected line.</p>
+
+<p><a name="stf_lel"></a><strong>LEL</strong> - Enter the Lower Earnings Limit for the year selected.</p>
+
+<p><a name="stf_uel"></a><strong>UEL</strong> - Enter the Upper Earnings Limit for the year selected.</p>
+
+<p><a name="stf_earncap"></a><strong>EARNINGS CAP</strong> - Enter the Earnings Cap for the year
+selected.</p>
+
+<p><a name="stf_et"></a><strong>EARNINGS THRESHOLD</strong> - Enter the earnings threshold for
+the year selected (UK only).</p>
+
+<p><a name="stf_ee_reb"></a><strong>EMPLOYEES REBATE %</strong> - Enter the employees rebate %
+for the year selected (UK only).</p>
+
+<p><a name="stf_er_reb"></a><strong>EMPLOYERS REBATE %</strong> - Enter the employers rebate %
+for the year selected (UK only).</p>
+
+<p>When the Annual Statutory Amounts have been entered click on ‘OK’ to save the figures
+to file. You can click on ‘Cancel’ at any stage to exit the update option without
+saving the entered Annual Statutory Amounts.</p>
+
+<p><a name="2"></a>You will now be sent through the second screen, where you can enter the Tax Simplification Amounts.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stf2.jpg" alt="Tax Simplification Amounts Screen" /></p>
+
+  <p>Tax Simplification Amounts Screen</p>
+</div>
+
+<p><a name="stf_life_allow"></a><strong>LIFETIME ALLOWANCE</strong> - Enter the lifetime allowance for the year selected (UK only).</p>
+
+<p><a name="stf_ann_allow"></a><strong>ANNUAL ALLOWANCE</strong> - Enter the annual allowance for the year selected (UK only).</p>
+
+<p><a name="stf_ann_mult"></a><strong>ANNUAL DB MULTIPLIER</strong> - Enter the annual DC multiplier for the year selected (UK only).</p>
+
+<p><a name="stf_pen_fact"></a><strong>PENSION VALUATION FACTOR</strong> - Enter the pension valuation factor for the year selected (UK only).</p>
+
+<p><a name="stf_pen_mult"></a><strong>PENSION IN PAYMENT MULTIPLIER</strong> - Enter the pension in payment multiplier for the year selected (UK only).</p>
+
+<p><a name="stf_tv_val"></a><strong>CHANGE IN TV VALUE</strong> - Enter the change in TV value for the year selected (UK only).</p>
+
+<p><a name="stf_tax_allow"></a><strong>REFUND TAX ALLOWANCE</strong> - Enter the refund tax allowance for the year selected (UK only).</p>
+
+<p><a name="stf_dc_life_allow"></a><strong>DC LIFETIME ALLOWANCE</strong> - Enter the DC lifetime allowance for the year selected (UK only).</p>
+
+<p><a name="stf_mp_annual_allow"></a><strong>MP ANNUAL ALLOWANCE</strong> - Enter the MP annual allowance for the year selected (UK only).</p>
+
+<h2><a name="Query"></a>Query Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</h2>
+
+<p><a name="3"></a>You will now be sent through the third screen, where you can enter the Contribution Limits.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stf3.jpg" alt="Contribution Limits" /></p>
+
+  <p>Contribution Limits Screen</p>
+</div>
+
+<p>Click ‘Query’. The following pop-up window is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_stf1.jpg" alt="Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits Query Screen" /></p>
+
+  <p>Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits Query Screen</p>
+</div>
+
+<p>You may select records by using the Year field.</p>
+
+<p>Once you have entered your selection criteria, click ‘OK’ to proceed and retrieve
+the records from the database or click ‘Cancel’ to abort the selection and return
+to the main menu.</p>
+
+<h2><a name="Update"></a>Update Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</h2>
+
+<p>Click ‘Update’.</p>
+
+<p>When the changes have been made to the record click ‘OK’ to save the changes to file,
+or click ‘Cancel’ to exit the update option without saving changes.</p>
+
+<h2><a name="Delete"></a>Delete Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</h2>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected a window will appear with the options yes or no.</p>
+
+<p>If you do not wish to delete the record click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete the record, click ‘Yes’.</p>
+
+<p>A new window is displayed asking if you are sure.</p>
+
+<p>If you do not wish to delete the record click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record, click ‘ Yes’. The record is deleted and the program
+returns to the main menu.</p>
+
+<h2><a name="Report"></a>Printing Annual Statutory Amounts/Tax Simplification Amounts/Contribution Limits</h2>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:07.</p>
+      </div>
+    </div>
+  </body>
+</html>

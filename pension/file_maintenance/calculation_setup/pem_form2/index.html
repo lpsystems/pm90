@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Formulae</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085341" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="/pension/file_maintenance/calculation_setup/pem_form/#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Formulae</h1>
+        </div>
+      
+
+      
+<h2><a name="01"></a>TODAY</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the TODAY function to return today’s date i.e. the date on which the calculation is run.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>TODAY 
+</code></pre>
+
+<p><strong>NOTES</strong></p>
+
+<p>The word TODAY must be in uppercase.</p>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>TODAY 
+</code></pre>
+
+<h2><a name="02"></a>addday(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the addday function to add a fixed number of days onto a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>addday(date,num) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the days are to be added</li>
+  <li>num - number of days to be added to date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+or a reference to the result of a previous formula line (as long as it evaluates to
+a valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of days between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>addday(pm_dob,18) 
+addday(19950122,1) 
+addday(@1,20) 
+</code></pre>
+
+<h2><a name="03"></a>addmonth(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the addmonth function to add a fixed number of months onto a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>addmonth(date,num) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the months are to be added</li>
+  <li>num - number of months to be added to date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+or a reference to the result of a previous formula line (as long as it evaluates to
+a valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of months between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+  <li>month endings are dealt with as follows: if date is 31/1/98, adding 1 month will return
+28/2/98, adding 2 months will return 31/3/98. Leap years are dealt with accordingly.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>addmonth(pm_dob,18) 
+addmonth(19950122,1) 
+addmonth(@1,20) 
+</code></pre>
+
+<h2><a name="04"></a>addyear(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the addyear function to add a fixed number of years onto a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>addyear(date,num) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the years are to be added</li>
+  <li>num - number of years to be added to date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day or
+a reference to the result of a previous formula line (as long as it evaluates to a
+valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of years between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>addyear(pm_dob,18) 
+addyear(19950122,1) 
+addyear(@1,20) 
+</code></pre>
+
+<h2><a name="05"></a>cd(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cd function to calculate the number of years and completed days between two
+dates in a particular category or all categories.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cd(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>The function will return the number of years and completed days including the two
+dates e.g. cd(“20030101,”20031231”) will return 1 calendar year.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cd(pm_dtlft,pm_npd,pm_category) 
+cd(19950122,pm_npd,all) 
+cd(19900112,20040523,@4) 
+cd(@1,20040523,001) 
+</code></pre>
+
+<h2><a name="06"></a>cm(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cm function to calculate the number of years and completed months between
+two dates in a particular category or all categories.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cm(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - a category code or all</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cm(pm_dtlft,pm_npd,all) 
+cm(19950122,pm_npd,002) 
+cm(19900112,20040523,001) 
+cm(@1,20040523,001) 
+</code></pre>
+
+<h2><a name="07"></a>cty(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cty function to calculate the number of 5<sup>th</sup> Aprils between two
+dates in a particular category or all categories.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cty(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cty(pm_dtlft,pm_npd,pm_category) 
+cty(19950122,pm_npd,@2) 
+cty(19900112,20040523,all) 
+cty(@1,20040523,002) 
+</code></pre>
+
+<h2><a name="08"></a>cy(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the cy function to calculate the number of completed years between two dates for
+a particular category or all categories.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>cy(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>cy(pm_dtlft,pm_npd,pm_category) 
+cy(19950122,pm_npd,@3) 
+cy(19900112,20040523,002) 
+cy(@1,20040523,all) 
+</code></pre>
+
+<h2><a name="09"></a>date_day(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_day function to extract the day figure from a date e.g. date_day(19981012)
+will return a value of 12.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_day(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_day(pm_dtlft) 
+date_day(19981012) 
+date_day(@1) 
+</code></pre>
+
+<h2><a name="10"></a>date_first(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_first function to extract the first day of the month in which the date
+implied by the function argument falls. e.g. if date is 10/3/98, the function will
+return 1/3/98.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_first(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_first(pm_dtlft) 
+date_first(19950122) 
+date_first(@1) 
+</code></pre>
+
+<h2><a name="11"></a>date_fixed(date,day)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_fixed function to extract the date in the same month as the date implied
+by the first function argument, but with the day equal to day (i.e. the second function
+argument) e.g. date_fixed(19980101,10) would return a date of 10/01/1998.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_fixed(date,nn) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+  <li>nn - day of month to calculate day to</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1. 2.</li>
+  <li>nn must be between 1 and 31 or a reference to the result of a previous formula line
+(as long as it evaluates to a valid number) in the format @line_num e.g. @2.</li>
+  <li>month endings are dealt with as follows: if date is 10/2/98, date_fixed(date,31) will
+return 28/2/98. Leap years are dealt with accordingly.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_fixed(pm_dtlft,3) 
+date_fixed(19950122,24) 
+date_fixed(@1,12) 
+</code></pre>
+
+<h2><a name="12"></a>date_last(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_last function to extract the last day of the month in which the date
+implied by the function argument falls. e.g. if date is 10/3/98, the function will
+return 31/3/98.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_last(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_last(pm_dtlft) 
+date_last(19950122) 
+date_last(@1) 
+</code></pre>
+
+<h2><a name="13"></a>date_month(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_month function to extract the month figure from a date e.g. date_month(19981012)
+will return a value of 10.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_month(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_month(pm_dtlft) 
+date_month(19981012) 
+date_month(@1) 
+</code></pre>
+
+<h2><a name="14"></a>date_next(date,month,day)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_next function to calculate the next dd/mm from the date implied by the
+first function argument e.g. date_next(pm_dterm_dt,4,5) calculates the next occurrence
+of 5 April following pm_dterm_dt.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_next(date,month,day) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for calculation</li>
+  <li>month - a valid month in the range 1 to 12</li>
+  <li>day - a valid day in the range 1 to 31</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+  <li>month must be between 1 and 12 or a reference to the result of a previous formula
+line (as long as it evaluates to a valid number) in the format @line_num e.g. @2.</li>
+  <li>day must be between 1 and 31 or a reference to the result of a previous formula line
+(as long as it evaluates to a valid number) in the format @line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_next(pm_dtlft,4,@1) 
+date_next(19950122,6,1) 
+date_next(@1,12,31) 
+</code></pre>
+
+<h2><a name="15"></a>date_prev(date,month,day)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_prev function to calculate the previous dd/mm from the date implied by
+the first function argument e.g. date_prev(pm_dterm_dt,4,5) calculates the previous
+occurrence of 5 April prior to pm_dterm_dt.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_prev(date,month,day) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for calculation</li>
+  <li>month - a valid month in the range 1 to 12</li>
+  <li>day - a valid day in the range 1 to 31</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+  <li>month must be between 1 and 12 or a reference to the result of a previous formula
+line (as long as it evaluates to a valid number) in the format @line_num e.g. @2.</li>
+  <li>day must be between 1 and 31 or a reference to the result of a previous formula line
+(as long as it evaluates to a valid number) in the format @line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_prev(pm_dtlft,4,@1) 
+date_prev(19950122,6,1) 
+date_prev(@1,12,31) 
+</code></pre>
+
+<h2><a name="16"></a>date_year(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_year function to extract the year figure from a date e.g. date_year(19981012)
+will return a value of 1998.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_year(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to a date field on the member file (pe_mem), a
+constant date entered in the format YYYYMMDD where YYYY is the year, MM is the month
+and DD is the day or a reference to the result of another line of formula code within
+the current formula e.g. @1.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_year(pm_dtlft) 
+date_year(19981012) 
+date_year(@1) 
+</code></pre>
+
+<h2><a name="17"></a>date_ymd(year,month,day)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the date_ymd function to extract a date, given the values for the date’s day,
+month and year e.g. date_ymd(1998,10,12) will evaluate to the date 12/10/1998.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>date_ymd(year,month,day) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>year - year for extraction</li>
+  <li>month - month for extraction</li>
+  <li>day - day for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>year, month and day must be either a constant value entered in the appropriate format
+(YYYY for the year, MM for the month or DD for the day) or a reference to the result
+of another line of formula code within the current formula e.g. @1.</li>
+  <li>if the result of the function call does not return a valid date e.g. if the function
+arguments are results of previous lines of your formula which do not evaluate to correct
+years, months or day values, a value of 0 will be returned and a message will be written
+to the Quotation Warnings file informing you of this. You should then examine your
+formula as it is quite likely that the result of the formula will be incorrect.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>date_ymd(1998,@1,10) 
+date_ymd(@1,@2,@3) 
+</code></pre>
+
+<h2><a name="18"></a>tax_rendate(taxdate,year)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the tax_rendate function to extract a date, given the date in the form ‘dd-mmm’
+and year e.g. tax_rendate(‘13-Jan’,1998) will evaluate to the date 13/01/1998.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>tax_rendate(taxdate,year) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date for extraction in the form ‘dd-mmm’ where dd is 01 to 31 and mmm is Jan to Dec</li>
+  <li>year - year for extraction</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a constant value entered in the format YYYY or a reference to the result of 
+another line of formula code within the current formula e.g. @1 or pm_tax_rendate, the 
+member’s tax renewal date as held on the Pension Input Periods screen.</li>
+  <li>year must be either a constant value entered in the format YYYY or a reference to the 
+result of another line of formula code within the current formula e.g. @1.</li>
+  <li>if the result of the function call does not return a valid date e.g. if the function
+arguments are results of previous lines of your formula which do not evaluate to correct
+dates or year values, a value of 0 will be returned and a message will be written
+to the Quotation Warnings file informing you of this. You should then examine your
+formula as it is quite likely that the result of the formula will be incorrect.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>tax_rendate(@1,1998) 
+tax_rendate(@1,@2) 
+</code></pre>
+
+<h2><a name="19"></a>hm(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the hm function to calculate the number of years and higher months between two
+dates. This equates to the number of years and months with the months figure rounded
+up rather than down as is the case with the cm(date1,date2) function.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>hm(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>hm(pm_dtlft,pm_npd,all) 
+hm(19950122,pm_npd,001) 
+hm(19900112,20040523,pm_category) 
+hm(@1,20040523,@2) 
+</code></pre>
+
+<h2><a name="20"></a>hy(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the hy function to calculate the number of years and higher months between two
+dates. This equates to the number of years with the years figure rounded up rather
+than down as is the case with the cy(date1,date2) function.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>hy(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>hy(pm_dtlft,pm_npd,pm_category) 
+hy(19950122,pm_npd,all) 
+hy(19900112,20040523,@2) 
+hy(@1,20040523,001) 
+</code></pre>
+
+<h2><a name="21"></a>pt(date1,date2,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the pt function to calculate the full time equivalent service ratio from a Part
+Time Service record.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>pt(date1,date2,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>The ratio will be calculated as the total equivalent service recorded between date1
+and date2 on the Part Time Service record plus the remaining service (assumed to be
+at full time), divided by the period between date1 and date2.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p>This is displayed as a 2 decimal place result but is available in the calculating
+formula to 8 decimal places.</p>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>pt(pm_djp,pm_npd,all) 
+pt(19950122,pm_dterm_dt,pm_category) 
+pt(19900406,19960405,001) 
+pt(@1,19960405,@4) 
+</code></pre>
+
+<h2><a name="22"></a>ptratio(date)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the ptratio function to calculate the part time/full time ratio effective at a particular date from a Part Time Service record.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>ptratio(date) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - the effective date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The date must be a field reference to the member file (pe_mem), a constant date
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or a reference to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>A warning will be produced if the effective date is before the date joined company for that member.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>ptratio(pm_npd) 
+ptratio(19950122) 
+ptratio(@1) 
+</code></pre>
+
+<h2><a name="23"></a>rm(date1,date2,r,cat_code)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the rm function to calculate the number of years and completed months between
+two dates. This is the same as the cm() function except that if the number of remaining
+days is greater than or equal to a specified value (given by the r argument to the
+function call), then the number of completed months is rounded up.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>rm(date1,date2,r,cat_code) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+  <li>r - is the number of days to round up</li>
+  <li>cat_code - category code</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 &gt; date2 the value returned will be 0.</li>
+  <li>r must be a valid number between 1 and 31.</li>
+  <li>To do a calculation for all category codes enter all.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>rm(pm_dtlft,pm_npd,20,001) 
+rm(19950122,pm_npd,1,pm_category) 
+rm(19900112,20040523,17,@3) 
+rm(@1,20040523,15,all) 
+</code></pre>
+
+<h2><a name="24"></a>service(type,date1,date2)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the service function to calculate the number of years and completed days between
+two dates for a particular type of service.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>service(type,date1,date2) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>type
+    <ul>
+      <li>1 - Full time service</li>
+      <li>2 - Part time service</li>
+      <li>3 - Zero hours service</li>
+    </ul>
+  </li>
+  <li>date1 - start date for date period</li>
+  <li>date2 - end date for date period</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>The two dates must be field references to the member file (pe_mem), constant dates
+entered in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is
+the day or references to the result of another line of formula code within the current
+formula e.g. @1.</li>
+  <li>If date1 is before the member joined the company a warning will be produced and the value returned will be 0.</li>
+  <li>If date2 is after the member left the company a warning will be produced and the value returned will be 0.</li>
+  <li>If date2 is after the normal pension date for the member a warning will be produced and the value returned will be 0.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>service(1,19950101,19971231) 
+service(2,@1,@2)
+service(3,pm_dec,@1)
+</code></pre>
+
+<h2><a name="25"></a>subday(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the subday function to subtract a fixed number of days from a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>subday(date,num) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the days are to be subtracted</li>
+  <li>num - number of days to be subtracted from date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the month and DD is the day
+or a reference to the result of a previous formula line (as long as it evaluates to
+a valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of days between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>subday(pm_dob,18) 
+subday(19950122,1) 
+subday(@1,20) 
+</code></pre>
+
+<h2><a name="26"></a>submonth(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the submonth function to subtract a fixed number of months from a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>submonth(date,num) 
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the months are to be subtracted</li>
+  <li>num - number of months to be subtracted from date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the onth and DD is the day or
+a reference to the result of a previous formula line (as long as it evaluates to a
+valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of months between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+  <li>month endings are dealt with as follows: if date is 31/3/98, subtracting 1 month will
+return 28/2/98, subtracting 2 months will return 31/1/98. Leap years are dealt with
+accordingly.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>submonth(pm_dob,18) 
+submonth(19950122,1) 
+submonth(@1,20) 
+</code></pre>
+
+<h2><a name="27"></a>subyear(date,num)</h2>
+
+<p><strong>OVERVIEW</strong></p>
+
+<p>Use the subyear function to subtract a fixed number of years from a given date.</p>
+
+<p><strong>SYNTAX</strong></p>
+
+<pre><code>subyear(date,num) 
+
+</code></pre>
+
+<p><strong>EXPLANATION</strong></p>
+
+<ul>
+  <li>date - date to which the years are to be subtracted</li>
+  <li>num - number of years to be subtracted from date</li>
+</ul>
+
+<p><strong>NOTES</strong></p>
+
+<ol>
+  <li>date must be a field reference to the member file (pe_mem), a constant date entered
+in the format YYYYMMDD, where YYYY is the year, MM is the onth and DD is the day or
+a reference to the result of a previous formula line (as long as it evaluates to a
+valid date) in the format @line_num e.g. @2.</li>
+  <li>num must be a whole number of years between 0 and 30000 or a reference to the result
+of a previous formula line (as long as it evaluates to a valid number) in the format
+@line_num e.g. @2.</li>
+</ol>
+
+<p><strong>EXAMPLES</strong></p>
+
+<pre><code>subyear(pm_dob,18) 
+subyear(19950122,1) 
+subyear(@1,20) 
+</code></pre>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:53:41.</p>
+      </div>
+    </div>
+  </body>
+</html>

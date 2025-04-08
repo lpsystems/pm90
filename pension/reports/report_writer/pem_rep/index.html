@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Member Report Units</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085403" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Member Report Units</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Add a Record">Add a Record</a></li>
+  <li><a href="#Query a Record">Query a Record</a></li>
+  <li><a href="#Viewing Records">Viewing Records</a></li>
+  <li><a href="#Update a Record">Update a Record</a></li>
+  <li><a href="#Delete a Record">Delete a Record</a></li>
+  <li><a href="#Printing Report Units Details">Printing Report Units Details</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program allows maintenance of the report units fields. These are fields specified
+for use in the Member Report, Mail Merge Report and in the calculation engine in Pension
+Master.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>You should not normally need to amend these records and in any case should only
+do so under the supervision of a member of L&amp;P Systems Limited support staff.</p>
+
+  <p>Supervisor level access is required.</p>
+</div>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Add</li>
+  <li>Query</li>
+  <li>Update</li>
+  <li>Delete</li>
+  <li>Report</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_rep1.jpg" alt="Member Report Units Screen" /></p>
+
+  <p>Member Report Units Screen</p>
+</div>
+
+<h2><a name="Add a Record"></a>Add a Record</h2>
+
+<p>Click ‘Add’.</p>
+
+<p><a name="gnr_tabname"></a><strong>TABLE NAME</strong> - Enter the Table Name. A table name that
+exists on Pension Master must be entered here (See the <a href="/pension/appendices/app_a/">Data Dictionary</a>).
+Click on the lookup icon to see a list of database tables.
+If a valid table name is not entered an error message will be displayed.</p>
+
+<p><a name="gnr_tabfield"></a><strong>FIELD NAME</strong> - Enter the Field Name. A field name
+that is a part of the table must be entered here (See the <a href="/pension/appendices/app_a/">Data Dictionary</a>).
+Click on the lookup icon to see a list of fields
+on the selected database table. If a valid field name is not entered
+an error message will be displayed.</p>
+
+<p><a name="gnr_desc"></a><strong>FIELD DESCRIPTION</strong> - Enter a field description. A field
+description must be entered. The field description entered will be displayed in the
+total and count lines in the members report and full members listing.</p>
+
+<p>e.g. If the description entered for pm_scheme is ‘SCHEME’ the count line will be:</p>
+
+<div class="well">
+
+  <p>Total Members in SCHEME : xx</p>
+
+</div>
+
+<p><a name="gnr_head1"></a><a name="gnr_head2"></a><strong>HEADING FIELDS</strong> - Enter the
+heading fields. Headings for the field may be entered or can be left blank. These
+are used as column headings when printing off a Member Report or a Full Members Listing
+using this field.</p>
+
+<p>e.g. If the headings entered for pm_member are ‘Pen.’ (heading 1), ‘Ref.’ (heading
+2) the heading over the column will be:</p>
+
+<div class="well">
+
+  <p>Pen.Ref.</p>
+
+</div>
+
+<p><a name="gnr_col_type"></a><strong>COLUMN TYPE</strong> - The column type will default to ‘Character’, ‘Date’ or ‘Number’ depending on the field.
+Default column widths, decimal places and print masks will also be generated at this stage.</p>
+
+<p><a name="gnr_col_width"></a><strong>COLUMN WIDTH</strong> - Enter the column width. the value
+entered in this field is the number of columns that the field requires on the report.</p>
+
+<p>e.g. For printing a date in the format dd/mm/yyyy 10 columns would be required.</p>
+
+<p>If the headings entered require more columns than specified the column width will
+default to the number of columns required to print the headings.</p>
+
+<p><a name="gnr_dec_places"></a><strong>DECIMAL PLACES</strong> - Enter decimal places required.
+This field is a reference field only and may be left blank.</p>
+
+<p><a name="gnr_col_mask"></a><strong>PRINT MASK</strong> - Enter the print mask for the field.
+This field only applies to numeric and date fields.</p>
+
+<p>Date field print masks should be entered as ‘dd/mm/yyyy’ or ‘dd/mm/yy’.</p>
+
+<p>Numeric field print masks can be entered in a variety of ways.</p>
+
+<p>e.g. For a value of 123.45 the following formats would produce:</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td>’#####&amp;.##’</td>
+          <td>123.45</td>
+        </tr>
+        <tr>
+          <td>‘&amp;&amp;&amp;&amp;&amp;&amp;.##’</td>
+          <td>000123.45</td>
+        </tr>
+        <tr>
+          <td>’######’</td>
+          <td>123</td>
+        </tr>
+        <tr>
+          <td>‘&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;’</td>
+          <td>000000123</td>
+        </tr>
+        <tr>
+          <td>’—–&amp;.&amp;&amp;’</td>
+          <td>-123.45 ( Negative sign printed on output )</td>
+        </tr>
+        <tr>
+          <td>’##.##’</td>
+          <td><strong>**</strong>*** ( print mask is too small for value )</td>
+        </tr>
+        <tr>
+          <td>123.45</td>
+          <td>( Left-justified - no print mask )</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p><a name="gnr_systype"></a><strong>SYS COL TYPE</strong> - Internal value used when Pension Master
+is running on databases other than Informix. L&amp;P Systems staff use only.</p>
+
+<p><a name="gnr_syslength"></a><strong>SYS COL LENGTH</strong> - Internal value used when Pension
+Master is running on databases other than Informix. L&amp;P Systems staff use only.</p>
+
+<p><a name="gnr_wback_ord"></a><strong>WRITEBACK ORDER</strong> - This field is used in the ‘Quotation
+Type Setup - Writebacks’ screen in Categories. The numeric value held in this field
+is used to order the list of fields displayed in the writeback screen. The writebacks
+concerned with this new field are Refund, Death, Transfer In and Transfer Out. The
+order of these fields are defaulted to the order they appear in the corresponding
+screens in Members.</p>
+
+<p><a name="gnr_not_mrep"></a><strong>NOT MEMBER REPORT</strong> - This field is used in the Member
+Report and Mail Merge Report programs. If this field is ticked then the database table/field
+cannot be used in either of these programs. All tables/fields listed are used in the
+Advanced Report Generator and General Data Load programs.</p>
+
+<p><a name="gnr_mandatory"></a><strong>MANDATORY</strong> - This field is used in the General Data
+Load program. If this field is ticked, then it will indicate that a data item must
+be present in the datafile, being loaded into the database table, for this field.
+Obvious mandatory fields are ones such as member columns, dates, contribution types
+etc. Please make sure that these fields are ticked.</p>
+
+<p><a name="gnr_scrn_code"></a><strong>MEMBER SCREEN</strong> - Internal value used to ensure that
+the Member Report Unit has the same security characteristics as the appropriate Member
+screen. L&amp;P Systems staff use only.</p>
+
+<p><a name="gnr_outer_tab"></a><a name="gnr_outer_field"></a><strong>OUTER JOINS</strong> - Outer
+join details only need be entered if details from another table other than the Member
+File (pe_mem) are required to link with the details being selected. E.g. If pm_scheme
+was being selected and the scheme name (psc_desc) was required from the Scheme Table
+(pe_sch).</p>
+
+<p>The outer join table name must exist in the pensions database, and must represent
+the table name of the file being selected to link in with the field name already specified
+(see the <a href="/pension/appendices/app_a/">Data Dictionary</a>).</p>
+
+<p>The outer join field name must exist on the file specified for the outer join and
+represents the field required.</p>
+
+<p><a name="gnr_slct1"></a><a name="gnr_slct2"></a><a name="gnr_slct3"></a><a name="gnr_slct4"></a><strong>SELECTION
+CRITERIA</strong> - The selection criteria must represent the link between the field name
+required and the outer field and file names. The entry of selection criteria cannot
+be validated so care must be taken when entering the selection criteria.</p>
+
+<h2><a name="Query a Record"></a>Query a Record</h2>
+
+<p>Click ‘Query’.</p>
+
+<p>Selection criteria may be entered in the table name and field name fields. If any
+match to the selection criteria is found then the first record will be displayed to
+the screen and a message displayed to the bottom of the screen.</p>
+
+<div class="well">
+
+  <p>Record 1 of 2</p>
+
+</div>
+
+<h2><a name="Viewing Records"></a>Viewing Records</h2>
+
+<p>To view the other records selected press <kbd>N</kbd> to get the next record, and <kbd>P</kbd> to view
+the previous record.</p>
+
+<p>If <kbd>N</kbd> is chosen and there are no records after the current record an error message
+is displayed. If <kbd>P</kbd> is chosen and there are no previous records an error message
+is displayed.</p>
+
+<h2><a name="Update a Record"></a>Update a Record</h2>
+
+<p>Before Updating, a record must be selected through the Query option, and an error
+message is displayed if a record for update has not been selected.</p>
+
+<p>Click ‘Update’.</p>
+
+<p>The table and field names cannot be changed as the combination of table and field
+name is a key to the report units file.</p>
+
+<p>When the changes have been made click on ‘OK’ to save the changes to file, or click
+on ‘Cancel’ to abort the update option without saving changes.</p>
+
+<h2><a name="Delete a Record"></a>Delete a Record</h2>
+
+<p>Before Deleting, a record must be selected through the query option, and an error
+message is displayed if a record for deletion has not been selected.</p>
+
+<p>Click ‘Delete’.</p>
+
+<p>When the delete option is selected a new window will appear with th eoptions yes and
+no.</p>
+
+<p>If you do not wish to delete the record, click ‘No’. You will return to the program
+menu.</p>
+
+<p>If you wish to delete therecord, click ‘Yes’.</p>
+
+<p>The following menu is displayed:</p>
+
+<p>If you do not wish to delete the record, click ‘No’. The program returns to the main
+menu.</p>
+
+<p>If you wish to delete the record, click ‘Yes’.</p>
+
+<div class="alert alert-danger" role="alert">
+  <p>If the field being deleted exists on any of the prepared report formats, it will
+be deleted from these report formats.</p>
+</div>
+
+<h2><a name="Printing Report Units Details"></a><a name="print"></a>Printing Report Units Details</h2>
+
+<p>Click the ‘Report’ icon.</p>
+
+<p>If records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="screen">
+  <p><img src="/pension/images/pem_rep2.jpg" alt="Print Options Screen 1" /></p>
+
+  <p>Print Options Screen 1</p>
+</div>
+
+<p>If no records have been selected in the program before the report option was selected
+the following window is displayed.</p>
+
+<div class="row">
+  <div class="col-md-6">
+
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <td><strong>Record</strong></td>
+          <td>Prints the current screen Record.</td>
+        </tr>
+        <tr>
+          <td><strong>Query</strong></td>
+          <td>Prints the all the selected records.</td>
+        </tr>
+        <tr>
+          <td><strong>Select</strong></td>
+          <td>Allows selection of records for the report using the Table name and Field name fields.</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>Closes the window and leaves the report option.</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<p>If the Select option was chosen and no records are found to match the selection criteria
+entered, an error message is displayed and new selection criteria should be entered.</p>
+
+<p>If records are found to match the selection criteria the report continues and options
+are then displayed for printing.</p>
+
+<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+From Pension Master</a>.</p>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:03.</p>
+      </div>
+    </div>
+  </body>
+</html>

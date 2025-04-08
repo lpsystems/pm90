@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="User Manual">
+    <meta name="author" content="Carl D. Patterson">
+    <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
+
+    <title>Common Data Check</title>
+
+    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
+    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+
+    <meta name="generator" content="nanoc 4.9.1">
+  </head>
+  <body role="document" onload="checkCookie()">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://www.lpsystems.com/">L&amp;P Systems Limited</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+              <li><a href="/">Main Index</a></li>
+            
+            
+              <li><a href="#">Page Index</a></li>
+            
+            <li class="clients btn-group dropup">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clients <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="?client=default">Default</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="?client=ascot_lloyd">Ascot Lloyd</a></li>
+                <li><a href="?client=corpad">Corpad</a></li>
+                <li><a href="?client=croda">Croda</a></li>
+                <li><a href="?client=crown_agents_bank">Crown Agents Bank</a></li>
+                <li><a href="?client=friends_first">Friends First</a></li>
+                <li><a href="?client=csc">CSC</a></li>
+                <li><a href="?client=irish_cement">Irish Cement</a></li>
+                <li><a href="?client=jmmb">JMMB</a></li>
+                <li><a href="?client=kleinwort_benson">Kleinwort Benson</a></li>
+                <li><a href="?client=newell_palmer">Newell Palmer</a></li>
+                <li><a href="?client=options_pensions">Options Pensions</a></li>
+                <li><a href="?client=pensions_management">Pensions Management</a></li>
+                <li><a href="?client=source">Source</a></li>
+                <li><a href="?client=sovereign">Sovereign</a></li>
+                <li><a href="?client=ucc">UCC</a></li>
+                <li><a href="?client=vhi">VHI</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container theme-showcase" role="main">
+      
+        <div class="page-header">
+          <h1>Common Data Check</h1>
+        </div>
+      
+
+      
+<h2><a name="INDEX"></a>Index</h2>
+
+<ul>
+  <li><a href="#Introduction">Introduction</a></li>
+  <li><a href="#Run A Report">Run A Common Data Check Report</a></li>
+  <li><a href="#Exit">Exit Program</a></li>
+  <li><a href="#Tests">Tests that result in Fails</a></li>
+  <li><a href="#Notes">Notes</a></li>
+</ul>
+
+<h2><a name="Introduction"></a>Introduction</h2>
+
+<p>This program produces a series of reports to check on the common data, as defined by The Pensions Regulator resulting in the calculation of the Common Data Score for a Scheme.</p>
+
+<p>It provides the option of running it on a particular scheme and then on Actives, Deferreds and Pensioners, splitting out the results within each status covering 10 areas of data checks.</p>
+
+<p>The following options and screen appear when this program is selected:</p>
+
+<ul>
+  <li>Run</li>
+  <li>Exit</li>
+</ul>
+
+<div class="screen">
+  <p><img src="/pension/images/per_commondata.jpg" alt="Selection Screen" /></p>
+
+  <p>Selection Screen</p>
+</div>
+
+<h2><a name="Run A Report"></a>Run A Common Data Check Report</h2>
+
+<p>Click ‘Run’.</p>
+
+<p>Enter the selection criteria required.</p>
+
+<p><a name="s_scheme"></a><strong>SCHEME CODE</strong> - This represents the code corresponding
+to the scheme the member belongs to. The scheme code must be entered and the code
+entered must exist on the scheme file. Click on the lookup icon to see a list of the scheme codes.
+When a valid scheme code has been entered the scheme
+name will be displayed.</p>
+
+<p><a name="s_active"></a><a name="s_deferred"></a><a name="s_pensioner"></a><strong>STATUS TYPE</strong> - The default is that all are ticked but this can be run for 1, 2 or all 3 status types by clicking the box to display a tick or not.</p>
+
+<p>Click on ‘OK’ to proceed. You can click on ‘Cancel’ to return to the run menu
+and abort report selection.</p>
+
+<p>When the report has been processed and no records are found to match the selection
+criteria an error message is displayed:</p>
+
+<div class="well">
+
+  <p>There are no records to match the selection criteria</p>
+
+</div>
+
+<p>If records are found to match the selection criteria the report continues and 2 Microsoft Excel reports are produced:</p>
+
+<ul>
+  <li><strong>per_commondata_checked_members</strong> - This provides a spreadsheet of the basic common data and indicates whether a members data has failed or passed in the last column. It doesn’t indicate why at this point as a member could have failed more than one check. A detailed report can be selected at the next step on Pension Master which provides this detail.</li>
+  <li><strong>per_commondata_score</strong> - This summarises the totals for the checks and calculates the common data score - the overall number of members failed as a percentage of total number of members checked.</li>
+</ul>
+
+<p>On returning to the Pension Master screen, you will be prompted as to whether you want to produce the third report, the detail of the fails:</p>
+
+<div class="screen">
+  <p><img src="/pension/images/per_commondata_failed.jpg" alt="Failed report" /></p>
+
+  <p>Failed report</p>
+</div>
+
+<p>On selecting No, the program ends.</p>
+
+<p>On selecting Yes, the detailed report is produced before the program ends:</p>
+
+<ul>
+  <li><strong>per_commondata_failed</strong> - For each data area checked, this report will produce a worksheet listing the member within their current status and the description of their fail for that data area. There are potentially 10 worksheets produced: nino, surname, forename, sex, dob djpdec, npdnpa, laststat, address, postcode. A worksheet will only be produced if it has found a fail in that data area. If a member has failed more than one test in that area of data, it will show all the tests.</li>
+</ul>
+
+<h2><a name="Exit"></a>Exit Program</h2>
+
+<p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
+<h2><a name="Tests"></a>Tests that result in Fails</h2>
+
+<p><strong>National Insurance Number</strong></p>
+
+<ul>
+  <li>If the NI Number field is blank.</li>
+  <li>If the NI Number value is invalid for the scheme’s region.</li>
+</ul>
+
+<p><strong>Surname</strong></p>
+
+<ul>
+  <li>If the Surname field is blank.</li>
+</ul>
+
+<p><strong>Forename/Initials</strong></p>
+
+<ul>
+  <li>If both the Forename and Initials fields are blank.</li>
+</ul>
+
+<p><strong>Sex</strong></p>
+
+<ul>
+  <li>If the Sex field is blank.</li>
+  <li>If the Sex field has an invalid value, i.e. not “M” or “F”.</li>
+</ul>
+
+<p><strong>Date of Birth</strong></p>
+
+<ul>
+  <li>If the DOB is blank.</li>
+  <li>If the DOB exists, but is after the Effective Date of the report.</li>
+  <li>If the DOB exists, but is before the Effective Date of the report, less 110 years.</li>
+</ul>
+
+<p><strong>Date Pensionable Service started</strong> - Using Date Joined Company (DJC), Date Joined for Pension (DJP) and Normal Retirement Date (NRD):</p>
+
+<ul>
+  <li>If either, or both the dates, are blank.</li>
+  <li>If (DJP exists) and (DOB exists and hasn’t failed already), if DJP is earlier than the DOB + 16 years.</li>
+  <li>If (DJP exists) and (NPD exists), if DJP is later than NPD.</li>
+  <li>If (DJP exists) and (DJC exists), then if DJP is earlier than DJC.</li>
+  <li>If (DJC exists) and (DOB exists and hasn’t failed already), if DJC is earlier than the DOB + 16 years.</li>
+  <li>If (DJC exists) and (NPD exists), then if DJC is later than NPD.</li>
+</ul>
+
+<p><strong>Expected retirement/maturity date</strong> - Using Normal Pension Date (NPD) and Normal Pension Age (NPA):</p>
+
+<ul>
+  <li>If the NPD is blank.</li>
+  <li>If the NPA is blank.</li>
+  <li>If (NPD exists) and (DOB exists and hasn’t failed already), then if NPD is earlier than the DOB plus 55 years or later than DOB plus 70 years.
+(based on the most normal ranges of NRD within 55 to 70)</li>
+  <li>If (NPD exists) and (NPD is within the range of DOB plus 55 years, and DOB plus 70 years),then if the calculated category level NPD is different to the NPD held.</li>
+  <li>If (NPA exists), then if the calculated category level NPA is different to the NPA held.</li>
+</ul>
+
+<p><strong>Membership Status</strong> - There are several levels to these checks to ensure the member records are held consistently.
+Status is held on a history table as well as the current status held on the member’s basic record.</p>
+
+<ul>
+  <li>If the Status History is empty.</li>
+  <li>If the Status History exists, and the last entry held in the history doesn’t match with the current status.</li>
+  <li>For Actives - If the Date Left (DOL) is present.</li>
+  <li>For Actives - If the Status History Effective Date is earlier than the DJC.</li>
+  <li>For Deferreds - If the DOL is blank.</li>
+  <li>For Deferreds - If the Status History Effective Date is earlier than the DOL, or more than 1 day later than the DOL.</li>
+  <li>For Deferreds - If the Date of Cessation is present on the Deferred Pensioner Record.</li>
+  <li>For Deferreds - If the Total Current Pension from the Deferred Pensioner Totals table is blank or zero.</li>
+  <li>For Pensioners - If the DOL is blank.</li>
+  <li>For Pensioners - If the Status History Effective Date is earlier than the DOL.</li>
+  <li>For Pensioners - If the Date of Cessation is present on the Pensioner Record.</li>
+  <li>For Pensioners - If the Total Current Pension from the Pensioner Totals table is blank or zero.</li>
+</ul>
+
+<p><strong>Address</strong></p>
+
+<ul>
+  <li>If address line 1 is blank.</li>
+  <li>If address line 1 is present, but address is flagged as Suspect.</li>
+</ul>
+
+<p><strong>Postcode</strong></p>
+
+<ul>
+  <li>If postcode is blank.</li>
+  <li>If postcode is present, but address is flagged as Suspect.</li>
+</ul>
+
+<h2><a name="Notes"></a>Notes</h2>
+<p>The NI Number is renamed to the corresponding equivalent depending on the scheme region ie. Irish schemes will have PPS Number printed instead.</p>
+
+<p>Only UK and Jamaican schemes will show the Normal Pension Age Months as this follows what PM8 displays on the Basic Member Details screen.</p>
+
+
+      <div id="footer">
+        <p>Version 9.0</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 08:54:02.</p>
+      </div>
+    </div>
+  </body>
+</html>
