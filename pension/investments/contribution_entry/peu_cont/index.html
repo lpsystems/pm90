@@ -10,13 +10,13 @@
 
     <title>Contribution Request Run</title>
 
-    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
-    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
-    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20250408085401" type="text/javascript"></script>
+    <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250408155712" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -31,7 +31,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             
-              <li><a href="/">Main Index</a></li>
+              <li><a href="/pm90/">Main Index</a></li>
             
             
               <li><a href="#">Page Index</a></li>
@@ -85,29 +85,29 @@
 <h2><a name="Introduction"></a>Introduction</h2>
 
 <p>This program calculates expected contributions for a specified group of members. If
-successful, these are loaded into a <a href="/pension/updates/pem_bat/">Contribution Batch</a> for
+successful, these are loaded into a <a href="/pm90/pension/updates/pem_bat/">Contribution Batch</a> for
 onward processing.</p>
 
 <p>It is intended that you send the schedule produced by this program to your client
 to request the contributions that are then due. The client should then ensure they
 deduct these contributions from the member and send you full details. These will then
-be reconciled against what was expected in <a href="/pension/updates/pem_bat/">Batch Data Input</a>.</p>
+be reconciled against what was expected in <a href="/pm90/pension/updates/pem_bat/">Batch Data Input</a>.</p>
 
-<p>The contribution amounts are calculated by reference to the <a href="/pension/file_maintenance/pem_mem/#Contribution Rate Percentages">Contribution
+<p>The contribution amounts are calculated by reference to the <a href="/pm90/pension/file_maintenance/pem_mem/#Contribution Rate Percentages">Contribution
 Rate Percentages</a> screen in the member file for each selected member. If, for a
 selected member, there are no details held in this screen, the values are defaulted
-to those set up in the <a href="/pension/file_maintenance/pem_cat/#Contribution Rate % Defaults">Contribution
+to those set up in the <a href="/pm90/pension/file_maintenance/pem_cat/#Contribution Rate % Defaults">Contribution
 Rate Defaults</a> screen in Categories for the members category.</p>
 
 <p>Note that types EEPR and ERPR are only calculated for members who are on NI Table
-F i.e. an entry of ‘F’ is in the <a href="/pension/file_maintenance/pem_mem/#pm_nitab">NI Table</a> field
-on the <a href="/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a> 
+F i.e. an entry of ‘F’ is in the <a href="/pm90/pension/file_maintenance/pem_mem/#pm_nitab">NI Table</a> field
+on the <a href="/pm90/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a> 
 in the members record.</p>
 
-<p>If a contribution type is setup to use a <a href="/pension/file_maintenance/calculation_setup/pem_form/">Formulae</a>, the
+<p>If a contribution type is setup to use a <a href="/pm90/pension/file_maintenance/calculation_setup/pem_form/">Formulae</a>, the
 calculation date used will be the date you enter into <a href="#pmc_due">DATE DUE</a> on
 screen 2 of the Contribution Request Run. Thus, for example, if the formulae
-used involved <a href="/pension/file_maintenance/calculation_setup/pem_fac/">factor</a> tables, these will be looked up using
+used involved <a href="/pm90/pension/file_maintenance/calculation_setup/pem_fac/">factor</a> tables, these will be looked up using
 the date due you enter.</p>
 
 <p>The following options and screen appear when this program is selected.</p>
@@ -118,7 +118,7 @@ the date due you enter.</p>
 </ul>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_cont1.jpg" alt="Contributions Request Run Selection Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_cont1.jpg" alt="Contributions Request Run Selection Screen" /></p>
 
   <p>Contributions Request Run Selection Screen</p>
 </div>
@@ -138,7 +138,7 @@ fields. When the selection criteria have been entered click ‘OK’ to proceed 
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_cont2.jpg" alt="Contributions Request Run Options Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_cont2.jpg" alt="Contributions Request Run Options Screen" /></p>
 
   <p>Contributions Request Run Options Screen</p>
 </div>
@@ -181,7 +181,7 @@ has been found. Possible exception messages are:</p>
 scheme year of the contribution due date.</li>
   <li>A contribution type has been found for which there are no details set up on the members
 Contribution Rate Defaults screen.</li>
-  <li>If a contribution is being calculated by a <a href="/pension/file_maintenance/calculation_setup/pem_form/">formula</a>, the
+  <li>If a contribution is being calculated by a <a href="/pm90/pension/file_maintenance/calculation_setup/pem_form/">formula</a>, the
 formula is returning a non-numeric value.</li>
 </ul>
 
@@ -195,7 +195,7 @@ to the screen.</p>
 The number of the generated batch will be displayed to the screen. You should take
 a note of this.</p>
 
-<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
 <p>The program will then return to the main menu.</p>
@@ -207,8 +207,8 @@ From Pension Master</a>.</p>
 
       <div id="footer">
         <p>Version 9.0</p>
-        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 08/04/2025 08:54:01.</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 15:57:12.</p>
       </div>
     </div>
   </body>

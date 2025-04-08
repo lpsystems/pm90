@@ -10,13 +10,13 @@
 
     <title>Post Units</title>
 
-    <link rel="stylesheet" href="/css/bootstrap-min.css" type="text/css">
-    <link rel="stylesheet" href="/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
-    <script src="/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/js/main.js?v=20250408085402" type="text/javascript"></script>
+    <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250408155713" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -31,7 +31,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             
-              <li><a href="/">Main Index</a></li>
+              <li><a href="/pm90/">Main Index</a></li>
             
             
               <li><a href="#">Page Index</a></li>
@@ -88,10 +88,10 @@
 
 <h2><a name="Introduction"></a>Introduction</h2>
 
-<p>This program allows you to post <a href="/pension/investments/allocate_contributions/peu_alloc/">allocated contributions</a> to units.</p>
+<p>This program allows you to post <a href="/pm90/pension/investments/allocate_contributions/peu_alloc/">allocated contributions</a> to units.</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_post1.jpg" alt="Unit Posting Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_post1.jpg" alt="Unit Posting Screen" /></p>
 
   <p>Unit Posting Screen</p>
 </div>
@@ -107,7 +107,7 @@ run does all that an actual run does, but does not write any results to the data
 the member prior to the current date due. If unposted units exist for the member prior
 to the current date due, you should post all unposted units for the member in date
 order, starting with the earliest date due. You can get a list of the unposted units
-for the member by using the <a href="/pension/investments/unit_posting/per_post/">Unposted Units Report</a>.</p>
+for the member by using the <a href="/pm90/pension/investments/unit_posting/per_post/">Unposted Units Report</a>.</p>
 
 <p><a name="pm_scheme"></a>
 <a name="pm_company"></a>
@@ -116,7 +116,7 @@ for the member by using the <a href="/pension/investments/unit_posting/per_post/
 <a name="psft_code"></a></p>
 
 <p><strong>SELECTION CRITERIA</strong> - Select the group of members you require to post units for using the
-Scheme, Company, Category, Status, Special Code and Member Number fields (see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+Scheme, Company, Category, Status, Special Code and Member Number fields (see <a href="/pm90/pension/appendices/app_b/">Selection Criteria</a>).
 When the selection criteria have been entered click ‘OK’ to proceed.</p>
 
 <p>You can click ‘Cancel’ to return to the main menu and abort the unit post run.</p>
@@ -124,7 +124,7 @@ When the selection criteria have been entered click ‘OK’ to proceed.</p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_post2.jpg" alt="Date Selection Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_post2.jpg" alt="Date Selection Screen" /></p>
 
   <p>Date Selection Screen</p>
 </div>
@@ -146,7 +146,7 @@ the lookup icon to see a list of transaction codes. If the transaction type of S
 <p><strong>LOAD DETAILS FROM</strong> - Select a CSV file from a folder on your hard drive. This enables the user to populate the screen by loading the Fund and Date Invested from a CSV file. The CSV file should simply have 2 columns, column A for the Fund Code and column B for the Date Invested. No headers or footers are permitted. The file will be checked for invalid data in the process. The user will be able to amend the unit price date once the data from the load file is displayed to the screen.</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_post6.jpg" alt="Type Selection Screen" />
+  <p><img src="/pm90/pension/images/peu_post6.jpg" alt="Type Selection Screen" />
 Type Selection Screen</p>
 </div>
 
@@ -166,10 +166,10 @@ types for each member.</li>
 <p><a name="pmi_fund"></a><strong>FUND</strong> - The investment funds that have unposted units at the selected dates will be listed, if you wish to posted units for a fund insert a date in the date invested field. You can have different dates for each of the rows, or if you don’t wish to post the units at this time leave the field blank. If you want to post units for all investment funds with unposted units at this date for the selected members, enter a date in the first row under ‘ALL’.</p>
 
 <p>Pension Master then proceeds to calculate and post the units for the contributions
-to each member selected. The unit price used for this will be based on the <a href="/pension/investments/pem_invfun/#pif_buy_basis">unit
-buy basis</a> field in Investment Funds and is looked up on the <a href="/pension/investments/pem_invfun/#Unit Prices">Unit
+to each member selected. The unit price used for this will be based on the <a href="/pm90/pension/investments/pem_invfun/#pif_buy_basis">unit
+buy basis</a> field in Investment Funds and is looked up on the <a href="/pm90/pension/investments/pem_invfun/#Unit Prices">Unit
 Prices file</a> at the date you have entered in Date Invested. Full account of any
-unit <a href="/pension/file_maintenance/pem_sch/#Investment Funds">allocation percentage</a> for the fund
+unit <a href="/pm90/pension/file_maintenance/pem_sch/#Investment Funds">allocation percentage</a> for the fund
 concerned is allowed for.</p>
 
 <p><a name="p_price"></a>If no unit buy basis price exists for the funds an exception report is produced.</p>
@@ -182,7 +182,7 @@ concerned is allowed for.</p>
 
 <p>UNITS = new units bought</p>
 
-<p>ALLOCRATE = <a href="/pension/investments/pem_invfun/#pif_allocation">allocation percentage</a> for
+<p>ALLOCRATE = <a href="/pm90/pension/investments/pem_invfun/#pif_allocation">allocation percentage</a> for
 fund concerned, expressed as a percentage</p>
 
 <p>CONT = amount of gross contribution</p>
@@ -197,7 +197,7 @@ depends on the <a href="#report_type">Report Type</a> field.</p>
 details the records that were rejected and the reason why. You must address each exception
 before being able to post the contributions to units successfully.</p>
 
-<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
 <p>The system will then return to the main menu.</p>
@@ -216,7 +216,7 @@ the current date due, you should unpost all unposted units for the member in dat
 descending order, starting with the latest date due.</p>
 
 <p>If you undo a unit dividend run, then the corresponding entries are deleted from the
-members <a href="/pension/file_maintenance/pem_mem/#Investment History">Investment History</a> screen.</p>
+members <a href="/pm90/pension/file_maintenance/pem_mem/#Investment History">Investment History</a> screen.</p>
 
 <p>Details of how this works can be found in the ‘Run’ section detailed above.</p>
 
@@ -234,7 +234,7 @@ run does all that an actual run does, but does not write any results to the data
 <a name="psft_code"></a><strong>SELECTION
 CRITERIA</strong> - Select the group of members you require to calculate unit dividends
 for using the Scheme, Company, Category, Status, Special Code and Member Number fields
-(see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+(see <a href="/pm90/pension/appendices/app_b/">Selection Criteria</a>).
 When the selection criteria have been entered click on ‘OK’ to proceed.</p>
 
 <p>You can click ‘Cancel’ to return to the main menu and abort the unit dividend run.</p>
@@ -242,7 +242,7 @@ When the selection criteria have been entered click on ‘OK’ to proceed.</p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_post4.jpg" alt="Dividend Details Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_post4.jpg" alt="Dividend Details Screen" /></p>
 
   <p>Dividend Details Screen</p>
 </div>
@@ -275,7 +275,7 @@ Type</a> field.</p>
 details the records that were rejected and the reason why. You must address each exception
 before being able to post the unit dividend successfully.</p>
 
-<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
 <p>The system will then return to the main menu.</p>
@@ -294,7 +294,7 @@ run does all that an actual run does, but does not write any results to the data
 <a name="psft_code"></a><strong>SELECTION
 CRITERIA</strong> - Select the group of members you require to calculate unit dividends
 for using the Scheme, Company, Category, Status, Special Code and Member Number fields
-(see <a href="/pension/appendices/app_b/">Selection Criteria</a>).
+(see <a href="/pm90/pension/appendices/app_b/">Selection Criteria</a>).
 When the selection criteria have been entered click on ‘OK’ to proceed.</p>
 
 <p>You can click ‘Cancel’ to return to the main menu and abort the unit charge run.</p>
@@ -302,7 +302,7 @@ When the selection criteria have been entered click on ‘OK’ to proceed.</p>
 <p>The following screen is displayed:</p>
 
 <div class="screen">
-  <p><img src="/pension/images/peu_post5.jpg" alt="Charge Details Screen" /></p>
+  <p><img src="/pm90/pension/images/peu_post5.jpg" alt="Charge Details Screen" /></p>
 
   <p>Charge Details Screen</p>
 </div>
@@ -338,7 +338,7 @@ Type</a> field.</p>
 details the records that were rejected and the reason why. You must address each exception
 before being able to proceed.</p>
 
-<p>The options for printing are described in the document <a href="/pension/general/gn_printm/">Printing
+<p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
 <p>The system will then return to the main menu.</p>
@@ -350,8 +350,8 @@ From Pension Master</a>.</p>
 
       <div id="footer">
         <p>Version 9.0</p>
-        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Build Date 08/04/2025 08:54:02.</p>
+        <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
+        <p>Build Date 08/04/2025 15:57:13.</p>
       </div>
     </div>
   </body>
