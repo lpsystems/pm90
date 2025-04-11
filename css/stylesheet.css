@@ -26,3 +26,12 @@ body {
   font-size: 10px;
   color: gray;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto:
+}
+
+.w-50 {
+  width: 50%;
+}
