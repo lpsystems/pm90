@@ -100,7 +100,7 @@ function checkCookie() {
   $('.jmmb').parent().hide();
   $('.kleinwort_benson').parent().hide();
   $('.lp').parent().hide();
-  $('.intertrust').parent().hide();
+  $('.csc').parent().hide();
   $('.sovereign').parent().hide();
   $('.source').parent().hide();
   $('.ucc').parent().hide();
@@ -149,8 +149,8 @@ function checkCookie() {
       $('.lp').parent().show();
     }
 
-    if (query.client == 'intertrust' || query.client == 'all') {
-      $('.intertrust').parent().show();
+    if (query.client == 'csc' || query.client == 'all') {
+      $('.csc').parent().show();
     }
 
     if (query.client == 'sovereign' || query.client == 'all') {
