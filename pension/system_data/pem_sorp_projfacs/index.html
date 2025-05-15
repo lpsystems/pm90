@@ -8,7 +8,7 @@
     <meta name="author" content="Carl D. Patterson">
     <meta name="algolia-site-verification"  content="510C669AA8312BCB" />
 
-    <title>CPF Export</title>
+    <title>SORPS Projection Factors</title>
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
@@ -69,7 +69,7 @@
     <div class="container theme-showcase" role="main">
       
         <div class="page-header">
-          <h1>CPF Export</h1>
+          <h1>SORPS Projection Factors</h1>
         </div>
       
 
@@ -78,86 +78,56 @@
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
-  <li><a href="#Run An Export">Run An Export</a></li>
+  <li><a href="#Update">Update SORPS Projection Factors</a></li>
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
 <h2><a name="Introduction"></a>Introduction</h2>
 
-<p>This program produces a data file for members who fall in the selection criteria entered by the user and whose ‘Opt Out’ field, on the <a href="/pm90/pension/file_maintenance/pem_mem/#CPF">Combined Pension Forecast</a> screen in Members, is unticked. The data file contains data
-such as member’s NI Number, surname, forename, date of birth and sex. The data file will
-then be sent to the Department of Widows and Pensions (DWP) as part of the initial stage of the CPF process.</p>
+<p>The data in these screens is used in the SORP calculator.</p>
 
-<p>The following options and appear when this program is selected:</p>
+<p>The following options and screen appear when this program is selected:</p>
 
 <ul>
-  <li>Proceed</li>
+  <li>Update</li>
   <li>Exit</li>
 </ul>
 
 <div class="screen">
-  <p><img src="/pm90/pension/images/pem_cpf1.jpg" alt="CPF Export Screen" /></p>
+  <p><img src="/pm90/pension/images/pem_sorps_proj1.jpg" alt="SORPS Projection Factors " /></p>
 
-  <p>CPF Export Screen</p>
+  <p>SORPS Projection Factors - Standard</p>
 </div>
 
-<h2><a name="Run An Export"></a>Run An Export</h2>
+<h2><a name="Update"></a>Update SORPS Projection Factors</h2>
 
-<p>Press <kbd>P</kbd>, or selected the ‘Proceed’ menu option.</p>
+<p>Click ‘Update’.</p>
 
-<p>You will be prompted to choose between a Provisional or Actual Export. Both options work exactly the same, however, the actual will create the datafile and save the file number created.</p>
+<p>Click on ‘Insert’ to add a blank line ready for input of the new values.</p>
 
-<p><a name="pm_scheme"></a>
-<a name="pm_company"></a>
-<a name="pm_category"></a>
-<a name="pm_status"></a>
-<a name="psft_code"></a>Enter
-the selection criteria required (see <a href="/pm90/pension/appendices/app_b/">Selection Criteria</a>). When the
-selection criteria has been entered click on ‘OK’. You can click on ‘Cancel’ to return
-to the proceed menu and abort report selection.</p>
+<p>When the factor details have been entered click on ‘OK’ to save the details to file.
+You can click on ‘Cancel’ at any stage to exit the add option without saving the entered
+the details.</p>
 
-<p><a name="media_type"></a>The media type must be selected. You can click on ‘lookup’ to give you a list of valid media types.</p>
+<h2><a name="Browsing SORP Details"></a>Browsing SORP Details</h2>
 
-<p>If there are no records to match the selection criteria, the following message is
-displayed to the screen:</p>
+<p>Click on the ‘Browse’ button or the Browse icon on the toolbar to view details in
+any screen where the data does not fit on the screen.</p>
 
-<div class="well">
+<p>Once in browse mode, use the arrow keys or the scrollbar on the right of the data
+to navigate around the data.</p>
 
-  <p>There are no records to match the selection criteria</p>
+<p>Click on ‘OK’ or ‘Cancel’ to leave browse mode.</p>
 
-</div>
-
-<p>If there are records, then a message is displayed at the bottom of the screen:</p>
-
-<p>Checking member’s data</p>
-
-<p>The program is checking that the data is all present and correct. For example, that
-the NI Number is in the correct format of AA123456A, that the first character of the
-surname is alphabetic etc. If any of the data isn’t correct then an exceptions report
-will be produced and the CPF Export run is abandoned.</p>
-
-<p>If all the data is correct, then a message will be displayed at the bottom of the
-screen:</p>
-
-<div class="well">
-
-  <p>Processing report … Please Wait</p>
-
-</div>
-
-<p>A report and a data file will now be produced, and the report will be displayed to
-the screen. This report will list the member’s who have been included in the data
-file.</p>
+<h2><a name="Printing SORP Factor Details"></a>Printing CEP Factor Details</h2>
 
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
-from Pension Master</a>.</p>
-
-<p>The name of the data file will be displayed to the screen. This data file can be located
-in the programs driectory on the Pension Master server.</p>
+From Pension Master</a>.</p>
 
 <h2><a name="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
+
 
 
       <div id="footer">
