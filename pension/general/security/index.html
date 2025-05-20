@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250519094554" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250520015542" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20250519094554" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250520015542" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -86,38 +86,28 @@
 
 <h2><a name="User Account And Valid Password"></a>User Account and Valid Password</h2>
 
-<p>The first line of security is that someone wanting to use Pension Master must have
-a valid account set up on the system. This consists of a username or ID together with
-a password and various other items of user details. These details are then used to
-determine which options within Pension Master are made available to this user. This
-enables the System Administrator to customise the look and feel of the software according
-to the seniority or ability of each user of the system.</p>
+<p>To use Pension Master, each person must have a valid user account with a username and password. These details help control which parts of the system the user can access. This allows the System Administrator to tailor access to the software based on the user’s role or level of access.</p>
 
 <h2><a name="Security Level"></a>Security Level</h2>
 
-<p>Each user is assigned a security level from 1 to 99. Security levels must be pre-set using
-<a href="/pm90/pension/system_data/pem_sec/#Introduction">Security Levels</a>.
-This defines both a security level number and a description pertaining
-to this security level e.g. can access scheme 0000 but not scheme 0009.</p>
+<p>Each user in Pension Master is given a security level between 1 and 99. These levels are set up in advance using the
+<a href="/pm90/pension/system_data/pem_sec/#Introduction">Security Levels</a>screen, 
+where you give each level a number and a description (for example, “Can access scheme 0000 but not scheme 0009”).</p>
 
-<p>Each member and scheme record on Pension Master is then assigned a corresponding security
-level from this list of valid security levels and this is matched up against the security
-level on the current user’s record to determine whether that user has access to any
-records in that scheme or access to that individual member record. In this way, the
-System Administrator can easily control access to sensitive records e.g. member records
-for Director’s of an in-house scheme.</p>
+<p>Each scheme and member record also has a security level. When a user tries to access a record, the system compares the user’s level with the level on the record. If the user’s level allows it, access is granted. This helps control access to sensitive information, such as director records in in-house schemes.</p>
 
-<p>As an extension to this principle, a valid security level can be assigned to each
-screen in the Member Record on a scheme by scheme basis so that you can limit access
-to certain screens within member records e.g. Director’s salary records. This is done
-by using the <a href="/pm90/pension/file_maintenance/pem_mem/#Introduction">Member Screen Selection</a> screen
-in <a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>.</p>
+<p>You can also use security levels to control access to specific screens within a member record on a scheme-by-scheme basis. For example, you might restrict access to a screen showing director salary details. This is managed using the <a href="/pm90/pension/file_maintenance/pem_mem/#Introduction">Member Screen Selection</a> screen
+in <a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Schemes</a> in the Schemes section.</p>
 
 <h2><a name="User Groups"></a>User Groups</h2>
 
-<p>A user needs to be in a user group. The group define what areas of Pension Master the user is allowed to access <a href="/pm90/pension/user_group/gn_user/#Introduction">Users</a></p>
+<p>Every user in Pension Master must be assigned to a <a href="/pm90/pension/system_administration/user_group/#Introduction">User Group</a>. User Groups control which areas of the system the user can access.</p>
 
-<p>The screen within User Groups will list all the places in Pension Master that have has been defined as restricted access. Here are some of the areas that access can be switched off for a particular group.</p>
+<p>What Are User Groups For?</p>
+
+<p>User Groups let you limit access to certain areas of Pension Master. For example, you might want to stop some users from changing key codes or viewing audit trails.</p>
+
+<p>Areas that can be restricted include:</p>
 
 <ul>
   <li><a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Schemes</a></li>
@@ -138,22 +128,19 @@ in <a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Schemes</a>.</
   <li><a href="/pm90/pension/system_administration/per_audtr/#Introduction">Audit Trail Listing</a></li>
 </ul>
 
-<p>The <a href="/pm90/pension/system_administration/gn_user_groups/#Introduction">User Group</a>  menu option is in the System Administration menu of Pension Master. This option allows you to maintain the default User Groups as well as adding new groups of your own.</p>
+<p>The <a href="/pm90/pension/system_administration/gn_user_groups/#Introduction">User Group</a>  menu option is in the System Administration menu of Pension Master. This option allows you to maintain the default User Groups as well as adding new groups of your own. You can keep the 6 defaulted groups or you can add your own and move the user across by updating their users details with the new user group. Alternatively you can amend the existing details of the defaulted user groups and allow or deny permission as you wish.</p>
 
 <p>If a user belongs to a group that doesn’t have permission to perform a certain action they will see the following error message:</p>
 
 <p>The User Group that you belong to doesn’t have permission to use this option.
 If you need permission ask your System Administrator giving them the following details: User ID, User Group, Product, Module and Description.</p>
 
-<p>You can keep the 6 defaulted groups or you can add your own and move the user across by updating their users details with the new user group. Alternatively you can amend the existing details of the defaulted user groups and allow or deny permission as you wish.</p>
-
 <h2><a name="Update Member Records"></a>Update Member Records Status</h2>
 
 <p>If a user has a ‘No’ against ‘Update Member Records’ in <a href="/pm90/pension/system_administration/gn_user/#Introduction">Users</a> they
 will not be allowed to add/update/delete member records in <a href="/pm90/pension/file_maintenance/pem_mem/#Introduction">Members</a>.</p>
 
-<p>Otherwise the user will be granted full access to the member records, subject to any
-other security procedures described herein.</p>
+<p>If it is not set to ‘No’, the user will have full access to member records—subject to any other security restrictions in place (such as security levels or user group permissions).</p>
 
 <h2><a name="Restrict Access To Individual Schemes"></a>Restrict Access to Individual Schemes</h2>
 
@@ -176,7 +163,7 @@ Scheme lists, available by clicking on the lookup icon.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 19/05/2025 09:45:54.</p>
+        <p>Version 9.0 &bull; Build Date 20/05/2025 01:55:42.</p>
       </div>
     </div>
   </body>
