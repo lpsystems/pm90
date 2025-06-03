@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250530015551" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250603014605" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20250530015551" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250603014605" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -93,14 +93,14 @@ files for contributions/nis, salaries and addresses.</p>
 a decimal field, or if a staff number/NI number doesn’t exist on Pension Master then a warnings report will be generated informing the user of
 this. The warnings report will not stop the user from continuing to load the data, however, any data lines found with a warning will not be processed.</p>
 
-<p>The external data files being used must be tab delimitered. In order for
-the user to ensure this, they should use a software package, like Microsoft Excel, to save the spreadsheets as Text (Tab delimitered) prior to using this program.</p>
+<p>The external data files being used must be tab delimited. In order for
+the user to ensure this, they should use a software package, like Microsoft Excel, to save the spreadsheets as Text (Tab delimited) prior to using this program.</p>
 
 <h2><a name="format"></a>Datafile Layouts</h2>
 
 <p>This program can load from up to a maximum of 4 datafiles. Each datafile chosen MUST be in a certain layout/format and contain no headers or footers.</p>
 
-<p><strong>CONTRIBUTION AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+<p><strong>CONTRIBUTION AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimited file:</p>
 
 <p>Staff Number
 <br />Name
@@ -115,7 +115,7 @@ the user to ensure this, they should use a software package, like Microsoft Exce
 <br />NI Code
 <br />Pens Scheme No</p>
 
-<p><strong>SALARY AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+<p><strong>SALARY AMOUNTS DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimited file:</p>
 
 <p>Staff Number
 <br />Name
@@ -130,7 +130,7 @@ the user to ensure this, they should use a software package, like Microsoft Exce
 <br />D.O.L
 <br />Pens Scheme No</p>
 
-<p><strong>PENSIONER ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+<p><strong>PENSIONER ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimited file:</p>
 
 <p>Pens Scheme No
 <br />Name
@@ -145,7 +145,7 @@ the user to ensure this, they should use a software package, like Microsoft Exce
   <p>The Pens Scheme No for this datafile only is expected in the format of xxxxy, where xxxx are 4 numbers and y is a character.</p>
 </div>
 
-<p><strong>ACTIVE ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimitered file:</p>
+<p><strong>ACTIVE ADDRESSES DATAFILE LAYOUT</strong> - This file must be in the following format and must be saved as a Tab delimited file:</p>
 
 <p>Staff Number
 <br />Name
@@ -182,7 +182,7 @@ the user to ensure this, they should use a software package, like Microsoft Exce
 
 <p><a name="s_ni_year"></a><strong>NI DATE 5TH APRIL</strong> - If loading a file for Contribution Amounts, which should also contain NI amounts, then enter the year for year ending 5th April. This year will then be used for all lines within the Contribution Amounts datafile.</p>
 
-<p><a name="s_cont_file"></a><strong>CONTRIBUTION AMOUNTS</strong> - Enter the filename path of the datfile you are going to use to load on contribution/NI amounts. The window, shown at the end of this section, will pop-up on entering this field.</p>
+<p><a name="s_cont_file"></a><strong>CONTRIBUTION AMOUNTS</strong> - Enter the filename path of the data file you are going to use to load on contribution/NI amounts. The window, shown at the end of this section, will pop-up on entering this field.</p>
 
 <p><a name="s_sal_file"></a><strong>SALARY AMOUNTS</strong> - Enter the filename path of the data
 file you are going to use to load on salary amounts. The window, shown at the end of this section, will pop-up on entering this field.</p>
@@ -215,7 +215,7 @@ you of this, and you will be invited to re-enter a valid filename for your data 
 <p>At least one filename needs to be entered in order for the loading process to
 continue.</p>
 
-<p>Once all neccessary fields have been entered click ‘OK’ to continue and the following pop-up window appears informing the user of where the data is being loaded, and then asking them if they wish to continue:</p>
+<p>Once all necessary fields have been entered click ‘OK’ to continue and the following pop-up window appears informing the user of where the data is being loaded, and then asking them if they wish to continue:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/peu_croda2.jpg" alt="Continue window" /></p>
@@ -236,11 +236,11 @@ listing these errors. The user will be asked if they wish to view the report, an
 
 <div class="alert alert-danger" role="alert">
 
-  <p>For Contribution Amounts, if data already exists on Pension Master for the member and contribution data entered, then the data in the datafile will overwrite the data found on Pension Master, else it will be added on as a new record.</p>
+  <p>For Contribution Amounts, if data already exists on Pension Master for the member and contribution data entered, then the data in the data file will overwrite the data found on Pension Master, else it will be added on as a new record.</p>
 
-  <p>For NI Amounts, if data already exists on Pension Master for the member and NI year entered, then the data in the datafile will be added to the amount found on Pension Master, else it will be added on as a new record.</p>
+  <p>For NI Amounts, if data already exists on Pension Master for the member and NI year entered, then the data in the data file will be added to the amount found on Pension Master, else it will be added on as a new record.</p>
 
-  <p>For Salary Amounts, if data already exists on Pension Master for the member and salary date, found in the datafile, then the data in the datafile will overwrite data found on Pension Master, else it will be added on as a new record.</p>
+  <p>For Salary Amounts, if data already exists on Pension Master for the member and salary date, found in the datafile, then the data in the data file will overwrite data found on Pension Master, else it will be added on as a new record.</p>
 
   <p>For Pensioner and Active Addresses, if an address already exists for the member and address number 1, then the address in the datafile will overwrite the address found on Pension Master, else it will be added on as a new record and the current flag for the address will be flagged as ‘Yes’.</p>
 
@@ -253,7 +253,7 @@ listing these errors. The user will be asked if they wish to view the report, an
 
       <div id="footer">
         <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 30/05/2025 01:55:51.</p>
+        <p>Version 9.0 &bull; Build Date 03/06/2025 01:46:05.</p>
       </div>
     </div>
   </body>
