@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250603014547" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250604014809" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20250603014547" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250604014809" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -82,6 +82,7 @@
   <li><a href="#Query/Search For A Company">Query/Search for a Company</a></li>
   <li><a href="#Viewing Companies">Viewing Companies</a></li>
   <li><a href="#Updating Companies">Updating Companies</a></li>
+  <li><a href="#Broker Details">Broker Details</a></li>
   <li><a href="#Deleting Companies">Deleting Companies</a></li>
   <li><a href="#Printing Company Details">Printing Company Details</a></li>
   <li><a href="#Instigating A Workflow Action">Instigating a Workflow Action</a></li>
@@ -137,7 +138,7 @@ used to generate mail merge letters to companies within your scheme.</li>
 <p>You will be asked if you wish to copy an existing Company. If you select ‘Yes’ you will be prompted to select the company code of the company you wish to copy or select one from the lookup list.</p>
 
 <p><a name="pc_scheme"></a><strong>SCHEME CODE</strong> - The scheme code must exist on the scheme
-file. To get a lookup list list of existing scheme codes click the lookup icon. When a valid
+file. To get a lookup list of existing scheme codes click the lookup icon. When a valid
 scheme code has been entered the scheme description will be displayed, otherwise an
 error message will be displayed and the scheme code will have to be re-entered.</p>
 
@@ -245,6 +246,29 @@ menu.</p>
 
 <p>If you wish to delete the record, click ‘ Yes’. The record is deleted and the program
 returns to the main menu.</p>
+
+<h3><a name="BROK"></a><a name="Broker Details"></a>Broker Details</h3>
+
+<p>Click Menu and then select the Broker Details option and press <kbd>Return</kbd>.</p>
+
+<p>The following screen is displayed:</p>
+
+<div class="screen">
+  <p><img src="/pm90/pension/images/pem_sch1j.jpg" alt="Broker Details Screen" /></p>
+
+  <p>Broker Details Screen</p>
+</div>
+
+<p><a name="pbr_code"></a><strong>BROKER CODE</strong> - Enter a valid broker code, or click on
+the lookup icon for a list of broker codes.
+Upon selection of a valid broker code, the broker details from
+the <a href="/pm90/pension/file_maintenance/pem_brok/">Brokers</a> program are automatically filled out on the
+screen and saved to the company file. If the Broker you require is not available, add
+it first using the <a href="/pm90/pension/file_maintenance/pem_brok/">Brokers</a> program, then return to this
+screen to assign the broker to the company.</p>
+
+<p>When all the details have been entered click ‘OK’ to save the broker details, or click
+‘Cancel’ to exit entry without saving the details.</p>
 
 <h2><a name="Printing Company Details"></a><a name="report"></a>Printing Company Details</h2>
 
@@ -403,7 +427,7 @@ the location of the merge file.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 03/06/2025 01:45:47.</p>
+        <p>Version 9.0 &bull; Build Date 04/06/2025 01:48:09.</p>
       </div>
     </div>
   </body>
