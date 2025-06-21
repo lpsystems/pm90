@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250620014800" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20250621014945" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20250620014800" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20250621014945" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -533,7 +533,16 @@ out will also be left to the user.</p>
 
 <p><strong>Final Submission For Year?</strong> - If this is the last payroll payment of the tax year then tick this check box.</p>
 
-<p><strong>Transferring Scheme?</strong> - This field should only be selected when you (the client) are transferring the scheme to another provider and are therefore no longer running the payroll. When this field is selected all payroll members within the scheme must have the Date Finished Pension and Last Payment fields filled in, and it’s only members with a Last Payment field ticked that are picked up.</p>
+<p><strong>Transferring Scheme?</strong> - This field should only be selected under the following conditions:</p>
+
+<ul>
+  <li>You (the client) are transferring the scheme to another provider and are therefore no longer running the payroll.</li>
+  <li>The PAYE tax reference for the scheme <strong>is changing</strong> during the take over process.</li>
+</ul>
+
+<p>N.B. If the PAYE tax reference is staying the same for the scheme once its transferred to the new provider, then this option should not be used.</p>
+
+<p>When this field is selected all payroll members within the scheme must have the Date Finished Pension and Last Payment fields filled in, and it’s only members with a Last Payment field ticked that are picked up.</p>
 
 <p>When you know you are transferring a scheme you must do the following:</p>
 
@@ -620,7 +629,7 @@ out will also be left to the user.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 20/06/2025 01:48:00.</p>
+        <p>Version 9.0 &bull; Build Date 21/06/2025 01:49:45.</p>
       </div>
     </div>
   </body>
