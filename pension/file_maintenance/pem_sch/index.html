@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20251002023823" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20251003023412" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20251002023823" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20251003023412" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -264,8 +264,15 @@ generated for you. You will not be permitted to amend this.</p>
 and how certain screens are displayed. Select the Region from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>UK</li>
+  <li>Ireland</li>
+  <li>Belgium</li>
+  <li>Denmark</li>
+  <li>Jamaica</li>
+  <li>Gibraltar</li>
+  <li>Trinidad and Tobago</li>
+  <li>Norway</li>
+  <li>Sweden</li>
 </ul>
 
 <p><a name="psc_alt_code"></a><strong>ALTERNATIVE SCHEME CODE</strong> - Enter an alternative to
@@ -304,8 +311,9 @@ defined benefits scheme to allow for current market conditions.</p>
 <p><a name="psc_type"></a><strong>SCHEME TYPE</strong> - Select one of the following options from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Defined Benefits</li>
+  <li>Defined Contributions</li>
+  <li>Hybrid</li>
 </ul>
 
 <p><a name="psc_c_out"></a><strong>CONTRACTED OUT</strong> - Indicates that the scheme is contracted
@@ -366,8 +374,19 @@ scheme.</p>
 <p><a name="psc_status"></a><strong>STATUS</strong> - This field denotes that the status of the scheme Select one of the options from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Active</li>
+  <li>Frozen</li>
+  <li>Frozen DB with Active DC</li>
+  <li>In Wind Up</li>
+  <li>Inactive</li>
+  <li>Paid Up</li>
+  <li>Test</li>
+  <li>Transferred</li>
+  <li>Wound Up</li>
+  <li>Not Staged Yet</li>
+  <li>Not Proceeding</li>
+  <li>Not Decided</li>
+  <li>Transferring Out</li>
 </ul>
 
 <p><a name="psc_care"></a><strong>CARE SCHEME</strong> - This field denotes that the scheme
@@ -385,8 +404,8 @@ is a SSAS scheme. By ticking this then have access to the SSAS screens at scheme
 <p><a name="psc_sal_freq"></a><strong>SALARY FREQUENCY</strong> - This field denotes the salary frequency used in the <a href="/pm90/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>. Select a Salary Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annually</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="psc_cont_sal_cap"></a><strong>CONTRIBUTION SALARY CAP</strong> - This field denotes the cap used in the <a href="/pm90/pension/reports/standard_reports/per_consalcap/">Contribution Salary Cap Report</a>.</p>
@@ -1216,8 +1235,10 @@ rate for investments in this fund. This defaults to 100%.</p>
 <p><a name="psf_rebate_freq"></a><strong>REBATE FREQUENCY</strong> - Select the Rebate Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p>You cannot delete a fund from a scheme if any members of the scheme have investments
@@ -1307,8 +1328,10 @@ Generic quote for the projections calculation.</p>
 <p><a name="psct_type"></a><strong>CONTRIBUTION TYPE</strong> - Select the Contribution Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>AVC</li>
+  <li>EE</li>
+  <li>ER</li>
+  <li>Other</li>
 </ul>
 
 <p><a name="psct_tvin"></a><strong>CONTRIBUTION TYPE SOLELY FOR TVIN</strong> - Tick if this contribution should
@@ -1892,22 +1915,25 @@ options can be found <a href="/pm90/pension/updates/peu_reval/#destdlg">here</a>
 <p><a name="pctt_freq"></a><strong>REVALUATION FREQUENCY</strong> - Select the frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Biannual</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="pctt_date_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the date type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
 </ul>
 
 <p><a name="pctt_reval_day"></a><strong>DATE OF REVALUATION</strong> - Select the date of the revaluation from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Month Start</li>
+  <li>Month End</li>
+  <li>Specific Day in Month</li>
 </ul>
 
 <p><a name="pctt_dsy"></a><strong>DAY</strong> - Enter the day if the value of the previous field is specfic day. Valid entries are 1 - 31.</p>
@@ -1937,15 +1963,17 @@ return to the <a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Sch
 <p><a name="psmh_type"></a><strong>TYPE</strong> - Select a Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Salary</li>
+  <li>Age</li>
+  <li>Service</li>
+  <li>Combined</li>
 </ul>
 
 <p><a name="psmh_eff_dt"></a><strong>EFFECTIVE DATE</strong> - Select a date type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Immediate</li>
+  <li>Renewal Date</li>
 </ul>
 
 <p><a name="psmh_salary"></a><strong>SALARY</strong> - The salary type from the salaries set up for the scheme.</p>
@@ -1961,15 +1989,20 @@ return to the <a href="/pm90/pension/file_maintenance/pem_sch/#Introduction">Sch
 <p><a name="psmh_cap_inc_rate"></a><strong>SALARY CAP INCREASE RATE</strong> - Enter or select from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Date Joined Company</li>
+  <li>None - Fixed Cap</li>
+  <li>CPI</li>
+  <li>Salary Growth</li>
+  <li>CPI Capped at 3%</li>
+  <li>CPI Capped at 4%</li>
 </ul>
 
 <p><a name="psmh_service_dt"></a><strong>SERVICE DATE</strong> - Select the Service Date from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Date Joined Company</li>
+  <li>Date Joined Scheme</li>
+  <li>Qualifying Service Date</li>
 </ul>
 
 <p><a name="psmb_age"></a><strong>AGE</strong> - Entered the age.</p>
@@ -2041,8 +2074,10 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
@@ -2050,15 +2085,17 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
 </ul>
 
 <p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
 </ul>
 
 <p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
@@ -2082,8 +2119,10 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
@@ -2091,15 +2130,17 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
 </ul>
 
 <p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
 </ul>
 
 <p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
@@ -2160,8 +2201,10 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpa_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="psexpa_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
@@ -2169,15 +2212,17 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpa_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
 </ul>
 
 <p><a name="psexpa_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
 </ul>
 
 <p><a name="psexpa_eff_day"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
@@ -2201,8 +2246,10 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpd_freq"></a><strong>FREQUENCY</strong> - Select the Frequency from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Annual</li>
+  <li>Half Yearly</li>
+  <li>Quarterly</li>
+  <li>Monthly</li>
 </ul>
 
 <p><a name="psexpd_fut_incr"></a><strong>FUTURE INCREASES</strong> - Tick if there are future increases.</p>
@@ -2210,15 +2257,17 @@ See <a href="/pm90/pension/file_maintenance/pem_sch/#SEXP">Contribution Expenses
 <p><a name="psexpd_fut_incr_basis"></a><strong>FUTURE INCREASES BASIS</strong> - Select the Future Increases Basis from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>None</li>
+  <li>CPI</li>
+  <li>Earnings</li>
 </ul>
 
 <p><a name="psexpd_eff_dt_type"></a><strong>EFFECTIVE DATE TYPE</strong> - Select the Effective Date Type from the drop-down list:</p>
 
 <ul>
-  <li>Male</li>
-  <li>Female</li>
+  <li>Renewal Date</li>
+  <li>Calendar Year</li>
+  <li>Other</li>
 </ul>
 
 <p><a name="psexpd_eff_dd"></a><strong>EFFECTIVE DAY</strong> - Enter a day i.e. 1 if type is Other.</p>
@@ -2412,7 +2461,7 @@ menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2025 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 02/10/2025 02:38:23.</p>
+        <p>Version 9.0 &bull; Build Date 03/10/2025 02:34:12.</p>
       </div>
     </div>
   </body>
