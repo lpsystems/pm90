@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260401030203" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260401120137" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260401030203" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260401120137" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="01"></a>post_88_gmp_death(p,a,r,e,m,o)</h2>
+<h2><a name="01"></a>post_88_gmp_death(p,a,r,e,m)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -84,7 +84,7 @@ accrued after 6 April 1988, revalued to date of death.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_death(p,a,r,e,m,o)
+<pre><code>post_88_gmp_death(p,a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -101,7 +101,6 @@ accrued after 6 April 1988, revalued to date of death.</p>
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -119,9 +118,9 @@ Pension Date and Normal Pension Date is at least seven weeks.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>post_88_gmp_death(L,Y,N,Y,Y,N)
-post_88_gmp_death(F,N,Y,Y,Y,N)
-post_88_gmp_death(S,Y,Y,N,N,N)
+<pre><code>post_88_gmp_death(L,Y,N,Y,Y)
+post_88_gmp_death(F,N,Y,Y,Y)
+post_88_gmp_death(S,Y,Y,N,N)
 </code></pre>
 
 <h2><a name="02"></a>post_88_gmp_exit(a,r,e,m)</h2>
@@ -133,7 +132,7 @@ Pension (GMP) accrued after 6 April 1988 at termination of service.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_exit(a,r,e,m,o)
+<pre><code>post_88_gmp_exit(a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -143,7 +142,6 @@ Pension (GMP) accrued after 6 April 1988 at termination of service.</p>
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -162,10 +160,10 @@ this and you should then add them using <a href="/pm90/pension/system_data/pem_g
 
 <p><strong>EXAMPLE</strong></p>
 
-<pre><code>post_88_gmp_exit(Y,N,Y,Y,N)
+<pre><code>post_88_gmp_exit(Y,N,Y,Y)
 </code></pre>
 
-<h2><a name="03"></a>post_88_gmp_inc(p,a,r,e,m,o)</h2>
+<h2><a name="03"></a>post_88_gmp_inc(p,a,r,e,m)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -175,7 +173,7 @@ These are then notified to the DSS on form CA1597 (old RD574).</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_inc(p,a,r,e,m,o)
+<pre><code>post_88_gmp_inc(p,a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -192,17 +190,16 @@ These are then notified to the DSS on form CA1597 (old RD574).</p>
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>post_88_gmp_inc(L,Y,N,Y,Y,N)
-post_88_gmp_inc(F,N,N,N,N,N)
-post_88_gmp_inc(S,Y,Y,Y,Y,N)
+<pre><code>post_88_gmp_inc(L,Y,N,Y,Y)
+post_88_gmp_inc(F,N,N,N,N)
+post_88_gmp_inc(S,Y,Y,Y,Y)
 </code></pre>
 
-<h2><a name="04"></a>post_88_gmp_npd(p,a,r,e,m,o)</h2>
+<h2><a name="04"></a>post_88_gmp_npd(p,a,r,e,m)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -212,7 +209,7 @@ Date, if later.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_npd(p,a,r,e,m,o)
+<pre><code>post_88_gmp_npd(p,a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -229,7 +226,6 @@ Date, if later.</p>
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -249,12 +245,12 @@ Warnings file.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>post_88_gmp_npd(L,Y,Y,N,Y,N)
-post_88_gmp_npd(F,N,N,Y,Y,N)
-post_88_gmp_npd(S,Y,N,Y,Y,N)
+<pre><code>post_88_gmp_npd(L,Y,Y,N,Y)
+post_88_gmp_npd(F,N,N,Y,Y)
+post_88_gmp_npd(S,Y,N,Y,Y)
 </code></pre>
 
-<h2><a name="05"></a>post_88_gmp_spd(p,a,r,e,m,o)</h2>
+<h2><a name="05"></a>post_88_gmp_spd(p,a,r,e,m)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -263,7 +259,7 @@ accrued after 6 April 1988, revalued to State Pension Age.</p>
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_spd(p,a,r,e,m,o)
+<pre><code>post_88_gmp_spd(p,a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -280,7 +276,6 @@ accrued after 6 April 1988, revalued to State Pension Age.</p>
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -295,12 +290,12 @@ retirement increases also apply.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>post_88_gmp_spd(L,Y,N,N,N,N)
-post_88_gmp_spd(F,N,Y,N,N,N)
-post_88_gmp_spd(S,Y,N,Y,Y,N)
+<pre><code>post_88_gmp_spd(L,Y,N,N,N)
+post_88_gmp_spd(F,N,Y,N,N)
+post_88_gmp_spd(S,Y,N,Y,Y)
 </code></pre>
 
-<h2><a name="06"></a>post_88_gmp_calcdate(p,a,r,e,m,o)</h2>
+<h2><a name="06"></a>post_88_gmp_calcdate(p,a,r,e,m)</h2>
 
 <p><strong>OVERVIEW</strong></p>
 
@@ -309,7 +304,7 @@ post_88_gmp_spd(S,Y,N,Y,Y,N)
 
 <p><strong>SYNTAX</strong></p>
 
-<pre><code>post_88_gmp_calcdate(p,a,r,e,m,o)
+<pre><code>post_88_gmp_calcdate(p,a,r,e,m)
 </code></pre>
 
 <p><strong>EXPLANATION</strong></p>
@@ -326,7 +321,6 @@ post_88_gmp_spd(S,Y,N,Y,Y,N)
   <li>r - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to include an additional revaluation year in the GMP calculations.</li>
   <li>e - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating female SPA.</li>
   <li>m - is a single character field that takes the value ‘Y’ or ‘N’. It denotes whether to use equalisation when calculating male SPA.</li>
-  <li>o - is a single character field that takes the value ‘Y’ or ‘N’. When set to ‘Y’ it switches the calculation to use the opposite sex.</li>
 </ul>
 
 <p><strong>NOTES</strong></p>
@@ -342,9 +336,9 @@ Warnings file.</li>
 
 <p><strong>EXAMPLES</strong></p>
 
-<pre><code>post_88_gmp_calcdate(L,Y,Y,Y,Y,N)
-post_88_gmp_calcdate(F,N,Y,Y,Y,N)
-post_88_gmp_calcdate(S,Y,N,Y,Y,N)
+<pre><code>post_88_gmp_calcdate(L,Y,Y,Y,Y)
+post_88_gmp_calcdate(F,N,Y,Y,Y)
+post_88_gmp_calcdate(S,Y,N,Y,Y)
 </code></pre>
 
 <h2><a name="07"></a>pre_88_gmp_death(p,a,r,e,m)</h2>
@@ -599,7 +593,7 @@ pre_88_gmp_calcdate(S,Y,N,Y,Y)
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 01/04/2026 03:02:03.</p>
+        <p>Version 9.0 &bull; Build Date 01/04/2026 12:01:37.</p>
       </div>
     </div>
   </body>
