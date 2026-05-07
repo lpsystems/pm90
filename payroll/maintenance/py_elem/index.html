@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506142904" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123215" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506142904" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123215" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -88,7 +88,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as Supervisor status in <a href="/pm90/pension/system_administration/gn_user/">Users</a> may access this program.</p>
@@ -115,11 +115,11 @@
   <p>Codes Screen</p>
 </div>
 
-<h2><a name="Add Element Code"></a>Add Element Code</h2>
+<h2><a id="Add Element Code"></a>Add Element Code</h2>
 
 <p>Click ‘Add’. This allows the user to enter the following details:</p>
 
-<p><a name="pye_code"></a><strong>CODE</strong> - Enter the Code. The code is validated using the following rules:</p>
+<p><a id="pye_code"></a><strong>CODE</strong> - Enter the Code. The code is validated using the following rules:</p>
 
 <ul>
   <li>The first character must be ‘P’ for Payroll.</li>
@@ -132,24 +132,24 @@
 <p>Characters 3 to 8 are user defineable. This will enable users to differentiate
 between the Codes.</p>
 
-<p><a name="pye_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your Code. We recommend that you use something meaningful
+<p><a id="pye_desc"></a><strong>DESCRIPTION</strong> - Enter a description for your Code. We recommend that you use something meaningful
 as this will be displayed on screens and lookup lists.</p>
 
-<p><a name="pye_add_deduct"></a><strong>CODE TYPE</strong> - This field is set depending on the second character entered in the Code. If the
+<p><a id="pye_add_deduct"></a><strong>CODE TYPE</strong> - This field is set depending on the second character entered in the Code. If the
 second character is ‘A’, then this field defaults to ‘Addition’. If the second character
 is ‘D’, then this field defaults to ‘Deduction’. If the second character is ‘T’, then this field defaults to ‘Tax Credit’. This field is not accessible.</p>
 
-<p><a name="pye_amount"></a><strong>AMOUNT</strong> - Enter the amount of addition/deduction. If this field is left blank, it will default
+<p><a id="pye_amount"></a><strong>AMOUNT</strong> - Enter the amount of addition/deduction. If this field is left blank, it will default
 to 0.00.</p>
 
-<p><a name="pye_taxable"></a><strong>TAXABLE?</strong> - Tick this field if the amount to be added or deducted is to be taxed, i.e. If
+<p><a id="pye_taxable"></a><strong>TAXABLE?</strong> - Tick this field if the amount to be added or deducted is to be taxed, i.e. If
 the code is a ‘Deduction’ type, then tick this field if the amount is to be deducted
 before tax. <strong>This field does not get ticked if it is a Tax credit type code, as tax credits are not taxable.</strong></p>
 
 <p>When the Code details have been entered click ‘OK’ to save the details. You can
 click ‘Cancel’ at any stage to exit without saving the Code details.</p>
 
-<h2><a name="query"></a><a name="Query/Search For Element Codes"></a>Query/Search For Element Codes</h2>
+<h2><a id="query"></a><a id="Query/Search For Element Codes"></a>Query/Search For Element Codes</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -169,12 +169,12 @@ A message is displayed to the bottom of the screen.</p>
 
 </div>
 
-<h2><a name="Viewing Element Codes"></a>Viewing Element Codes</h2>
+<h2><a id="Viewing Element Codes"></a>Viewing Element Codes</h2>
 
 <p>To view the other records selected click Next to view the next record, and Previous
 to view the previous record.</p>
 
-<h2><a name="Delete Element Codes"></a>Delete Codes</h2>
+<h2><a id="Delete Element Codes"></a>Delete Codes</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -185,7 +185,7 @@ prompted to again confirm the deletion.</p>
 <p>An error message is displayed if the code you are trying to delete is currently
 allocated to a member.</p>
 
-<h2><a name="Bulk Delete Element Codes"></a>Bulk Delete Codes</h2>
+<h2><a id="Bulk Delete Element Codes"></a>Bulk Delete Codes</h2>
 
 <p>Click ‘Bulk Delete’.</p>
 
@@ -205,7 +205,7 @@ allocated to a member.</p>
 
 <p>Any pay element selected will then be deleted from member’s records. If the scheme field is left blank, then the pay element will also be deleted from the system level. If the scheme field is entered, then the pay element will also be deleted from the system level, but only if there are no other members in other schemes that are using the pay element.</p>
 
-<h2><a name="Printing Element Code Details"></a><a name="print"></a>Printing Element Code Details</h2>
+<h2><a id="Printing Element Code Details"></a><a id="print"></a>Printing Element Code Details</h2>
 
 <p>This option allows you to print a list of one or all of the types of Element
 Codes available on your system.</p>
@@ -228,14 +228,14 @@ Codes available on your system.</p>
   <li><strong>All Pay Element Codes</strong> - This will print any codes that exist on the system.</li>
 </ul>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:29:04.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:32:15.</p>
       </div>
     </div>
   </body>

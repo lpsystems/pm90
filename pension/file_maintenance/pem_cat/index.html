@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506142950" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123322" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506142950" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123322" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -109,7 +109,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>Only users set up as Supervisor status in <a href="/pm90/pension/system_administration/gn_user/">Users</a> may
@@ -152,9 +152,9 @@ program.</p>
   <p>Basic Category Details Screen</p>
 </div>
 
-<h2><a name="Add A New Category"></a>Add A New Category</h2>
+<h2><a id="Add A New Category"></a>Add A New Category</h2>
 
-<h3><a name="Basic Category Details"></a>Basic Category Details</h3>
+<h3><a id="Basic Category Details"></a>Basic Category Details</h3>
 
 <p>This screen allows you to set the criteria by which you wish to validate entries and
 exits from this category.</p>
@@ -167,11 +167,11 @@ exits from this category.</p>
 will be able to select which screens you wish to copy from the list. When this has been done, the window closes and you will
 be returned to the category code field for your new category.</p>
 
-<p><a name="pct_scheme"></a><strong>SCHEME CODE</strong> - The scheme must be entered and the code
+<p><a id="pct_scheme"></a><strong>SCHEME CODE</strong> - The scheme must be entered and the code
 entered must exist on the scheme file. When a valid scheme code has been entered the
 scheme description will be displayed. You can click the lookup icon to see a list of scheme codes.</p>
 
-<p><a name="pct_category"></a><a name="pct_desc"></a><strong>CATEGORY CODE</strong> - The category
+<p><a id="pct_category"></a><a id="pct_desc"></a><strong>CATEGORY CODE</strong> - The category
 Code must be entered and the combination of scheme and category code cannot already
 exist on the category file.</p>
 
@@ -180,42 +180,42 @@ The former is used to validate the ‘Date Joined For Pension’ field and the l
 is used to validate the ‘Date Joined For Life Assurance’ field on the <a href="/pm90/pension/file_maintenance/pem_mem/#Basic Member Details">Basic
 Member Details</a> screen in Members when adding or updating a member record.</p>
 
-<p><a name="pct_mid_year_p"></a><a name="pct_mid_year_d"></a><strong>MID YEAR ENTRANTS ALLOWED</strong> -
+<p><a id="pct_mid_year_p"></a><a id="pct_mid_year_d"></a><strong>MID YEAR ENTRANTS ALLOWED</strong> -
 This is used to determine whether members of this category will only be allowed to
 join the scheme on the anniversary of the scheme renewal date (by reference to the
 renewal day and month on the <a href="/pm90/pension/file_maintenance/pem_sch/#Basic Scheme Details">Basic Scheme
 Details</a> screen in Schemes) or at any date during the scheme year. It will default
 to ‘No’ for all categories.</p>
 
-<p><a name="pct_min_age"></a><a name="pct_dis_min_age"></a><strong>MINIMUM AGE FOR JOINING</strong> -
+<p><a id="pct_min_age"></a><a id="pct_dis_min_age"></a><strong>MINIMUM AGE FOR JOINING</strong> -
 This is the minimum age an employee needs to be in order to be eligible to join the
 current category. This will be used to validate entry of new members to this category
 in Members. The default value is 18 (i.e. 18 years of age).</p>
 
-<p><a name="pct_min_serv"></a><a name="pct_dis_min_serv"></a><strong>MINIMUM SERVICE FOR JOINING</strong> -
+<p><a id="pct_min_serv"></a><a id="pct_dis_min_serv"></a><strong>MINIMUM SERVICE FOR JOINING</strong> -
 This is the minimum period of company service in years (by reference to the Date Entered
 Company, pm_dec, field on the member record) an employee needs to be in order to be
 eligible to join the current category. This will be used to validate entry of new
 members to this category in Members. The default value is 0 (i.e. the member can join
 the category any time after they have joined the Company as an employee).</p>
 
-<p><a name="pct_max_age"></a><a name="pct_dis_max_age"></a><strong>MAXIMUM AGE FOR JOINING</strong> -
+<p><a id="pct_max_age"></a><a id="pct_dis_max_age"></a><strong>MAXIMUM AGE FOR JOINING</strong> -
 This is the maximum age an employee needs to be in order to be eligible to join the
 current category. This will be used to validate entry of new members to this category
 in Members. This field can not be greater than the higher of the normal pension date
 for males or that for females.</p>
 
-<p><a name="pct_nra_m"></a><strong>NORMAL PENSION AGE (MALES)</strong> - This is the normal pension
+<p><a id="pct_nra_m"></a><strong>NORMAL PENSION AGE (MALES)</strong> - This is the normal pension
 age applicable to male members of this category. This will be used as a default in
 the entry of a new member record and will be used to automatically update the members
 Normal Pension Date (pm_npd). The default value is 65.</p>
 
-<p><a name="pct_nra_f"></a><strong>NORMAL PENSION AGE (FEMALES)</strong> - This is the normal pension
+<p><a id="pct_nra_f"></a><strong>NORMAL PENSION AGE (FEMALES)</strong> - This is the normal pension
 age applicable to female members of this category. This will be used as a default
 in the entry of a new member record and will be used to automatically update the members
 Normal Pension Date (pm_npd). The default value is 65.</p>
 
-<p><a name="pct_end_mth"></a><a name="pct_end_mth_no"></a><strong>NORMAL PENSION DATE ADJUSTMENT</strong> -
+<p><a id="pct_end_mth"></a><a id="pct_end_mth_no"></a><strong>NORMAL PENSION DATE ADJUSTMENT</strong> -
 This is used to denote whether members of this category usually retire on the actual
 day of them reaching Normal Pension Age or whether a adjustment is to be made to this
 date. The options available are:</p>
@@ -242,7 +242,7 @@ in that month i.e. 28 or 29.</li>
 to add to the category, you should go directly to the appropriate screen and add them
 now.</p>
 
-<h2><a name="Query/Search For A Category"></a><a name="query"></a>Query/Search For A Category</h2>
+<h2><a id="Query/Search For A Category"></a><a id="query"></a>Query/Search For A Category</h2>
 
 <p>Click ‘Query’. The following pop-up window is displayed:</p>
 
@@ -264,7 +264,7 @@ to the Categories main menu.</p>
 click Menu’, then select the appropriate screen by moving the highlight bar. See later
 in this chapter for more on the Menu option in Categories.</p>
 
-<h2><a name="Browsing Category Details"></a>Browsing Category Details</h2>
+<h2><a id="Browsing Category Details"></a>Browsing Category Details</h2>
 
 <p>Click ‘Browse’ to view details in any screen where the data does not fit on the screen.</p>
 
@@ -273,19 +273,19 @@ to navigate around the data.</p>
 
 <p>Click ‘OK’ or ‘Cancel’ to leave browse mode.</p>
 
-<h2><a name="Viewing Categories"></a>Viewing Categories</h2>
+<h2><a id="Viewing Categories"></a>Viewing Categories</h2>
 
 <p>To view the other records selected press <kbd>N</kbd> to get the next record, and <kbd>P</kbd> to view
 the previous record. If <kbd>N</kbd> is chosen and there are no records after the current record
 an error message is displayed. If <kbd>P</kbd> is chosen and there are no previous records
 an error message is displayed.</p>
 
-<h2><a name="Updating Categories"></a>Updating Categories</h2>
+<h2><a id="Updating Categories"></a>Updating Categories</h2>
 
 <p>Before Updating, a record must be selected through the query option, and an error
 message is displayed if a record for update has not been selected.</p>
 
-<h3><a name="Update Basic Category Details"></a>Basic Category Details</h3>
+<h3><a id="Update Basic Category Details"></a>Basic Category Details</h3>
 
 <p>Select the Basic Category Details screen using the menu, then click ‘Update’. The
 Basic Category Details screen (shown in the section “Add a category”) will be displayed.</p>
@@ -308,7 +308,7 @@ A user prompt will follow this warning to allow the user to cancel this amendmen
 
 <p>Click ‘OK’ to save or click ‘Cancel’ to exit without saving.</p>
 
-<h3><a name="Contribution Interest"></a>Contribution Interest Details</h3>
+<h3><a id="Contribution Interest"></a>Contribution Interest Details</h3>
 
 <p>Select the Contribution Interest Details screen using the menu.</p>
 
@@ -326,7 +326,7 @@ added to the total contributions on an regular basis.</p>
 
 <p>The fields are described as follows:</p>
 
-<p><a name="pcti_formula"></a><strong>FORMULA CODE</strong> - Enter a valid Formula Code or select
+<p><a id="pcti_formula"></a><strong>FORMULA CODE</strong> - Enter a valid Formula Code or select
 a code from the lookup list. If a Formula Code is entered with an Interest Rate on
 the same line then an error message is displayed indicating that one of them must
 be removed.</p>
@@ -344,7 +344,7 @@ ONLY detect any interest rates that are greater than 100% or less than -100%.</p
   <p>New Interest Value = ( Contribution Amount + Contribution Interest ) * ( Formula Result / 100 )</p>
 </div>
 
-<p><a name="pcti_int"></a><strong>INTEREST</strong> - Enter a Percentage Rate. If a Percentage
+<p><a id="pcti_int"></a><strong>INTEREST</strong> - Enter a Percentage Rate. If a Percentage
 Rate is entered with a Formula Code on the same line then an error message is displayed
 indicating that one of them must be removed.</p>
 
@@ -358,7 +358,7 @@ are 0. These fields are used by the <a href="/pm90/pension/updates/peu_int/">Con
   <p>New Interest Value = ( Contribution Amount + Contribution Interest ) * ( Interest Rate / 100 )</p>
 </div>
 
-<p><a name="pcti_pro_rata"></a><strong>PRO RATA</strong> - Tick this box if a Pro Rata increase
+<p><a id="pcti_pro_rata"></a><strong>PRO RATA</strong> - Tick this box if a Pro Rata increase
 should be calculated. This will determine the fraction of the Interest Rate increase
 based on the members last Interest Run date and the current run date used in the <a href="/pm90/pension/updates/peu_int/">Contribution
 Interest Run</a>.</p>
@@ -381,7 +381,7 @@ will be 365.</p>
 
 <p>Click ‘OK’ to save the details, or click ‘Cancel’ to exit without saving the changes.</p>
 
-<h3><a name="ContributionRate"></a>Contribution Rate Defaults</h3>
+<h3><a id="ContributionRate"></a>Contribution Rate Defaults</h3>
 
 <p>Select the Contribution Rate Defaults screen using the menu.</p>
 
@@ -406,7 +406,7 @@ to generate batches of contribution requests for the scheme.</p>
 
 <p>Enter the fields as follows:</p>
 
-<p><a name="pcc_frequency"></a><strong>CONTRIBUTION FREQUENCY</strong> - Enter the frequency of
+<p><a id="pcc_frequency"></a><strong>CONTRIBUTION FREQUENCY</strong> - Enter the frequency of
 your contributions for members of this category. The valid options are:</p>
 
 <ul>
@@ -417,9 +417,9 @@ your contributions for members of this category. The valid options are:</p>
   <li><strong>52</strong> - Weekly</li>
 </ul>
 
-<p><a name="pcc_cont"></a><strong>CONT TYPE</strong> - Enter the contribution type code for this line.</p>
+<p><a id="pcc_cont"></a><strong>CONT TYPE</strong> - Enter the contribution type code for this line.</p>
 
-<p><a name="pcc_type"></a><strong>TYPE</strong> - Enter the code for the type of calculation of
+<p><a id="pcc_type"></a><strong>TYPE</strong> - Enter the code for the type of calculation of
 contributions you require for this contribution type. The valid options are:</p>
 
 <ul>
@@ -434,13 +434,13 @@ F i.e. an entry of ‘F’ is in the <a href="/pm90/pension/file_maintenance/pem
 on the <a href="/pm90/pension/file_maintenance/pem_mem/#Member Indicator Details">Member Indicators screen</a>
 in the members record.</p>
 
-<p><a name="pcc_rate"></a><strong>ANNL RATE</strong> - If PERCENT type code is used, enter the
+<p><a id="pcc_rate"></a><strong>ANNL RATE</strong> - If PERCENT type code is used, enter the
 percentage rate to use.</p>
 
-<p><a name="pcc_salary"></a><strong>SALARY TO USE</strong> - If PERCENT type code is used, enter
+<p><a id="pcc_salary"></a><strong>SALARY TO USE</strong> - If PERCENT type code is used, enter
 the salary to use in the calculation.</p>
 
-<p><a name="pcc_formula"></a><strong>FORMULA</strong> - Enter a formula code to use to calculate
+<p><a id="pcc_formula"></a><strong>FORMULA</strong> - Enter a formula code to use to calculate
 the contributions for this contribution type. The formula must be a valid formula
 for this scheme. If a valid formula code is entered, all the other parameters for
 the calculation of contributions for this contribution type are ignored.</p>
@@ -456,7 +456,7 @@ contribution amount for that contribution type.</p>
 
 <p>Click ‘OK’ to save the details, or click ‘Cancel’ to exit without saving the changes.</p>
 
-<h3><a name="UDS/UDA Allocation"></a>UDS/UDA Allocation</h3>
+<h3><a id="UDS/UDA Allocation"></a>UDS/UDA Allocation</h3>
 
 <p>Select the UDS/UDA Allocation screen using the menu.</p>
 
@@ -479,12 +479,12 @@ screens if they have been ticked for allocation.</p>
 
 <p>Enter the field as follows:</p>
 
-<p><a name="alloc_flag"></a><strong>ALLOCATE</strong> - If the UDS/UDA screen is to be allocated
+<p><a id="alloc_flag"></a><strong>ALLOCATE</strong> - If the UDS/UDA screen is to be allocated
 for the category, then tick this field.</p>
 
 <p>Click ‘OK’ to save the details, or click ‘Cancel’ to exit without saving the changes.</p>
 
-<h3><a name="DC Benefit Statement Configuration"></a>DC Benefit Statement Configuration</h3>
+<h3><a id="DC Benefit Statement Configuration"></a>DC Benefit Statement Configuration</h3>
 
 <p>Select the DC Benefit Statement Configuration screen using the menu.</p>
 
@@ -499,37 +499,37 @@ for the category, then tick this field.</p>
 <p>This screen record contribution types and other information required to produce the calculations in the DC Generic Quotation.</p>
 
 <p><strong>Salary Information</strong>
-<a name="pcdc_salary"></a><strong>Salary</strong> - The salary must be entered and the salary
+<a id="pcdc_salary"></a><strong>Salary</strong> - The salary must be entered and the salary
 entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
 
-<p><a name="pcdc_pen_sal"></a><strong>Pensionable Salary</strong> - The salary must be entered and the salary
+<p><a id="pcdc_pen_sal"></a><strong>Pensionable Salary</strong> - The salary must be entered and the salary
 entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
 
 <p><strong>Risk Information</strong>
-<a name="pcdc_risk_salary"></a><strong>Risk Salary</strong> - The salary must be entered and the salary
+<a id="pcdc_risk_salary"></a><strong>Risk Salary</strong> - The salary must be entered and the salary
 entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
 
-<p><a name="pcdc_sdis_sal"></a><strong>Spouse’s DIS Salary</strong> - The salary must be entered and the salary
+<p><a id="pcdc_sdis_sal"></a><strong>Spouse’s DIS Salary</strong> - The salary must be entered and the salary
 entered must exist on the scheme file. You can click the lookup icon to see a list of salary codes.</p>
 
 <p><strong>Non-TV Contribution Types</strong>
-<a name="pcdc_con_type1"></a><strong>Contribution Type</strong> - A Non -TV contribution code must be entered and the type
+<a id="pcdc_con_type1"></a><strong>Contribution Type</strong> - A Non -TV contribution code must be entered and the type
 entered must exist on the scheme file. You can click the lookup icon to see a list of types.</p>
 
 <p><strong>Risk Multiples</strong>
-<a name="pcdc_marr_mult"></a><strong>Married Members</strong> - Entered the multiple for married members.</p>
+<a id="pcdc_marr_mult"></a><strong>Married Members</strong> - Entered the multiple for married members.</p>
 
-<p><a name="pcdc_sin_mult"></a><strong>Single Members</strong> - Entered the multiple for single members.</p>
+<p><a id="pcdc_sin_mult"></a><strong>Single Members</strong> - Entered the multiple for single members.</p>
 
-<p><a name="pcdc_sdis_pc"></a><strong>Spouse’s Pension DIS %</strong> - Entered the percentage.</p>
+<p><a id="pcdc_sdis_pc"></a><strong>Spouse’s Pension DIS %</strong> - Entered the percentage.</p>
 
-<p><a name="pcdc_phi_pc"></a><strong>PHI Member’s Benefit %</strong> - Entered the percentage.</p>
+<p><a id="pcdc_phi_pc"></a><strong>PHI Member’s Benefit %</strong> - Entered the percentage.</p>
 
-<p><a name="pcdc_offset_pc"></a><strong>State Disability Offset %</strong> - Entered the percentage.</p>
+<p><a id="pcdc_offset_pc"></a><strong>State Disability Offset %</strong> - Entered the percentage.</p>
 
-<p><a name="pcdc_offset_dt"></a><strong>Date for Offset</strong> - Entered the date.</p>
+<p><a id="pcdc_offset_dt"></a><strong>Date for Offset</strong> - Entered the date.</p>
 
-<p><a name="pcdc_phi_max"></a><strong>Maximum PHI Benefit</strong> - Entered the amount.</p>
+<p><a id="pcdc_phi_max"></a><strong>Maximum PHI Benefit</strong> - Entered the amount.</p>
 
 <p><strong>DC Generic Configuration Projection Criteria  - UK Only Schemes</strong></p>
 
@@ -543,15 +543,15 @@ entered must exist on the scheme file. You can click the lookup icon to see a li
   <p>DC Generic Configuration Projection Criteria</p>
 </div>
 
-<p><a name="pcdc_interest_code"></a><strong>Interest Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+<p><a id="pcdc_interest_code"></a><strong>Interest Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
 
-<p><a name="pcdc_expense_code"></a><strong>Expense Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+<p><a id="pcdc_expense_code"></a><strong>Expense Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
 
-<p><a name="pcdc_salary_code"></a><strong>Salary Increase Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+<p><a id="pcdc_salary_code"></a><strong>Salary Increase Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
 
-<p><a name="pcdc_inflate_code"></a><strong>Inflation Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
+<p><a id="pcdc_inflate_code"></a><strong>Inflation Rate Factor Table Code</strong> - Entered the factor table code or use the lookup to select it.</p>
 
-<p><a name="pcdc_annuity_code"></a><strong>State Disability Offset %</strong> - Entered the factor table code or use the lookup to select it.</p>
+<p><a id="pcdc_annuity_code"></a><strong>State Disability Offset %</strong> - Entered the factor table code or use the lookup to select it.</p>
 
 <p><strong>Auto Enrolment Minimum Contribution Rates  - UK Only Schemes</strong></p>
 
@@ -567,7 +567,7 @@ entered must exist on the scheme file. You can click the lookup icon to see a li
 
 <p>These fields have to be updated by the user for any existing scheme where the dcgeneric screens have already been set up for the category. For any new categories, the copy function attached to the dc configuration will now include this screen.</p>
 
-<h3><a name="Add A Quotation Type"></a>Add A Quotation Type</h3>
+<h3><a id="Add A Quotation Type"></a>Add A Quotation Type</h3>
 
 <p>Select the relevant ‘Add A Quotation Type’ option using the menu.</p>
 
@@ -582,7 +582,7 @@ entered must exist on the scheme file. You can click the lookup icon to see a li
 <p>Fill out the details for your new Quotation Type as set out in the section <a href="#Update A Quotation Type">Update
 A Quotation Type</a> below.</p>
 
-<h3><a name="Update A Quotation Type"></a>Update A Quotation Type</h3>
+<h3><a id="Update A Quotation Type"></a>Update A Quotation Type</h3>
 
 <p>Select the relevant Quotation Type screen using the menu, then click ‘Update’.</p>
 
@@ -658,17 +658,17 @@ results are to be written back to the member record.</p>
   <p>Quotation Types Screen</p>
 </div>
 
-<p><a name="pqh_code"></a><strong>QUOTATION TYPE CODE</strong> - Enter a code for your Quotation
+<p><a id="pqh_code"></a><strong>QUOTATION TYPE CODE</strong> - Enter a code for your Quotation
 Type. This is a 6 character field and must be unique for the current category and
 scheme combination e.g. you cannot have two Quotation Types of NORM for scheme 0000
 category 000. If you do not enter a unique code in this way, an error message is displayed
 and you will be requested to re-enter your Quotation Type Code.</p>
 
-<p><a name="pqh_desc"></a><strong>QUOTATION TYPE DESCRIPTION</strong> - Enter a name for your Quotation
+<p><a id="pqh_desc"></a><strong>QUOTATION TYPE DESCRIPTION</strong> - Enter a name for your Quotation
 Type. This will be used in subsequent lookups and menus in other parts of Pension
 Master so it is important that you use a meaningful name.</p>
 
-<p><a name="pqh_table"></a><strong>WRITE RESULTS TO</strong> - Enter the name of the screen you
+<p><a id="pqh_table"></a><strong>WRITE RESULTS TO</strong> - Enter the name of the screen you
 wish to write results of this quotation type back to. Valid options are:</p>
 
 <ul>
@@ -684,7 +684,7 @@ wish to write results of this quotation type back to. Valid options are:</p>
   <li>Finalise</li>
 </ul>
 
-<p><a name="pqb_for_desc"></a><a name="pqb_for_code"></a><strong>FORMULAE DESCRIPTIONS/CODES</strong> -
+<p><a id="pqb_for_desc"></a><a id="pqb_for_code"></a><strong>FORMULAE DESCRIPTIONS/CODES</strong> -
 Enter the formulae codes and descriptions corresponding to the various fields. To
 get a list of existing formula codes for the current scheme click on the lookup icon
 whilst in any of the codes fields. The formula descriptions will default to
@@ -709,27 +709,27 @@ up which quotation result is written back to which field on the specified screen
 <p>The screen may vary slightly dependant on which <a href="#pqh_table">Write Results
 To</a> screen you have chosen. If you have chosen to ‘Finalise’ the results, then you won’t be allowed to update this screen as the results are not being sent anywhere.</p>
 
-<h3><a name="pqw_field"></a>User Defined Screens</h3>
+<h3><a id="pqw_field"></a>User Defined Screens</h3>
 
 <p>You can writeback results to more than one user defined screen. Simply specify the
 different user defined screen descriptions in the User Defined Screen column of this
 screen.</p>
 
-<p><a name="pqw_field"></a><strong>USER DEFINED SCREEN</strong> - Enter the name of user defined
+<p><a id="pqw_field"></a><strong>USER DEFINED SCREEN</strong> - Enter the name of user defined
 screen you wish to write results back to. Click on the lookup icon to see a list of user defined screens.</p>
 
-<p><a name="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
+<p><a id="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
 
-<p><a name="pqw_quote"></a><strong>CALCULATION</strong> - Enter the description of the calculation
+<p><a id="pqw_quote"></a><strong>CALCULATION</strong> - Enter the description of the calculation
 (from screen 1 of <a href="#pqb_for_desc">Quotation Type setup</a>) that you wish
 to write back to the specified user defined screen. There is a lookup list of the
 calculations available by clicking on the lookup icon. After entering a valid description, the ‘Num’ field is automatically filled in with corresponding line number (from screen 1).</p>
 
-<p><a name="pqw_sub_code"></a><strong>FIELD</strong> - Enter the position on the specified user
+<p><a id="pqw_sub_code"></a><strong>FIELD</strong> - Enter the position on the specified user
 defined screen to write this calculation back to. This is a valid number from 1 to
 20.</p>
 
-<h3><a name="DEATH"></a>Death, Lifetime/Annual Allowance, Protected A-Day Benefits, Refund, Transfer In &amp; Transfer Out Screens</h3>
+<h3><a id="DEATH"></a>Death, Lifetime/Annual Allowance, Protected A-Day Benefits, Refund, Transfer In &amp; Transfer Out Screens</h3>
 
 <p><strong>FIELD</strong> - This is automatically populated with a list of
 all available fields on the specified writeback screen.</p>
@@ -738,7 +738,7 @@ all available fields on the specified writeback screen.</p>
 fields i.e. fields that you must write back some data to. All other fields are optional
 and you are not required to assign a calculation to them.</p>
 
-<p><a name="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
+<p><a id="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
 
 <p><strong>CALCULATION</strong> - Enter the description of the calculation (from screen 1 of <a href="#pqb_for_desc">Quotation
 Type setup</a>) that you wish to write back to the specified screen. There is a lookup
@@ -747,7 +747,7 @@ list of the calculations available by clicking on the lookup icon. After enterin
 <p>For transfer in / transfer out screen writebacks, you will be asked for the transfer
 in / transfer out code when you actually perform the writeback.</p>
 
-<h3><a name="DEF"></a>Deferred Pensioner/Pensioner Screens</h3>
+<h3><a id="DEF"></a>Deferred Pensioner/Pensioner Screens</h3>
 
 <p>You can writeback results to the deferred pensioner / pensioner basic details screen
 and the deferred pensioner / pensioner history screen. When writing back deferred
@@ -758,7 +758,7 @@ in the Sub Code column of this screen.</p>
 <p><strong>FIELD</strong> - Enter the description of the field you wish to writeback to. There
 is a lookup list of the fields available by clicking on the lookup icon.</p>
 
-<p><a name="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
+<p><a id="p_quote_id"></a><strong>NUM</strong> - This field is automatically filled in with the corresponding line number (from screen 1) for the calculation description that the user has entered. The user does not have access to this field.</p>
 
 <p><strong>CALCULATION</strong> - Enter the description of the calculation (from screen 1 of <a href="#pqb_for_desc">Quotation
 Type setup</a>) that you wish to write back to the specified screen. There is a lookup
@@ -779,7 +779,7 @@ mandatory when performing a deferred pension / pension increase run.</p>
 <p>When all the details have been entered click ‘OK’ to save the details to file. You
 can click ‘Cancel’ to exit the option without saving the details.</p>
 
-<h2><a name="Deleting Categories"></a>Deleting Categories</h2>
+<h2><a id="Deleting Categories"></a>Deleting Categories</h2>
 
 <p>Before Deleting, a record must be selected through the Query option, and an error
 message is displayed if a record for deletion has not been selected.</p>
@@ -805,7 +805,7 @@ menu.</p>
 <p>If you wish to delete the record click ‘Yes’. The record is deleted and the program
 returns to the main menu.</p>
 
-<h2><a name="Printing Individual Screens"></a><a name="report"></a>Printing Individual Screens &amp; Full Category Details</h2>
+<h2><a id="Printing Individual Screens"></a><a id="report"></a>Printing Individual Screens &amp; Full Category Details</h2>
 
 <p>Click the ‘Report’ icon.</p>
 
@@ -830,7 +830,7 @@ options can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>
 <p>Select the appropriate option and click ‘OK’. Click on ‘Cancel’ to exit the printing
 or ‘Help’ to display this help text.</p>
 
-<h3><a name="fcatprint"></a>Full Category Report</h3>
+<h3><a id="fcatprint"></a>Full Category Report</h3>
 
 <p>If you chose to print off a Full Category Report, a window will now appear which asks
 which screens you wish to print off for this category. Pension Master defaults to
@@ -854,7 +854,7 @@ screen is as follows:</p>
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2><a name="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
+<h2><a id="Instigating A Workflow Action"></a>Instigating A Workflow Action</h2>
 
 <p>Click ‘Workflow’ to instigate a workflow action for the current category. A category
 record must be selected using the <a href="/pm90/pension/file_maintenance/pem_mem/#Query/Search For A Member">Query</a> option
@@ -873,7 +873,7 @@ a list of available workflow codes. To set up a workflow
 code if one to suit your purpose does not already exist, use the <a href="/pm90/pension/workflow/gn_wkflw/#Add A Workflow Type">Workflow
 Management</a> option.</p>
 
-<h2><a name="navigate"></a>Navigating Between Screens</h2>
+<h2><a id="navigate"></a>Navigating Between Screens</h2>
 
 <p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user access to
 the various pages of the Category File by picking from a list of the various pages.
@@ -886,7 +886,7 @@ or hybrid type scheme. If no record is currently selected (i.e. the details on t
 screen are blank) then all available screens in Categories are available in the pop-up
 menu.</p>
 
-<p><a name="menu"></a>The menu selection pop-up is as follows:</p>
+<p><a id="menu"></a>The menu selection pop-up is as follows:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/pem_cat10.jpg" alt="Category Screen Selection Screen" /></p>
@@ -894,14 +894,14 @@ menu.</p>
   <p>Category Screen Selection Screen</p>
 </div>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:29:50.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:22.</p>
       </div>
     </div>
   </body>

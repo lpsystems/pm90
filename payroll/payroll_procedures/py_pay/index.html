@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506142905" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123217" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506142905" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123217" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -99,7 +99,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <p>This program allows the user to run a payroll for a specified scheme. From this
 program the user can print the payslips and payment summary reports for the members
@@ -141,21 +141,21 @@ details as soon as they receive them.</p>
   <p>Payroll Run Screen</p>
 </div>
 
-<h2><a name="Run A Payroll"></a>Run A Payroll</h2>
+<h2><a id="Run A Payroll"></a>Run A Payroll</h2>
 
 <p>Click ‘Run’.</p>
 
-<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong>
+<p><a id="pm_scheme"></a><strong>SCHEME CODE</strong>
 - Enter the scheme code required. To get a list of valid scheme codes click on the lookup icon.
 When a valid scheme code has been entered the scheme description will be displayed.
 This field must be entered.</p>
 
-<p><a name="pm_category"></a><strong>CATEGORY CODE</strong>
+<p><a id="pm_category"></a><strong>CATEGORY CODE</strong>
 - Enter the category code required. To get a list of valid category codes click on the lookup icon.
 When a valid category code has been entered the category description will be displayed.
 This field should be left blank if you wish to run the payroll for every category of the scheme.</p>
 
-<p><a name="run_date"></a><strong>RUN DATE</strong> - Enter the run date of the backup in the
+<p><a id="run_date"></a><strong>RUN DATE</strong> - Enter the run date of the backup in the
 format dd/mm/yyyy or ddmmyyyy. This field is defaulted as today’s date, however,
 this can be altered to another date. Click on the calendar icon to display a calendar on
 the screen. This field must be entered.</p>
@@ -211,66 +211,66 @@ then the program returns to the payroll menu.</p>
 this screen. You can use the arrow buttons to scroll through the selected members.
 Some of the fields can be adjusted as follows:</p>
 
-<p><a name="pym_code"></a><strong>CODE</strong>
+<p><a id="pym_code"></a><strong>CODE</strong>
 - The payment element code is displayed to this field. You cannot enter into this
 field.</p>
 
-<p><a name="pym_desc"></a><strong>DESCRIPTION</strong>
+<p><a id="pym_desc"></a><strong>DESCRIPTION</strong>
 - The payment element description is displayed to this field. You cannot enter into
 this field.</p>
 
-<p><a name="code_type"></a><strong>TYPE</strong>
+<p><a id="code_type"></a><strong>TYPE</strong>
 - The type of payment element is displayed to this field. This will either be Addition
 or Deduction. You cannot enter into this field.</p>
 
-<p><a name="code_tax"></a><strong>TAX</strong>
+<p><a id="code_tax"></a><strong>TAX</strong>
 - The taxability of the amount is displayed to this field. This will either be Pre
 or Post. You cannot enter into this field.</p>
 
-<p><a name="multiple"></a><strong>MULTIPLE</strong>
+<p><a id="multiple"></a><strong>MULTIPLE</strong>
 - The multiple of the member’s payment element rate is displayed to this field.
 This is defaulted to 1. The user can adjust this value accordingly.</p>
 
-<p><a name="rate"></a><strong>RATE</strong>
+<p><a id="rate"></a><strong>RATE</strong>
 - The rate of the member’s payment element is displayed to this field. This is retrieved
 from the Payment Element screen in Payroll Members. The PENSION code rate is calculated
 by Payroll Master by dividing the member’s pension amount by the member’s payment
 frequency e.g. Monthly = 12, Weekly = 52 etc. The user can adjust this value accordingly.</p>
 
-<p><a name="amount"></a><strong>AMOUNT</strong>
+<p><a id="amount"></a><strong>AMOUNT</strong>
 - The amount of the member’s payment element is displayed to this field. This is
 calculated by Payroll Master by multiplying the ‘Multiple’ value by the ‘Rate’ value.
 You cannot enter into this field.</p>
 
-<p><a name="tax_code"></a><strong>TAX CODE</strong>
+<p><a id="tax_code"></a><strong>TAX CODE</strong>
 - The tax code of the member is displayed to this field. You cannot enter into this
 field.</p>
 
-<p><a name="basis"></a><strong>BASIS</strong>
+<p><a id="basis"></a><strong>BASIS</strong>
 - The tax basis of the member is displayed to this field. You cannot enter into this
 field.</p>
 
-<p><a name="gross_pay"></a><strong>GROSS PAY</strong>
+<p><a id="gross_pay"></a><strong>GROSS PAY</strong>
 - The amount of the member’s gross pay is displayed to this field. This is calculated
 by Payroll Master by adding the pension amount with any other Addition type payment
 elements. You cannot enter into this field.</p>
 
-<p><a name="paye"></a><strong>PAYE</strong>
+<p><a id="paye"></a><strong>PAYE</strong>
 - The amount of PAYE the member is to pay is displayed to this field. This is calculated
 by Payroll Master. You cannot enter into this field.</p>
 
-<p><a name="nic"></a><strong>NIC</strong>
+<p><a id="nic"></a><strong>NIC</strong>
 - The amount of nic the member is to pay is displayed to this field. This is calculated
 by Payroll Master. You cannot enter into this field.</p>
 
-<p><a name="net_pay"></a><strong>NET PAY</strong>
+<p><a id="net_pay"></a><strong>NET PAY</strong>
 - The amount of net pay the member is to be paid is displayed to this field. This
 is calculated by Payroll Master. You cannot enter into this field.</p>
 
 <p>Click ‘OK’ to continue with the payroll run. Click ‘Cancel’ to return to the payroll
 menu.</p>
 
-<h2><a name="summary"></a>Summary Screen</h2>
+<h2><a id="summary"></a>Summary Screen</h2>
 
 <p>Click ‘Summary’. The following screen will be displayed to the screen.</p>
 
@@ -283,7 +283,7 @@ menu.</p>
 <p>This screen will summarise all the selected member’s details. These details will
 be listed in this screen.</p>
 
-<h2><a name="Exceptions Report"></a>Exceptions Report</h2>
+<h2><a id="Exceptions Report"></a>Exceptions Report</h2>
 
 <p>When a payroll is run, all the members in the scheme must have all the information
 required in Pension Master and Payroll Master. If any vital information does not
@@ -301,14 +301,14 @@ exceptions report is generated.</p>
 <p>The information must be entered onto Pension Master and Payroll Master before the
 Payroll Run can be successfully carried out.</p>
 
-<h2><a name="Information Report"></a>Information Report</h2>
+<h2><a id="Information Report"></a>Information Report</h2>
 
 <p>When a payroll is run, if any members in the scheme have a negative net pay calculated,
 then they will be listed in this report. The user should then check that the pension
 amounts and tax codes have been entered correctly against these members before they
 continue with the Payroll Run.</p>
 
-<h2><a name="message"></a><a name="Printing A Payslip Message"></a>Printing A Payslip Message</h2>
+<h2><a id="message"></a><a id="Printing A Payslip Message"></a>Printing A Payslip Message</h2>
 
 <p>If the ‘Payslip message?’ field is ticked in Schemes and there are payslips
 to print, then the following window now appears:</p>
@@ -322,7 +322,7 @@ to print, then the following window now appears:</p>
 <p>If you enter a message in this window, then the message entered will appear on all
 the payslips generated in the current payroll run.</p>
 
-<h2><a name="print"></a><a name="Printing Standard Payslips &amp; Payment Reports"></a>Printing Standard Payslips, Export Data for Mail Merge &amp; Payment Reports</h2>
+<h2><a id="print"></a><a id="Printing Standard Payslips &amp; Payment Reports"></a>Printing Standard Payslips, Export Data for Mail Merge &amp; Payment Reports</h2>
 
 <p>The following window now appears:</p>
 
@@ -376,14 +376,14 @@ the payslips generated in the current payroll run.</p>
 <p>Select the appropriate option and click on ‘OK’. Click on ‘Cancel’ to exit the window
 or ‘Help’ to display this help text.</p>
 
-<h3><a name="payslips"></a>Payslips</h3>
+<h3><a id="payslips"></a>Payslips</h3>
 
 <p>The member’s payslips will now be displayed to the screen. Further details of the
 printing options can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>. Please
 ensure that there are pre-printed payslips ready in the printer before you send
 the payslips to print.</p>
 
-<h3><a name="export"></a>Export Data for Mail Merge</h3>
+<h3><a id="export"></a>Export Data for Mail Merge</h3>
 
 <p>The member’s payslip data will now be exported out to a pipe delimitered file, which the user can then use in Mail Merge to print payslips using their own designed payslip layout. Once the pipe delimitered file has been created, it is copied to the local path of the user’s pc, as defined in <a href="/pm90/pension/system_administration/pem_sysp/#pp_local_path">System Parameters</a>. The data that is exported out to the pipe delimitered file is:</p>
 
@@ -447,17 +447,17 @@ the payslips to print.</p>
   <li>Net Pay</li>
 </ul>
 
-<h3><a name="paysum"></a>Payment Summary Report</h3>
+<h3><a id="paysum"></a>Payment Summary Report</h3>
 
 <p>The payment summary report will now be displayed to the screen. Further details
 of the printing options can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>.</p>
 
-<h3><a name="bulkpay"></a>Bulk Payment Report</h3>
+<h3><a id="bulkpay"></a>Bulk Payment Report</h3>
 
 <p>The bulk payment report will now be displayed to the screen. Further details of
 the printing options can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>.</p>
 
-<h2><a name="commit"></a><a name="Committing the Payroll Data"></a>Committing the Payroll Data</h2>
+<h2><a id="commit"></a><a id="Committing the Payroll Data"></a>Committing the Payroll Data</h2>
 
 <p>The following window now appears:</p>
 
@@ -470,7 +470,7 @@ the printing options can be found <a href="/pm90/pension/general/gn_printm/#dest
 <p>If ‘Yes’ is selected then the program continues to commit the payroll data generated.
 If ‘No’ is selected then the program returns back to the payroll menu.</p>
 
-<h2><a name="bacs"></a>Creating a BACS Data File</h2>
+<h2><a id="bacs"></a>Creating a BACS Data File</h2>
 
 <p>Members who run their payroll on Payroll Master can have their payment made
 by BACS. In order for BACS to be used, a data file must be created to hold the payroll
@@ -493,7 +493,7 @@ Building Society Roll Number, Description.</p>
 
 </div>
 
-<h2><a name="chq"></a>Creating a Cheque Report</h2>
+<h2><a id="chq"></a>Creating a Cheque Report</h2>
 
 <p>Members who run their payroll on Payroll Master can have their payment made by manual
 cheque. To inform the user of which members are to be paid by cheque, a Cheque Report
@@ -513,13 +513,13 @@ up:</p>
 BACS data file containing payroll data. Any manual cheques which need to be written
 out will also be left to the user.</p>
 
-<h2><a name="backup"></a>Backup of Payroll Data</h2>
+<h2><a id="backup"></a>Backup of Payroll Data</h2>
 
 <p>The Payroll Run program automatically creates backups of the Scheme’s payroll data.</p>
 
 <p>These backups are done before and after records are written to the database, and only once the user has confirmed the payroll run. The two backups have descriptions of ‘Pre Payroll dd/mm/yyyy’ and ‘Post Payroll dd/mm/yyyy’ where dd/mm/yyyy is the Run Date.</p>
 
-<h2><a name="submit"></a>Submit</h2>
+<h2><a id="submit"></a>Submit</h2>
 
 <div class="screen">
   <p><img src="/pm90/payroll/images/py_paysub.jpg" alt="Submit File" /></p>
@@ -586,7 +586,7 @@ out will also be left to the user.</p>
 
 <p>If you are running payroll for multiple Scheme and Scheme/Category combinations then it is important that you keep track of the stages that have been completed.</p>
 
-<h2><a name="error"></a>HMRC Error Messages</h2>
+<h2><a id="error"></a>HMRC Error Messages</h2>
 
 <p>If a member is being paid for the first time and has no Current Pension value then a HMRC submission could return the following error:</p>
 
@@ -622,14 +622,14 @@ out will also be left to the user.</p>
   </div>
 </div>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:29:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:32:17.</p>
       </div>
     </div>
   </body>

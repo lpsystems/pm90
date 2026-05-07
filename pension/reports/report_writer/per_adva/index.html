@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143005" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123341" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143005" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123341" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="operators"></a>Operators</h2>
+<h2><a id="operators"></a>Operators</h2>
 
 <div class="row">
   <div class="col-md-6">
@@ -144,7 +144,7 @@
 
 <p>As well as the above listed operators, there is another one called the <a href="#range">Range operator</a>. This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
 
-<h2><a name="eff_at"></a>Effective At</h2>
+<h2><a id="eff_at"></a>Effective At</h2>
 
 <p>The user should be able to select an item from a historic array that is effective at a specific date e.g.</p>
 
@@ -182,7 +182,7 @@ immediately prior to or on the supplied date.</p>
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="eq_to"></a>Equal To</h2>
+<h2><a id="eq_to"></a>Equal To</h2>
 
 <p>During any selection of records, the user will want to be able to drill down into selecting certain records that fall within a certain scheme, or category, or has a certain date. This is where the operator ‘EQ’ comes in very useful.</p>
 
@@ -230,7 +230,7 @@ immediately prior to or on the supplied date.</p>
 
 <p>FIELD 1 = pm_scheme, OPERATOR = EQ and FIELD 2 = ‘0001’</p>
 
-<h2><a name="first"></a>First Entry</h2>
+<h2><a id="first"></a>First Entry</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting the first
 entry in that history. This is where the operator ‘F’ is used.</p>
@@ -249,7 +249,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="great"></a>Greater Than</h2>
+<h2><a id="great"></a>Greater Than</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is greater than a specific date or value e.g.</p>
 
@@ -286,7 +286,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="great_eq"></a>Greater Than Or Equal To</h2>
+<h2><a id="great_eq"></a>Greater Than Or Equal To</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is greater than or equal to a specific date or value e.g.</p>
 
@@ -323,7 +323,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="last"></a>Last Entry</h2>
+<h2><a id="last"></a>Last Entry</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting the last
 entry in that history (this is the default option when selecting a history field in the
@@ -343,7 +343,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="less"></a>Less Than</h2>
+<h2><a id="less"></a>Less Than</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is less than a specific date or value e.g.</p>
 
@@ -380,7 +380,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="less_eq"></a>Less Than Or Equal To</h2>
+<h2><a id="less_eq"></a>Less Than Or Equal To</h2>
 
 <p>The user should be able to select an item from a historic array where the date or numeric value is less than or equal to a specific date or value e.g.</p>
 
@@ -417,7 +417,7 @@ with on that history table (e.g. pmc_due on pe_mcon, contribution history table)
 
 <p>In order to get this link to the Salary Screen 1 table, it is left down to the user to have selected a salary field in screen 1.</p>
 
-<h2><a name="match"></a>Matches</h2>
+<h2><a id="match"></a>Matches</h2>
 
 <p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
 we wish to get all surnames starting with "Smi". In SQL this would use the
@@ -451,7 +451,7 @@ OPERATOR = MA,
 FIELD 2 = ‘O*?onnell’</p>
 </div>
 
-<h2><a name="no_hist"></a>No History</h2>
+<h2><a id="no_hist"></a>No History</h2>
 
 <p>When using a history field, e.g. a salary value, there needs to be a way of selecting members that do not have an entry on the history record for a certain date. This can be useful when doing an annual update of members salaries. You can print off this report to see what members have no salary entry for this year i.e. what members have been missed out in the update procedure.</p>
 
@@ -496,7 +496,7 @@ END FOREACH
   <p>Unlike ‘SELECT’ statements, the ‘IF’ statement must be hard-coded and cannot be made up from variables. Therefore, the AND/OR clause is defaulted to ‘AND’, and no brackets can be entered.</p>
 </div>
 
-<h2><a name="not_eq"></a>Not Equal To</h2>
+<h2><a id="not_eq"></a>Not Equal To</h2>
 
 <p>During any selection of records, the user will want to be able to drill down into selecting certain records that don’t fall within a certain scheme, or category, or doesn’t have a certain date. This is where the operator ‘NE’ comes in very useful.</p>
 
@@ -544,7 +544,7 @@ END FOREACH
 
 <p>FIELD 1 = pm_scheme, OPERATOR = NE and FIELD 2 = ‘0001’</p>
 
-<h2><a name="not_match"></a>Not Matches</h2>
+<h2><a id="not_match"></a>Not Matches</h2>
 
 <p>It is a requirement that WHERE clauses be done on partial strings e.g. pm_surname where
 we wish to get all surnames that don’t start with "Smi". In SQL this would use the
@@ -578,7 +578,7 @@ OPERATOR = NM,
 FIELD 2 = ‘O*?onnell’</p>
 </div>
 
-<h2><a name="range"></a>Range Operator</h2>
+<h2><a id="range"></a>Range Operator</h2>
 
 <p>This is slightly different to all the other operators in that it is used in Field 2 and takes two values, rather than just the one value all other operators take.</p>
 
@@ -596,7 +596,7 @@ FIELD 2 = ‘O*?onnell’</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:41.</p>
       </div>
     </div>
   </body>

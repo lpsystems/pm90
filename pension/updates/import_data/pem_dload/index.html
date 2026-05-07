@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143008" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123344" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143008" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123344" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="index"></a>Index</h2>
+<h2><a id="index"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -91,7 +91,7 @@
   <li><a href="#exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <p>This program allows the user to load data into Pension Master from an external data
 file. The database tables used within this program and their load templates are listed <a href="/pm90/pension/updates/import_data/pem_dloada/">here</a>,
@@ -113,7 +113,7 @@ and load the data into the database.</p>
 the user to ensure this, they should use a software package, like Microsoft Excel,
 to reformat the data file prior to using this program.</p>
 
-<p><a name="1"></a>The following options and screen appear when this program is selected:</p>
+<p><a id="1"></a>The following options and screen appear when this program is selected:</p>
 
 <ul>
   <li>Add</li>
@@ -127,20 +127,20 @@ to reformat the data file prior to using this program.</p>
   <p>Selection Screen</p>
 </div>
 
-<h2><a name="add"></a>Add a General Data Load</h2>
+<h2><a id="add"></a>Add a General Data Load</h2>
 
 <p>Click ‘Add’.</p>
 
 <p>Enter the selection criteria required.</p>
 
-<p><a name="imp_name"></a><strong>IMPORT NAME</strong> - Enter an import name.</p>
+<p><a id="imp_name"></a><strong>IMPORT NAME</strong> - Enter an import name.</p>
 
-<p><a name="imp_desc"></a><strong>IMPORT DESCRIPTION</strong> - Enter an import description.</p>
+<p><a id="imp_desc"></a><strong>IMPORT DESCRIPTION</strong> - Enter an import description.</p>
 
-<p><a name="sch_code"></a><strong>SCHEME CODE</strong> - Enter a scheme code. Click the lookup icon for
+<p><a id="sch_code"></a><strong>SCHEME CODE</strong> - Enter a scheme code. Click the lookup icon for
 a list of valid scheme codes.</p>
 
-<p><a name="imp_source"></a><strong>IMPORT FROM</strong> - Enter the filename path of the data
+<p><a id="imp_source"></a><strong>IMPORT FROM</strong> - Enter the filename path of the data
 file you are going to use. You only have access to this field if you have “Network Source” entered in your system parameters. If a filename is entered which does not exist then an error message will appear informing
 you of this, and you will be invited to re-enter a valid filename for your data file. However its best to use the lookup and the following screen will pop-up.</p>
 
@@ -158,11 +158,11 @@ you of this, and you will be invited to re-enter a valid filename for your data 
 <p>This field must have a filename entered into it in order for the loading process to
 continue.</p>
 
-<p><a name="imp_dest"></a><strong>IMPORT TO</strong> - Enter the table to which you wish to load
+<p><a id="imp_dest"></a><strong>IMPORT TO</strong> - Enter the table to which you wish to load
 the data into. This field must have a table name entered into it for the loading process
 to continue. Click the lookup icon to see a list of database tables.</p>
 
-<p><a name="up_type"></a><strong>RUN TYPE</strong> - Select what type of data load you wish
+<p><a id="up_type"></a><strong>RUN TYPE</strong> - Select what type of data load you wish
 to use.</p>
 
 <ul>
@@ -174,7 +174,7 @@ other data not specified will remain. Table used for this option is Basic Member
 Only the updating of Marital Status or the updating of Company codes can be carried out.</li>
 </ul>
 
-<p><a name="rec_type"></a><strong>DELIMITER</strong> - Enter the Delimiter, which is a character
+<p><a id="rec_type"></a><strong>DELIMITER</strong> - Enter the Delimiter, which is a character
 used to separate each of the fields in the data file. This should be either
 of the following:</p>
 
@@ -190,22 +190,22 @@ of the following:</p>
 <p>This field must have a delimiter entered into it in order for the loading process
 to continue.</p>
 
-<p><a name="imp_header"></a><strong>HEADER SIZE</strong> - Enter the number of lines the header
+<p><a id="imp_header"></a><strong>HEADER SIZE</strong> - Enter the number of lines the header
 takes up in the data file. If this box is left blank, it is assumed the data file
 has no header, and a default of 0 is entered.</p>
 
-<p><a name="imp_footer"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the footer
+<p><a id="imp_footer"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the footer
 takes up in the data file. If this box is left blank, it is assumed the data file
 has no footer, and a default of 0 is entered.</p>
 
-<p><a name="imp_del"></a><strong>DELETE ORIGINAL?</strong> - Tick this box if you wish to delete
+<p><a id="imp_del"></a><strong>DELETE ORIGINAL?</strong> - Tick this box if you wish to delete
 the data file, upon completion of the data load.</p>
 
-<p><a name="mem_note"></a><strong>MEMBER NOTES?</strong> - Tick this box if you wish to write out
+<p><a id="mem_note"></a><strong>MEMBER NOTES?</strong> - Tick this box if you wish to write out
 a note to each member in the data file. This can only be used with database tables
 that contain a member number field.</p>
 
-<p><a name="mem_validation"></a><strong>MEMBER VAILDATION</strong> - This is to help with the loading of data where you have data from more than one scheme in your data file. This field has a drop-down list with the following values displayed in it:</p>
+<p><a id="mem_validation"></a><strong>MEMBER VAILDATION</strong> - This is to help with the loading of data where you have data from more than one scheme in your data file. This field has a drop-down list with the following values displayed in it:</p>
 
 <ul>
   <li>None</li>
@@ -225,7 +225,7 @@ that contain a member number field.</p>
 
 <p>The value in the ‘Member Validation’ field can only be used when either the NI/PPS Number or Pension Master Number as the identifier in screen 2.</p>
 
-<p><a name="dup_select"></a><strong>DUPLICATE MEMBER SELECT</strong> - This is to help with the loading of data where you have several members with the same PPS/NI Number of Staff Number. This field has a drop-down list with the following values displayed in it:</p>
+<p><a id="dup_select"></a><strong>DUPLICATE MEMBER SELECT</strong> - This is to help with the loading of data where you have several members with the same PPS/NI Number of Staff Number. This field has a drop-down list with the following values displayed in it:</p>
 
 <ul>
   <li>None-User Select</li>
@@ -240,7 +240,7 @@ that contain a member number field.</p>
 
 <p>The value in the ‘Duplicate Member Select’ field only gets used when either the NI/PPS Number or Staff Number has been selected as the identifier in screen 2. At the point in the code where the identifier is checked to see which member on PM the identifier belongs to, if there are more than one member then this new field is checked. If the value is found to be None-User Select, then the code works exactly as it used to do and the user will get a pop-up window where they can select which member they wish to make the update to. If the value is found to be something else i.e. Active, then that value is used in the checking of the duplicate members found on PM. If just one member is found, then that member has their data updated. If more than one member is found, then the user will be presented with a pop-up window where they can select which member they wish to make the update to. If no members are found, then an exception is produced.</p>
 
-<p><a name="2"></a>Once details have been entered, then click ‘OK’. Screen 2 will now appear.</p>
+<p><a id="2"></a>Once details have been entered, then click ‘OK’. Screen 2 will now appear.</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/pem_dload3.jpg" alt="Field entry" /></p>
@@ -248,7 +248,7 @@ that contain a member number field.</p>
   <p>Field entry</p>
 </div>
 
-<p><a name="rule"></a><strong>RULE</strong> - This informs the import process of the action you
+<p><a id="rule"></a><strong>RULE</strong> - This informs the import process of the action you
 are taking on the data, and therefore how the data, when sent to a Pension Master
 field, will be interpreted.</p>
 
@@ -269,10 +269,10 @@ field, will be interpreted.</p>
 
 <p>If the rule is left blank, it is defaulted to rule 0.</p>
 
-<p><a name="field_desc"></a><strong>FIELD</strong> - Enter a field name that you wish the import
+<p><a id="field_desc"></a><strong>FIELD</strong> - Enter a field name that you wish the import
 data to be sent to. Click the lookup icon for a list of field names.</p>
 
-<p><a name="start"></a><strong>START</strong> - The Start value can represent two types of position,
+<p><a id="start"></a><strong>START</strong> - The Start value can represent two types of position,
 depending on the record type entered on Screen 1. If the record type is anything other
 than ‘Flat’, then the start value relates to the field’s position in the data lines.
 The following will show how this is set:</p>
@@ -284,7 +284,7 @@ The following will show how this is set:</p>
 
 </div>
 
-<p><a name="length"></a><strong>LENGTH</strong> - When dealing with flat files the length column
+<p><a id="length"></a><strong>LENGTH</strong> - When dealing with flat files the length column
 also gets used. The number of characters a section of data uses from the Start position
 to the end of that section of data must be entered here.</p>
 
@@ -295,7 +295,7 @@ to the end of that section of data must be entered here.</p>
 
 </div>
 
-<p><a name="value"></a><strong>VALUE</strong> - This field will only become available if you have
+<p><a id="value"></a><strong>VALUE</strong> - This field will only become available if you have
 specified rule 1 or 7.</p>
 
 <p>If rule 1 has been selected, then enter in the constant data you wish to send through
@@ -316,7 +316,7 @@ codes will be displayed to the screen on entering this field.</p>
 
 <p>Once all fields have been entered click ‘OK’ to save your import settings.</p>
 
-<h2><a name="query"></a>Querying a General Data Load</h2>
+<h2><a id="query"></a>Querying a General Data Load</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -327,12 +327,12 @@ codes will be displayed to the screen on entering this field.</p>
 
 </div>
 
-<p><a name="popup"></a>Enter the Import Code and/or Scheme Code details. If any load
+<p><a id="popup"></a>Enter the Import Code and/or Scheme Code details. If any load
 details match the entered criteria, then a pop-up window will appear listing them.</p>
 
 <p>Select a load and click ‘OK’ to display the details to the screen.</p>
 
-<h2><a name="update"></a>Updating a General Data Load</h2>
+<h2><a id="update"></a>Updating a General Data Load</h2>
 
 <p>Click ‘Update’.</p>
 
@@ -346,7 +346,7 @@ details match the entered criteria, then a pop-up window will appear listing the
   <li>The values for the field must be Y or N for an AE scheme and N only for a non AE scheme. If any other values exist for the field, the load will not progress. The values in the file are loaded to the member.</li>
 </ol>
 
-<h2><a name="Run a General Data Load"></a>Running a General Data Load</h2>
+<h2><a id="Run a General Data Load"></a>Running a General Data Load</h2>
 
 <p>Click ‘Load’.</p>
 
@@ -388,7 +388,7 @@ will be produced, listing the exceptions.</p>
 <p>If all data is present and correct, then the user can continue to load the data. Only
 Actual loads will load into the actual database tables.</p>
 
-<h2><a name="delete"></a>Deleting a General Data Load</h2>
+<h2><a id="delete"></a>Deleting a General Data Load</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -397,7 +397,7 @@ Actual loads will load into the actual database tables.</p>
 <p>Template loads cannot be deleted. If one is trying to be deleted, then a warning message
 will appear informing the user that this cannot happen.</p>
 
-<h2><a name="add info"></a>Additional Information</h2>
+<h2><a id="add info"></a>Additional Information</h2>
 
 <p>If the Contribution History Batch Details, Salary Batch Details or N.I. History Batch
 Details table is being loaded into, then extra information is needed in order for
@@ -437,7 +437,7 @@ field and a list of Salary Screens for the Salary Screen field.</p>
 actual load has been run, the batch can be viewed in the <a href="/pm90/pension/updates/pem_bat/#Introduction">Batch
 Data Input</a> program.</p>
 
-<h2><a name="mem notes"></a>Member Notes</h2>
+<h2><a id="mem notes"></a>Member Notes</h2>
 
 <p>If the ‘Member Notes?’ field has been ticked in Screen 1, then the following pop-up
 window will appear during the run process:</p>
@@ -448,25 +448,25 @@ window will appear during the run process:</p>
   <p>Member Notes</p>
 </div>
 
-<p><a name="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
+<p><a id="rec_type"></a><strong>RECORD TYPE</strong> - This field will default to the record
 type entered in Screen 1. You cannot enter into this field.</p>
 
-<p><a name="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
+<p><a id="note"></a><strong>NOTE</strong> - Enter the note you wish to send through to each member
 in the data file.</p>
 
-<p><a name="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
+<p><a id="attach"></a><strong>ATTACH</strong> - Tick this field if there is data in the data
 file which can be attached to the note.</p>
 
-<p><a name="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
+<p><a id="start"></a><strong>START</strong> - If the Attach field is ticked then you will be
 required to enter a value here. This field has the same principle as the <a href="/pm90/pension/updates/import_data/pem_dload/#start">Start</a> field
 in Screen 2.</p>
 
-<p><a name="length"></a><strong>LENGTH</strong> - This field will only be available if the record
+<p><a id="length"></a><strong>LENGTH</strong> - This field will only be available if the record
 type is ‘Flat’. In the case of this, then a value must be entered. This field has
 the same principle as the <a href="/pm90/pension/updates/import_data/pem_dload/#length">Length</a> field in Screen
 2.</p>
 
-<h2><a name="navigate"></a>Navigating Between Screens</h2>
+<h2><a id="navigate"></a>Navigating Between Screens</h2>
 
 <p>Click ‘Menu’. A pop-up menu will open on the screen which allows the user to pick
 one of the screens available. Click ‘Cancel’ to abort the screen selection process.</p>
@@ -479,7 +479,7 @@ one of the screens available. Click ‘Cancel’ to abort the screen selection p
   <p>Menu Screen Selection</p>
 </div>
 
-<h2><a name="report"></a>Reporting a Load</h2>
+<h2><a id="report"></a>Reporting a Load</h2>
 
 <p>Click the ‘Report’ icon.</p>
 
@@ -519,14 +519,14 @@ one of the screens available. Click ‘Cancel’ to abort the screen selection p
 <p>Select the appropriate option and click ‘OK’. Click ‘Cancel’ to exit the printing
 or ‘Help’ to display this help text.</p>
 
-<h2><a name="exit"></a>Exit Program</h2>
+<h2><a id="exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:08.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:44.</p>
       </div>
     </div>
   </body>

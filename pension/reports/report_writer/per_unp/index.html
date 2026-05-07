@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143005" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123342" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143005" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123342" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -91,7 +91,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+<h2><a id="1"></a><a id="Introduction"></a>Introduction</h2>
 
 <p>Use this program to set up the data sets needed to produce the various different kinds
 of standard letters and benefit statements for members of your pension scheme.</p>
@@ -136,7 +136,7 @@ option:</p>
   <p>Mail Merge Report Main Screen</p>
 </div>
 
-<h2><a name="Add A New Report"></a>Add A New Mail Merge Report</h2>
+<h2><a id="Add A New Report"></a>Add A New Mail Merge Report</h2>
 
 <div class="alert alert-danger" role="alert">
   <p>When adding a new mail merge report, you should first of all create an empty Microsoft
@@ -148,31 +148,31 @@ This should be in a location that is accessible to all Pension Master users at
 your site e.g. a shared network drive.</p>
 </div>
 
-<p><a name="Add"></a>Click ‘Add’.</p>
+<p><a id="Add"></a>Click ‘Add’.</p>
 
 <p>You will be asked if you wish to copy an existing Mail Merge Report. If you select ‘Yes’ you will be prompted to select the Mail Merge Report to copy or select one from the lookup list.</p>
 
-<p><a name="pm_member"></a>
-<a name="pm_scheme"></a>
-<a name="pm_company"></a>
-<a name="pm_category"></a>
-<a name="pm_status"></a>
-<a name="pm_marital_stat"></a>
-<a name="pm_sex"></a>
-<a name="pm_dob"></a>
-<a name="psft_code"></a>You are then requested to enter the selection criteria required in order to select the
+<p><a id="pm_member"></a>
+<a id="pm_scheme"></a>
+<a id="pm_company"></a>
+<a id="pm_category"></a>
+<a id="pm_status"></a>
+<a id="pm_marital_stat"></a>
+<a id="pm_sex"></a>
+<a id="pm_dob"></a>
+<a id="psft_code"></a>You are then requested to enter the selection criteria required in order to select the
 members you wish to output to the report (see the <a href="/pm90/pension/appendices/app_b/">Data Dictionary</a> of
 this manual for further details on selection of records in Pension Master). When the
 selection criteria has been entered click on ‘OK’ to proceed to the report date field.	When initially setting up a mail merge it is best to select just an individual member or at least a very small group of members.</p>
 
 <p>You can click on ‘Cancel’ to return to the menu and abort report selection.</p>
 
-<p><a name="rep_date"></a><strong>REPORT DATE</strong> - The report date defaults to today’s date,
+<p><a id="rep_date"></a><strong>REPORT DATE</strong> - The report date defaults to today’s date,
 but it may be overwritten with any date in the format ddmmyy or dd/mm/yyyy. This date
 is used in conjunction with the <strong>DATE ENTERED COMPARISON</strong> field to include only
 those members who have joined the scheme before a certain date.</p>
 
-<p><a name="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
+<p><a id="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
 field are:</p>
 
 <ul>
@@ -182,7 +182,7 @@ field are:</p>
   <li><strong>’ ‘</strong> - Include All members</li>
 </ul>
 
-<p><a name="document"></a><strong>DOCUMENT PATH</strong> - This is the name and full path of the
+<p><a id="document"></a><strong>DOCUMENT PATH</strong> - This is the name and full path of the
 mail merge template document you have set up for merging the data in this Mail Merge
 Report into. This field is used to indicate which template document to open for which
 letter when doing a mail merge. See <a href="/pm90/pension/file_maintenance/pem_mem/#Producing Benefit Statements And Standard Letters">Members</a> for
@@ -202,28 +202,28 @@ in the ‘Document Path’ field.</p>
 users at your site e.g. a shared network drive. Otherwise you will find that only
 users that can access the template file can run mail merges for this letter/certificate.</strong></p>
 
-<p><a name="gns_macro"></a><strong>MACRO AFTER MERGE</strong> - Tick this box if you want to run
+<p><a id="gns_macro"></a><strong>MACRO AFTER MERGE</strong> - Tick this box if you want to run
 your own Microsoft Word macro in the form letters that are produced by the mail merge
 process. You may want to do this for example if you want to make sure the user saves
 the resulting form letters. If you are unsure what this option means, it is likely
 you will not need it and so should set this field to unticked.</p>
 
-<p><a name="gns_macro_name"></a><strong>MACRO NAME</strong> - Enter the name of your Microsoft
+<p><a id="gns_macro_name"></a><strong>MACRO NAME</strong> - Enter the name of your Microsoft
 Word macro that you wish to run after the mail merge process has completed.</p>
 
-<p><a name="gns_mem_lab"></a><strong>USE FOR MEMBER LABELS?</strong> - Check this box if you want
+<p><a id="gns_mem_lab"></a><strong>USE FOR MEMBER LABELS?</strong> - Check this box if you want
 this mail merge report to be used to generate member labels.</p>
 
 <p>Any selection criteria that is entered will be used if this report is run from the
 Mail Merge Report screen. But, if this report is run as a Member Label report then
 the Member Label report selection criteria will be used.</p>
 
-<p><a name="group_1"></a>
-<a name="group_2"></a>
-<a name="group_3"></a>
-<a name="group_4"></a>
-<a name="group_5"></a>
-<a name="group_6"></a><strong>GROUP
+<p><a id="group_1"></a>
+<a id="group_2"></a>
+<a id="group_3"></a>
+<a id="group_4"></a>
+<a id="group_5"></a>
+<a id="group_6"></a><strong>GROUP
 BY</strong> - These fields can be optionally used to specify how you wish to group the
 member records that are output to the report e.g. you may wish to group the records
 by date of birth. In this case you would enter <em>pm_dob</em> in the first GROUP BY
@@ -235,7 +235,7 @@ by, simply click on the lookup icon for a list of fields.</p>
 <p>When all groups have been entered click on ‘OK’, or press <kbd>Return</kbd> down through
 the remaining fields to proceed to the following screen.</p>
 
-<p><a name="2"></a>The second screen is displayed as follows:</p>
+<p><a id="2"></a>The second screen is displayed as follows:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/per_unp2.jpg" alt="Field Selection Screen" /></p>
@@ -243,11 +243,11 @@ the remaining fields to proceed to the following screen.</p>
   <p>Field Selection Screen</p>
 </div>
 
-<p><a name="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
+<p><a id="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
 appear in the data file or the result of a particular formula to output to the data
 file. Which one is dependent on how you enter the field:</p>
 
-<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+<h2><a id="To Output A Particular Field"></a>To Output A Particular Field</h2>
 
 <p>Enter the fieldname you wish to appear in the output. If you are unsure of the name
 of the field, click on the lookup icon to see a list of fields.</p>
@@ -750,7 +750,7 @@ argument, the arguments are separated by a comma e.g. pmq_current(NORM,1) - this
 the first quotation result for Quotation Type NORM.</p>
 </div>
 
-<p><a name="popup"></a></p>
+<p><a id="popup"></a></p>
 
 <div class="alert alert-danger" role="alert">
   <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
@@ -804,7 +804,7 @@ A date must be entered in this field.</p>
   <li>pmq_current(CERT,1-5)</li>
 </ol>
 
-<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+<h2><a id="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
 
 <p>To reference calculations in your report, enter the appropriate formula code in the
 format:</p>
@@ -833,7 +833,7 @@ field.</p>
 
 <p>When all fields have been entered click on ‘OK’, to proceed to the following screen.</p>
 
-<p><a name="3"></a>The third screen is displayed as follows:</p>
+<p><a id="3"></a>The third screen is displayed as follows:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/per_unp6.jpg" alt="Mail Merge Output Settings" /></p>
@@ -841,11 +841,11 @@ field.</p>
   <p>Mail Merge Output Settings</p>
 </div>
 
-<p><a name="gnu_email"></a><strong>EMAIL ADDRESS</strong> - You should have your email address in the email address field; if it is not present you will need to add this in the “Users” program. (For larger mail merges this is used to notify the user that the mail merge has completed).</p>
+<p><a id="gnu_email"></a><strong>EMAIL ADDRESS</strong> - You should have your email address in the email address field; if it is not present you will need to add this in the “Users” program. (For larger mail merges this is used to notify the user that the mail merge has completed).</p>
 
-<p><a name="gns_file_type"></a><strong>PDF/WORD DOCUMENT</strong> - Select from the drop-down list whether you want the final document in PDF or DOC format.</p>
+<p><a id="gns_file_type"></a><strong>PDF/WORD DOCUMENT</strong> - Select from the drop-down list whether you want the final document in PDF or DOC format.</p>
 
-<p><a name="gns_split"></a><strong>SPILT THE DOCUMENT</strong> - If you wish the final mail merge document to be split into individual documents you should check the “Split Document” check box. The remaining text boxes and drop-down lists on this screen should now become available and they determine the naming convention of the final merged documents. If you don’t click ‘OK’ to proceed.</p>
+<p><a id="gns_split"></a><strong>SPILT THE DOCUMENT</strong> - If you wish the final mail merge document to be split into individual documents you should check the “Split Document” check box. The remaining text boxes and drop-down lists on this screen should now become available and they determine the naming convention of the final merged documents. If you don’t click ‘OK’ to proceed.</p>
 
 <p>When all fields have been entered click on ‘OK’ to process the report. A message will
 be displayed:</p>
@@ -900,7 +900,7 @@ your template file and then exit Microsoft Word.</p>
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2><a name="Search For An Existing Mail Merge Report"></a>Search For An Existing Mail Merge Report</h2>
+<h2><a id="Search For An Existing Mail Merge Report"></a>Search For An Existing Mail Merge Report</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -929,7 +929,7 @@ selection criteria an error message will be displayed.</p>
 <p>You will then be returned to the main menu and can select the appropriate menu option
 as required.</p>
 
-<h2><a name="Re-Run An Existing Mail Merge"></a>Re-Run An Existing Mail Merge Report</h2>
+<h2><a id="Re-Run An Existing Mail Merge"></a>Re-Run An Existing Mail Merge Report</h2>
 
 <p>Click ‘Run’.</p>
 
@@ -970,7 +970,7 @@ within the Mail Merge Report.</p>
 
 <p>Once you have finished with your merged document, exit Microsoft Word.</p>
 
-<h2><a name="Edit An Existing Template Document"></a>Edit An Existing Template Document</h2>
+<h2><a id="Edit An Existing Template Document"></a>Edit An Existing Template Document</h2>
 
 <p>Click ‘edIt’.</p>
 
@@ -1043,7 +1043,7 @@ text.</p>
 
 <p>The program will return to the main menu.</p>
 
-<h2><a name="Delete A Mail Merge"></a>Delete A Mail Merge Report</h2>
+<h2><a id="Delete A Mail Merge"></a>Delete A Mail Merge Report</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -1077,7 +1077,7 @@ If this is not the case, you should now manually delete this template document
 using standard Windows tools e.g. Windows Explorer.</p>
 </div>
 
-<h2><a name="List Mail Merge Reports Currently Set"></a>List Mail Merge Reports Currently Set Up</h2>
+<h2><a id="List Mail Merge Reports Currently Set"></a>List Mail Merge Reports Currently Set Up</h2>
 
 <p>Click List.</p>
 
@@ -1108,7 +1108,7 @@ and click on ‘OK’ to proceed.</p>
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2><a name="Where To Find The Resulting Mail Merge Data File"></a>Where To Find The Resulting Mail Merge Data File</h2>
+<h2><a id="Where To Find The Resulting Mail Merge Data File"></a>Where To Find The Resulting Mail Merge Data File</h2>
 
 <p>A data file is written as follows. This is suitable for reading into the mail merge
 facility of your selected word processor, the full mail merge process is automatically
@@ -1118,14 +1118,14 @@ to perform mail merges.</p>
 
 <p>The mail merge data file will be created as c:\penmast.doc or otherwise as specified in the Report Path field of <a href="/pm90/pension/system_administration/pem_sysp/">System Parameters</a>.</p>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:42.</p>
       </div>
     </div>
   </body>

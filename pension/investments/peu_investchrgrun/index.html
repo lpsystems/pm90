@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143004" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123340" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143004" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123340" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -84,7 +84,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <p>This program allows you to to facilitate the distribution of a charge, from an external data file, on a prorate basis across the member’s total invested value. The members in the file can be from any scheme.</p>
 
@@ -98,7 +98,7 @@ The external data file must have the following mandatory fields in the order sta
 Transaction Types - are held at system level in Codes under ‘Contribution Transactions’ in the System Data menu tree on pension master. The transaction type code in the data file must exist on Pension Master.
 Amount - the charge ‘Amount’ value should be a positive value. It will be converted to negative through the load process. If the data file contains negative values, warnings will be produced, and the load will be aborted.</p>
 
-<h2><a name="Run"></a>Run</h2>
+<h2><a id="Run"></a>Run</h2>
 
 <p>Click ‘Run’.</p>
 
@@ -115,21 +115,21 @@ run does all that an actual run does, but does not write any results to the data
   <p>Investment Charge Run Screen</p>
 </div>
 
-<p><a name="pmi_due"></a><strong>FILENAME</strong> - Enter the filename path of the data file you are going to use, if you are unsure use the lookup button and select the file from the file directory.</p>
+<p><a id="pmi_due"></a><strong>FILENAME</strong> - Enter the filename path of the data file you are going to use, if you are unsure use the lookup button and select the file from the file directory.</p>
 
-<p><a name="pmi_recvd"></a><strong>DELIMITER</strong> - The data delimiters available are: Colon, Comma, Pipe, Semi-Colon, Tab</p>
+<p><a id="pmi_recvd"></a><strong>DELIMITER</strong> - The data delimiters available are: Colon, Comma, Pipe, Semi-Colon, Tab</p>
 
-<p><a name="pmi_invested"></a><strong>MONETARY FORMAT</strong> - The monetary format of amounts available are: 99999.99 or 99.999,99. .</p>
+<p><a id="pmi_invested"></a><strong>MONETARY FORMAT</strong> - The monetary format of amounts available are: 99999.99 or 99.999,99. .</p>
 
-<p><a name="pmi_type"></a><strong>HEADER SIZE</strong> -  Enter the number of lines the footer takes up in the data file. If this box is left blank, it is assumed the data file has no footer, and a default of 0 is entered..</p>
+<p><a id="pmi_type"></a><strong>HEADER SIZE</strong> -  Enter the number of lines the footer takes up in the data file. If this box is left blank, it is assumed the data file has no footer, and a default of 0 is entered..</p>
 
-<p><a name="pmi_type"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the header takes up in the data file. If this box is left blank, it is assumed the data file has no header, and a default of 0 is entered..</p>
+<p><a id="pmi_type"></a><strong>FOOTER SIZE</strong> - Enter the number of lines the header takes up in the data file. If this box is left blank, it is assumed the data file has no header, and a default of 0 is entered..</p>
 
-<p><a name="pmi_invested"></a><strong>DATE DUE</strong> -  This date will populate the date due on the investment charge record for the members investment history screen.</p>
+<p><a id="pmi_invested"></a><strong>DATE DUE</strong> -  This date will populate the date due on the investment charge record for the members investment history screen.</p>
 
-<p><a name="pmi_type"></a><strong>DATE RECEIVED</strong> - This date will populate the date received on the investment charge record for the members investment history screen .</p>
+<p><a id="pmi_type"></a><strong>DATE RECEIVED</strong> - This date will populate the date received on the investment charge record for the members investment history screen .</p>
 
-<p><a name="pmi_type"></a><strong>ASSET VALUATION DATE</strong> - The Valuation Date entered will be used to calculate each member’s fund value which is used to determine how the charge will be split across fund and contribution types. Units with a date invested up to and including the Valuation Date will be used to calculate the value of the members assets using the unit price at or effective at the Valuation Date.</p>
+<p><a id="pmi_type"></a><strong>ASSET VALUATION DATE</strong> - The Valuation Date entered will be used to calculate each member’s fund value which is used to determine how the charge will be split across fund and contribution types. Units with a date invested up to and including the Valuation Date will be used to calculate the value of the members assets using the unit price at or effective at the Valuation Date.</p>
 
 <p>If successful, a report detailing the proposed unit posting is displayed and can be printed at this time.</p>
 
@@ -141,7 +141,7 @@ From Pension Master</a>.</p>
 
 <p>The system will then return to the main menu.</p>
 
-<h2><a name="Undo"></a>Undo</h2>
+<h2><a id="Undo"></a>Undo</h2>
 
 <p>Click ‘Undo’.</p>
 
@@ -163,14 +163,14 @@ the member after the current date due. If posted units exist for the member afte
 the current date due, you should unpost all unpsoted units for the member in date
 descending order, starting with the latest date due.</p>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:04.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:40.</p>
       </div>
     </div>
   </body>
