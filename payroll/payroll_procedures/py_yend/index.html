@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506142905" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123217" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506142905" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123217" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -85,7 +85,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="Introduction"></a>Introduction</h2>
+<h2><a id="Introduction"></a>Introduction</h2>
 
 <p>This program allows the user to run a year end for a specified scheme. From this
 program the user can produce the P11 and P60 reports.</p>
@@ -113,24 +113,24 @@ other program has completed.</p>
   <p>Tax Year End Screen</p>
 </div>
 
-<h2><a name="Run A Year End"></a>Run A Year End</h2>
+<h2><a id="Run A Year End"></a>Run A Year End</h2>
 
 <p>Click ‘Run’.</p>
 
-<p><a name="pm_scheme"></a><strong>SCHEME CODE</strong>
+<p><a id="pm_scheme"></a><strong>SCHEME CODE</strong>
 - Enter the scheme code required. To get a list of valid scheme codes click the lookup icon.
 When a valid scheme code has been entered the scheme description will be displayed.
 This field must be entered.</p>
 
-<p><a name="check1"></a><strong>ALL EMPLOYEE PAYMENTS/DEDUCTIONS HAVE BEEN PROCESSED</strong>
+<p><a id="check1"></a><strong>ALL EMPLOYEE PAYMENTS/DEDUCTIONS HAVE BEEN PROCESSED</strong>
 - If the payroll run has been processed for the members then tick the box. This
 field must have been ticked before you can continue onto the next screen.</p>
 
-<p><a name="check2"></a><strong>ALL OF YOUR PAYROLL RECORDS HAVE BEEN UPDATED</strong>
+<p><a id="check2"></a><strong>ALL OF YOUR PAYROLL RECORDS HAVE BEEN UPDATED</strong>
 - If the payroll run data has been committed for the members then tick the box.
 This field must have been ticked before you can continue onto the next screen.</p>
 
-<p><a name="check3"></a><strong>ALL OF YOUR PAYROLL REPORT(S) HAVE BEEN PRINTED</strong>
+<p><a id="check3"></a><strong>ALL OF YOUR PAYROLL REPORT(S) HAVE BEEN PRINTED</strong>
 - If the payroll run payslips and payment summary report have been processed for
 the members then tick the box. This field must have been ticked before you can continue
 onto the next screen.</p>
@@ -149,7 +149,7 @@ to the tax year end menu.</p>
 <p>Click ‘Yes’ to continue the year end process or click ‘No’ to return to the tax
 year end menu.</p>
 
-<h2><a name="print"></a>Printing Year End Reports</h2>
+<h2><a id="print"></a>Printing Year End Reports</h2>
 
 <p>The following screen is displayed:</p>
 
@@ -161,25 +161,25 @@ year end menu.</p>
 
 <p>The fields are as follows:</p>
 
-<p><a name="p11"></a><strong>P11 DEDUCTION WORKING SHEET (PAYE)</strong> - Click ‘Create’
+<p><a id="p11"></a><strong>P11 DEDUCTION WORKING SHEET (PAYE)</strong> - Click ‘Create’
 to display the Pll (PAYE) report to the screen. Further details of the printing options
 can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>
 . When you return to the screen there will be a tick displayed in the box next to
 the ‘Create’ button.</p>
 
-<p><a name="printable_p60"></a><strong>PRINTABLE P60 (SUBSTITUTE)</strong> - Click
+<p><a id="printable_p60"></a><strong>PRINTABLE P60 (SUBSTITUTE)</strong> - Click
 ‘Create’ to display the P60 (SUBSTITUE) report to the screen. A copy of the P60 report
 will also be saved to the ../p60_reports/printable/date/scheme/ directory. Further details
 of the printing options can be found <a href="/pm90/pension/general/gn_printm/#destdlg">here</a>
 . When you return to the screen there will be a tick displayed in the box next to the ‘Create’ button.</p>
 
-<p><a name="electronic_p60"></a><strong>ELECTRONIC P60 (SUBSTITUTE)</strong> - Click ‘Create’ to
+<p><a id="electronic_p60"></a><strong>ELECTRONIC P60 (SUBSTITUTE)</strong> - Click ‘Create’ to
 create a P60 (SUSBTITUE) report per member. These reports won’t be displayed to the screen.
 They can be found in the  ../p60_reports/electronic/date/scheme/ directory where each report’s filename
 will contain the member number of the member the P60 is for. Once the reports have
 been created there will be a tick displayed in the box next to the ‘Create’ button.</p>
 
-<p><a name="export_p60"></a><strong>Export Data For P60 Mail Merge</strong> - Click ‘Export’ to export payroll data
+<p><a id="export_p60"></a><strong>Export Data For P60 Mail Merge</strong> - Click ‘Export’ to export payroll data
 out to a TXT file, which can then be used in the user’s own P60 template. Once the TXT file has been
 created there will be a tick displayed in the box next to the ‘Export’ button.</p>
 
@@ -203,20 +203,20 @@ created there will be a tick displayed in the box next to the ‘Export’ butto
 
 </div>
 
-<h2><a name="backup"></a>Backup of Payroll Data</h2>
+<h2><a id="backup"></a>Backup of Payroll Data</h2>
 
 <p>The Year End program automatically creates backups of the Scheme’s payroll data.</p>
 
 <p>These backups are done before and after records are written to the database, and only once the user has confirmed the year end run. The two backups have descriptions of ‘Pre Year End dd/mm/yyyy’ and ‘Post Year End dd/mm/yyyy’ where dd/mm/yyyy is the Run Date.</p>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:29:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:32:17.</p>
       </div>
     </div>
   </body>

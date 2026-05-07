@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143005" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123342" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143005" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123342" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -91,7 +91,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+<h2><a id="1"></a><a id="Introduction"></a>Introduction</h2>
 
 <p>This program produces a report of member details as selected by the user. You can:</p>
 
@@ -126,7 +126,7 @@ menu option:</p>
   <p>Member Report Main Screen</p>
 </div>
 
-<h2><a name="Add A New Report"></a>Add A New Report</h2>
+<h2><a id="Add A New Report"></a>Add A New Report</h2>
 
 <p>Click ‘Add’</p>
 
@@ -167,16 +167,16 @@ understood by another user we would recommend that you export column headings.</
 in normal report format and be available to view/print in the same way as all other
 reports in Pension Master.</p>
 
-<p><a name="pm_member"></a>
-<a name="pm_scheme"></a>
-<a name="pm_company"></a>
-<a name="pm_category"></a>
-<a name="pm_status"></a>
-<a name="pm_marital_stat"></a>
-<a name="pm_sex"></a>
-<a name="pm_dob"></a>
-<a name="psft_code"></a>
-<a name="advance"></a>You are then requested to enter the selection criteria required in order to select the
+<p><a id="pm_member"></a>
+<a id="pm_scheme"></a>
+<a id="pm_company"></a>
+<a id="pm_category"></a>
+<a id="pm_status"></a>
+<a id="pm_marital_stat"></a>
+<a id="pm_sex"></a>
+<a id="pm_dob"></a>
+<a id="psft_code"></a>
+<a id="advance"></a>You are then requested to enter the selection criteria required in order to select the
 members you wish to output to the report (see <a href="/pm90/pension/appendices/app_b/">Selection Criteria</a>). When the
 selection criteria has been entered click on ‘OK’ to proceed to the report date field.</p>
 
@@ -224,12 +224,12 @@ or a range of Status Codes can be entered as described in <a href="/pm90/pension
 <p>Click on ‘OK’ to proceed or click on ‘Cancel’ to exit from the Advanced Search window
 and abort report selection.</p>
 
-<p><a name="rep_date"></a><strong>REPORT DATE</strong> - This defaults to today’s date, but it
+<p><a id="rep_date"></a><strong>REPORT DATE</strong> - This defaults to today’s date, but it
 may be overwritten with any date in the format ddmmyy or dd/mm/yyyy. This is used
 in conjunction with the <strong>DATE ENTERED COMPARISON</strong> field to only include those
 members who have joined the scheme before a certain date.</p>
 
-<p><a name="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
+<p><a id="date_comp"></a><strong>DATE ENTERED COMPARISON</strong> - The valid entries for this
 field are:</p>
 
 <ul>
@@ -239,12 +239,12 @@ field are:</p>
   <li><strong>’ ‘</strong> - Include All members.</li>
 </ul>
 
-<p><a name="head_1"></a><a name="head_2"></a><strong>HEADINGS</strong> - Enter up to two lines
+<p><a id="head_1"></a><a id="head_2"></a><strong>HEADINGS</strong> - Enter up to two lines
 that you wish to use as headings for your report. If the first heading is left blank
 the default heading is the name of the scheme implied by the report selection criteria.
 If the second heading is left blank the default heading is “Membership Report”.</p>
 
-<p><a name="group_1"></a><a name="group_2"></a><a name="group_3"></a><a name="group_4"></a><a name="group_5"></a><a name="group_6"></a><strong>GROUP
+<p><a id="group_1"></a><a id="group_2"></a><a id="group_3"></a><a id="group_4"></a><a id="group_5"></a><a id="group_6"></a><strong>GROUP
 BY</strong> - These fields can be optionally used to specify how you wish to group the
 member records that are output to the report e.g. you may wish to group the records
 by age. In this case you would enter <em>pm_age</em> in the first GROUP BY field. The
@@ -253,12 +253,12 @@ the member file an error message will be displayed and the group by field should
 re-entered. If you are unsure of the name of the field you wish to group by,
 click on the lookup icon for a list of the available fields.</p>
 
-<p><a name="tot_gr_1"></a>
-<a name="tot_gr_2"></a>
-<a name="tot_gr_3"></a>
-<a name="tot_gr_4"></a>
-<a name="tot_gr_5"></a>
-<a name="tot_gr_6"></a><strong>TOTAL</strong> - This indicates that a total of a field/fields specified is required after the group.</p>
+<p><a id="tot_gr_1"></a>
+<a id="tot_gr_2"></a>
+<a id="tot_gr_3"></a>
+<a id="tot_gr_4"></a>
+<a id="tot_gr_5"></a>
+<a id="tot_gr_6"></a><strong>TOTAL</strong> - This indicates that a total of a field/fields specified is required after the group.</p>
 
 <p>e.g. If total is ticked for group by pm_scheme, after the members in the Scheme
 have been printed a total line will be printed as follows:</p>
@@ -281,12 +281,12 @@ as follows before the members in the Scheme are printed.</p>
 
 </div>
 
-<p><a name="cnt_gr_1"></a>
-<a name="cnt_gr_2"></a>
-<a name="cnt_gr_3"></a>
-<a name="cnt_gr_4"></a>
-<a name="cnt_gr_5"></a>
-<a name="cnt_gr_6"></a><strong>COUNT</strong> - This indicates that a count of members in a group is required after the members in the group have been printed.</p>
+<p><a id="cnt_gr_1"></a>
+<a id="cnt_gr_2"></a>
+<a id="cnt_gr_3"></a>
+<a id="cnt_gr_4"></a>
+<a id="cnt_gr_5"></a>
+<a id="cnt_gr_6"></a><strong>COUNT</strong> - This indicates that a count of members in a group is required after the members in the group have been printed.</p>
 
 <p>e.g. If there were 23 members in a scheme and count is ticked for group by pm_scheme
 the following line will be printed after all members in the scheme have been printed:</p>
@@ -297,12 +297,12 @@ the following line will be printed after all members in the scheme have been pri
 
 </div>
 
-<p><a name="seq_gr_1"></a>
-<a name="seq_gr_2"></a>
-<a name="seq_gr_3"></a>
-<a name="seq_gr_4"></a>
-<a name="seq_gr_5"></a>
-<a name="seq_gr_6"></a><strong>SEQUENCE</strong> -
+<p><a id="seq_gr_1"></a>
+<a id="seq_gr_2"></a>
+<a id="seq_gr_3"></a>
+<a id="seq_gr_4"></a>
+<a id="seq_gr_5"></a>
+<a id="seq_gr_6"></a><strong>SEQUENCE</strong> -
 The valid entries for this field are ‘A’ for Ascending and ‘D’ for Descending. The
 default is ‘A’. If any other value is entered in this field an error message will
 be displayed. This specifies that a group be sorted into ascending or descending order
@@ -315,7 +315,7 @@ members first for each scheme.</p>
 <p>When all groups have been entered click on ‘OK’, or press <kbd>Return</kbd> down through
 the remaining fields to proceed to the following screen.</p>
 
-<p><a name="2"></a>The second screen is displayed as follows:</p>
+<p><a id="2"></a>The second screen is displayed as follows:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/per_mem2.jpg" alt="Field Selection Screen" /></p>
@@ -323,11 +323,11 @@ the remaining fields to proceed to the following screen.</p>
   <p>Field Selection Screen</p>
 </div>
 
-<p><a name="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
+<p><a id="s_fieldname"></a><strong>FIELD</strong> - This denotes either the field you wish to
 appear on your report or the result of a particular formula to output to the report.
 Which one is dependent on how you enter the field:</p>
 
-<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+<h2><a id="To Output A Particular Field"></a>To Output A Particular Field</h2>
 
 <p>Enter the field-name you wish to appear in the output. If you are unsure of the name
 of the field, click on the lookup icon to see a list of the available fields.</p>
@@ -781,7 +781,7 @@ argument, the arguments are separated by a comma e.g. pmq_current(NORM,1) - this
 the first quotation result for Quotation Type NORM.</p>
 </div>
 
-<p><a name="popup"></a></p>
+<p><a id="popup"></a></p>
 
 <div class="alert alert-danger" role="alert">
   <p>If flag 2 is used as the 2nd argument for the Unit Prices table, then during the report run a popup window will appear that prompts the user to enter a date.
@@ -793,7 +793,7 @@ A date must be entered in this field.</p>
   <p>If the index for Member Address Details (pe_maddr) is 0 then the current address will be returned.</p>
 </div>
 
-<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+<h2><a id="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
 
 <p>To reference calculations in your report, enter the appropriate formula code in the
 format:</p>
@@ -846,7 +846,7 @@ your report with a tick against the TOTAL field, when your report is produced, a
 each scheme the report will total up the gross salary column and print the total on
 the report.</p>
 
-<p><a name="3"></a>The third screen is displayed as follows:</p>
+<p><a id="3"></a>The third screen is displayed as follows:</p>
 
 <div class="screen">
   <p><img src="/pm90/pension/images/per_mem7.jpg" alt="Heading Selection Screen" /></p>
@@ -889,7 +889,7 @@ currently in that file will thus be overwritten.</p>
 to another directory prior to running your data export.</p>
 </div>
 
-<p><a name="save"></a></p>
+<p><a id="save"></a></p>
 
 <p>When the report has been processed you will be asked if you wish to save this report for later use.</p>
 
@@ -917,7 +917,7 @@ or click on ‘Cancel’ to cancel saving the report to file.</p>
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2><a name="Search For An Existing Report"></a>Search For An Existing Report</h2>
+<h2><a id="Search For An Existing Report"></a>Search For An Existing Report</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -949,7 +949,7 @@ then an error message will be displayed.</p>
 <p>You will then be returned to the main menu and can select the appropriate menu option
 as required.</p>
 
-<h2><a name="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
+<h2><a id="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
 
 <p>Click ‘Run’.</p>
 
@@ -1000,7 +1000,7 @@ is currently in that file will thus be overwritten.</p>
 to another directory prior to running your data export.</p>
 </div>
 
-<h2><a name="Update An Existing Report"></a>Update An Existing Report</h2>
+<h2><a id="Update An Existing Report"></a>Update An Existing Report</h2>
 
 <p>Click ‘Update’.</p>
 
@@ -1026,7 +1026,7 @@ extra fields. To process the report click on ‘OK’. A message will be display
 
 <p>When you have made your changes to the screen press ok. To rerun the report with the changes simply press ‘Run’.</p>
 
-<h2><a name="Delete A Member Report"></a>Delete A Member Report</h2>
+<h2><a id="Delete A Member Report"></a>Delete A Member Report</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -1040,7 +1040,7 @@ message will be displayed and you will be returned to the main menu.</p>
 
 <p>When the delete option is selected you will be asked to confirm and re-confirm that you wish to delete the current Member Report.</p>
 
-<h2><a name="List Reports Currently Set Up"></a><a name="list"></a>List Reports Currently Set Up</h2>
+<h2><a id="List Reports Currently Set Up"></a><a id="list"></a>List Reports Currently Set Up</h2>
 
 <p>Click on the ‘List’ menu option.</p>
 
@@ -1071,19 +1071,19 @@ and click on ‘OK’ to proceed.</p>
 <p>The options for printing are described in the document <a href="/pm90/pension/general/gn_printm/">Printing
 From Pension Master</a>.</p>
 
-<h2><a name="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
+<h2><a id="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
 
 <p>The data is written into a file, c:\penmast.csv, as a comma seperated values (CSV)
 formatted file.</p>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:42.</p>
       </div>
     </div>
   </body>

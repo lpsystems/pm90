@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260506143005" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260507123341" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260506143005" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260507123341" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -75,7 +75,7 @@
       
 
       
-<h2><a name="INDEX"></a>Index</h2>
+<h2><a id="INDEX"></a>Index</h2>
 
 <ul>
   <li><a href="#Introduction">Introduction</a></li>
@@ -97,7 +97,7 @@
   <li><a href="#Exit">Exit Program</a></li>
 </ul>
 
-<h2><a name="1"></a><a name="Introduction"></a>Introduction</h2>
+<h2><a id="1"></a><a id="Introduction"></a>Introduction</h2>
 
 <p>This program produces a report on any database table columns selected by the user.
 Whilst the user enters details into the screens, an SQL statement is being produced
@@ -132,7 +132,7 @@ option.</p>
   <p>Field Selection Screen</p>
 </div>
 
-<h2><a name="Add A New Report"></a>Add A New Report</h2>
+<h2><a id="Add A New Report"></a>Add A New Report</h2>
 
 <p>Click ‘Add’.</p>
 
@@ -174,29 +174,29 @@ box is defaulted to a tick.</p>
 in normal report format and be available to view/print in the same way as all other
 reports in Pension Master.</p>
 
-<p><a name="advance"></a>You are then requested to enter the report header details you
+<p><a id="advance"></a>You are then requested to enter the report header details you
 are going to save the report under.</p>
 
-<p><a name="psc_scheme"></a><strong>SCHEME CODE</strong> - Enter the scheme code you wish to save
+<p><a id="psc_scheme"></a><strong>SCHEME CODE</strong> - Enter the scheme code you wish to save
 the report under. You can click on the lookup icon for a list of valid scheme
 codes. This field is mandatory.</p>
 
-<p><a name="gna_code"></a><strong>REPORT CODE</strong> - Enter the report code you wish to save
+<p><a id="gna_code"></a><strong>REPORT CODE</strong> - Enter the report code you wish to save
 the report under. If another report already exists for the same combination of scheme
 code and report code, the user is informed of this and will be prompted to enter a
 different report code. This field is mandatory.</p>
 
-<p><a name="gna_desc"></a><strong>REPORT DESCRIPTION</strong> - Enter the report description you
+<p><a id="gna_desc"></a><strong>REPORT DESCRIPTION</strong> - Enter the report description you
 wish to save the report under. This field is mandatory.</p>
 
 <p>You are then requested to enter at least one line of data in the history at the bottom
 of the screen.</p>
 
-<p><a name="gnaf_field_desc"></a><strong>FIELD DESCRIPTION</strong> - This denotes either a field
+<p><a id="gnaf_field_desc"></a><strong>FIELD DESCRIPTION</strong> - This denotes either a field
 description you wish to appear on the report or the result of a particular formula
 output to the report. Which one is dependant on how you enter the field:</p>
 
-<h2><a name="To Output A Particular Field"></a>To Output A Particular Field</h2>
+<h2><a id="To Output A Particular Field"></a>To Output A Particular Field</h2>
 
 <p>If you wish to enter a field description, for example Member Number off the Basic
 Member Details table, then you can do so via a number of ways.</p>
@@ -214,7 +214,7 @@ will return the wordy description of the field chosen, back to the Field Descrip
 field.</li>
 </ul>
 
-<h2><a name="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
+<h2><a id="To Output The Results Of A Particular Formula"></a>To Output The Results Of A Particular Formula</h2>
 
 <p>To reference calculations in your report, enter the appropriate formula code in the format:</p>
 
@@ -261,20 +261,20 @@ will be brought up to the screen showing the details of the formula selected.</p
   <p>Report Width : xx</p>
 </div>
 
-<p><a name="gnaf_include"></a><strong>INCLUDE ON REPORT</strong> - Tick the box if you wish to
+<p><a id="gnaf_include"></a><strong>INCLUDE ON REPORT</strong> - Tick the box if you wish to
 include the field description entered on the report. You cannot entered a tick in
 this field is the corresponding field description is blank.</p>
 
-<p><a name="gnaf_total"></a><strong>PRINT TOTAL</strong> - Tick the box if you wish to print a
+<p><a id="gnaf_total"></a><strong>PRINT TOTAL</strong> - Tick the box if you wish to print a
 total of the field description at the end of the report. You can only tick this field
 if the field description is entered, the include on report field is ticked and the
 field description is of a numeric/decimal type.</p>
 
-<p><a name="gnaf_sort"></a><strong>SORT ORDER</strong> - Enter a numeric value between 1 and 6
+<p><a id="gnaf_sort"></a><strong>SORT ORDER</strong> - Enter a numeric value between 1 and 6
 in this field. You can only enter a value in this field if the field description is
 entered. A maximum of 6 columns can be used to sort data by, per report.</p>
 
-<p><a name="gnaf_asc_desc"></a><strong>ASC/DESC</strong> - Valid values for this field are ‘A’
+<p><a id="gnaf_asc_desc"></a><strong>ASC/DESC</strong> - Valid values for this field are ‘A’
 - Ascending, and ‘D’ - Descending. This field can only be entered if the field description
 is entered, and the Sort Order field is entered. This field defaults to ‘A’ - Ascending,
 when a value has been entered in the Sort Order field.</p>
@@ -299,7 +299,7 @@ wider than this amount. If the field width goes over 255 characters, then the fi
 data will be cut down to 255 characters before it gets sent to Microsoft Excel.</p>
 </div>
 
-<h2><a name="Between Screens Selection"></a>Between Screens Selection</h2>
+<h2><a id="Between Screens Selection"></a>Between Screens Selection</h2>
 
 <p>Before the second screen is displayed to the screen, the program will work out the
 start of the SQL statement to be used in the report. The database tables to be used
@@ -309,7 +309,7 @@ one another will be created to then be displayed to screen 2.</p>
 <p>If at least one formula line has been entered in screen 1, then a line defaulting
 the calculation date to TODAY, will also be auto-generated for screen 2.</p>
 
-<h2><a name="2"></a><a name="Criteria Selection"></a>Criteria Selection</h2>
+<h2><a id="2"></a><a id="Criteria Selection"></a>Criteria Selection</h2>
 
 <p>Press <kbd>2</kbd>, or select the ‘Criteria Selection’ from the ‘Menu’ menu option with the
 arrow keys and press <kbd>Return</kbd>. If you are in the process of generating a new
@@ -324,16 +324,16 @@ in screen 1.</p>
   <p>Criteria Selection Screen</p>
 </div>
 
-<p><a name="p_and_or"></a><strong>AND/OR CLAUSE</strong> - Enter either ‘AND’ or ‘OR’ into this
+<p><a id="p_and_or"></a><strong>AND/OR CLAUSE</strong> - Enter either ‘AND’ or ‘OR’ into this
 field. The first line of the history will not allow the user to enter into the field
 due to the first line going into the SELECT statement from this screen will always
 use the ‘WHERE’ clause. The default value for this field is ‘AND’.</p>
 
-<p><a name="p_bracket_1"></a><strong>BRACKET 1</strong> - This field can take the value of either blank or ‘(‘.  If a ‘(‘ is entered then ensure that a corresponding ‘)’ bracket is entered in Bracket 3 or 4 field on one of the lines to follow.</p>
+<p><a id="p_bracket_1"></a><strong>BRACKET 1</strong> - This field can take the value of either blank or ‘(‘.  If a ‘(‘ is entered then ensure that a corresponding ‘)’ bracket is entered in Bracket 3 or 4 field on one of the lines to follow.</p>
 
-<p><a name="p_bracket_2"></a><strong>BRACKET 2</strong> - This field can take the value of either blank or ‘(‘.  If a ‘(‘ is entered then ensure that a corresponding ‘)’ bracket is entered in Bracket 3 or 4 field on one of the lines to follow.</p>
+<p><a id="p_bracket_2"></a><strong>BRACKET 2</strong> - This field can take the value of either blank or ‘(‘.  If a ‘(‘ is entered then ensure that a corresponding ‘)’ bracket is entered in Bracket 3 or 4 field on one of the lines to follow.</p>
 
-<p><a name="gnas_field_desc1"></a><strong>FIELD 1</strong> - This denotes either a field description or an actual value which you wish
+<p><a id="gnas_field_desc1"></a><strong>FIELD 1</strong> - This denotes either a field description or an actual value which you wish
 to compare the Field 2 value against.</p>
 
 <p>If a field description is to be entered then it must be from a database table already
@@ -384,7 +384,7 @@ date, numeric or decimal, it may need to be in single, double or no quotations:<
   </div>
 </div>
 
-<p><a name="gnas_operator"></a><strong>OPERATOR</strong> - Enter one of the following valid operators:</p>
+<p><a id="gnas_operator"></a><strong>OPERATOR</strong> - Enter one of the following valid operators:</p>
 
 <div class="row">
   <div class="col-md-6">
@@ -459,15 +459,15 @@ to it’s complex method of retrieving data from the database tables.</p>
 
 <p>For more explanation on <a href="/pm90/pension/reports/report_writer/per_adva/">how each operator works,</a> please click on the link.</p>
 
-<p><a name="gnas_field_desc2"></a><strong>FIELD 2</strong> - This denotes either a field description
+<p><a id="gnas_field_desc2"></a><strong>FIELD 2</strong> - This denotes either a field description
 or an actual value which you wish to compare the Field 1 value against. The same method
 used in <a href="#Field 1">Field 1</a> for entering a value, also applies to Field 2.</p>
 
-<p><a name="p_bracket_3"></a><strong>BRACKET 3</strong> - This field can take the value of either
+<p><a id="p_bracket_3"></a><strong>BRACKET 3</strong> - This field can take the value of either
 blank or ‘)’. If a ‘)’ is entered then ensure that a corresponding ‘(‘ bracket is
 entered in Bracket 1 or 2 field on one of the lines previous.</p>
 
-<p><a name="p_bracket_4"></a><strong>BRACKET 4</strong> - This field can take the value of either
+<p><a id="p_bracket_4"></a><strong>BRACKET 4</strong> - This field can take the value of either
 blank or ‘)’. If a ‘)’ is entered then ensure that a corresponding ‘(‘ bracket is
 entered in Bracket 1 or 2 field on one of the lines previous.</p>
 
@@ -483,7 +483,7 @@ informed of this and is prompted to alter one of the values entered.</p>
 brackets 1 and 2 are defaulted to blank.</p>
 </div>
 
-<h2><a name="3"></a><a name="Column Headings"></a>Setting up Report Column Headings</h2>
+<h2><a id="3"></a><a id="Column Headings"></a>Setting up Report Column Headings</h2>
 
 <p>Click ‘Screen 3’.</p>
 
@@ -500,17 +500,17 @@ in this screen. The user cannot amend the value entered in Field, as these are d
 from the field descriptions in screen 1. If you do not want any of these fields to
 be reported on, then you must untick them from screen 1.</p>
 
-<p><a name="gnac_header1"></a><strong>HEADING 1</strong> - Enter the first line of column heading
+<p><a id="gnac_header1"></a><strong>HEADING 1</strong> - Enter the first line of column heading
 for the field that is to be output to the report.</p>
 
-<p><a name="gnac_header2"></a><strong>HEADING 2</strong> - Enter the second line of column heading
+<p><a id="gnac_header2"></a><strong>HEADING 2</strong> - Enter the second line of column heading
 for the field that is to be output to the report.</p>
 
 <p>When a new report is being generated, the column headings default to the appropriate
 values that have been set up in the <a href="/pm90/pension/reports/report_writer/pem_rep/">Member Report Units</a> option
 and can be overwritten by the user. These are then saved with the report for future use.</p>
 
-<h2><a name="4"></a><a name="Report Layout Settings"></a>Report Layout Settings</h2>
+<h2><a id="4"></a><a id="Report Layout Settings"></a>Report Layout Settings</h2>
 
 <p>Click ‘Screen 4’.</p>
 
@@ -525,19 +525,19 @@ and can be overwritten by the user. These are then saved with the report for fut
 <p>When a new report is being generated, the fields in this screen will be set to their
 defaults as described below:</p>
 
-<p><a name="gnar_title1"></a><a name="gnar_title2"></a><strong>REPORT TITLES</strong> - Enter the
+<p><a id="gnar_title1"></a><a id="gnar_title2"></a><strong>REPORT TITLES</strong> - Enter the
 report heading. The default for the top line is ‘PENSION MASTER - ADVANCED REPORT
 GENERATOR’</p>
 
-<p><a name="gnar_blank"></a><strong>NUMBER OF BLANK LINES AFTER EVERY ROW</strong> - Enter the
+<p><a id="gnar_blank"></a><strong>NUMBER OF BLANK LINES AFTER EVERY ROW</strong> - Enter the
 number of blank lines you wish to print after every row. The default value for this
 field is 0.</p>
 
-<p><a name="gnar_rows"></a><strong>BLANK LINE PRINTED AFTER NUMBER OF ROWS</strong> - Enter the
+<p><a id="gnar_rows"></a><strong>BLANK LINE PRINTED AFTER NUMBER OF ROWS</strong> - Enter the
 number of rows you wish to print before a blank line is printed. The default value
 for this field is 0.</p>
 
-<h2><a name="5"></a><a name="Report Group Settings"></a>Report Group Settings</h2>
+<h2><a id="5"></a><a id="Report Group Settings"></a>Report Group Settings</h2>
 
 <p>Click ‘Screen 5’.</p>
 
@@ -555,19 +555,19 @@ these are defaulted from the field descriptions in screen 1. If you do not want 
 of these fields to be used in ordering the data, then you must de-select them from
 screen1. Enter the remaining fields as follows:</p>
 
-<p><a name="gnag_total"></a><strong>TOTAL</strong> - Tick the box if you wish to total up the numeric
+<p><a id="gnag_total"></a><strong>TOTAL</strong> - Tick the box if you wish to total up the numeric
 values ticked on screen 1 as being ‘Included on report’, after each group of data.</p>
 
-<p><a name="gnag_head"></a><strong>HEAD</strong> - Tick the box if you wish to print a heading
+<p><a id="gnag_head"></a><strong>HEAD</strong> - Tick the box if you wish to print a heading
 of the group, before each group of data.</p>
 
-<p><a name="gnag_count"></a><strong>COUNT</strong> - Tick the box if you wish to print a count
+<p><a id="gnag_count"></a><strong>COUNT</strong> - Tick the box if you wish to print a count
 of the number of records in each group, after each group of data.</p>
 
-<p><a name="gnag_break"></a><strong>PAGE BREAK</strong> - Tick the box if you wish to have a page
+<p><a id="gnag_break"></a><strong>PAGE BREAK</strong> - Tick the box if you wish to have a page
 break, after each group of data. <strong>N.B. This option does not work when reporting out to Excel.</strong></p>
 
-<h2><a name="Update An Existing Report"></a>Update An Existing Report</h2>
+<h2><a id="Update An Existing Report"></a>Update An Existing Report</h2>
 
 <p>Click ‘Update’.</p>
 
@@ -580,7 +580,7 @@ removed from the original selection.</p>
 
 <p>Click on ‘OK’ to save the alterations you have made.</p>
 
-<h2><a name="search"></a>Search For An Existing Report</h2>
+<h2><a id="search"></a>Search For An Existing Report</h2>
 
 <p>Click ‘Query’.</p>
 
@@ -600,7 +600,7 @@ will be displayed.</p>
 
 <p>You will then be returned to the main menu and can select the appropriate menu options as required.</p>
 
-<h2><a name="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
+<h2><a id="Re-Run An Existing Report"></a>Re-Run An Existing Report</h2>
 
 <p>Click ‘Run’.</p>
 
@@ -653,7 +653,7 @@ If you wish to keep this data, we suggest you manually copy the file c:\penmast.
 to another directory prior to running your data export.</p>
 </div>
 
-<h2><a name="Delete An Advanced Report"></a>Delete An Advanced Report</h2>
+<h2><a id="Delete An Advanced Report"></a>Delete An Advanced Report</h2>
 
 <p>Click ‘Delete’.</p>
 
@@ -677,7 +677,7 @@ absolutely certain that you do wish to delete the report.</p>
 be permanently removed from Pension Master. If you have any doubt about deleting the
 report, click on ‘No’.</p>
 
-<h2><a name="Browsing Report Details"></a>Browsing Report Details</h2>
+<h2><a id="Browsing Report Details"></a>Browsing Report Details</h2>
 <p>Click on the ‘Browse’ button or the Browse icon on the toolbar to view details in
 any screen where the data does not fit on the screen.</p>
 
@@ -686,12 +686,12 @@ to navigate around the data.</p>
 
 <p>Click on ‘OK’ or ‘Cancel’ to leave browse mode.</p>
 
-<h2><a name="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
+<h2><a id="Where To Find The Resulting Exported Data File"></a>Where To Find The Resulting Exported Data File</h2>
 
 <p>The .CSV data file will be created as c:\penmast.csv. The Excel spreadsheet will be
 created as c:\penmast.xls.</p>
 
-<h2><a name="fullquery"></a>Full Query</h2>
+<h2><a id="fullquery"></a>Full Query</h2>
 
 <p>Click ‘Full Query’.</p>
 
@@ -714,14 +714,14 @@ the example would be displayed as SELECT {pm_member} FROM {pe_mem}.</p>
 <p>Click on the ‘Toggle’ button again and it will change the SQL statement back to the
 wordy description format.</p>
 
-<h2><a name="Exit"></a>Exit Program</h2>
+<h2><a id="Exit"></a>Exit Program</h2>
 
 <p>Click ‘Exit’. This leaves the program and closes the current browser tab.</p>
 
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 06/05/2026 14:30:05.</p>
+        <p>Version 9.0 &bull; Build Date 07/05/2026 12:33:41.</p>
       </div>
     </div>
   </body>
