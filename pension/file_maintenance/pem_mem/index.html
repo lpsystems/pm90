@@ -12,11 +12,11 @@
 
     <link rel="stylesheet" href="/pm90/css/bootstrap-min.css" type="text/css">
     <link rel="stylesheet" href="/pm90/css/bootstrap-theme-min.css" type="text/css">
-    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260616092646" type="text/css">
+    <link rel="stylesheet" href="/pm90/css/stylesheet.css?v=20260616102738" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"  type="text/javascript"></script>
     <script src="/pm90/js/bootstrap-min.js" type="text/javascript"></script>
-    <script src="/pm90/js/main.js?v=20260616092646" type="text/javascript"></script>
+    <script src="/pm90/js/main.js?v=20260616102738" type="text/javascript"></script>
 
     <meta name="generator" content="nanoc 4.9.1">
   </head>
@@ -319,11 +319,11 @@ the staff number with member records for data transfer or reports. Typically you
 enter the employers payroll number here. This field is optional and can be left blank
 if you so wish.</p>
 
-<p><a id="pm_rsi_num"></a><strong>NI/PPS/TRN Number</strong> - This is where you store the members personal security number. As you enter this field, Pension Master will check all other member records on the database for duplicate numbers and if any are found, you will be asked to confirm that you wish to continue or stop adding a new member. There is also validation against the format of the number.</p>
+<p><a id="pm_rsi_num"></a><strong>NI/PPS/TRN Number</strong> - This is where you store the member’s personal security number. As you enter this field, Pension Master will check all other member records on the database for duplicate numbers and if any are found, you will be asked to confirm that you wish to continue or stop adding a new member. There is also validation against the format of the number.</p>
 
-<p><a id="pm_title"></a><strong>Title</strong> - The members title (e.g. Mrs, Mr, Dr ). This
+<p><a id="pm_title"></a><strong>Title</strong> - The member’s title (e.g. Mrs, Mr, Dr ). This
 field is optional, but can be used in mail merges etc. and is used by Pension Master
-to default a new members sex as appropriate.</p>
+to default a new member’s sex as appropriate.</p>
 
 <p><a id="pm_forename"></a><a id="pm_surname"></a><strong>Forename &amp; Surname</strong> -
 A forename and surname for the member must be entered. The forename field is used
@@ -380,8 +380,8 @@ When a valid status code has been entered the status description will be entered
   <li>Divorced with Dependants</li>
 </ul>
 
-<p><a id="pm_dob"></a><strong>Date of Birth</strong> - This represents the members date of birth. If
-you enter a date for which the members current age is less than 16 or over 75, a message
+<p><a id="pm_dob"></a><strong>Date of Birth</strong> - This represents the member’s date of birth. If
+you enter a date for which the member’s current age is less than 16 or over 75, a message
 will be displayed informing you of this and asking if this is really correct.</p>
 
 <p><a id="pm_age_adm"></a><strong>Admitted</strong> - Select ‘Yes’ to confirm that the member’s date of birth has been confirmed
@@ -410,7 +410,7 @@ Schemes, this field description will change to Qualifying Serv Date.</p>
 <p>Adding a New Member</p>
 
 <ol>
-  <li>If the AE (auto enrolled) field at scheme level is ticked then the value of the member AE field will default to Y unless the members date of leaving is before the staging date where it will be set to N.</li>
+  <li>If the AE (auto enrolled) field at scheme level is ticked then the value of the member AE field will default to Y unless the member’s date of leaving is before the staging date where it will be set to N.</li>
   <li>On saving the new member, if they are under age 22 today, a popup message will appear advising that the member is under 22 and asking if the value of the AE field should be Y. If the user clicks ‘Yes’ it will save it as Yes, if the user clicks ‘No’ it will save it as No.</li>
 </ol>
 
@@ -420,7 +420,7 @@ Schemes, this field description will change to Qualifying Serv Date.</p>
   <li>The field can be updated to Y or N with no verification.</li>
 </ol>
 
-<p><a id="pm_age"></a><strong>Age Last Birthday</strong> - This shows the members age as at today’s date and
+<p><a id="pm_age"></a><strong>Age Last Birthday</strong> - This shows the member’s age as at today’s date and
 is automatically calculated as long as you have already supplied the member’s date
 of birth. This field is a view only field and is re-calculated each time you view
 a member’s record. The age will be calculated as age last birthday or age next birthday
@@ -435,16 +435,16 @@ number which is the age that the member will retire at. Usual values are any age
 age of 65 for both males and females.</p>
 
 <p><a id="pm_npd"></a><strong>Normal Pension Date</strong> - Normal Retirement Date. This is
-a date field which will automatically be calculated if the members date of birth and
+a date field which will automatically be calculated if the member’s date of birth and
 Normal Retirement Age are both entered, otherwise a date can be entered in the format
 ddmmyy or dd/mm/yyyy.</p>
 
 <p><a id="pm_tpd"></a><strong>Target Pension Date</strong> - If you intend using a <a href="/pm90/pension/file_maintenance/pem_sch/#Lifestyle Matrix Setup">term
 related lifestyle matrix</a> for this member, enter a target retirement date here.
-This will default to the members Normal Pension Date.</p>
+This will default to the member’s Normal Pension Date.</p>
 
 <p><a id="pm_spd"></a><strong>State Pension Date</strong> - State Pension Date. This is a date
-field which will automatically be calculated if the members date of birth is entered.
+field which will automatically be calculated if the member’s date of birth is entered.
 As State Pension Dates are laid down by Statute, you are not permitted to amend this
 field.</p>
 
@@ -1154,7 +1154,7 @@ over the period whilst he/she has been a member of the scheme.</p>
 <p><a id="pdec_id"></a><a id="pdec_oldstat"></a><a id="pdec_newstat"></a>Pension
 Master will automatically log details to this screen every time you change the company
 of a member, with the date on the company history screen being the effective date
-you changed the members company code.</p>
+you changed the member’s company code.</p>
 
 <p><a id="pdec_note"></a>You can add a brief note to any of the company history lines
 outlining, for example, the reason the company was changed.</p>
@@ -1187,7 +1187,7 @@ code over the period whilst he/she has been a member of the scheme.</p>
 <p><a id="pdec_id"></a><a id="pdec_oldstat"></a><a id="pdec_newstat"></a>Pension
 Master will automatically log details to this screen every time you change the category
 of a member, with the date on the category history screen being the effective date
-you changed the members category.</p>
+you changed the member’s category.</p>
 
 <p><a id="pdec_note"></a>You can add a brief note to any of the category history lines
 outlining, for example, the reason the category was changed.</p>
@@ -1205,9 +1205,9 @@ be reset to today’s date for that particular line.</p>
 <h3><a id="STATHST"></a><a id="Status History"></a>Status History</h3>
 
 <div class="alert alert-danger" role="alert">
-  <p>If you plan to use the <a href="/pm90/pension/reports/membership_movements/per_move/">Membership Movements Report</a> it is essential that each members status history is up to date as it is this that is analysed to produce the report.</p>
+  <p>If you plan to use the <a href="/pm90/pension/reports/membership_movements/per_move/">Membership Movements Report</a> it is essential that each member’s status history is up to date as it is this that is analysed to produce the report.</p>
 
-  <p>Any inaccuracies in members status histories will mean that the results of your Membership Movements Report will be incorrect.</p>
+  <p>Any inaccuracies in members’ status histories will mean that the results of your Membership Movements Report will be incorrect.</p>
 </div>
 
 <p>Select the status history screen using the menu, then click ‘Update’.</p>
@@ -1226,7 +1226,7 @@ over the period whilst he/she has been a member of the scheme.</p>
 <p><a id="pdec_id"></a><a id="pdec_oldstat"></a><a id="pdec_newstat"></a>Pension
 Master will automatically log details to this screen every time you change the status
 of a member, with the date on the status history screen being the effective date you
-changed the members status.</p>
+changed the member’s status.</p>
 
 <p><a id="pdec_note"></a>You can add a brief note to any of the status history lines
 outlining, for example, the reason the status was changed.</p>
@@ -1259,7 +1259,7 @@ code over the period whilst he/she has been a member of the scheme.</p>
 <p><a id="pdec_id"></a><a id="pdec_oldstat"></a><a id="pdec_newstat"></a>Pension
 Master will automatically log details to this screen every time you change the marital status
 of a member, with the date on the status history screen being the effective date
-you changed the members marital status.</p>
+you changed the member’s marital status.</p>
 
 <p><a id="pdec_note"></a>You can add a brief note to any of the history lines
 outlining, for example, the reason the status was changed.</p>
@@ -1391,15 +1391,15 @@ or click on ‘Cancel’ to exit the FSAVC input without saving the entered deta
   <p>Investment Setup Screen</p>
 </div>
 
-<p>This screen is used to record the allocation of a members contributions to investment
+<p>This screen is used to record the allocation of a member’s contributions to investment
 funds and is used by <a href="/pm90/pension/investments/allocate_contributions/peu_alloc/">Contribution Allocation</a>.
 These details, if entered, override the <a href="/pm90/pension/file_maintenance/pem_sch/#Investment Setup">scheme
 default investment setup</a>.</p>
 
-<p>If the members investments follow the <a href="/pm90/pension/file_maintenance/pem_sch/#Investment Setup">scheme
+<p>If the member’s investments follow the <a href="/pm90/pension/file_maintenance/pem_sch/#Investment Setup">scheme
 default investment setup</a>, leave this screen blank and the scheme defaults will
 be used by <a href="/pm90/pension/investments/allocate_contributions/peu_alloc/">Contribution Allocation</a>. Otherwise
-enter the members specific investment instructions here.</p>
+enter the member’s specific investment instructions here.</p>
 
 <p>The details are held by effective date, with the most recent effective date shown
 first. To navigate between entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
@@ -1462,9 +1462,9 @@ Request Run</a> to generate batches of contribution requests for the scheme.
 These details, if entered, override the <a href="/pm90/pension/file_maintenance/pem_cat/#ContributionRate">category
 default contribution rates</a>.</p>
 
-<p>If the members contribution rates follow the <a href="/pm90/pension/file_maintenance/pem_cat/#ContributionRate">category
+<p>If the member’s contribution rates follow the <a href="/pm90/pension/file_maintenance/pem_cat/#ContributionRate">category
 default</a>, leave this screen blank and the category defaults will be used by the <a href="/pm90/pension/investments/contribution_entry/peu_cont/">Contribution
-Request Run</a>. Otherwise enter the members specific investment instructions here.</p>
+Request Run</a>. Otherwise enter the member’s specific investment instructions here.</p>
 
 <p>If any details are found, the most recent contribution rate percentages are displayed.
 If you want to scroll between the entries for different effective dates, click ‘<span class="glyphicon glyphicon-arrow-left"></span> Previous’ or ‘<span class="glyphicon glyphicon-arrow-right"></span> Next’.</p>
@@ -1492,7 +1492,7 @@ contributions you require for this contribution type. The valid options are:</p>
 <p>Note that types EEPR and ERPR are only calculated for members who are on NI Table
 F i.e. an entry of ‘F’ is in the <a href="#pm_nitab">NI Table</a> field
 on the <a href="#Member Indicator Details">Member Indicators screen</a>
-in the members record.</p>
+in the member’s record.</p>
 
 <p><a id="pcp_rate"></a><strong>PERCENT/ANNUAL FLATRATE</strong> - If PERCENT type code is used, enter the percentage rate to use otherwise enter the flatrate.</p>
 
@@ -1763,7 +1763,7 @@ these into Pension Master as appropriate.</p>
   <p>NI History Screen</p>
 </div>
 
-<p><a id="pi_year"></a><a id="pi_nisal"></a>Enter the members NI contracted out contributions/earnings.
+<p><a id="pi_year"></a><a id="pi_nisal"></a>Enter the member’s NI contracted out contributions/earnings.
 Each value is indexed by the year in which the 5<sup>th</sup> April of that tax year
 falls e.g. for the tax year 1992/93, the 5<sup>th</sup> April in that tax year is
 5/4/1993 so enter the 1993 as the year.</p>
@@ -1851,12 +1851,12 @@ Benefit.</p>
 will force the entry of the years, months and days of any Added Service.</p>
 
 <p><a id="padb_sps_bret"></a><strong>Spouses Before Retirement</strong> -
-Enter the appropriate % of the additional benefit that the members spouse would receive
+Enter the appropriate % of the additional benefit that the member’s spouse would receive
 on death before or after retirement, as appropriate. These fields will default to
 0 if left blank.</p>
 
 <p><a id="padb_sps_aret"></a><strong>Spouses After Retirement</strong> -
-Enter the appropriate % of the additional benefit that the members spouse would receive
+Enter the appropriate % of the additional benefit that the member’s spouse would receive
 on death before or after retirement, as appropriate. These fields will default to
 0 if left blank.</p>
 
@@ -1880,7 +1880,7 @@ Additional Benefit input without saving the details entered.</p>
 <p>To update existing transfer details for this member, click ‘Update’.</p>
 
 <p>To delete the current transfer in record for this member, click ‘Delete’. <strong>If the
-transfer in is of a DC Transfer type, any entries on the members <a href="#Contribution History">Contribution
+transfer in is of a DC Transfer type, any entries on the member’s <a href="#Contribution History">Contribution
 History</a> or <a href="#Investment History">Investment History</a> that have been
 created as a result of this transfer in are also removed.</strong></p>
 
@@ -1894,7 +1894,7 @@ a member record has, although you can use the same transfer in code on more than
 member record in the same scheme.</p>
 
 <p>The Transfer Codes are entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> option on
-the System Data Menu. The code must first be assigned to the members Scheme using
+the System Data Menu. The code must first be assigned to the member’s Scheme using
 the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p><a id="ptvi_type"></a><strong>Transfer Type</strong> - Select the transfer type. This is used
@@ -1905,14 +1905,14 @@ options:</p>
   <li><strong>Additional Pension</strong> - If the transfer in is being used to purchase additional pension, select this option.</li>
   <li><strong>Additional Service</strong> - If the transfer in is being used to purchase additional service, select this option.</li>
   <li><strong>DC Transfer</strong> - If the transfer in is into a defined contribution type scheme and is being applied
-as an additional premium to the members fund, select this option.</li>
+as an additional premium to the member’s fund, select this option.</li>
 </ul>
 
 <p><a id="ptvi_date"></a><strong>Date Transfer Received</strong> - Enter the date the transfer value was received.</p>
 
 <p>When adding a DC Transfer type transfer in, the member must not already have a transfer
 in for the same date received as this is the date that is used to create entries on
-the members <a href="#Contribution History">Contribution History</a> and <a href="#Investment History">Investment
+the member’s <a href="#Contribution History">Contribution History</a> and <a href="#Investment History">Investment
 History</a> records.</p>
 
 <p>If this is a DC Transfer type then this field cannot be amended.</p>
@@ -1948,11 +1948,11 @@ GMP figures then the user is prompted to confirm that this is correct.</p>
 <p><a id="ptvi_use_148"></a><strong>Use Section 148 (UK)</strong> - Tick this field if you wish to use Section 148 factors when calculating the transfer in part of GMP calculations.</p>
 
 <p><a id="ptvi_sps_bret"></a><strong>Spouses Before Retirement</strong> - Enter the appropriate
-% of the transfer in that the members spouse would receive on death before retirement.
+% of the transfer in that the member’s spouse would receive on death before retirement.
 This fields will default to 0 if left blank.</p>
 
 <p><a id="ptvi_sps_aret"></a><strong>Spouses After Retirement</strong> - Enter the appropriate
-% of the transfer in that the members spouse would receive on death after retirement.
+% of the transfer in that the member’s spouse would receive on death after retirement.
 This fields will default to 0 if left blank.</p>
 
 <p><a id="ptvi_dis_ls"></a><strong>DIS Lump Sum Granted</strong> - Enter any Death in Service Lump Sum value, if applicable.</p>
@@ -2028,7 +2028,7 @@ Revenue Maximum benefits have been revalued to in the format ddmmyy or dd/mm/yyy
 
 <p><a id="ptvi_scon"></a><strong>Old Scheme SCON (UK)</strong> - Enter the SCON for the Transferring Scheme
 (if any). This field will not be shown for Irish based schemes. This is only relevant
-for contracted-out schemes. If the members scheme is a UK scheme then the SCON is
+for contracted-out schemes. If the member’s scheme is a UK scheme then the SCON is
 validated as follows:</p>
 
 <ul>
@@ -2040,7 +2040,7 @@ validated as follows:</p>
 
 <p><a id="ptvi_econ"></a><strong>Old Scheme ECON (UK)</strong> - Enter the ECON for the Transferring Scheme
 (if any). This field will not be shown for Irish based schemes. This is only relevant
-for contracted-out schemes. If the members scheme is a UK scheme then the ECON is
+for contracted-out schemes. If the member’s scheme is a UK scheme then the ECON is
 validated as follows:</p>
 
 <ul>
@@ -2090,9 +2090,9 @@ must add up to the protected rights included in the transfer value.</p>
 input without saving the details entered.</p>
 
 <p>For DC Transfer types, you should now go into <a href="/pm90/pension/updates/pem_bat/">Batch Data Input</a>,
-select the batch you have just created and post the entries to the members <a href="#Contribution History">Contribution
+select the batch you have just created and post the entries to the member’s <a href="#Contribution History">Contribution
 History</a> screen. Then use <a href="/pm90/pension/investments/allocate_contributions/peu_alloc/">Contributions Allocation</a>
-to allocate these contributions to the members Investment History. At this stage,
+to allocate these contributions to the member’s Investment History. At this stage,
 the contributions are available to purchase units in the normal way.</p>
 
 <h3><a id="TVOUT"></a><a id="Transfer Out Details"></a>Transfer Out Details</h3>
@@ -2161,7 +2161,7 @@ Date cannot be before the Date the member Left service.</p>
 <p><a id="ptvo_date_start"></a><strong>Date In Specie Transfer Completed</strong> - Enter the Date in the format ddmmyy or dd/mm/yyyy.</p>
 
 <p><a id="ptvo_scon"></a><strong>New Scheme SCON (UK)</strong> - Enter the SCON for the receiving scheme
-(if any). This is only relevant for contracted-out schemes. If the members scheme
+(if any). This is only relevant for contracted-out schemes. If the member’s scheme
 is a UK scheme then the SCON is validated as follows:</p>
 
 <ul>
@@ -2329,7 +2329,7 @@ are described as follows:</p>
 
 <h4><a id="basic_deferred_pensioner_details"></a>Screen 1) Basic Deferred Pensioner Details</h4>
 
-<p>This contains typical deferred pensioner data that relates to the members Deferred
+<p>This contains typical deferred pensioner data that relates to the member’s Deferred
 Pension benefits. Information such as, the Date the first Payment is Due, values relating
 to Inland Revenue Maximum Pension/Cash and Scheme Cash, Cessation Details and the
 Payment Frequency. Also an additional 5 fields are available that can be defined by
@@ -2339,23 +2339,23 @@ the 2 other screens can be accessed.</p>
 
 <h4><a id="deferred_pension_history"></a>Screen 2) Deferred Pension History</h4>
 
-<p>This is used to record the component parts of the members deferred pension, e.g.
-those parts of the members deferred pension that escalate at different rates or for
+<p>This is used to record the component parts of the member’s deferred pension, e.g.
+those parts of the member’s deferred pension that escalate at different rates or for
 which legislation dictates that we have to record the components separately. Deferred
 Pension Codes are used to indicate whether the component values are Added/Ignored
-or Subtracted from the calculation of the members total Deferred Pension. Other information
+or Subtracted from the calculation of the member’s total Deferred Pension. Other information
 can also be entered such as, the Date the component is due to Commence, the Date of
-Last Increase and values for the members Initial/Current Pension and benefit for Spouses
+Last Increase and values for the member’s Initial/Current Pension and benefit for Spouses
 before and after the normal pension date.</p>
 
 <h4><a id="deferred_pension_increase_history"></a>Screen 3) Deferred Pension Increase History</h4>
 
-<p>This records the full increase history of any changes made to a members Deferred
+<p>This records the full increase history of any changes made to a member’s Deferred
 Pension benefit on the Deferred Pension History Screen. There is one screen per deferred
 pension code shown on the Deferred Pension History screen with the facility to scroll
 between the different deferred pension codes.The last 10 alterations made to a Deferred
 Pension Code are displayed on the screen with options on the menu to allow any other
-codes to be shown. Information such as the value of the members Pension and any Spouses
+codes to be shown. Information such as the value of the member’s Pension and any Spouses
 Benefit before and after the normal pension date are recorded.</p>
 
 <p>Select the Deferred Pensioner screen from the Members menu, then click ‘Update’.</p>
@@ -2469,7 +2469,7 @@ of Deferred Pension transaction:</p>
 <p>The Deferred Pensioner Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p><a id="pdpa_dt_commence"></a><strong>DATE TO COMMENCE</strong> - Enter the Date at which the
@@ -2530,7 +2530,7 @@ for Increase Code or select a code from the lookup list.</p>
 <p>The Reason for Increase Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p>Click ‘OK’ to save the Reason for Increase Code, or click ‘Cancel’ to exit the screen
@@ -2599,7 +2599,7 @@ are described as follows:</p>
 
 <h4><a id="basic_pensioner_details"></a>Screen 1) Basic Pensioner Details</h4>
 
-<p>This contains typical pensioner data that relates to the members Pension benefits.
+<p>This contains typical pensioner data that relates to the member’s Pension benefits.
 Information such as, Retirement Date and the Date the Pension Commenced, Commutation
 and Lump Sum details, Cessation Details and Payment and Pension Provider details.
 Also an additional 5 fields are available that can be defined by the user (see the <a href="/pm90/pension/file_maintenance/pem_sch/#Deferred Pensioner/Pensioner Fields">Deferred
@@ -2608,29 +2608,29 @@ the 3 other screens can be accessed.</p>
 
 <h4><a id="pension_history"></a>Screen 2) Pension History</h4>
 
-<p>This is used to record the component parts of the members pension, e.g. those parts
-of the members pension that escalate at different rates or for which legislation dictates
+<p>This is used to record the component parts of the member’s pension, e.g. those parts
+of the member’s pension that escalate at different rates or for which legislation dictates
 that we have to record the components separately. Pension Codes are used to indicate
 whether the component values are Added/Ignored or Subtracted from the calculation
-of the members total Pension. Other information can also be entered such as, the Date
+of the member’s total Pension. Other information can also be entered such as, the Date
 the change is due to Commence, the Date of Last Increase and values for the members
 Initial/Current Pension and benefit for Spouses.</p>
 
 <h4><a id="pension_increase_history"></a>Screen 3) Pension Increase History</h4>
 
-<p>This records the full increase history of any changes made to a members Pension
+<p>This records the full increase history of any changes made to a member’s Pension
 benefit on the Pension History Screen. There is one screen per pension code shown
 on the Pension History screen with the facility to scroll between the different pension
 codes. The last 10 alterations made to a Pension Code are displayed on the screen
 with options on the menu to allow any other codes to be shown. Information such as
-the value of the members Pension and any Spouses Benefit before and after the normal
+the value of the member’s Pension and any Spouses Benefit before and after the normal
 pension date are recorded.</p>
 
 <h4><a id="pensioner_bank_details"></a>Screen 4) Pensioner Bank Details</h4>
 
-<p>This allows the members Bank/Building Society information to be held, allowing data
+<p>This allows the member’s Bank/Building Society information to be held, allowing data
 to be exported to a Pensioner Payroll system. The data includes the Bank/Building
-Society Name and Address details, the members Account information and the Roll Number
+Society Name and Address details, the member’s Account information and the Roll Number
 required by a Building Society.</p>
 
 <p>Select the Pensioner screen from the Members menu, then click ‘Update’.</p>
@@ -2656,10 +2656,10 @@ Date of the Original Member, in the format ddmmyy or dd/mm/yyyy. This field is o
 shown if the Members Status Type is Widower.</p>
 
 <p><a id="pps_precom_pen"></a><strong>Pre-Commutation Pension</strong> - Enter the amount of
-the members Pension before any Commutation for tax free cash has been made.</p>
+the member’s Pension before any Commutation for tax free cash has been made.</p>
 
 <p><a id="pps_pstcom_pen"></a><strong>Post-Commutation Pension</strong> - Enter the amount of
-the members Pension after any Commutation for tax free cash has been made.</p>
+the member’s Pension after any Commutation for tax free cash has been made.</p>
 
 <p><a id="pps_lump_sum_amt"></a><strong>Lump Sum Amount</strong> - Enter the Lump Sum Amount.</p>
 
@@ -2682,14 +2682,14 @@ Ceased, in the format ddmmyy or dd/mm/yyyy. When a date is entered in this field
   <li>Trivial Commutation</li>
 </ul>
 
-<p><a id="pps_last_payment"></a><strong>Last Payment</strong> - This indicates to HMRC that the leaving date should be sent with the next Payroll Run. Also that this will be the last time that the members information will be submitted to HMRC. Setting this indicator will not trigger a Payroll Run, it will merely ensure that this member in included.</p>
+<p><a id="pps_last_payment"></a><strong>Last Payment</strong> - This indicates to HMRC that the leaving date should be sent with the next Payroll Run. Also that this will be the last time that the member’s information will be submitted to HMRC. Setting this indicator will not trigger a Payroll Run, it will merely ensure that this member in included.</p>
 
 <p><a id="pps_provider"></a><strong>Pension Provider</strong> - Enter the name of the members
 Pension Provider.</p>
 
-<p><a id="pps_policy"></a><strong>Policy Number</strong> - Enter the members Policy Number.</p>
+<p><a id="pps_policy"></a><strong>Policy Number</strong> - Enter the member’s Policy Number.</p>
 
-<p><a id="pps_pay_num"></a><strong>Payroll Number</strong> - Enter the members Payroll Number.</p>
+<p><a id="pps_pay_num"></a><strong>Payroll Number</strong> - Enter the member’s Payroll Number.</p>
 
 <p><a id="pps_pay_freq"></a><strong>Pay Frequency</strong> - Select one of the following options from the list:</p>
 
@@ -2772,7 +2772,7 @@ transaction:</p>
 <p>The Pensioner Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p><a id="ppa_dt_commence"></a><strong>DATE TO COMMENCE</strong> - Enter the Date at which the
@@ -2840,7 +2840,7 @@ for Increase Code or select a code from the lookup list.</p>
 <p>The Reason for Increase Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p>Click on ‘OK’ to save the Reason for Increase Code, or click ‘Cancel’ to exit the
@@ -2905,7 +2905,7 @@ the first screen.</p>
 
 <p><a id="pps_account_type"></a><strong>Account Type</strong> - Select the Account Type.</p>
 
-<p><a id="pps_bank_name"></a><strong>Bank - Name</strong> - Enter the Name of the members Bank/Building Society.</p>
+<p><a id="pps_bank_name"></a><strong>Bank - Name</strong> - Enter the Name of the member’s Bank/Building Society.</p>
 
 <p><a id="pps_bank_add_1"></a>
 <a id="pps_bank_add_2"></a>
@@ -3032,7 +3032,7 @@ indicator flag is ticked).</p>
 will be displayed.</p>
 
 <p>You can use this screen to record the member’s address for correspondence, and optionally,
-the members job title, salutation, full forenames and previous surname. To scroll
+the member’s job title, salutation, full forenames and previous surname. To scroll
 between the different addresses for the member, use the navigation buttons displayed
 next to the Salutation field.</p>
 
@@ -3054,14 +3054,14 @@ appears after the “Dear” part of the letter e.g. for Mr Simon Jones you migh
 to use a salutation of Simon or Mr Jones.</p>
 
 <p><a id="pm_initials"></a><strong>Initials</strong> - This is a view only field that holds the
-members initials. It is automatically generated based on the members forename(s) as
+member’s initials. It is automatically generated based on the member’s forename(s) as
 entered in the <a href="#pm_forename">Basic Member Details screen</a>.</p>
 
-<p><a id="pm_job_title"></a><strong>Job Title</strong> - Enter the members job title. This is
+<p><a id="pm_job_title"></a><strong>Job Title</strong> - Enter the member’s job title. This is
 useful for storing occupation details which can, for example, be used as part of a
 Group Life broking exercise.</p>
 
-<p><a id="pm_prev_surname"></a><strong>Previous Surname</strong> - Enter the members previous
+<p><a id="pm_prev_surname"></a><strong>Previous Surname</strong> - Enter the member’s previous
 surname if applicable.</p>
 
 <p><a id="pmad_currflag"></a><strong>Current</strong> - Indicates whether the
@@ -3074,17 +3074,17 @@ address entered is the (Current) Member Address or the (Non-Current) Alternative
 <a id="pmad_addr_3"></a>
 <a id="pmad_addr_4"></a>
 <a id="pmad_addr_5"></a>
-<a id="pmad_postcode"></a><strong>Address &amp; Postcode</strong> - Enter the members address and postcode (if known).</p>
+<a id="pmad_postcode"></a><strong>Address &amp; Postcode</strong> - Enter the member’s address and postcode (if known).</p>
 
-<p><a id="pmad_televe"></a><strong>Telephone (Eve)</strong> - Enter the members evening telephone number (if known).</p>
+<p><a id="pmad_televe"></a><strong>Telephone (Eve)</strong> - Enter the member’s evening telephone number (if known).</p>
 
-<p><a id="pmad_telday"></a><strong>Telephone (Day)</strong> - Enter the members daytime telephone number (if known).</p>
+<p><a id="pmad_telday"></a><strong>Telephone (Day)</strong> - Enter the member’s daytime telephone number (if known).</p>
 
 <p><a id="pmad_eff_date"></a><strong>Effective Date</strong> - This field is updated when a change has been made.</p>
 
 <p><a id="pmad_system_id"></a><strong>Changed By</strong> - This field indicates how the change was made i.e. via Pension Master, or On Line or via a dataload.</p>
 
-<p><a id="pmad_email"></a><strong>Email</strong> - Enter the members e-mail address
+<p><a id="pmad_email"></a><strong>Email</strong> - Enter the member’s e-mail address
 (if known). This must contain the ‘@’ symbol that is present in all e-mail addresses.</p>
 
 <p>If you have entered a valid e-mail address for this member, click on the ‘Send E-Mail’
@@ -3107,25 +3107,25 @@ or click on ‘Cancel’ to exit address input without saving the details.</p>
 
 <p>The Member details will be displayed to the top of the screen.</p>
 
-<p><a id="pm_location"></a><strong>Location</strong> - Enter the members location.</p>
+<p><a id="pm_location"></a><strong>Location</strong> - Enter the member’s location.</p>
 
-<p><a id="pm_department"></a><strong>Department</strong> - Enter the members department.</p>
+<p><a id="pm_department"></a><strong>Department</strong> - Enter the member’s department.</p>
 
-<p><a id="pm_employer"></a><strong>Employer Name</strong> - Enter the members employer’s name.</p>
+<p><a id="pm_employer"></a><strong>Employer Name</strong> - Enter the member’s employer’s name.</p>
 
-<p><a id="pm_mobile_per"></a><strong>Personal Mobile</strong> - Enter the members personal mobile (if know)</p>
+<p><a id="pm_mobile_per"></a><strong>Personal Mobile</strong> - Enter the member’s personal mobile (if know)</p>
 
-<p><a id="pm_mobile_work"></a><strong>Work Mobile</strong> - Enter the members work mobile (if known)</p>
+<p><a id="pm_mobile_work"></a><strong>Work Mobile</strong> - Enter the member’s work mobile (if known)</p>
 
-<p><a id="pm_home_fax"></a><strong>Home Fax</strong> - Enter the members work fax number (if known).</p>
+<p><a id="pm_home_fax"></a><strong>Home Fax</strong> - Enter the member’s work fax number (if known).</p>
 
-<p><a id="pm_work_fax"></a><strong>Work Fax</strong> - Enter the members work fax number (if known).</p>
+<p><a id="pm_work_fax"></a><strong>Work Fax</strong> - Enter the member’s work fax number (if known).</p>
 
-<p><a id="pm_email1"></a><strong>Additional E-Mail 1</strong> - Enter the members additional e-mail (if known).</p>
+<p><a id="pm_email1"></a><strong>Additional E-Mail 1</strong> - Enter the member’s additional e-mail (if known).</p>
 
-<p><a id="pm_email2"></a><strong>Additional E-Mail 2</strong> - Enter the members additional e-mail  (if known).</p>
+<p><a id="pm_email2"></a><strong>Additional E-Mail 2</strong> - Enter the member’s additional e-mail  (if known).</p>
 
-<p><a id="pmad_nationality"></a><strong>Nationality</strong> - Enter the members nationality (if known).</p>
+<p><a id="pmad_nationality"></a><strong>Nationality</strong> - Enter the member’s nationality (if known).</p>
 
 <p>When the address details have been entered click on ‘OK’ to save the address entered,
 or click on ‘Cancel’ to exit address input without saving the details.</p>
@@ -3317,8 +3317,8 @@ left blank. The quotation date can be used in calculations, so a date in the fut
 may be entered for a member retiring in the future for example.</p>
 
 <p>Also, if you are using any <a href="/pm90/pension/file_maintenance/calculation_setup/pem_fac/">Actuarial Factors</a>
-then the members age will be worked out using
-this supplied quotation date and the members date of birth. This will determine which
+then the member’s age will be worked out using
+this supplied quotation date and the member’s date of birth. This will determine which
 actuarial factor is used.</p>
 
 <p>Click ‘OK’ when in the field Quote Date to calculate quotes, otherwise click on ‘Cancel’
@@ -3433,19 +3433,19 @@ details will automatically be updated from the Apply For Access form.</p>
 <p><a id="pm_int_access"></a><strong>Allow Access</strong> - Select ‘Yes’ from the list to allow members
 access to Pension Master Online.</p>
 
-<p><a id="pm_password"></a><strong>Internet Password</strong> - Enter the members password for
+<p><a id="pm_password"></a><strong>Internet Password</strong> - Enter the member’s password for
 access to the Internet application. This screen can only be updated by a System Administrator.
 The member can then change the password using the logon page of the application.</p>
 
-<p><a id="pm_maiden"></a><strong>Mothers Maiden Name</strong> - Enter the members mothers maiden name.</p>
+<p><a id="pm_maiden"></a><strong>Mothers Maiden Name</strong> - Enter the member’s mothers maiden name.</p>
 
-<p><a id="pm_birth_place"></a><strong>Place of Birth</strong> - Enter the members birth place.</p>
+<p><a id="pm_birth_place"></a><strong>Place of Birth</strong> - Enter the member’s birth place.</p>
 
-<p><a id="pm_first_school"></a><strong>First School</strong> - Enter the members first school.</p>
+<p><a id="pm_first_school"></a><strong>First School</strong> - Enter the member’s first school.</p>
 
-<p><a id="pm_memorable"></a><strong>Memorable Word</strong> - Enter the members memorable word.</p>
+<p><a id="pm_memorable"></a><strong>Memorable Word</strong> - Enter the member’s memorable word.</p>
 
-<p><a id="pm_nationality"></a><strong>Nationality</strong> - Enter the members nationality.</p>
+<p><a id="pm_nationality"></a><strong>Nationality</strong> - Enter the member’s nationality.</p>
 
 <p><a id="pm_locked_out"></a><strong>Account Locked</strong> - If the member has unsuccessfully
 attempted to login 3 times then the account is locked. The member must contact the
@@ -3499,7 +3499,7 @@ Scheme Administrator to unlock the account.</p>
 
 <h3><a id="MSPOUSES"></a><a id="Divorce and Spouses Details"></a>Divorce and Spouses’ Details</h3>
 
-<p>This screen allows you to add and amend details of a members divorce and spouse.</p>
+<p>This screen allows you to add and amend details of a member’s divorce and spouse.</p>
 
 <p>Select Divorce and Spouses’ Details from the menu.</p>
 
@@ -3514,11 +3514,11 @@ the ex-spouse details.</p>
   <p>Ex-Spouse details screen</p>
 </div>
 
-<p><a id="pmsp_title"></a><strong>Title</strong> - Enter the members ex-spouses title.</p>
+<p><a id="pmsp_title"></a><strong>Title</strong> - Enter the member’s ex-spouses title.</p>
 
-<p><a id="pmsp_forename"></a><strong>Forename</strong> - Enter the members ex-spouses forename.</p>
+<p><a id="pmsp_forename"></a><strong>Forename</strong> - Enter the member’s ex-spouses forename.</p>
 
-<p><a id="pmsp_surname"></a><strong>Surname</strong> - Enter the members ex-spouses surname.</p>
+<p><a id="pmsp_surname"></a><strong>Surname</strong> - Enter the member’s ex-spouses surname.</p>
 
 <p><a id="pmsp_cohabiting"></a><strong>Cohabiting?</strong></p>
 
@@ -3526,17 +3526,17 @@ the ex-spouse details.</p>
 <a id="pmsp_addr2"></a>
 <a id="pmsp_addr3"></a>
 <a id="pmsp_addr4"></a>
-<a id="pmsp_postcode"></a><strong>Address &amp; Postcode</strong> - Enter the members ex-spouses address and postcode.</p>
+<a id="pmsp_postcode"></a><strong>Address &amp; Postcode</strong> - Enter the member’s ex-spouses address and postcode.</p>
 
-<p><a id="pmsp_telday"></a><strong>Telephone (Day)</strong> - Enter the members ex-spouses daytime telephone number.</p>
+<p><a id="pmsp_telday"></a><strong>Telephone (Day)</strong> - Enter the member’s ex-spouses daytime telephone number.</p>
 
-<p><a id="pmsp_televe"></a><strong>Telephone (Eve)</strong> - Enter the members ex-spouses evening telephone number.</p>
+<p><a id="pmsp_televe"></a><strong>Telephone (Eve)</strong> - Enter the member’s ex-spouses evening telephone number.</p>
 
-<p><a id="pmsp_email"></a><strong>Email</strong> - Enter the members ex-spouses e-mail address.</p>
+<p><a id="pmsp_email"></a><strong>Email</strong> - Enter the member’s ex-spouses e-mail address.</p>
 
-<p><a id="pmsp_ni"></a><strong>NI/PPS/SSNI Number</strong> - Enter the members ex-spouses NI Number for UK schemes, PPS Number for Irish schemes or SSNI Number for Belgian schemes.</p>
+<p><a id="pmsp_ni"></a><strong>NI/PPS/SSNI Number</strong> - Enter the member’s ex-spouses NI Number for UK schemes, PPS Number for Irish schemes or SSNI Number for Belgian schemes.</p>
 
-<p><a id="pmsp_dob"></a><strong>Date of Birth</strong> - Enter the members ex-spouses date of birth.</p>
+<p><a id="pmsp_dob"></a><strong>Date of Birth</strong> - Enter the member’s ex-spouses date of birth.</p>
 
 <p><a id="pmsp_ctry_law"></a><strong>Law Indicator</strong> - Select one of the following options from the drop-down list:</p>
 
@@ -3743,10 +3743,10 @@ are described as follows:</p>
 
 <h4><a id="care_pension_amount"></a>Screen 1) Career Average Revalued Earnings Current Amount</h4>
 
-<p>This is used to record the component parts of the members care pension, e.g.
-those parts of the members care pension that escalate or are calculated at different rates. Care
+<p>This is used to record the component parts of the member’s care pension, e.g.
+those parts of the member’s care pension that escalate or are calculated at different rates. Care
 Pension Codes are used to indicate whether the component values are Added/Ignored
-or Subtracted from the calculation of the members total Care Pension.</p>
+or Subtracted from the calculation of the member’s total Care Pension.</p>
 
 <p>The Care Headings are initially entered via the <a href="/pm90/pension/file_maintenance/pem_sch/#CARE">Care Screens</a> menu
 option in the Scheme File. The scheme needs to be set up as a Care scheme under basic scheme details.</p>
@@ -3756,7 +3756,7 @@ number of the deferred record.</p>
 
 <h4><a id="care_pension_increase_history"></a>Screen 2) Career Average Revalued Earnings Increase History</h4>
 
-<p>This records the full increase history of any changes made to a members Deferred
+<p>This records the full increase history of any changes made to a member’s Deferred
 Pension benefit on the Deferred Pension History Screen. There is one screen per deferred
 pension code shown on the Deferred Pension History screen with the facility to scroll
 between the different deferred pension codes. The last 10 alterations made to a Deferred
@@ -3804,7 +3804,7 @@ of Care Pension transaction:</p>
 <p>The Care Pensioner Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p>The totals at the bottom of the Care History Screen are calculated as
@@ -3847,23 +3847,23 @@ are described as follows:</p>
 
 <h4><a id="basic_disability_details"></a>Screen 1) Basic Disability Details</h4>
 
-<p>This contains typical disability data that relates to the members Disability benefits.
+<p>This contains typical disability data that relates to the member’s Disability benefits.
 Information such as, Disability Date and the Date the Benefit Commenced, and Payment and Pension Provider details.
 Data must be entered on this screen before the 3 other screens can be accessed.</p>
 
 <h4><a id="disability_history"></a>Screen 2) Disability History</h4>
 
-<p>This is used to record the component parts of the members benefits, e.g. those parts
-of the members benefit that escalate at different rates or for which legislation dictates
+<p>This is used to record the component parts of the member’s benefits, e.g. those parts
+of the member’s benefit that escalate at different rates or for which legislation dictates
 that we have to record the components separately. Disability Codes are used to indicate
 whether the component values are Added/Ignored or Subtracted from the calculation
-of the members total Benefit. Other information can also be entered such as, the Date
+of the member’s total Benefit. Other information can also be entered such as, the Date
 the change is due to Commence, the Date of Last Increase and values for the members
 Initial/Current Benefit.</p>
 
 <h4><a id="disability_increase_history"></a>Screen 3) Disability Increase History</h4>
 
-<p>This records the full increase history of any changes made to a members Disability
+<p>This records the full increase history of any changes made to a member’s Disability
 benefit on the Pension History Screen. There is one screen per disability code shown
 on the History screen with the facility to scroll between the different disability
 codes. The last 10 alterations made to a Disability Code are displayed on the screen
@@ -3871,9 +3871,9 @@ with options on the menu to allow any other codes to be shown.</p>
 
 <h4><a id="disability_bank_details"></a>Screen 4) Disability Bank Details</h4>
 
-<p>This allows the members Bank/Building Society information to be held, allowing data
+<p>This allows the member’s Bank/Building Society information to be held, allowing data
 to be exported to a Payroll system. The data includes the Bank/Building
-Society Name and Address details, the members Account information and the Roll Number
+Society Name and Address details, the member’s Account information and the Roll Number
 required by a Building Society.</p>
 
 <p>Select the Disability screen from the Members menu, then click ‘Update’.</p>
@@ -3909,9 +3909,9 @@ Ceased, in the format ddmmyy or dd/mm/yyyy. When a date is entered in this field
 <p><a id="pbps_provider"></a><strong>Benefit Provider</strong> - Enter the name of the members
 Benefit Provider.</p>
 
-<p><a id="pbps_policy"></a><strong>Policy Number</strong> - Enter the members Policy Number.</p>
+<p><a id="pbps_policy"></a><strong>Policy Number</strong> - Enter the member’s Policy Number.</p>
 
-<p><a id="pbps_pay_num"></a><strong>Payroll Number</strong> - Enter the members Payroll Number.</p>
+<p><a id="pbps_pay_num"></a><strong>Payroll Number</strong> - Enter the member’s Payroll Number.</p>
 
 <p><a id="pbps_pay_freq"></a><strong>Pay Frequency</strong> - Select one of the following options from the list:</p>
 
@@ -3966,7 +3966,7 @@ transaction:</p>
 <p>The Disability Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p><a id="pbpa_dt_commence"></a><strong>DATE TO COMMENCE</strong> - Enter the Date at which the
@@ -4026,7 +4026,7 @@ for Increase Code or select a code from the lookup list.</p>
 <p>The Reason for Increase Codes are initially entered via the <a href="/pm90/pension/system_data/pem_codem/">Codes</a> menu
 option on the System Data Menu. This allows
 Codes to be entered with a brief description. For the code to be used against the
-member, the code must be assigned to the members Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
+member, the code must be assigned to the member’s Scheme using the <a href="/pm90/pension/file_maintenance/pem_sch/#Code Allocation">Code
 Allocation</a> menu option on the <a href="/pm90/pension/file_maintenance/pem_sch/">Schemes</a> menu.</p>
 
 <p>Click on ‘OK’ to save the Reason for Increase Code, or click ‘Cancel’ to exit the
@@ -4088,7 +4088,7 @@ the first screen.</p>
 
 <p><a id="pbps_account_type"></a><strong>Account Type</strong> - Select the Account Type.</p>
 
-<p><a id="pbps_bank_name"></a><strong>Bank - Name</strong> - Enter the Name of the members Bank/Building Society.</p>
+<p><a id="pbps_bank_name"></a><strong>Bank - Name</strong> - Enter the Name of the member’s Bank/Building Society.</p>
 
 <p><a id="pbps_bank_add_1"></a>
 <a id="pbps_bank_add_2"></a>
@@ -4329,7 +4329,7 @@ labels that you have selected.</p>
 <h2><a id="meminfo"></a>Member Information Screen</h2>
 
 <p>On all member screens in Pension Master you have the option of displaying the following
-member details: members age, how long they have been with the company and how long
+member details: member’s age, how long they have been with the company and how long
 they have been in the pension scheme. Just click ‘information’.</p>
 
 <div class="screen">
@@ -4430,7 +4430,7 @@ by Pension Master.</p>
 
 <p>Select the ‘Quick Letter’ button from the screen. This automatically
 starts your word processor and transfers enough data to start and end the
-letter i.e. it transfers the members address, inserts today’s date, sets
+letter i.e. it transfers the member’s address, inserts today’s date, sets
 out the Dear xxx part of the letter and then does the Yours sincerely…
 at the end of the letter. If the member’s address is flagged as suspect,
 then you will be asked if you wish to use the suspect address. If the member’s
@@ -4476,7 +4476,7 @@ not be displayed to the menu.</p>
 
       <div id="footer">
         <p>Copyright &copy; 1987-2026 L&amp;P Systems Limited. All rights reserved. <a href="/pm90/cookiepolicy.html">Cookie Policy</a>.</p>
-        <p>Version 9.0 &bull; Build Date 16/06/2026 09:26:46.</p>
+        <p>Version 9.0 &bull; Build Date 16/06/2026 10:27:38.</p>
       </div>
     </div>
   </body>
